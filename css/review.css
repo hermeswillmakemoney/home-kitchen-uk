@@ -1,0 +1,89 @@
+/* Review Article Styles — Home & Kitchen UK */
+
+/* Article Header */
+.article-header { padding: 2rem 0 1.5rem; }
+.breadcrumbs { font-size: 0.85rem; color: var(--color-text-secondary); margin-bottom: 0.75rem; }
+.breadcrumbs a { color: var(--color-text-secondary); text-decoration: none; }
+.breadcrumbs a:hover { text-decoration: underline; }
+.article-category { display: inline-block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-accent); font-weight: 600; margin-bottom: 0.75rem; }
+.article-header h1 { font-size: 2.25rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.03em; margin-bottom: 0.75rem; }
+.article-subtitle { font-size: 1.15rem; color: var(--color-text-secondary); line-height: 1.6; max-width: 700px; margin-bottom: 0.75rem; }
+.article-meta { font-size: 0.85rem; color: var(--color-text-secondary); }
+
+/* Summary Box */
+.summary-box { background: var(--color-surface); border: 2px solid var(--color-accent); border-radius: var(--radius-lg); padding: 1.5rem; margin-bottom: 2rem; }
+.summary-box h2 { font-size: 1.3rem; margin-bottom: 1.25rem; }
+.summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+.summary-card { background: var(--color-bg); border-radius: var(--radius); padding: 1.25rem; border: 1px solid var(--color-border); }
+.summary-card--winner { border-color: var(--color-orange); background: #fffbeb; }
+.summary-card--value { border-color: var(--color-green); background: #f0fdf4; }
+.summary-rank { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-accent); }
+.summary-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+.summary-card p { font-size: 0.85rem; color: var(--color-text-secondary); margin-bottom: 0.75rem; line-height: 1.5; }
+
+/* Buttons */
+.btn { display: inline-block; padding: 0.6rem 1.25rem; border-radius: var(--radius); font-weight: 600; font-size: 0.9rem; text-decoration: none; cursor: pointer; transition: background 0.15s, transform 0.1s; border: none; font-family: inherit; }
+.btn:active { transform: scale(0.98); }
+.btn--primary { background: var(--color-accent); color: white; }
+.btn--primary:hover { background: var(--color-accent-hover); }
+.btn--small { padding: 0.35rem 0.75rem; font-size: 0.8rem; }
+.btn--lg { padding: 0.8rem 2rem; font-size: 1rem; }
+
+/* Section Styles */
+.article-section { margin-bottom: 2.5rem; }
+.article-section h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-border); }
+.article-section h3 { font-size: 1.15rem; font-weight: 600; margin: 1.25rem 0 0.5rem; }
+.article-section h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--color-text-secondary); }
+.article-section p { margin-bottom: 1rem; line-height: 1.7; color: var(--color-text); }
+.article-section ul, .article-section ol { margin: 0 0 1rem 1.5rem; line-height: 1.7; }
+.article-section li { margin-bottom: 0.35rem; }
+
+/* Comparison Table */
+.table-wrapper { overflow-x: auto; margin: 1rem 0; }
+.comparison-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; background: var(--color-surface); border-radius: var(--radius); overflow: hidden; border: 1px solid var(--color-border); }
+.comparison-table th { background: var(--color-bg); padding: 0.75rem; text-align: left; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--color-text-secondary); border-bottom: 2px solid var(--color-border); }
+.comparison-table td { padding: 0.75rem; border-bottom: 1px solid var(--color-border); }
+.comparison-table tr:last-child td { border-bottom: none; }
+.comparison-table .rating { white-space: nowrap; }
+
+/* Product Review Cards */
+.product-review { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.5rem; margin-bottom: 1.5rem; position: relative; }
+.product-review h3 { margin-top: 0; font-size: 1.25rem; }
+
+.award-badge { position: absolute; top: -1px; right: 1.5rem; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.35rem 0.8rem; border-radius: 0 0 6px 6px; color: white; }
+.award-badge--best { background: var(--color-accent); }
+.award-badge--value { background: var(--color-green); }
+.award-badge--dual { background: var(--color-blue); }
+
+.review-score { margin: 0.5rem 0 1rem; font-size: 1rem; }
+.review-score .score { font-size: 2rem; font-weight: 700; color: var(--color-accent); }
+.review-score .score-label { color: var(--color-text-secondary); }
+
+.pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem; }
+.pros h4 { color: var(--color-green); }
+.cons h4 { color: var(--color-accent); }
+.pros ul, .cons ul { margin: 0.25rem 0 0 1.25rem; font-size: 0.9rem; }
+.pros li, .cons li { margin-bottom: 0.3rem; line-height: 1.5; }
+
+.product-review .btn { margin-top: 0.75rem; }
+
+/* FAQ */
+.faq-item { margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px solid var(--color-border); }
+.faq-item:last-child { border-bottom: none; }
+.faq-item h3 { font-size: 1.05rem; margin-bottom: 0.35rem; }
+.faq-item p { font-size: 0.95rem; color: var(--color-text-secondary); margin-bottom: 0; }
+
+/* Bottom CTA */
+.article-cta { background: linear-gradient(135deg, var(--color-accent) 0%, #991b1b 100%); color: white; padding: 2rem; border-radius: var(--radius-lg); text-align: center; margin-top: 2rem; }
+.article-cta h2 { font-size: 1.5rem; margin-bottom: 0.75rem; border: none; padding: 0; color: white; }
+.article-cta p { margin-bottom: 1.25rem; font-size: 1rem; line-height: 1.6; color: #fecaca; }
+.article-cta .btn--primary { background: white; color: var(--color-accent); }
+.article-cta .btn--primary:hover { background: #fecaca; }
+.cta-note { font-size: 0.8rem; color: #fca5a5; margin-top: 0.75rem; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .article-header h1 { font-size: 1.6rem; }
+  .pros-cons { grid-template-columns: 1fr; }
+  .summary-grid { grid-template-columns: 1fr; }
+}

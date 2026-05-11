@@ -1,0 +1,130 @@
+/* Home & Kitchen UK — Main Stylesheet */
+/* Clean, fast, mobile-first. No frameworks. */
+
+:root {
+  --color-bg: #fafaf9;
+  --color-surface: #ffffff;
+  --color-text: #1c1917;
+  --color-text-secondary: #78716c;
+  --color-accent: #dc2626;
+  --color-accent-hover: #b91c1c;
+  --color-border: #e7e5e4;
+  --color-green: #16a34a;
+  --color-orange: #f59e0b;
+  --color-blue: #2563eb;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.06);
+  --max-width: 1100px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+.site-header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 0;
+  position: sticky; top: 0; z-index: 100;
+}
+.site-header .container { display: flex; align-items: center; justify-content: space-between; }
+
+.logo { font-size: 1.25rem; font-weight: 700; color: var(--color-text); text-decoration: none; letter-spacing: -0.02em; }
+.logo-uk { color: var(--color-accent); }
+
+.main-nav { display: flex; gap: 1.5rem; }
+.main-nav a { text-decoration: none; color: var(--color-text-secondary); font-size: 0.9rem; font-weight: 500; transition: color 0.15s; }
+.main-nav a:hover { color: var(--color-text); }
+
+/* Hero */
+.hero { background: linear-gradient(135deg, #1c1917 0%, #292524 100%); color: white; padding: 4rem 0; text-align: center; }
+.hero h1 { font-size: 2.5rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.03em; margin-bottom: 1rem; }
+.hero h1 em { color: #fca5a5; font-style: normal; }
+.hero-sub { font-size: 1.1rem; color: #d6d3d1; max-width: 600px; margin: 0 auto; line-height: 1.7; }
+
+/* Featured */
+.featured { padding: 3rem 0; }
+.featured h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; }
+
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+}
+.card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+
+.card-badge {
+  position: absolute; top: 0.75rem; left: 0.75rem; z-index: 2;
+  font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 0.25rem 0.6rem; border-radius: 4px;
+}
+.card-badge--new { background: var(--color-blue); color: white; }
+.card-badge--best { background: var(--color-green); color: white; }
+
+.card-img { height: 160px; }
+
+.card-body { padding: 1.25rem; }
+.card-category { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-accent); font-weight: 600; }
+.card-body h3 { margin: 0.35rem 0 0.5rem; font-size: 1.1rem; line-height: 1.35; }
+.card-body h3 a { color: var(--color-text); text-decoration: none; }
+.card-body h3 a:hover { text-decoration: underline; }
+.card-body p { font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.55; margin-bottom: 0.75rem; }
+.card-meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--color-text-secondary); }
+.rating { color: var(--color-orange); font-weight: 600; }
+.rating small { color: var(--color-text-secondary); font-weight: 400; }
+
+/* Methodology */
+.methodology { background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); padding: 3rem 0; }
+.methodology h2 { text-align: center; font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem; }
+.method-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+.method-item { text-align: center; padding: 0 1rem; }
+.method-icon { font-size: 2.5rem; display: block; margin-bottom: 0.75rem; }
+.method-item h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem; }
+.method-item p { font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.6; }
+
+/* Footer */
+.site-footer { background: var(--color-text); color: #d6d3d1; padding: 3rem 0 1.5rem; font-size: 0.9rem; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+.footer-col h4 { color: white; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 0.4rem; }
+.footer-col a { color: #a8a29e; text-decoration: none; }
+.footer-col a:hover { color: white; }
+.footer-bottom { border-top: 1px solid #44403c; padding-top: 1.5rem; }
+.disclosure { font-size: 0.8rem; color: #a8a29e; margin-bottom: 0.75rem; line-height: 1.55; }
+.disclosure a { color: #d6d3d1; }
+.copyright { font-size: 0.8rem; color: #78716c; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero { padding: 2.5rem 0; }
+  .hero h1 { font-size: 1.8rem; }
+  .hero-sub { font-size: 1rem; }
+  .card-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .main-nav { gap: 0.75rem; }
+  .main-nav a { font-size: 0.8rem; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 1rem; }
+  .hero h1 { font-size: 1.5rem; }
+}
