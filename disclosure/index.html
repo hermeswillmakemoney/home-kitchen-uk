@@ -1,72 +1,392 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Affiliate Disclosure — Home & Kitchen UK</title>
-  <meta name="description" content="How we make money — affiliate disclosure for Home & Kitchen UK.">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/review.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate Disclosure | Home Kitchen UK</title>
+    <meta name="description" content="Home Kitchen UK affiliate disclosure. We earn commissions from qualifying purchases through eBay Partner Network, Skimlinks, and other affiliate programmes.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://homekitchenuk.netlify.app/disclosure/">
+
+    <style>
+        /* ============================================
+           OPEN DESIGN: Warm Editorial Style
+           Serif headings, warm off-white, terracotta
+           ============================================ */
+
+        :root {
+            --bg-primary: #FAF7F2;
+            --bg-white: #FFFFFF;
+            --bg-warm: #F5F0EA;
+            --accent: #C0512F;
+            --accent-hover: #A84427;
+            --accent-light: #F9EDE7;
+            --accent-border: #E8D5CC;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --text-muted: #8A8A7A;
+            --border: #E8E4DE;
+            --border-light: #F0ECE6;
+            --green: #2D7D46;
+            --green-bg: #EDF7F0;
+            --gold: #C5981B;
+            --gold-bg: #FFF8E8;
+            --star: #E8A620;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --radius: 8px;
+            --radius-lg: 12px;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Palatino', serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: var(--text-primary);
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+        }
+
+        h1 { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; }
+        h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; }
+        h3 { font-size: 1.35rem; font-weight: 700; }
+        h4 { font-size: 1.15rem; font-weight: 600; }
+
+        p {
+            margin-bottom: 1em;
+            color: var(--text-secondary);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-decoration-color: rgba(192,81,47,0.3);
+            text-underline-offset: 2px;
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            color: var(--accent-hover);
+            text-decoration-color: var(--accent);
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---- Site Header ---- */
+        .site-header {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .site-header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .site-logo {
+            font-family: 'Georgia', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .site-logo span { color: var(--accent); }
+        .site-nav { font-size: 0.9rem; }
+        .site-nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 500;
+        }
+        .site-nav a:hover { color: var(--accent); }
+
+        /* ---- Breadcrumbs ---- */
+        .breadcrumbs {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            padding: 16px 0;
+            color: var(--text-muted);
+        }
+        .breadcrumbs a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+        .breadcrumbs a:hover { color: var(--accent); }
+        .breadcrumbs .sep { margin: 0 6px; opacity: 0.5; }
+
+        /* ---- Page Header ---- */
+        .page-header {
+            padding: 16px 0 32px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 40px;
+        }
+        .category-label {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            background: var(--accent-light);
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+        .page-header h1 {
+            margin-bottom: 12px;
+        }
+        .page-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 640px;
+        }
+
+        /* ---- Content ---- */
+        .content {
+            padding-bottom: 60px;
+        }
+        .content h2 {
+            margin-top: 48px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent-border);
+        }
+        .content h3 {
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+        .content p {
+            margin-bottom: 1.2em;
+        }
+        .content ul, .content ol {
+            margin: 0 0 1.2em 1.5em;
+            color: var(--text-secondary);
+        }
+        .content li {
+            margin-bottom: 0.5em;
+        }
+        .content strong {
+            color: var(--text-primary);
+        }
+
+        /* ---- Disclosure Box ---- */
+        .disclosure-box {
+            background: var(--accent-light);
+            border: 1px solid var(--accent-border);
+            border-radius: var(--radius-lg);
+            padding: 24px 28px;
+            margin-bottom: 36px;
+        }
+        .disclosure-box p {
+            color: var(--text-secondary);
+            margin-bottom: 0;
+        }
+        .disclosure-box strong {
+            color: var(--accent);
+        }
+
+        /* ---- Partner Grid ---- */
+        .partner-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+        .partner-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+        }
+        .partner-card h4 {
+            margin-bottom: 8px;
+            color: var(--accent);
+        }
+        .partner-card p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* ---- Site Footer ---- */
+        .site-footer {
+            background: var(--bg-white);
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            margin-top: 20px;
+        }
+        .site-footer .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .footer-left {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .footer-right {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            max-width: 400px;
+            text-align: right;
+        }
+
+        /* ---- Last Updated ---- */
+        .last-updated {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 640px) {
+            .site-header .container { flex-direction: column; gap: 12px; }
+            .site-nav a { margin-left: 12px; }
+            .site-footer .container { flex-direction: column; text-align: center; }
+            .footer-right { text-align: center; }
+        }
+    </style>
 </head>
 <body>
-  <header class="site-header">
+
+    <!-- ===================== -->
+    <!-- Site Header           -->
+    <!-- ===================== -->
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="site-logo">Home <span>Kitchen</span> UK</a>
+            <nav class="site-nav">
+                <a href="/">Home</a>
+                <a href="/about/">About</a>
+                <a href="/disclosure/">Disclosure</a>
+                <a href="/privacy/">Privacy</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===================== -->
+    <!-- Breadcrumbs           -->
+    <!-- ===================== -->
     <div class="container">
-      <a href="/" class="logo">Home &amp; Kitchen <span class="logo-uk">UK</span></a>
-      <nav class="main-nav">
-        <a href="/">Home</a>
-        <a href="/kitchen/">Kitchen</a>
-        <a href="/home/">Home</a>
-        <a href="/about/">About</a>
-      </nav>
+        <div class="breadcrumbs">
+            <a href="/">Home</a><span class="sep">/</span> Affiliate Disclosure
+        </div>
     </div>
-  </header>
 
-  <main>
-    <article class="review-article">
-      <div class="container">
-        <header class="article-header">
-          <div class="breadcrumbs"><a href="/">Home</a> &rsaquo; Affiliate Disclosure</div>
-          <h1>Affiliate Disclosure</h1>
-        </header>
-
-        <section class="article-section">
-          <h2>How We Earn Money</h2>
-          <p>Home &amp; Kitchen UK participates in affiliate marketing programmes. This means that when you click on some of the links on our site and make a purchase, we may earn a small commission — at no additional cost to you.</p>
-        </section>
-
-        <section class="article-section">
-          <h2>Our Programmes</h2>
-          <p>We are a participant in the <strong>Amazon Services LLC Associates Program</strong>, an affiliate advertising programme designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.co.uk.</p>
-          <p>As an Amazon Associate, we earn from qualifying purchases.</p>
-        </section>
-
-        <section class="article-section">
-          <h2>Our Promise</h2>
-          <p>Affiliate commissions do not influence our reviews, rankings, or recommendations. We:</p>
-          <ul>
-            <li>Never accept payment for product coverage or favourable reviews</li>
-            <li>Rank products based on testing and merit, not commission rates</li>
-            <li>Clearly label affiliate links where practical</li>
-            <li>Recommend products we would genuinely recommend to friends and family</li>
-          </ul>
-        </section>
-
-        <section class="article-section">
-          <h2>Questions?</h2>
-          <p>If you have any questions about our affiliate relationships or how we make money, please contact us at hello@homeandkitchenuk.co.uk.</p>
-          <p><em>Last updated: May 2026</em></p>
-        </section>
-      </div>
-    </article>
-  </main>
-
-  <footer class="site-footer">
+    <!-- ===================== -->
+    <!-- Page Header           -->
+    <!-- ===================== -->
     <div class="container">
-      <div class="footer-bottom">
-        <p class="copyright">&copy; 2026 Home &amp; Kitchen UK. All rights reserved.</p>
-      </div>
+        <div class="page-header">
+            <span class="category-label">Legal</span>
+            <h1>Affiliate Disclosure</h1>
+            <p class="page-subtitle">How we earn money, which programmes we participate in, and what that means for you as a reader.</p>
+        </div>
     </div>
-  </footer>
+
+    <!-- ===================== -->
+    <!-- Content               -->
+    <!-- ===================== -->
+    <div class="container">
+        <div class="content">
+
+            <div class="disclosure-box">
+                <p><strong>Affiliate Disclosure:</strong> Home Kitchen UK is a participant in various affiliate advertising programmes. This means we earn commissions when you click on our links and make qualifying purchases. This comes at no additional cost to you.</p>
+            </div>
+
+            <h2>How We Make Money</h2>
+            <p>Home Kitchen UK is a free resource for UK consumers looking for honest, thorough reviews of home and kitchen products. To keep this site running and our content free, we participate in affiliate programmes. When you click on a product link on our site and make a purchase through a participating retailer, we may earn a small commission.</p>
+            <p><strong>This does not affect the price you pay.</strong> The commission is paid by the retailer, not by you. In fact, we often negotiate or find the best available prices for the products we recommend.</p>
+
+            <h2>Affiliate Programmes We Use</h2>
+            <p>We currently participate in the following affiliate programmes:</p>
+
+            <div class="partner-grid">
+                <div class="partner-card">
+                    <h4>eBay Partner Network</h4>
+                    <p>We earn commissions on qualifying purchases made through our eBay affiliate links. This includes new and refurbished products from verified eBay sellers across the UK.</p>
+                </div>
+                <div class="partner-card">
+                    <h4>Skimlinks</h4>
+                    <p>Skimlinks automatically converts standard retailer links on our site into affiliate links. This programme gives us access to commissions from hundreds of UK and international retailers including Argos, Currys, John Lewis, and many more.</p>
+                </div>
+                <div class="partner-card">
+                    <h4>Other Affiliate Networks</h4>
+                    <p>From time to time, we may also participate in direct affiliate programmes with individual retailers. Any such partnerships are disclosed within the relevant product pages.</p>
+                </div>
+            </div>
+
+            <h2>How Affiliate Links Work</h2>
+            <p>When you click on a product link on our site, you may be redirected to the retailer's website via an affiliate tracking link. This link contains a unique identifier that tells the retailer you came from Home Kitchen UK. If you then make a purchase, the retailer pays us a small commission as a thank-you for the referral.</p>
+            <p>These tracking links are standard across the affiliate marketing industry and are used solely to attribute the sale to our site. They <strong>do not</strong> collect personal information about you, nor do they affect the price you pay for any product.</p>
+
+            <h2>Our Editorial Independence</h2>
+            <p>We want to be completely transparent: <strong>affiliate commissions do not influence our reviews, ratings, or rankings.</strong></p>
+            <ul>
+                <li>We do <strong>not</strong> accept free products from manufacturers in exchange for reviews.</li>
+                <li>We do <strong>not</strong> accept payment for favourable coverage or higher rankings.</li>
+                <li>We do <strong>not</strong> allow affiliate partners to review or approve our content before publication.</li>
+                <li>Our product rankings are based on our analysis of verified customer reviews, specifications, and value for money.</li>
+            </ul>
+            <p>Our only incentive is to recommend the best products for UK consumers, because that's what keeps readers coming back. A recommendation we don't stand behind would ultimately hurt our reputation far more than any single commission is worth.</p>
+
+            <h2>FTC &amp; ASA Compliance</h2>
+            <p>We comply with the advertising and endorsement guidelines set out by:</p>
+            <ul>
+                <li><strong>the UK Advertising Standards Authority (ASA)</strong> — we clearly disclose our commercial relationships so readers can make informed decisions.</li>
+                <li><strong>the UK Competition and Markets Authority (CMA)</strong> — we ensure all affiliate links and commercial content are clearly labelled.</li>
+                <li><strong>the US Federal Trade Commission (FTC)</strong> — as an internationally accessible site, we also follow FTC guidelines on affiliate disclosure.</li>
+            </ul>
+
+            <h2>Prices &amp; Availability</h2>
+            <p>Prices shown on our site are correct at the time of writing but may change without notice. We make every effort to keep pricing information up to date, but we recommend checking the retailer's website for the most current pricing and availability before making a purchase.</p>
+
+            <h2>Questions?</h2>
+            <p>If you have any questions about our affiliate relationships, how we select products, or our editorial process, please don't hesitate to get in touch:</p>
+            <p><strong>Email:</strong> <a href="mailto:hermeswillmakesmoney@gmail.com">hermeswillmakesmoney@gmail.com</a></p>
+
+            <p class="last-updated">Last updated: May 2026</p>
+
+        </div>
+    </div>
+
+    <!-- ===================== -->
+    <!-- Footer                -->
+    <!-- ===================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-left">
+                &copy; 2026 Home Kitchen UK. All rights reserved.
+            </div>
+            <div class="footer-right">
+                <strong>Affiliate Disclosure:</strong> We earn commissions from qualifying purchases. Prices are correct at time of writing but may change.
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

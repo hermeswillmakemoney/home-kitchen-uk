@@ -1,72 +1,442 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — Home & Kitchen UK</title>
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/review.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Home Kitchen UK</title>
+    <meta name="description" content="Home Kitchen UK privacy policy. We do not collect personal data, use tracking cookies, or store identifiable information. GDPR compliant.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://homekitchenuk.netlify.app/privacy/">
+
+    <style>
+        /* ============================================
+           OPEN DESIGN: Warm Editorial Style
+           Serif headings, warm off-white, terracotta
+           ============================================ */
+
+        :root {
+            --bg-primary: #FAF7F2;
+            --bg-white: #FFFFFF;
+            --bg-warm: #F5F0EA;
+            --accent: #C0512F;
+            --accent-hover: #A84427;
+            --accent-light: #F9EDE7;
+            --accent-border: #E8D5CC;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --text-muted: #8A8A7A;
+            --border: #E8E4DE;
+            --border-light: #F0ECE6;
+            --green: #2D7D46;
+            --green-bg: #EDF7F0;
+            --gold: #C5981B;
+            --gold-bg: #FFF8E8;
+            --star: #E8A620;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --radius: 8px;
+            --radius-lg: 12px;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Palatino', serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: var(--text-primary);
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+        }
+
+        h1 { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; }
+        h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; }
+        h3 { font-size: 1.35rem; font-weight: 700; }
+        h4 { font-size: 1.15rem; font-weight: 600; }
+
+        p {
+            margin-bottom: 1em;
+            color: var(--text-secondary);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-decoration-color: rgba(192,81,47,0.3);
+            text-underline-offset: 2px;
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            color: var(--accent-hover);
+            text-decoration-color: var(--accent);
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---- Site Header ---- */
+        .site-header {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .site-header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .site-logo {
+            font-family: 'Georgia', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .site-logo span { color: var(--accent); }
+        .site-nav { font-size: 0.9rem; }
+        .site-nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 500;
+        }
+        .site-nav a:hover { color: var(--accent); }
+
+        /* ---- Breadcrumbs ---- */
+        .breadcrumbs {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            padding: 16px 0;
+            color: var(--text-muted);
+        }
+        .breadcrumbs a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+        .breadcrumbs a:hover { color: var(--accent); }
+        .breadcrumbs .sep { margin: 0 6px; opacity: 0.5; }
+
+        /* ---- Page Header ---- */
+        .page-header {
+            padding: 16px 0 32px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 40px;
+        }
+        .category-label {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            background: var(--accent-light);
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+        .page-header h1 {
+            margin-bottom: 12px;
+        }
+        .page-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 640px;
+        }
+
+        /* ---- Content ---- */
+        .content {
+            padding-bottom: 60px;
+        }
+        .content h2 {
+            margin-top: 48px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent-border);
+        }
+        .content h3 {
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+        .content p {
+            margin-bottom: 1.2em;
+        }
+        .content ul, .content ol {
+            margin: 0 0 1.2em 1.5em;
+            color: var(--text-secondary);
+        }
+        .content li {
+            margin-bottom: 0.5em;
+        }
+        .content strong {
+            color: var(--text-primary);
+        }
+
+        /* ---- Privacy Badge ---- */
+        .privacy-badge {
+            background: var(--green-bg);
+            border: 1px solid color-mix(in srgb, var(--green) 30%, transparent);
+            border-radius: var(--radius-lg);
+            padding: 24px 28px;
+            margin-bottom: 36px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+        .privacy-badge svg {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            color: var(--green);
+        }
+        .privacy-badge p {
+            margin-bottom: 0;
+        }
+        .privacy-badge strong {
+            color: var(--green);
+        }
+
+        /* ---- Info Box ---- */
+        .info-box {
+            background: var(--bg-warm);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+        .info-box p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        /* ---- Rights List ---- */
+        .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+        .right-item {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+        }
+        .right-item h4 {
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        .right-item p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        /* ---- Site Footer ---- */
+        .site-footer {
+            background: var(--bg-white);
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            margin-top: 20px;
+        }
+        .site-footer .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .footer-left {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .footer-right {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            max-width: 400px;
+            text-align: right;
+        }
+
+        /* ---- Last Updated ---- */
+        .last-updated {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 640px) {
+            .site-header .container { flex-direction: column; gap: 12px; }
+            .site-nav a { margin-left: 12px; }
+            .site-footer .container { flex-direction: column; text-align: center; }
+            .footer-right { text-align: center; }
+        }
+    </style>
 </head>
 <body>
-  <header class="site-header">
+
+    <!-- ===================== -->
+    <!-- Site Header           -->
+    <!-- ===================== -->
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="site-logo">Home <span>Kitchen</span> UK</a>
+            <nav class="site-nav">
+                <a href="/">Home</a>
+                <a href="/about/">About</a>
+                <a href="/disclosure/">Disclosure</a>
+                <a href="/privacy/">Privacy</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===================== -->
+    <!-- Breadcrumbs           -->
+    <!-- ===================== -->
     <div class="container">
-      <a href="/" class="logo">Home &amp; Kitchen <span class="logo-uk">UK</span></a>
-      <nav class="main-nav">
-        <a href="/">Home</a>
-        <a href="/kitchen/">Kitchen</a>
-        <a href="/home/">Home</a>
-        <a href="/about/">About</a>
-      </nav>
+        <div class="breadcrumbs">
+            <a href="/">Home</a><span class="sep">/</span> Privacy Policy
+        </div>
     </div>
-  </header>
 
-  <main>
-    <article class="review-article">
-      <div class="container">
-        <header class="article-header">
-          <div class="breadcrumbs"><a href="/">Home</a> &rsaquo; Privacy Policy</div>
-          <h1>Privacy Policy</h1>
-          <p class="article-subtitle">How we handle your data. Simple and transparent.</p>
-        </header>
-
-        <section class="article-section">
-          <h2>Who We Are</h2>
-          <p>Home &amp; Kitchen UK is a review website operated from the United Kingdom.</p>
-        </section>
-
-        <section class="article-section">
-          <h2>What Data We Collect</h2>
-          <p>We use <strong>Plausible Analytics</strong>, a privacy-friendly analytics tool that does not use cookies and does not collect personal data. It tells us which pages are popular and how people find our site — nothing more.</p>
-          <p>We do not:</p>
-          <ul>
-            <li>Use tracking cookies</li>
-            <li>Collect email addresses (unless you contact us)</li>
-            <li>Create user accounts</li>
-            <li>Sell or share data with third parties</li>
-          </ul>
-        </section>
-
-        <section class="article-section">
-          <h2>Affiliate Links</h2>
-          <p>When you click an affiliate link to Amazon or another retailer, the retailer may place a cookie on your device to track the referral. This is standard affiliate marketing practice. These cookies are set by the retailer, not by us.</p>
-        </section>
-
-        <section class="article-section">
-          <h2>Contact</h2>
-          <p>For privacy-related questions: hello@homeandkitchenuk.co.uk</p>
-          <p><em>Last updated: May 2026</em></p>
-        </section>
-      </div>
-    </article>
-  </main>
-
-  <footer class="site-footer">
+    <!-- ===================== -->
+    <!-- Page Header           -->
+    <!-- ===================== -->
     <div class="container">
-      <div class="footer-bottom">
-        <p class="copyright">&copy; 2026 Home &amp; Kitchen UK. All rights reserved.</p>
-      </div>
+        <div class="page-header">
+            <span class="category-label">Legal</span>
+            <h1>Privacy Policy</h1>
+            <p class="page-subtitle">Your privacy matters to us. Here's exactly what data we collect (spoiler: none), what cookies we use (none), and your rights under GDPR.</p>
+        </div>
     </div>
-  </footer>
+
+    <!-- ===================== -->
+    <!-- Content               -->
+    <!-- ===================== -->
+    <div class="container">
+        <div class="content">
+
+            <div class="privacy-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="m9 12 2 2 4-4"/>
+                </svg>
+                <div>
+                    <p><strong>Our commitment:</strong> Home Kitchen UK does not collect, store, or process any personal data from visitors. We do not use tracking cookies, analytics scripts, or fingerprinting technologies. You can browse our site with complete privacy.</p>
+                </div>
+            </div>
+
+            <h2>1. Information We Collect</h2>
+            <p><strong>We do not collect any personal information from visitors to this website.</strong> Specifically, we do not:</p>
+            <ul>
+                <li>Collect names, email addresses, or contact details</li>
+                <li>Use analytics tools (Google Analytics, Plausible, etc.) to track your behaviour</li>
+                <li>Set tracking cookies or use any form of browser fingerprinting</li>
+                <li>Store IP addresses or device information</li>
+                <li>Use social media tracking pixels (Facebook Pixel, Twitter Pixel, etc.)</li>
+                <li>Employ retargeting or remarketing technologies</li>
+            </ul>
+            <p>Our website is a static site served through Netlify. Your web browser and Netlify's servers may log standard HTTP requests (including your IP address) for operational purposes such as DDoS protection and uptime monitoring, but we have no access to or control over these logs.</p>
+
+            <h2>2. Cookies</h2>
+            <p><strong>This website does not set any cookies.</strong> You will not receive any cookie consent banners from us because there are no cookies to consent to.</p>
+            <p>When you click on an affiliate link and are redirected to a retailer's website (such as eBay, Argos, or Currys), that retailer may set its own cookies on your device. These cookies are governed by the retailer's own privacy policy, not ours. We have no control over and accept no responsibility for the cookies set by third-party websites.</p>
+
+            <div class="info-box">
+                <p><strong>Note on affiliate links:</strong> Our affiliate links (via eBay Partner Network, Skimlinks, and other programmes) may contain tracking parameters that allow our affiliate partners to attribute a sale to our referral. These parameters are part of the URL and are transmitted only to the retailer when you click the link. They do not install cookies or collect data from our site.</p>
+            </div>
+
+            <h2>3. Affiliate Links &amp; Third-Party Sites</h2>
+            <p>As disclosed in our <a href="/disclosure/">Affiliate Disclosure</a>, we participate in affiliate programmes. When you click on a product link on our site:</p>
+            <ul>
+                <li>You are redirected to the retailer's website via an affiliate tracking link.</li>
+                <li>The affiliate network (e.g., eBay Partner Network, Skimlinks) may set a cookie on your device to track the referral for commission attribution purposes.</li>
+                <li>This cookie is set by the third-party network, not by Home Kitchen UK.</li>
+                <li>The cookie typically expires within 30–90 days, depending on the programme.</li>
+            </ul>
+            <p>We recommend reviewing the privacy policies of the retailers and affiliate networks you interact with for full details on their data practices.</p>
+
+            <h2>4. GDPR Compliance</h2>
+            <p>Under the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018, because we do not collect or process any personal data, most data subject rights are not applicable to our site. However, we respect your rights and are transparent about our practices.</p>
+
+            <div class="rights-grid">
+                <div class="right-item">
+                    <h4>Right to Access</h4>
+                    <p>Since we do not collect any personal data, there is no personal data to provide access to. If you believe we hold data about you, contact us and we will investigate.</p>
+                </div>
+                <div class="right-item">
+                    <h4>Right to Rectification</h4>
+                    <p>We do not store personal data, so there is no data to rectify.</p>
+                </div>
+                <div class="right-item">
+                    <h4>Right to Erasure ("Right to be Forgotten")</h4>
+                    <p>We do not store personal data, so there is no data to erase. Any server logs are managed by our hosting provider (Netlify) and are outside our control.</p>
+                </div>
+                <div class="right-item">
+                    <h4>Right to Restrict Processing</h4>
+                    <p>We do not process personal data, so this right is not applicable.</p>
+                </div>
+                <div class="right-item">
+                    <h4>Right to Data Portability</h4>
+                    <p>As we do not collect personal data, there is no data to port.</p>
+                </div>
+                <div class="right-item">
+                    <h4>Right to Object</h4>
+                    <p>We do not process personal data for direct marketing or any other purpose, so there is nothing to object to.</p>
+                </div>
+            </div>
+
+            <h2>5. Children's Privacy</h2>
+            <p>Our website is a general-audience site. We do not knowingly collect personal information from children under the age of 16. Since we do not collect any personal data from any visitors, this is inherently satisfied.</p>
+
+            <h2>6. External Links</h2>
+            <p>Our site contains links to external websites operated by third parties (retailers, manufacturers, and other sites). We are not responsible for the privacy practices or content of these external sites. We encourage you to read the privacy policy of every website you visit.</p>
+
+            <h2>7. Changes to This Policy</h2>
+            <p>We may update this privacy policy from time to time to reflect changes in our practices or for legal reasons. Any updates will be posted on this page with a revised "Last updated" date. We encourage you to review this page periodically.</p>
+
+            <h2>8. Contact Us</h2>
+            <p>If you have any questions about this privacy policy or our data practices, please contact us:</p>
+            <p><strong>Email:</strong> <a href="mailto:hermeswillmakesmoney@gmail.com">hermeswillmakesmoney@gmail.com</a></p>
+            <p>If you have a complaint about our handling of your personal data, you have the right to lodge a complaint with the <strong>Information Commissioner's Office (ICO)</strong>, the UK's data protection authority: <a href="https://ico.org.uk" rel="noopener">ico.org.uk</a>.</p>
+
+            <p class="last-updated">Last updated: May 2026</p>
+
+        </div>
+    </div>
+
+    <!-- ===================== -->
+    <!-- Footer                -->
+    <!-- ===================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-left">
+                &copy; 2026 Home Kitchen UK. All rights reserved.
+            </div>
+            <div class="footer-right">
+                <strong>Affiliate Disclosure:</strong> We earn commissions from qualifying purchases. Prices are correct at time of writing but may change.
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
