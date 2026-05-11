@@ -1,0 +1,112 @@
+{
+  "category": "cordless-vacuums",
+  "category_display": "Cordless Vacuums",
+  "currency": "GBP",
+  "products": [
+    {
+      "model": "Dyson V15 Detect Absolute Cordless Vacuum Cleaner",
+      "brand": "Dyson",
+      "price_gbp": 449.99,
+      "rating": 4.7,
+      "reviews_count": 1856,
+      "specs": {
+        "runtime": "Up to 60 minutes",
+        "dustbin_capacity": "0.76L",
+        "suction_power": "240AW",
+        "features": "Laser Slim Fluffy head, piezo sensor for particle count, LCD screen, whole-machine HEPA filtration",
+        "charge_time": "4.5 hours",
+        "weight": "3.1kg"
+      },
+      "retailer_urls": {
+        "argos": "https://www.argos.co.uk/product/9019288.do",
+        "currys": "https://www.currys.co.uk/products/dyson-v15-detect-absolute-cordless-vacuum-10236982.html",
+        "john_lewis": "https://www.johnlewis.com/dyson-v15-detect-absolute/p5821890",
+        "ebay_uk": "https://www.ebay.co.uk/sch/i.html?_nkw=Dyson+V15+Detect+Absolute+Cordless+Vacuum"
+      }
+    },
+    {
+      "model": "Dyson V8 Absolute Pet Cordless Vacuum Cleaner",
+      "brand": "Dyson",
+      "price_gbp": 250.0,
+      "rating": 4.6,
+      "reviews_count": 1405,
+      "specs": {
+        "runtime": "Up to 40 minutes",
+        "dustbin_capacity": "0.54L",
+        "suction_power": "115AW",
+        "features": "Tangle-free turbine tool, whole-machine filtration, 2-tier radial cyclones",
+        "charge_time": "5 hours",
+        "weight": "2.61kg"
+      },
+      "retailer_urls": {
+        "argos": "https://www.argos.co.uk/product/3261341.do",
+        "currys": "https://www.currys.co.uk/products/dyson-v8-absolute-pet-cordless-vacuum-10210293.html",
+        "john_lewis": "https://www.johnlewis.com/dyson-v8-absolute-pet/p5053182",
+        "ebay_uk": "https://www.ebay.co.uk/sch/i.html?_nkw=Dyson+V8+Absolute+Pet+Cordless+Vacuum"
+      }
+    },
+    {
+      "model": "Shark Anti Hair Wrap & Flexology Cordless Vacuum Cleaner",
+      "brand": "Shark",
+      "price_gbp": 169.99,
+      "rating": 4.6,
+      "reviews_count": 3362,
+      "specs": {
+        "runtime": "Up to 40 minutes",
+        "dustbin_capacity": "0.64L",
+        "suction_power": "Not specified",
+        "features": "Anti Hair Wrap technology, Flexology bendable wand, LED headlights, pet multi-tool",
+        "charge_time": "3.5 hours",
+        "weight": "3.3kg"
+      },
+      "retailer_urls": {
+        "argos": "https://www.argos.co.uk/product/5795743.do",
+        "currys": "https://www.currys.co.uk/products/shark-anti-hair-wrap-flexology-cordless-vacuum-10239458.html",
+        "john_lewis": "https://www.johnlewis.com/shark-anti-hair-wrap-flexology-cordless-vacuum/p6054817",
+        "ebay_uk": "https://www.ebay.co.uk/sch/i.html?_nkw=Shark+Anti+Hair+Wrap+Flexology+Cordless+Vacuum"
+      }
+    },
+    {
+      "model": "Henry Hetty Quick Cordless Vacuum Cleaner",
+      "brand": "Henry",
+      "price_gbp": 200.0,
+      "rating": 4.7,
+      "reviews_count": 207,
+      "specs": {
+        "runtime": "Up to 30 minutes",
+        "dustbin_capacity": "0.7L",
+        "suction_power": "Not specified",
+        "features": "TriTex floor head, Auto Brush Bar, lightweight, washable filters, LED power gauge",
+        "charge_time": "4 hours",
+        "weight": "2.5kg"
+      },
+      "retailer_urls": {
+        "argos": "https://www.argos.co.uk/product/1951392.do",
+        "currys": "https://www.currys.co.uk/products/henry-hetty-quick-cordless-vacuum-10241892.html",
+        "john_lewis": "https://www.johnlewis.com/henry-hetty-quick-cordless-vacuum/p6089215",
+        "ebay_uk": "https://www.ebay.co.uk/sch/i.html?_nkw=Henry+Hetty+Quick+Cordless+Vacuum"
+      }
+    },
+    {
+      "model": "Shark PowerPro Cordless Vacuum Cleaner",
+      "brand": "Shark",
+      "price_gbp": 179.99,
+      "rating": 4.5,
+      "reviews_count": 597,
+      "specs": {
+        "runtime": "Up to 60 minutes",
+        "dustbin_capacity": "0.64L",
+        "suction_power": "Not specified",
+        "features": "PowerFins technology, Clean Sense IQ, Anti Hair Wrap, pet multi-tool, LED headlights",
+        "charge_time": "4 hours",
+        "weight": "3.1kg"
+      },
+      "retailer_urls": {
+        "argos": "https://www.argos.co.uk/product/7181692.do",
+        "currys": "https://www.currys.co.uk/products/shark-powerpro-cordless-vacuum-10261043.html",
+        "john_lewis": "https://www.johnlewis.com/shark-powerpro-cordless-vacuum/p6345891",
+        "ebay_uk": "https://www.ebay.co.uk/sch/i.html?_nkw=Shark+PowerPro+Cordless+Vacuum"
+      }
+    }
+  ]
+}

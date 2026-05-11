@@ -1,0 +1,112 @@
+{
+  "category": "coffee-machines",
+  "category_display": "Coffee Machines",
+  "currency": "GBP",
+  "products": [
+    {
+      "model": "De'Longhi Dinamica Plus ECAM380.75.B Bean-to-Cup Coffee Machine",
+      "brand": "De'Longhi",
+      "price_gbp": 449.99,
+      "rating": 4.7,
+      "reviews_count": 856,
+      "specs": {
+        "type": "Bean-to-cup automatic",
+        "water_tank": "1.8L",
+        "bean_hopper": "300g",
+        "pump_pressure": "15 bar",
+        "features": "LatteCrema system, touch display, 18 one-touch recipes, auto-clean",
+        "milk_system": "Automatic LatteCrema carafe"
+      },
+      "retailer_urls": {
+        "argos": "https://www.argos.co.uk/product/8124951.do",
+        "currys": "https://www.currys.co.uk/products/delonghi-dinamica-plus-ecam380-75-b-bean-to-cup-10251890.html",
+        "john_lewis": "https://www.johnlewis.com/delonghi-dinamica-plus-ecam380-75-b/p6109825",
+        "ebay_uk": "https://www.ebay.co.uk/sch/i.html?_nkw=DeLonghi+Dinamica+Plus+ECAM380.75.B+Coffee+Machine"
+      }
+    },
+    {
+      "model": "De'Longhi Magnifica S ECAM22.110.B Bean-to-Cup Coffee Machine",
+      "brand": "De'Longhi",
+      "price_gbp": 249.99,
+      "rating": 4.6,
+      "reviews_count": 1247,
+      "specs": {
+        "type": "Bean-to-cup automatic",
+        "water_tank": "1.8L",
+        "bean_hopper": "250g",
+        "pump_pressure": "15 bar",
+        "features": "Manual cappuccino system, adjustable grinder, cup warmer, energy saving",
+        "milk_system": "Manual steam wand"
+      },
+      "retailer_urls": {
+        "argos": "https://www.argos.co.uk/product/1951392.do",
+        "currys": "https://www.currys.co.uk/products/delonghi-magnifica-s-ecam22-110-b-bean-to-cup-10208418.html",
+        "john_lewis": "https://www.johnlewis.com/delonghi-magnifica-s-ecam22-110-b/p3709212",
+        "ebay_uk": "https://www.ebay.co.uk/sch/i.html?_nkw=DeLonghi+Magnifica+S+ECAM22.110.B+Coffee+Machine"
+      }
+    },
+    {
+      "model": "Sage the Barista Express SES875 Coffee Machine",
+      "brand": "Sage",
+      "price_gbp": 499.95,
+      "rating": 4.8,
+      "reviews_count": 2103,
+      "specs": {
+        "type": "Semi-automatic espresso with integrated grinder",
+        "water_tank": "2L",
+        "bean_hopper": "250g",
+        "pump_pressure": "15 bar Italian pump",
+        "features": "Integrated conical burr grinder, digital temperature control (PID), pre-infusion, steam wand",
+        "milk_system": "360-degree steam wand"
+      },
+      "retailer_urls": {
+        "argos": "https://www.argos.co.uk/product/5052871.do",
+        "currys": "https://www.currys.co.uk/products/sage-the-barista-express-ses875-coffee-machine-10206644.html",
+        "john_lewis": "https://www.johnlewis.com/sage-the-barista-express-ses875/p2356009",
+        "ebay_uk": "https://www.ebay.co.uk/sch/i.html?_nkw=Sage+Barista+Express+SES875+Coffee+Machine"
+      }
+    },
+    {
+      "model": "Nespresso Vertuo Pop+ ENV135 Coffee Machine",
+      "brand": "Nespresso",
+      "price_gbp": 69.99,
+      "rating": 4.5,
+      "reviews_count": 678,
+      "specs": {
+        "type": "Capsule/pod coffee machine",
+        "water_tank": "0.6L",
+        "capsule_container": "Up to 10 used capsules",
+        "pump_pressure": "Centrifusion extraction",
+        "features": "5 cup sizes (40ml to 414ml), 30-second heat up, auto shut-off, compact design",
+        "milk_system": "Aeroccino frother (sold separately)"
+      },
+      "retailer_urls": {
+        "argos": "https://www.argos.co.uk/product/6172895.do",
+        "currys": "https://www.currys.co.uk/products/nespresso-vertuo-pop-env135-coffee-machine-10257684.html",
+        "john_lewis": "https://www.johnlewis.com/nespresso-vertuo-pop-env135/p6279574",
+        "ebay_uk": "https://www.ebay.co.uk/sch/i.html?_nkw=Nespresso+Vertuo+Pop+ENV135+Coffee+Machine"
+      }
+    },
+    {
+      "model": "Melitta Caffeo Solo E950-101 Bean-to-Cup Coffee Machine",
+      "brand": "Melitta",
+      "price_gbp": 229.99,
+      "rating": 4.4,
+      "reviews_count": 423,
+      "specs": {
+        "type": "Bean-to-cup automatic",
+        "water_tank": "1.2L",
+        "bean_hopper": "125g",
+        "pump_pressure": "15 bar",
+        "features": "One-touch operation, adjustable coffee strength & temperature, pre-brewing, removable brew group",
+        "milk_system": "Manual steam wand"
+      },
+      "retailer_urls": {
+        "argos": "https://www.argos.co.uk/product/5143761.do",
+        "currys": "https://www.currys.co.uk/products/melitta-caffeo-solo-e950-101-bean-to-cup-10210532.html",
+        "john_lewis": "https://www.johnlewis.com/melitta-caffeo-solo-e950-101/p5001268",
+        "ebay_uk": "https://www.ebay.co.uk/sch/i.html?_nkw=Melitta+Caffeo+Solo+E950+Coffee+Machine"
+      }
+    }
+  ]
+}

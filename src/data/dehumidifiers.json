@@ -1,0 +1,112 @@
+{
+  "category": "dehumidifiers",
+  "category_display": "Dehumidifiers",
+  "currency": "GBP",
+  "products": [
+    {
+      "model": "Meaco Arete One 12L Dehumidifier & Air Purifier",
+      "brand": "Meaco",
+      "price_gbp": 180.0,
+      "rating": 4.9,
+      "reviews_count": 1639,
+      "specs": {
+        "extraction_rate": "12L per day",
+        "coverage": "Up to 35m²",
+        "water_tank": "2.5L",
+        "power_consumption": "186W",
+        "noise_level": "41dB",
+        "features": "Laundry mode, humidistat, sleep timer, air purifier with HEPA filter, child lock"
+      },
+      "retailer_urls": {
+        "argos": "https://www.argos.co.uk/product/2910349.do",
+        "currys": "https://www.currys.co.uk/products/meaco-arete-one-12l-dehumidifier-10200319.html",
+        "john_lewis": "https://www.johnlewis.com/meaco-arete-one-12l-dehumidifier/p5040192",
+        "ebay_uk": "https://www.ebay.co.uk/sch/i.html?_nkw=Meaco+Arete+One+12L+Dehumidifier"
+      }
+    },
+    {
+      "model": "Meaco Dry Arete One 25L Dehumidifier",
+      "brand": "Meaco",
+      "price_gbp": 300.0,
+      "rating": 4.9,
+      "reviews_count": 663,
+      "specs": {
+        "extraction_rate": "25L per day",
+        "coverage": "Up to 75m²",
+        "water_tank": "4L",
+        "power_consumption": "374W",
+        "noise_level": "46dB",
+        "features": "Laundry mode, humidistat, sleep timer, child lock, continuous drainage option"
+      },
+      "retailer_urls": {
+        "argos": "https://www.argos.co.uk/product/8809492.do",
+        "currys": "https://www.currys.co.uk/products/meaco-dry-arete-one-25l-dehumidifier-10273928.html",
+        "john_lewis": "https://www.johnlewis.com/meaco-dry-arete-one-25l-dehumidifier/p6521940",
+        "ebay_uk": "https://www.ebay.co.uk/sch/i.html?_nkw=Meaco+Arete+One+25L+Dehumidifier"
+      }
+    },
+    {
+      "model": "Princess Smart 20 Litre Dehumidifier",
+      "brand": "Princess",
+      "price_gbp": 160.0,
+      "rating": 4.3,
+      "reviews_count": 65,
+      "specs": {
+        "extraction_rate": "20L per day",
+        "coverage": "Up to 60m²",
+        "water_tank": "3L",
+        "power_consumption": "300W",
+        "noise_level": "44dB",
+        "features": "WiFi/app control, laundry mode, auto shut-off, timer, child lock"
+      },
+      "retailer_urls": {
+        "argos": "https://www.argos.co.uk/product/3206090.do",
+        "currys": "https://www.currys.co.uk/products/princess-smart-20-litre-dehumidifier-10212617.html",
+        "john_lewis": "https://www.johnlewis.com/princess-smart-20-litre-dehumidifier/p5072183",
+        "ebay_uk": "https://www.ebay.co.uk/sch/i.html?_nkw=Princess+Smart+20+Litre+Dehumidifier"
+      }
+    },
+    {
+      "model": "Bush DH-CSK03 3L Dehumidifier & Air Purifier",
+      "brand": "Bush",
+      "price_gbp": 70.0,
+      "rating": 4.4,
+      "reviews_count": 250,
+      "specs": {
+        "extraction_rate": "3L per day",
+        "coverage": "Up to 15m² (small rooms)",
+        "water_tank": "0.8L",
+        "power_consumption": "40W (Peltier/thermoelectric)",
+        "noise_level": "35dB",
+        "features": "Air purifier, auto shut-off, compact/portable, LED indicator"
+      },
+      "retailer_urls": {
+        "argos": "https://www.argos.co.uk/product/7295409.do",
+        "currys": "https://www.currys.co.uk/products/bush-dh-csk03-3l-dehumidifier-air-purifier-10258433.html",
+        "john_lewis": "https://www.johnlewis.com/bush-dh-csk03-3l-dehumidifier-air-purifier/p6289517",
+        "ebay_uk": "https://www.ebay.co.uk/sch/i.html?_nkw=Bush+DH-CSK03+3L+Dehumidifier+Air+Purifier"
+      }
+    },
+    {
+      "model": "Ecostrure PureDry 12L Compressor Dehumidifier",
+      "brand": "Ecostrure",
+      "price_gbp": 129.99,
+      "rating": 4.3,
+      "reviews_count": 487,
+      "specs": {
+        "extraction_rate": "12L per day",
+        "coverage": "Up to 40m²",
+        "water_tank": "2L",
+        "power_consumption": "190W",
+        "noise_level": "42dB",
+        "features": "Digital humidistat, laundry mode, auto defrost, timer, auto shut-off, child lock"
+      },
+      "retailer_urls": {
+        "argos": "https://www.argos.co.uk/product/5095631.do",
+        "currys": "https://www.currys.co.uk/products/ecostrure-puredry-12l-compressor-dehumidifier-10218956.html",
+        "john_lewis": "https://www.johnlewis.com/ecostrure-puredry-12l-dehumidifier/p5204671",
+        "ebay_uk": "https://www.ebay.co.uk/sch/i.html?_nkw=Ecostrure+PureDry+12L+Dehumidifier"
+      }
+    }
+  ]
+}

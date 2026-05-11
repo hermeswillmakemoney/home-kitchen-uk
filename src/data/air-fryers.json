@@ -1,0 +1,108 @@
+{
+  "category": "air-fryers",
+  "category_display": "Air Fryers",
+  "currency": "GBP",
+  "products": [
+    {
+      "model": "Tower T17088 Xpress Pro 11L Dual Basket Air Fryer",
+      "brand": "Tower",
+      "price_gbp": 89.99,
+      "rating": 4.7,
+      "reviews_count": 1547,
+      "specs": {
+        "capacity": "11L total (5.5L + 5.5L dual baskets)",
+        "power": "2400W",
+        "functions": "Air fry, bake, roast, grill, reheat",
+        "dishwasher_safe_parts": true,
+        "dimensions": "38.2 x 31.4 x 32.1 cm"
+      },
+      "retailer_urls": {
+        "argos": "https://www.argos.co.uk/product/7163184.do",
+        "currys": "https://www.currys.co.uk/products/tower-t17088-xpress-pro-dual-basket-air-fryer-black-10252841.html",
+        "john_lewis": "https://www.johnlewis.com/tower-t17088-xpress-pro-11l-dual-basket-air-fryer/p6142427",
+        "ebay_uk": "https://www.ebay.co.uk/sch/i.html?_nkw=Tower+T17088+Xpress+Pro+11L+Dual+Basket+Air+Fryer"
+      }
+    },
+    {
+      "model": "Ninja Foodi MAX Dual Zone AF451UK 9.5L Air Fryer",
+      "brand": "Ninja",
+      "price_gbp": 179.99,
+      "rating": 4.8,
+      "reviews_count": 3254,
+      "specs": {
+        "capacity": "9.5L total (4.75L + 4.75L dual zone)",
+        "power": "2470W",
+        "functions": "Air fry, max crisp, roast, bake, reheat, dehydrate, sync, match cook",
+        "dishwasher_safe_parts": true,
+        "dimensions": "31.5 x 40.5 x 31 cm"
+      },
+      "retailer_urls": {
+        "argos": "https://www.argos.co.uk/product/1486623.do",
+        "currys": "https://www.currys.co.uk/products/ninja-foodi-max-dual-zone-af451uk-9-5l-air-fryer-10243844.html",
+        "john_lewis": "https://www.johnlewis.com/ninja-foodi-max-dual-zone-af451uk-9-5l-air-fryer/p5938005",
+        "ebay_uk": "https://www.ebay.co.uk/sch/i.html?_nkw=Ninja+Foodi+MAX+Dual+Zone+AF451UK+9.5L+Air+Fryer"
+      }
+    },
+    {
+      "model": "Tefal Easy Fry & Grill EY505D 4.2L Digital Air Fryer",
+      "brand": "Tefal",
+      "price_gbp": 79.99,
+      "rating": 4.5,
+      "reviews_count": 892,
+      "specs": {
+        "capacity": "4.2L",
+        "power": "1550W",
+        "functions": "Air fry, grill, roast, bake",
+        "dishwasher_safe_parts": true,
+        "dimensions": "31.5 x 28.6 x 33.6 cm"
+      },
+      "retailer_urls": {
+        "argos": "https://www.argos.co.uk/product/1486630.do",
+        "currys": "https://www.currys.co.uk/products/tefal-easy-fry-grill-ey505d-4-2l-digital-air-fryer-10225700.html",
+        "john_lewis": "https://www.johnlewis.com/tefal-easy-fry-grill-ey505d/p5721836",
+        "ebay_uk": "https://www.ebay.co.uk/sch/i.html?_nkw=Tefal+Easy+Fry+Grill+EY505D+4.2L+Digital+Air+Fryer"
+      }
+    },
+    {
+      "model": "Ninja 3.8L Air Fryer and Dehydrator AF100UK",
+      "brand": "Ninja",
+      "price_gbp": 98.99,
+      "rating": 4.8,
+      "reviews_count": 2916,
+      "specs": {
+        "capacity": "3.8L",
+        "power": "1550W",
+        "functions": "Air fry, max crisp, roast, bake, dehydrate, reheat",
+        "dishwasher_safe_parts": true,
+        "dimensions": "31 x 26.5 x 34 cm"
+      },
+      "retailer_urls": {
+        "argos": "https://www.argos.co.uk/product/1166039.do",
+        "currys": "https://www.currys.co.uk/products/ninja-3-8l-air-fryer-and-dehydrator-af100uk-10231569.html",
+        "john_lewis": "https://www.johnlewis.com/ninja-3-8l-air-fryer-and-dehydrator-af100uk/p5645855",
+        "ebay_uk": "https://www.ebay.co.uk/sch/i.html?_nkw=Ninja+3.8L+Air+Fryer+Dehydrator+AF100UK"
+      }
+    },
+    {
+      "model": "Bosch Series 6 Air Fryer and Grill 7.2L",
+      "brand": "Bosch",
+      "price_gbp": 139.99,
+      "rating": 4.9,
+      "reviews_count": 212,
+      "specs": {
+        "capacity": "7.2L",
+        "power": "1800W",
+        "functions": "Air fry, grill, bake, roast, defrost",
+        "dishwasher_safe_parts": true,
+        "dimensions": "39 x 31 x 31 cm",
+        "warranty": "2 year manufacturer warranty"
+      },
+      "retailer_urls": {
+        "argos": "https://www.argos.co.uk/product/7579132.do",
+        "currys": "https://www.currys.co.uk/products/bosch-series-6-air-fryer-and-grill-7-2l-10257239.html",
+        "john_lewis": "https://www.johnlewis.com/bosch-series-6-air-fryer-and-grill-7-2l/p6272190",
+        "ebay_uk": "https://www.ebay.co.uk/sch/i.html?_nkw=Bosch+Series+6+Air+Fryer+Grill+7.2L"
+      }
+    }
+  ]
+}
