@@ -1,14 +1,13 @@
+functionsDirectory = "/mnt/c/Users/jacob/projects/home-kitchen-uk/netlify/functions"
+functionsDirectoryOrigin = "config-v1"
+redirectsOrigin = "config"
 plugins = []
 headers = []
-redirects = []
-
-[functions]
-
-[functions."*"]
 
 [build]
-publish = "/mnt/c/Users/jacob/projects/home-kitchen-uk"
-publishOrigin = "default"
+publish = "/mnt/c/Users/jacob/projects/home-kitchen-uk/src"
+publishOrigin = "config"
+functions = "/mnt/c/Users/jacob/projects/home-kitchen-uk/netlify/functions"
 
 [build.environment]
 
@@ -23,3 +22,19 @@ publishOrigin = "default"
 [build.processing.js]
 
 [build.services]
+
+[functions]
+
+[functions."*"]
+
+[[redirects]]
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]

@@ -1,0 +1,53 @@
+{
+  "category": "toasters",
+  "category_display": "Toasters",
+  "currency": "GBP",
+  "source": "T3.com research May 2026",
+  "products": [
+    {
+      "model": "Dualit Newgen",
+      "brand": "Dualit",
+      "type": "Best Overall",
+      "specs": {
+        "slots": "4",
+        "power": "1800W"
+      }
+    },
+    {
+      "model": "Russell Hobbs Groove Toaster",
+      "brand": "Russell Hobbs",
+      "type": "Best Affordable",
+      "specs": {
+        "slots": "2",
+        "power": "850W"
+      }
+    },
+    {
+      "model": "Sage The Smart Toast",
+      "brand": "Sage",
+      "type": "Best Premium",
+      "specs": {
+        "slots": "4",
+        "power": "1800W"
+      }
+    },
+    {
+      "model": "Cuisinart SimpliTouch",
+      "brand": "Cuisinart",
+      "type": "Best Touchscreen",
+      "specs": {
+        "slots": "2",
+        "power": "900W"
+      }
+    },
+    {
+      "model": "Smeg TSF01",
+      "brand": "Smeg",
+      "type": "Best Looking",
+      "specs": {
+        "slots": "2",
+        "power": "950W"
+      }
+    }
+  ]
+}

@@ -11,7 +11,7 @@
       "reviews_count": 1639,
       "specs": {
         "extraction_rate": "12L per day",
-        "coverage": "Up to 35m²",
+        "coverage": "Up to 35m\u00b2",
         "water_tank": "2.5L",
         "power_consumption": "186W",
         "noise_level": "41dB",
@@ -32,7 +32,7 @@
       "reviews_count": 663,
       "specs": {
         "extraction_rate": "25L per day",
-        "coverage": "Up to 75m²",
+        "coverage": "Up to 75m\u00b2",
         "water_tank": "4L",
         "power_consumption": "374W",
         "noise_level": "46dB",
@@ -53,7 +53,7 @@
       "reviews_count": 65,
       "specs": {
         "extraction_rate": "20L per day",
-        "coverage": "Up to 60m²",
+        "coverage": "Up to 60m\u00b2",
         "water_tank": "3L",
         "power_consumption": "300W",
         "noise_level": "44dB",
@@ -74,7 +74,7 @@
       "reviews_count": 250,
       "specs": {
         "extraction_rate": "3L per day",
-        "coverage": "Up to 15m² (small rooms)",
+        "coverage": "Up to 15m\u00b2 (small rooms)",
         "water_tank": "0.8L",
         "power_consumption": "40W (Peltier/thermoelectric)",
         "noise_level": "35dB",
@@ -95,7 +95,7 @@
       "reviews_count": 487,
       "specs": {
         "extraction_rate": "12L per day",
-        "coverage": "Up to 40m²",
+        "coverage": "Up to 40m\u00b2",
         "water_tank": "2L",
         "power_consumption": "190W",
         "noise_level": "42dB",

@@ -1,0 +1,93 @@
+{
+  "T3: kettles": {
+    "status": 200,
+    "size": 500000,
+    "products_found": []
+  },
+  "T3: toasters": {
+    "status": 200,
+    "size": 500000,
+    "products_found": []
+  },
+  "T3: microwaves": {
+    "status": 200,
+    "size": 500000,
+    "products_found": []
+  },
+  "T3: blenders": {
+    "status": 200,
+    "size": 500000,
+    "products_found": []
+  },
+  "T3: slow cookers": {
+    "status": 200,
+    "size": 500000,
+    "products_found": []
+  },
+  "T3: food processors": {
+    "status": 200,
+    "size": 500000,
+    "products_found": []
+  },
+  "T3: bread makers": {
+    "status": 200,
+    "size": 500000,
+    "products_found": []
+  },
+  "TR: kettles": {
+    "status": 404,
+    "size": 500000,
+    "products_found": [
+      "What does this mean?",
+      "t.replace(/[#*()+\\-='\",",
+      "@layer legacy {}",
+      " new Date().getHours() ",
+      "2&&void 0!==arguments[2]?arguments[2]:{})}(window,7842,{})}();\n",
+      "\nPopular Phone Brands\n",
+      "\nOperating Systems\n",
+      "\nMore from Phones\n"
+    ]
+  },
+  "TR: toasters": {
+    "status": 404,
+    "size": 500000,
+    "products_found": [
+      "What does this mean?",
+      "t.replace(/[#*()+\\-='\",",
+      "@layer legacy {}",
+      " new Date().getHours() ",
+      "2&&void 0!==arguments[2]?arguments[2]:{})}(window,7842,{})}();\n",
+      "\nPopular Phone Brands\n",
+      "\nOperating Systems\n",
+      "\nMore from Phones\n"
+    ]
+  },
+  "TR: microwaves": {
+    "status": 404,
+    "size": 500000,
+    "products_found": [
+      "What does this mean?",
+      "t.replace(/[#*()+\\-='\",",
+      "@layer legacy {}",
+      " new Date().getHours() ",
+      "2&&void 0!==arguments[2]?arguments[2]:{})}(window,7842,{})}();\n",
+      "\nPopular Phone Brands\n",
+      "\nOperating Systems\n",
+      "\nMore from Phones\n"
+    ]
+  },
+  "TR: blenders": {
+    "status": 404,
+    "size": 500000,
+    "products_found": [
+      "What does this mean?",
+      "t.replace(/[#*()+\\-='\",",
+      "@layer legacy {}",
+      " new Date().getHours() ",
+      "2&&void 0!==arguments[2]?arguments[2]:{})}(window,7842,{})}();\n",
+      "\nPopular Phone Brands\n",
+      "\nOperating Systems\n",
+      "\nMore from Phones\n"
+    ]
+  }
+}
