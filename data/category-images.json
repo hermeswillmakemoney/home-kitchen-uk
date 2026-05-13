@@ -1,0 +1,102 @@
+{
+  "air-fryers": {
+    "query": "air fryer kitchen counter",
+    "card_image": "https://source.unsplash.com/600x400/?air,fryer,kitchen,counter",
+    "hero_image": "https://source.unsplash.com/1200x600/?air,fryer,kitchen,counter"
+  },
+  "coffee-machines": {
+    "query": "coffee machine kitchen",
+    "card_image": "https://source.unsplash.com/600x400/?coffee,machine,kitchen",
+    "hero_image": "https://source.unsplash.com/1200x600/?coffee,machine,kitchen"
+  },
+  "cordless-vacuums": {
+    "query": "cordless vacuum cleaner home",
+    "card_image": "https://source.unsplash.com/600x400/?cordless,vacuum,cleaner,home",
+    "hero_image": "https://source.unsplash.com/1200x600/?cordless,vacuum,cleaner,home"
+  },
+  "dehumidifiers": {
+    "query": "dehumidifier home",
+    "card_image": "https://source.unsplash.com/600x400/?dehumidifier,home",
+    "hero_image": "https://source.unsplash.com/1200x600/?dehumidifier,home"
+  },
+  "kitchen-knives": {
+    "query": "chef knife kitchen",
+    "card_image": "https://source.unsplash.com/600x400/?chef,knife,kitchen",
+    "hero_image": "https://source.unsplash.com/1200x600/?chef,knife,kitchen"
+  },
+  "robot-vacuums": {
+    "query": "robot vacuum cleaner floor",
+    "card_image": "https://source.unsplash.com/600x400/?robot,vacuum,cleaner,floor",
+    "hero_image": "https://source.unsplash.com/1200x600/?robot,vacuum,cleaner,floor"
+  },
+  "kettles": {
+    "query": "electric kettle kitchen",
+    "card_image": "https://source.unsplash.com/600x400/?electric,kettle,kitchen",
+    "hero_image": "https://source.unsplash.com/1200x600/?electric,kettle,kitchen"
+  },
+  "toasters": {
+    "query": "toaster kitchen counter",
+    "card_image": "https://source.unsplash.com/600x400/?toaster,kitchen,counter",
+    "hero_image": "https://source.unsplash.com/1200x600/?toaster,kitchen,counter"
+  },
+  "microwaves": {
+    "query": "microwave kitchen",
+    "card_image": "https://source.unsplash.com/600x400/?microwave,kitchen",
+    "hero_image": "https://source.unsplash.com/1200x600/?microwave,kitchen"
+  },
+  "blenders": {
+    "query": "blender smoothie kitchen",
+    "card_image": "https://source.unsplash.com/600x400/?blender,smoothie,kitchen",
+    "hero_image": "https://source.unsplash.com/1200x600/?blender,smoothie,kitchen"
+  },
+  "slow-cookers": {
+    "query": "slow cooker crockpot kitchen",
+    "card_image": "https://source.unsplash.com/600x400/?slow,cooker,crockpot,kitchen",
+    "hero_image": "https://source.unsplash.com/1200x600/?slow,cooker,crockpot,kitchen"
+  },
+  "food-processors": {
+    "query": "food processor kitchen",
+    "card_image": "https://source.unsplash.com/600x400/?food,processor,kitchen",
+    "hero_image": "https://source.unsplash.com/1200x600/?food,processor,kitchen"
+  },
+  "bread-makers": {
+    "query": "bread maker machine kitchen",
+    "card_image": "https://source.unsplash.com/600x400/?bread,maker,machine,kitchen",
+    "hero_image": "https://source.unsplash.com/1200x600/?bread,maker,machine,kitchen"
+  },
+  "hand-mixers": {
+    "query": "hand mixer electric kitchen",
+    "card_image": "https://source.unsplash.com/600x400/?hand,mixer,electric,kitchen",
+    "hero_image": "https://source.unsplash.com/1200x600/?hand,mixer,electric,kitchen"
+  },
+  "juicers": {
+    "query": "juicer machine kitchen",
+    "card_image": "https://source.unsplash.com/600x400/?juicer,machine,kitchen",
+    "hero_image": "https://source.unsplash.com/1200x600/?juicer,machine,kitchen"
+  },
+  "sandwich-makers": {
+    "query": "sandwich maker toaster kitchen",
+    "card_image": "https://source.unsplash.com/600x400/?sandwich,maker,toaster,kitchen",
+    "hero_image": "https://source.unsplash.com/1200x600/?sandwich,maker,toaster,kitchen"
+  },
+  "rice-cookers": {
+    "query": "rice cooker kitchen",
+    "card_image": "https://source.unsplash.com/600x400/?rice,cooker,kitchen",
+    "hero_image": "https://source.unsplash.com/1200x600/?rice,cooker,kitchen"
+  },
+  "pressure-cookers": {
+    "query": "pressure cooker instant pot kitchen",
+    "card_image": "https://source.unsplash.com/600x400/?pressure,cooker,instant,pot,kitchen",
+    "hero_image": "https://source.unsplash.com/1200x600/?pressure,cooker,instant,pot,kitchen"
+  },
+  "ice-cream-makers": {
+    "query": "ice cream maker machine",
+    "card_image": "https://source.unsplash.com/600x400/?ice,cream,maker,machine",
+    "hero_image": "https://source.unsplash.com/1200x600/?ice,cream,maker,machine"
+  },
+  "deep-fat-fryers": {
+    "query": "deep fat fryer kitchen",
+    "card_image": "https://source.unsplash.com/600x400/?deep,fat,fryer,kitchen",
+    "hero_image": "https://source.unsplash.com/1200x600/?deep,fat,fryer,kitchen"
+  }
+}
