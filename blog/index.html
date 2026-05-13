@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home Kitchen UK — Expert Guides & Advice</title>
+  <meta name="description" content="Practical advice for UK homes. Energy saving, maintenance, buying guides, and kitchen know-how from the team at Home Kitchen UK." />
+  <link rel="canonical" href="https://www.homekitchen.co.uk/blog/" />
+
+  <style>
+    :root {
+      --bg-primary: #FAF7F2;
+      --bg-white: #FFFFFF;
+      --bg-warm: #F5F0EA;
+      --accent: #C0512F;
+      --accent-hover: #A84427;
+      --accent-light: #F9EDE7;
+      --accent-border: #E8D5CC;
+      --text-primary: #2C2C2C;
+      --text-secondary: #5A5A5A;
+      --text-muted: #8A8A7A;
+      --border: #E8E4DE;
+      --border-light: #F0ECE6;
+      --green: #2D7D46;
+      --green-bg: #EDF7F0;
+      --gold: #C5981B;
+      --gold-bg: #FFF8E8;
+      --star: #E8A620;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+      --shadow-lg: 0 8px 30px rgba(0,0,0,0.1);
+      --radius: 8px;
+      --radius-lg: 12px;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', 'Palatino', serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      color: var(--text-primary);
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+    h1 { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; }
+    h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; }
+    h3 { font-size: 1.35rem; font-weight: 700; }
+    p { margin-bottom: 1em; color: var(--text-secondary); }
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-decoration-color: rgba(192,81,47,0.3);
+      text-underline-offset: 2px;
+      transition: all 0.2s ease;
+    }
+    a:hover { color: var(--accent-hover); text-decoration-color: var(--accent); }
+
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── Site Header ── */
+    .site-header {
+      background: var(--bg-white);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+    }
+    .site-header .container {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .site-logo {
+      font-family: 'Georgia', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .site-logo span { color: var(--accent); }
+    .site-nav { font-size: 0.9rem; }
+    .site-nav a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      margin-left: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-weight: 500;
+    }
+    .site-nav a:hover { color: var(--accent); }
+    .site-nav a.active { color: var(--accent); font-weight: 600; }
+
+    /* ── Breadcrumbs ── */
+    .breadcrumbs {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.85rem;
+      padding: 16px 0;
+      color: var(--text-muted);
+    }
+    .breadcrumbs a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumbs a:hover { color: var(--accent); }
+    .breadcrumbs .sep { margin: 0 6px; opacity: 0.5; }
+
+    /* ── Page Hero ── */
+    .page-hero {
+      padding: 48px 0 32px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
+    }
+    .page-hero .eyebrow {
+      display: inline-block;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      background: var(--accent-light);
+      padding: 4px 12px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+    .page-hero h1 { margin-bottom: 12px; }
+    .page-hero .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ── Article Grid ── */
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-bottom: 60px;
+    }
+
+    .article-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+      text-decoration: none;
+      display: flex; flex-direction: column;
+    }
+    .article-card:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .article-card-img {
+      aspect-ratio: 16 / 10;
+      background: linear-gradient(135deg, var(--accent-light), var(--bg-warm));
+      display: grid; place-items: center;
+      font-size: 3rem;
+      position: relative;
+    }
+    .article-card-badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .badge-energy { background: var(--green-bg); color: var(--green); }
+    .badge-maintenance { background: var(--accent-light); color: var(--accent); }
+    .badge-kitchen { background: var(--gold-bg); color: var(--gold); }
+    .badge-shopping { background: #E8E0F0; color: #6B4E8A; }
+
+    .article-card-body {
+      padding: 24px;
+      display: flex; flex-direction: column;
+      flex: 1;
+    }
+    .article-card-body h3 {
+      font-family: 'Georgia', serif;
+      font-size: 1.2rem;
+      line-height: 1.3;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+    .article-card-body .excerpt {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+    .article-card-meta {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-light);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .article-card-meta .read-time {
+      display: inline-flex; align-items: center; gap: 4px;
+    }
+
+    /* ── Newsletter ── */
+    .newsletter-cta {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .newsletter-cta h2 { margin-bottom: 8px; }
+    .newsletter-cta p {
+      max-width: 480px;
+      margin: 0 auto 20px;
+      font-size: 1rem;
+    }
+    .newsletter-form {
+      display: flex; gap: 10px;
+      max-width: 440px; margin: 0 auto;
+    }
+    .newsletter-form input[type="email"] {
+      flex: 1;
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-primary);
+      font-size: 0.95rem;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--text-primary);
+      outline: none;
+    }
+    .newsletter-form input[type="email"]:focus { border-color: var(--accent); }
+    .newsletter-form button {
+      padding: 12px 24px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .newsletter-form button:hover { background: var(--accent-hover); }
+    .newsletter-note {
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    /* ── Footer ── */
+    .site-footer {
+      background: var(--bg-white);
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      margin-top: 20px;
+    }
+    .site-footer .container {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .footer-left {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.8rem; color: var(--text-muted);
+    }
+    .footer-left a { color: var(--accent); text-decoration: none; }
+    .footer-left a:hover { text-decoration: underline; }
+    .footer-right {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.75rem; color: var(--text-muted);
+      max-width: 400px; text-align: right;
+    }
+
+    @media (max-width: 768px) {
+      .article-grid { grid-template-columns: 1fr; }
+      .site-nav { display: none; }
+      .newsletter-form { flex-direction: column; }
+      .footer-right { text-align: left; }
+      .page-hero { padding: 32px 0 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══════════════════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-logo">Home<span>&amp;</span>Kitchen UK</a>
+      <nav class="site-nav">
+        <a href="/air-fryers/">Kitchen</a>
+        <a href="/robot-vacuums/">Home</a>
+        <a href="/blog/" class="active">Blog</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══ BREADCRUMBS ═══════════════════════════════════════════════ -->
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a><span class="sep">›</span><strong>Blog</strong>
+      </div>
+    </div>
+
+    <!-- ═══ PAGE HERO ══════════════════════════════════════════════════ -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Expert Guides &amp; Advice</span>
+        <h1>Home Kitchen UK Blog</h1>
+        <p class="subtitle">Practical advice for UK homes. Energy saving, maintenance, buying guides, and kitchen know-how — researched and written for British households.</p>
+      </div>
+    </section>
+
+    <!-- ═══ ARTICLE GRID ═══════════════════════════════════════════════ -->
+    <section>
+      <div class="container">
+        <div class="article-grid">
+
+          <!-- Article 1: Air Fryer vs Oven -->
+          <a href="/blog/air-fryer-vs-oven-running-costs/" class="article-card">
+            <div class="article-card-img">
+              <span class="article-card-badge badge-energy">Energy Saving</span>
+              ⚡
+            </div>
+            <div class="article-card-body">
+              <h3>Air Fryer vs Oven: Which Is Cheaper to Run? (UK 2026)</h3>
+              <p class="excerpt">We calculated the real cost per meal using October 2026 energy price cap rates. Including chips, roast chicken, and fish fingers — the savings might surprise you.</p>
+              <div class="article-card-meta">
+                <span>13 May 2026</span>
+                <span class="read-time">⏱ 8 min read</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 2: Descale Kettle -->
+          <a href="/blog/descale-kettle-complete-guide/" class="article-card">
+            <div class="article-card-img">
+              <span class="article-card-badge badge-maintenance">Maintenance</span>
+              🫖
+            </div>
+            <div class="article-card-body">
+              <h3>How to Descale a Kettle: The Complete UK Guide</h3>
+              <p class="excerpt">Three methods tested: white vinegar, citric acid, and commercial descalers. Plus UK hard water facts, how often to descale, and why limescale is costing you money.</p>
+              <div class="article-card-meta">
+                <span>13 May 2026</span>
+                <span class="read-time">⏱ 7 min read</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 3: Small Kitchen Storage -->
+          <a href="/blog/small-kitchen-appliance-storage/" class="article-card">
+            <div class="article-card-img">
+              <span class="article-card-badge badge-kitchen">Kitchen Design</span>
+              📐
+            </div>
+            <div class="article-card-body">
+              <h3>Small Kitchen Storage: The Best Space-Saving Appliances for UK Kitchens</h3>
+              <p class="excerpt">UK kitchens are among the smallest in Europe. We rank which appliances truly earn their counter space — and which ones belong in the cupboard (or the bin).</p>
+              <div class="article-card-meta">
+                <span>13 May 2026</span>
+                <span class="read-time">⏱ 9 min read</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 4: Best Deals -->
+          <a href="/blog/best-kitchen-appliance-deals/" class="article-card">
+            <div class="article-card-img">
+              <span class="article-card-badge badge-shopping">Money Saving</span>
+              🏷️
+            </div>
+            <div class="article-card-body">
+              <h3>Best Kitchen Appliance Deals UK: When to Buy (2026)</h3>
+              <p class="excerpt">Timing is everything. The complete UK sales calendar — January sales, Prime Day, Black Friday, and the 'new model' trick that saves you 30% on almost-new appliances.</p>
+              <div class="article-card-meta">
+                <span>13 May 2026</span>
+                <span class="read-time">⏱ 8 min read</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ NEWSLETTER ═════════════════════════════════════════════════ -->
+    <section>
+      <div class="container">
+        <div class="newsletter-cta">
+          <h2>Get new articles in your inbox</h2>
+          <p>Practical kitchen advice, energy-saving tips, and buying guides — delivered once a month. No spam, no fluff.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed ✓'; this.querySelector('input').value='';">
+            <input type="email" placeholder="your@email.com" required aria-label="Email address" />
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="newsletter-note">Unsubscribe at any time. We respect your inbox.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ FOOTER ═══════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-left">
+        &copy; 2026 Home &amp; Kitchen UK. All rights reserved. &middot; <a href="/blog/">Blog</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/disclosure/">Disclosure</a>
+      </div>
+      <div class="footer-right">
+        <strong>Affiliate Disclosure:</strong> We earn commissions from qualifying purchases. This does not affect our analysis — we do not accept free products or paid placements.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
