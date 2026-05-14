@@ -5,7 +5,7 @@ plugins = []
 headers = []
 
 [build]
-publish = "src"
+publish = "/mnt/c/Users/jacob/projects/home-kitchen-uk/src"
 publishOrigin = "config"
 functions = "/mnt/c/Users/jacob/projects/home-kitchen-uk/netlify/functions"
 

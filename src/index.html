@@ -761,8 +761,10 @@
           <p class="eyebrow">Stay Updated</p>
           <h2>Get the latest rankings in your inbox.</h2>
           <p class="lead">New reviews, price drops, and updated rankings — once a month. No spam, ever.</p>
-          <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed ✓'; this.querySelector('input').value='';">
-            <input type="email" placeholder="your@email.com" required aria-label="Email address" />
+          <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="newsletter-form">
+            <input type="hidden" name="form-name" value="newsletter" />
+            <p style="display:none"><input name="bot-field" /></p>
+            <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address" />
             <button type="submit" class="btn btn-primary">Subscribe</button>
           </form>
           <p class="newsletter-note">Unsubscribe at any time. We respect your inbox.</p>
