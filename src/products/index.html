@@ -1,16 +1,16 @@
 <!doctype html>
 <!--
-  Home Kitchen UK — Homepage
-  Professional review site: Home Appliances Researched. Compared. Ranked.
+  Home Kitchen UK — Digital Products
+  Printable Tools for UK Life — from Hermes Wealth on Gumroad
   Warm-editorial design system.
 -->
 <html lang="en-GB">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home Kitchen UK — Home Appliances Researched. Compared. Ranked.</title>
-  <meta name="description" content="Independent UK reviews of home & kitchen appliances. We analyse thousands of verified customer reviews to rank the best air fryers, kettles, toasters, robot vacuums, coffee machines and more." />
-  <link rel="canonical" href="https://www.homekitchen.co.uk/" />
+  <title>Digital Products — Printable Tools for UK Life | Home Kitchen UK</title>
+  <meta name="description" content="Practical printable planners, guides, and toolkits for UK life — from freelancer tax templates to pub quiz kits. Instant download from Hermes Wealth on Gumroad." />
+  <link rel="canonical" href="https://www.homekitchen.co.uk/products/" />
   <style>
     /* ─── tokens — Warm Editorial ───────────────────────────────────── */
     :root {
@@ -26,8 +26,6 @@
       --accent-soft: color-mix(in oklch, var(--accent) 12%, transparent);
       --accent2-soft: color-mix(in oklch, var(--accent2) 10%, transparent);
       --fg-soft: color-mix(in oklch, var(--fg) 6%, transparent);
-      --success: #2F5B4F;
-      --warning: #C0512F;
 
       --font-display: 'Georgia', 'Times New Roman', 'Charter', serif;
       --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
@@ -168,166 +166,153 @@
     .btn-ghost:hover { color: var(--accent); }
     .btn-large { padding: 16px 36px; font-size: 17px; font-weight: 600; border-radius: 12px; }
 
-    /* ─── card ──────────────────────────────────────────────────────── */
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 28px;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-    .card:hover {
-      border-color: var(--accent);
-      box-shadow: 0 4px 24px color-mix(in oklch, var(--fg) 6%, transparent);
-    }
-
-    /* ─── review card ───────────────────────────────────────────────── */
-    .review-card {
+    /* ─── product card ──────────────────────────────────────────────── */
+    .product-card {
       display: flex; flex-direction: column;
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       overflow: hidden;
       transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      position: relative;
     }
-    .review-card:hover {
-      border-color: var(--accent);
+    .product-card:hover {
+      border-color: var(--accent2);
       box-shadow: 0 8px 32px color-mix(in oklch, var(--fg) 8%, transparent);
       transform: translateY(-2px);
     }
-    .review-card-img {
+    .product-card-img {
       aspect-ratio: 16 / 10;
-      background:
-        linear-gradient(135deg, var(--accent-soft), var(--fg-soft));
+      background: linear-gradient(135deg, var(--accent2-soft), var(--fg-soft));
       display: grid; place-items: center;
-      color: var(--muted);
-      font-family: var(--font-mono);
-      font-size: 13px;
       position: relative;
     }
-    .review-card-badge {
+    .product-card-icon {
+      font-size: 48px;
+      opacity: 0.6;
+    }
+    .product-card-price {
       position: absolute;
-      top: 12px; left: 12px;
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 4px 12px;
+      top: 12px; right: 12px;
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 4px 14px;
       border-radius: 999px;
       font-family: var(--font-mono);
-      font-size: 11px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      backdrop-filter: blur(4px);
-    }
-    .review-card-badge.kitchen { background: color-mix(in oklch, var(--accent) 18%, var(--surface)); color: var(--accent); }
-    .review-card-badge.home { background: color-mix(in oklch, var(--accent2) 18%, var(--surface)); color: var(--accent2); }
-    .review-card-badge.garden { background: color-mix(in oklch, #7B6B3A 18%, var(--surface)); color: #7B6B3A; }
-    .review-card-badge .best-tag {
-      display: inline-block;
-      margin-left: 4px;
-      padding: 1px 6px;
+      font-size: 13px;
+      font-weight: 600;
       background: var(--accent2);
       color: #fff;
-      border-radius: 999px;
-      font-size: 9px;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.02em;
     }
-    .review-card-body {
+    .product-card-body {
       padding: 24px;
       display: flex; flex-direction: column;
       flex: 1;
     }
-    .review-card-body h3 {
+    .product-card-body h3 {
       font-family: var(--font-display);
       font-size: 20px;
       font-weight: 600;
       line-height: 1.25;
       letter-spacing: -0.01em;
-      margin: 0 0 10px;
+      margin: 0 0 8px;
+      color: var(--accent2);
     }
-    .review-card-body .snippet {
+    .product-card-body .snippet {
       color: var(--muted);
       font-size: 14px;
       line-height: 1.55;
       margin: 0 0 16px;
       flex: 1;
     }
-    .review-card-meta {
+    .product-card-meta {
       display: flex; align-items: center; justify-content: space-between;
       padding-top: 14px;
       border-top: 1px solid var(--border);
     }
-    .review-card-stars { color: var(--accent); font-size: 15px; letter-spacing: 1px; }
-    .review-card-score {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 20px;
-      color: var(--accent2);
-    }
-    .review-card-score span {
+    .product-card-pages {
       font-family: var(--font-mono);
       font-size: 12px;
-      font-weight: 400;
       color: var(--muted);
     }
-    .review-card-link {
+    .product-card-link {
       display: inline-flex; align-items: center; gap: 4px;
-      margin-top: 14px;
       font-size: 14px;
       font-weight: 500;
       color: var(--accent);
     }
-    .review-card-link::after { content: '→'; transition: transform 0.15s ease; }
-    .review-card-link:hover::after { transform: translateX(3px); }
+    .product-card-link::after { content: '→'; transition: transform 0.15s ease; }
+    .product-card-link:hover::after { transform: translateX(3px); }
 
-    /* ─── score badge ───────────────────────────────────────────────── */
-    .score-badge {
-      display: inline-flex; align-items: center; gap: 4px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-family: var(--font-mono);
-      font-size: 12px;
-      font-weight: 600;
-      background: var(--accent2-soft);
-      color: var(--accent2);
-    }
-
-    /* ─── star rating ──────────────────────────────────────────────── */
-    .stars { color: var(--accent); font-size: 18px; letter-spacing: 2px; }
-
-    /* ─── methodology ───────────────────────────────────────────────── */
-    .methodology-steps {
+    /* ─── why section (feature grid) ─────────────────────────────────── */
+    .feature-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: var(--gap-lg);
-      counter-reset: step;
     }
     @media (max-width: 800px) {
-      .methodology-steps { grid-template-columns: repeat(2, 1fr); }
+      .feature-grid { grid-template-columns: 1fr; }
     }
-    @media (max-width: 500px) {
-      .methodology-steps { grid-template-columns: 1fr; }
-    }
-    .method-step {
-      counter-increment: step;
-      padding: 24px;
+    .feature-item {
+      padding: 28px;
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      position: relative;
+      text-align: center;
     }
-    .method-step::before {
-      content: counter(step);
+    .feature-item .feature-icon {
+      font-size: 32px;
+      margin-bottom: var(--gap-sm);
       display: block;
-      width: 36px; height: 36px;
-      border-radius: 50%;
-      background: var(--accent-soft);
-      color: var(--accent);
+    }
+    .feature-item h3 {
       font-family: var(--font-display);
       font-size: 18px;
-      font-weight: 700;
-      display: grid; place-items: center;
-      margin-bottom: var(--gap-md);
+      margin-bottom: 8px;
     }
-    .method-step h3 { margin-bottom: 8px; }
-    .method-step p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .feature-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    /* ─── what-you-get (icon grid) ──────────────────────────────────── */
+    .perk-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--gap-md);
+    }
+    @media (max-width: 800px) {
+      .perk-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 440px) {
+      .perk-grid { grid-template-columns: 1fr; }
+    }
+    .perk-item {
+      text-align: center;
+      padding: 20px;
+    }
+    .perk-item .perk-icon {
+      font-size: 28px;
+      margin-bottom: var(--gap-xs);
+      display: block;
+    }
+    .perk-item h4 {
+      font-family: var(--font-display);
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+    .perk-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    /* ─── section header ────────────────────────────────────────────── */
+    .section-header { text-align: center; max-width: 60ch; margin-inline: auto; margin-bottom: var(--gap-xl); }
+    .section-header .lead { margin-inline: auto; }
 
     /* ─── newsletter ────────────────────────────────────────────────── */
     .newsletter {
@@ -439,21 +424,6 @@
 
     /* ─── divider ───────────────────────────────────────────────────── */
     .rule { border: 0; border-top: 1px solid var(--border); margin: 0; }
-
-    /* ─── section header ────────────────────────────────────────────── */
-    .section-header { text-align: center; max-width: 60ch; margin-inline: auto; margin-bottom: var(--gap-xl); }
-    .section-header .lead { margin-inline: auto; }
-
-    /* ─── icon in card ──────────────────────────────────────────────── */
-    .card-icon {
-      width: 40px; height: 40px;
-      border-radius: 10px;
-      display: grid; place-items: center;
-      margin-bottom: var(--gap-md);
-    }
-    .card-icon svg { width: 20px; height: 20px; }
-    .card-icon.accent { background: var(--accent-soft); color: var(--accent); }
-    .card-icon.green { background: var(--accent2-soft); color: var(--accent2); }
   </style>
 </head>
 <body>
@@ -463,10 +433,10 @@
     <div class="container topnav-inner">
       <a href="/" class="logo">Home<span>&amp;</span>Kitchen UK</a>
       <nav id="main-nav">
-        <a href="/air-fryers/" class="active">Kitchen</a>
+        <a href="/air-fryers/">Kitchen</a>
         <a href="/robot-vacuums/">Home</a>
         <a href="/garden/">Garden</a>
-        <a href="/products/">Digital Products</a>
+        <a href="/products/" class="active">Digital Products</a>
         <a href="/about/">About</a>
       </nav>
       <button class="mobile-menu-btn" onclick="document.getElementById('main-nav').classList.toggle('open')" aria-label="Toggle navigation">
@@ -480,12 +450,12 @@
     <!-- ═══ HERO ═══════════════════════════════════════════════════════ -->
     <section class="section hero">
       <div class="container">
-        <p class="eyebrow">Independent Reviews · May 2026</p>
-        <h1>Home Appliances Researched. Compared. Ranked.</h1>
-        <p class="lead">We analyse thousands of verified UK customer reviews, cross-reference expert opinions, and rank the best products so you don't have to guess.</p>
+        <p class="eyebrow">Digital Products · Instant Download</p>
+        <h1>Printable Tools for UK Life</h1>
+        <p class="lead">Practical planners, guides, and toolkits — researched, written, and designed for British homes and British problems. No fluff. No filler. Just genuinely useful stuff you can print today.</p>
         <div class="hero-cta">
-          <a href="#reviews" class="btn btn-primary">Browse Reviews</a>
-          <a href="#methodology" class="btn btn-secondary">How We Rank</a>
+          <a href="#products" class="btn btn-primary">Browse Products</a>
+          <a href="https://hermeswealth.gumroad.com" class="btn btn-secondary" target="_blank" rel="noopener">Visit Gumroad Store ↗</a>
         </div>
       </div>
     </section>
@@ -495,20 +465,20 @@
       <div class="container">
         <div class="trust-bar">
           <div class="trust-item">
-            <span class="trust-num">47,000+</span>
-            <span class="trust-label">Customer reviews analysed</span>
+            <span class="trust-num">9</span>
+            <span class="trust-label">Printable products</span>
           </div>
           <div class="trust-item">
-            <span class="trust-num">8</span>
-            <span class="trust-label">Categories covered</span>
+            <span class="trust-num">£3.99</span>
+            <span class="trust-label">Starting price</span>
           </div>
           <div class="trust-item">
-            <span class="trust-num">100%</span>
-            <span class="trust-label">Independent — no paid placements</span>
+            <span class="trust-num">Instant</span>
+            <span class="trust-label">Digital download</span>
           </div>
           <div class="trust-item">
             <span class="trust-num">UK</span>
-            <span class="trust-label">Prices in £, UK retailers only</span>
+            <span class="trust-label">Built for British life</span>
           </div>
         </div>
       </div>
@@ -516,173 +486,158 @@
 
     <hr class="rule" />
 
-    <!-- ═══ REVIEW CARDS ═══════════════════════════════════════════════ -->
-    <section class="section" id="reviews">
+    <!-- ═══ PRODUCT GRID ═══════════════════════════════════════════════ -->
+    <section class="section" id="products">
       <div class="container">
         <div class="section-header">
-          <p class="eyebrow">Latest Reviews</p>
-          <h2>What should you buy?</h2>
-          <p class="lead">Every ranking is built from real UK customer data — not sponsored opinions or paid placements.</p>
+          <p class="eyebrow">The Collection</p>
+          <h2>Pick your toolkit</h2>
+          <p class="lead">Every product is a printable PDF — buy once, print forever. No subscriptions, no apps, no nonsense.</p>
         </div>
 
-                <div class="grid-3">
-          <!-- Air Fryers -->
-          <a href="/air-fryers/" class="review-card">
-            <div class="review-card-img" style="background-image: url('https://source.unsplash.com/600x400/?air,fryer,kitchen,counter'); background-size: cover; background-position: center;">
-              <span class="review-card-badge kitchen">Kitchen <span class="best-tag">TOP RATED</span></span>
+        <div class="grid-3">
+
+          <!-- 1. Freelancer's Survival Kit -->
+          <a href="https://hermeswealth.gumroad.com/l/freelancer-survival-kit" class="product-card" target="_blank" rel="noopener">
+            <div class="product-card-img">
+              <span class="product-card-icon">📋</span>
+              <span class="product-card-price">£12.99</span>
             </div>
-            <div class="review-card-body">
-              <h3>Best Air Fryers UK 2026</h3>
-              <p class="snippet">Ninja, Tower, and Tefal lead the pack. We analysed 12,400+ verified reviews to find the best air fryers for every budget and kitchen size.</p>
-              <div class="review-card-meta">
-                <span class="review-card-stars">★★★★★</span>
-                <span class="review-card-score">9.2 <span>/10</span></span>
+            <div class="product-card-body">
+              <h3>The UK Freelancer's Survival Kit</h3>
+              <p class="snippet">Tax deadlines, invoice templates, expense tracking, pricing calculator. Everything a UK sole trader needs to handle the business side of freelancing.</p>
+              <div class="product-card-meta">
+                <span class="product-card-pages">25 printable pages</span>
+                <span class="product-card-link">View on Gumroad</span>
               </div>
-              <span class="review-card-link">Read the full ranking</span>
             </div>
           </a>
 
-          <!-- Kettles -->
-          <a href="/kettles/" class="review-card">
-            <div class="review-card-img" style="background-image: url('https://source.unsplash.com/600x400/?electric,kettle,kitchen'); background-size: cover; background-position: center;">
-              <span class="review-card-badge kitchen">Kitchen <span class="best-tag">TOP RATED</span></span>
+          <!-- 2. Renovation Project Manager -->
+          <a href="https://hermeswealth.gumroad.com/l/renovation-project-manager" class="product-card" target="_blank" rel="noopener">
+            <div class="product-card-img">
+              <span class="product-card-icon">🏠</span>
+              <span class="product-card-price">£8.99</span>
             </div>
-            <div class="review-card-body">
-              <h3>Best Kettles UK 2026</h3>
-              <p class="snippet">Smeg, KitchenAid, and Ninja compete for the perfect boil. Temperature control, fast-boil, and design — ranked from thousands of UK reviews.</p>
-              <div class="review-card-meta">
-                <span class="review-card-stars">★★★★★</span>
-                <span class="review-card-score">9.1 <span>/10</span></span>
+            <div class="product-card-body">
+              <h3>The Renovation Project Manager</h3>
+              <p class="snippet">Master budget, contractor comparison, planning permission guide, snag list. Stay sane through the mess.</p>
+              <div class="product-card-meta">
+                <span class="product-card-pages">42 printable pages</span>
+                <span class="product-card-link">View on Gumroad</span>
               </div>
-              <span class="review-card-link">Read the full ranking</span>
             </div>
           </a>
 
-          <!-- Toasters -->
-          <a href="/toasters/" class="review-card">
-            <div class="review-card-img" style="background-image: url('https://source.unsplash.com/600x400/?toaster,kitchen,counter'); background-size: cover; background-position: center;">
-              <span class="review-card-badge kitchen">Kitchen <span class="best-tag">TOP RATED</span></span>
+          <!-- 3. Wedding Speech Kit -->
+          <a href="https://hermeswealth.gumroad.com/l/wedding-speech-kit" class="product-card" target="_blank" rel="noopener">
+            <div class="product-card-img">
+              <span class="product-card-icon">🎤</span>
+              <span class="product-card-price">£9.99</span>
             </div>
-            <div class="review-card-body">
-              <h3>Best Toasters UK 2026</h3>
-              <p class="snippet">Dualit, Sage, and Smeg battle for breakfast supremacy. 2-slice, 4-slice, and smart toasters — tested and ranked for UK homes.</p>
-              <div class="review-card-meta">
-                <span class="review-card-stars">★★★★★</span>
-                <span class="review-card-score">8.8 <span>/10</span></span>
+            <div class="product-card-body">
+              <h3>The UK Wedding Speech Kit</h3>
+              <p class="snippet">Best Man, Maid of Honour, and Parent speech templates with joke bank and delivery guide.</p>
+              <div class="product-card-meta">
+                <span class="product-card-pages">22 printable pages</span>
+                <span class="product-card-link">View on Gumroad</span>
               </div>
-              <span class="review-card-link">Read the full ranking</span>
             </div>
           </a>
 
-          <!-- Coffee Machines -->
-          <a href="/coffee-machines/" class="review-card">
-            <div class="review-card-img" style="background-image: url('https://source.unsplash.com/600x400/?coffee,machine,kitchen'); background-size: cover; background-position: center;">
-              <span class="review-card-badge kitchen">Kitchen</span>
+          <!-- 4. Pub Quiz Master's Kit -->
+          <a href="https://hermeswealth.gumroad.com/l/pub-quiz-masters-kit" class="product-card" target="_blank" rel="noopener">
+            <div class="product-card-img">
+              <span class="product-card-icon">🍺</span>
+              <span class="product-card-price">£7.99</span>
             </div>
-            <div class="review-card-body">
-              <h3>Best Coffee Machines UK 2026</h3>
-              <p class="snippet">Bean-to-cup, pod, and espresso — from Sage to De'Longhi. We compared 8,200+ reviews to rank the best coffee machines for UK homes.</p>
-              <div class="review-card-meta">
-                <span class="review-card-stars">★★★★★</span>
-                <span class="review-card-score">8.8 <span>/10</span></span>
+            <div class="product-card-body">
+              <h3>The Pub Quiz Master's Kit</h3>
+              <p class="snippet">300+ questions, 6 categories, picture rounds, answer sheets, host script. Everything you need to run a proper quiz night.</p>
+              <div class="product-card-meta">
+                <span class="product-card-pages">68 pages</span>
+                <span class="product-card-link">View on Gumroad</span>
               </div>
-              <span class="review-card-link">Read the full ranking</span>
             </div>
           </a>
 
-          <!-- Slow Cookers -->
-          <a href="/slow-cookers/" class="review-card">
-            <div class="review-card-img" style="background-image: url('https://source.unsplash.com/600x400/?slow,cooker,stew,kitchen'); background-size: cover; background-position: center;">
-              <span class="review-card-badge kitchen">Kitchen <span class="best-tag">NEW</span></span>
+          <!-- 5. Allotment & Kitchen Garden Planner -->
+          <a href="https://hermeswealth.gumroad.com/l/allotment-kitchen-garden-planner" class="product-card" target="_blank" rel="noopener">
+            <div class="product-card-img">
+              <span class="product-card-icon">🥕</span>
+              <span class="product-card-price">£6.99</span>
             </div>
-            <div class="review-card-body">
-              <h3>Best Slow Cookers UK 2026</h3>
-              <p class="snippet">Crock-Pot, Morphy Richards, and Ninja lead the slow-cooking revival. We analysed 9,600+ reviews to find the best for energy-saving family meals.</p>
-              <div class="review-card-meta">
-                <span class="review-card-stars">★★★★★</span>
-                <span class="review-card-score">9.0 <span>/10</span></span>
+            <div class="product-card-body">
+              <h3>The UK Allotment &amp; Kitchen Garden Planner</h3>
+              <p class="snippet">UK planting calendar, monthly tasks, pest guide, compost making. Built for British growing seasons.</p>
+              <div class="product-card-meta">
+                <span class="product-card-pages">46 pages</span>
+                <span class="product-card-link">View on Gumroad</span>
               </div>
-              <span class="review-card-link">Read the full ranking</span>
             </div>
           </a>
 
-          <!-- Blenders -->
-          <a href="/blenders/" class="review-card">
-            <div class="review-card-img" style="background-image: url('https://source.unsplash.com/600x400/?blender,smoothie,kitchen'); background-size: cover; background-position: center;">
-              <span class="review-card-badge kitchen">Kitchen <span class="best-tag">NEW</span></span>
+          <!-- 6. Flatmate Handbook -->
+          <a href="https://hermeswealth.gumroad.com/l/flatmate-handbook" class="product-card" target="_blank" rel="noopener">
+            <div class="product-card-img">
+              <span class="product-card-icon">🏘️</span>
+              <span class="product-card-price">£5.99</span>
             </div>
-            <div class="review-card-body">
-              <h3>Best Blenders UK 2026</h3>
-              <p class="snippet">NutriBullet, Ninja, and Vitamix go head-to-head. From budget personal blenders to premium jug powerhouses — ranked from 28,600+ UK reviews.</p>
-              <div class="review-card-meta">
-                <span class="review-card-stars">★★★★★</span>
-                <span class="review-card-score">9.1 <span>/10</span></span>
+            <div class="product-card-body">
+              <h3>Surviving Shared Housing: The Flatmate Handbook</h3>
+              <p class="snippet">Agreement templates, bill splitting, deposit recovery, HMO rules. For anyone who's ever argued about whose turn it is to buy toilet roll.</p>
+              <div class="product-card-meta">
+                <span class="product-card-pages">20 pages</span>
+                <span class="product-card-link">View on Gumroad</span>
               </div>
-              <span class="review-card-link">Read the full ranking</span>
             </div>
           </a>
 
-          <!-- Robot Vacuums -->
-          <a href="/robot-vacuums/" class="review-card">
-            <div class="review-card-img" style="background-image: url('https://source.unsplash.com/600x400/?robot,vacuum,cleaner,floor'); background-size: cover; background-position: center;">
-              <span class="review-card-badge home">Home <span class="best-tag">TOP RATED</span></span>
+          <!-- 7. Household Planner -->
+          <a href="https://hermeswealth.gumroad.com/l/household-planner" class="product-card" target="_blank" rel="noopener">
+            <div class="product-card-img">
+              <span class="product-card-icon">📅</span>
+              <span class="product-card-price">£3.99</span>
             </div>
-            <div class="review-card-body">
-              <h3>Best Robot Vacuums UK 2026</h3>
-              <p class="snippet">Roborock, iRobot, and Ecovacs dominate. LiDAR navigation, self-emptying docks, and mopping — we rank the best robot vacuums available in the UK.</p>
-              <div class="review-card-meta">
-                <span class="review-card-stars">★★★★★</span>
-                <span class="review-card-score">9.0 <span>/10</span></span>
+            <div class="product-card-body">
+              <h3>The UK Household Planner</h3>
+              <p class="snippet">Cleaning schedules, meal planner, budget tracker, UK home care. Run your household like a mildly competent adult.</p>
+              <div class="product-card-meta">
+                <span class="product-card-pages">23 pages</span>
+                <span class="product-card-link">View on Gumroad</span>
               </div>
-              <span class="review-card-link">Read the full ranking</span>
             </div>
           </a>
 
-          <!-- Cordless Vacuums -->
-          <a href="/cordless-vacuums/" class="review-card">
-            <div class="review-card-img" style="background-image: url('https://source.unsplash.com/600x400/?cordless,vacuum,cleaner,home'); background-size: cover; background-position: center;">
-              <span class="review-card-badge home">Home</span>
+          <!-- 8. Home Fitness Planner -->
+          <a href="https://hermeswealth.gumroad.com/l/home-fitness-planner" class="product-card" target="_blank" rel="noopener">
+            <div class="product-card-img">
+              <span class="product-card-icon">💪</span>
+              <span class="product-card-price">£5.99</span>
             </div>
-            <div class="review-card-body">
-              <h3>Best Cordless Vacuums UK 2026</h3>
-              <p class="snippet">Dyson, Shark, and Tineco go head-to-head. Battery life, suction power, and pet hair performance — ranked from 5,800+ UK reviews.</p>
-              <div class="review-card-meta">
-                <span class="review-card-stars">★★★★★</span>
-                <span class="review-card-score">8.6 <span>/10</span></span>
+            <div class="product-card-body">
+              <h3>Home Fitness Planner</h3>
+              <p class="snippet">4-week bodyweight programme, no equipment needed, quiet alternatives for flats. Exercise without annoying the neighbours downstairs.</p>
+              <div class="product-card-meta">
+                <span class="product-card-pages">8 pages</span>
+                <span class="product-card-link">View on Gumroad</span>
               </div>
-              <span class="review-card-link">Read the full ranking</span>
             </div>
           </a>
 
-          <!-- Dehumidifiers -->
-          <a href="/dehumidifiers/" class="review-card">
-            <div class="review-card-img" style="background-image: url('https://source.unsplash.com/600x400/?dehumidifier,home'); background-size: cover; background-position: center;">
-              <span class="review-card-badge home">Home <span class="best-tag">TOP RATED</span></span>
+          <!-- 9. New Dog Owner's Handbook -->
+          <a href="https://hermeswealth.gumroad.com/l/new-dog-owners-handbook" class="product-card" target="_blank" rel="noopener">
+            <div class="product-card-img">
+              <span class="product-card-icon">🐕</span>
+              <span class="product-card-price">£7.99</span>
             </div>
-            <div class="review-card-body">
-              <h3>Best Dehumidifiers UK 2026</h3>
-              <p class="snippet">Meaco, ProBreeze, and Ebac lead for UK damp. We ranked the best compressor and desiccant dehumidifiers based on 6,100+ verified reviews.</p>
-              <div class="review-card-meta">
-                <span class="review-card-stars">★★★★★</span>
-                <span class="review-card-score">8.9 <span>/10</span></span>
+            <div class="product-card-body">
+              <h3>The New Dog Owner's Handbook</h3>
+              <p class="snippet">Training tracker, socialisation checklist, UK legal guide, vet schedule. Don't be that owner at the park.</p>
+              <div class="product-card-meta">
+                <span class="product-card-pages">26 pages</span>
+                <span class="product-card-link">View on Gumroad</span>
               </div>
-              <span class="review-card-link">Read the full ranking</span>
-            </div>
-          </a>
-
-          <!-- Kitchen Knives -->
-          <a href="/kitchen-knives/" class="review-card">
-            <div class="review-card-img" style="background-image: url('https://source.unsplash.com/600x400/?chef,knife,kitchen'); background-size: cover; background-position: center;">
-              <span class="review-card-badge kitchen">Kitchen</span>
-            </div>
-            <div class="review-card-body">
-              <h3>Best Kitchen Knives UK 2026</h3>
-              <p class="snippet">Wusthof, Global, and Shun for the serious cook. Budget options from Premier and Lakeland too. 4,200+ reviews analysed and ranked.</p>
-              <div class="review-card-meta">
-                <span class="review-card-stars">★★★★★</span>
-                <span class="review-card-score">8.7 <span>/10</span></span>
-              </div>
-              <span class="review-card-link">Read the full ranking</span>
             </div>
           </a>
 
@@ -690,31 +645,63 @@
       </div>
     </section>
 
-    <!-- ═══ METHODOLOGY ════════════════════════════════════════════════ -->
-    <section class="section" id="methodology">
+    <!-- ═══ WHY THESE EXIST ════════════════════════════════════════════ -->
+    <section class="section" id="why">
       <div class="container">
         <div class="section-header">
-          <p class="eyebrow">How We Rank</p>
-          <h2>Our methodology</h2>
-          <p class="lead">We don't accept free products or paid placements. Every ranking is built from data — not opinions.</p>
+          <p class="eyebrow">Why These Exist</p>
+          <h2>Built for Britain. Not a generic template in sight.</h2>
+          <p class="lead">Most printable planners are American. They talk about 401(k)s, Thanksgiving dinner, and "fall cleanup." These aren't those.</p>
         </div>
 
-        <div class="methodology-steps">
-          <div class="method-step">
-            <h3>Collect Reviews</h3>
-            <p>We aggregate verified customer reviews from Amazon UK, Argos, Currys, John Lewis, and retailer direct sites. No fake or incentivised reviews make it through.</p>
+        <div class="feature-grid">
+          <div class="feature-item">
+            <span class="feature-icon">🇬🇧</span>
+            <h3>UK-Specific</h3>
+            <p>Council tax, HMO rules, NHS schedules, British wedding conventions, UK tax years, and planting calendars for our climate. Not generic — genuinely British.</p>
           </div>
-          <div class="method-step">
-            <h3>Analyse Patterns</h3>
-            <p>We score products on build quality, performance, value, and common failure points. Recurring praise and complaints carry more weight than one-off opinions.</p>
+          <div class="feature-item">
+            <span class="feature-icon">📝</span>
+            <h3>Practical, Not Pretty</h3>
+            <p>Designed to be used, not just admired on Instagram. Clear layouts, generous writing space, and instructions in plain English. No waffle.</p>
           </div>
-          <div class="method-step">
-            <h3>Compare &amp; Rank</h3>
-            <p>Products in the same category are scored against each other on a consistent rubric. We factor in price-to-performance ratios to surface genuine value leaders.</p>
+          <div class="feature-item">
+            <span class="feature-icon">💷</span>
+            <h3>Proper Value</h3>
+            <p>Prices from £3.99. Most products cost less than a pint in London. Buy once, print as many copies as you need, forever. No subscriptions, no upsells.</p>
           </div>
-          <div class="method-step">
-            <h3>Publish &amp; Update</h3>
-            <p>Rankings are updated monthly with fresh review data and price checks. If a product's consensus shifts, its ranking moves — we don't lock in winners.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WHAT YOU GET ═══════════════════════════════════════════════ -->
+    <section class="section" id="what-you-get">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">What You Get</p>
+          <h2>Simple. Digital. Yours forever.</h2>
+        </div>
+
+        <div class="perk-grid">
+          <div class="perk-item">
+            <span class="perk-icon">⚡</span>
+            <h4>Instant Download</h4>
+            <p>Get your files the second you pay. No waiting for post, no delivery charges.</p>
+          </div>
+          <div class="perk-item">
+            <span class="perk-icon">🖨️</span>
+            <h4>Print What You Need</h4>
+            <p>Print the whole thing or just the pages you'll actually use. Your printer, your rules.</p>
+          </div>
+          <div class="perk-item">
+            <span class="perk-icon">♾️</span>
+            <h4>Lifetime Access</h4>
+            <p>Files stay in your Gumroad library forever. New computer? Just download again.</p>
+          </div>
+          <div class="perk-item">
+            <span class="perk-icon">🔄</span>
+            <h4>Free Updates</h4>
+            <p>If a product gets updated — new tax year, new legislation — you get the new version free.</p>
           </div>
         </div>
       </div>
@@ -725,8 +712,8 @@
       <div class="container">
         <div class="newsletter">
           <p class="eyebrow">Stay Updated</p>
-          <h2>Get the latest rankings in your inbox.</h2>
-          <p class="lead">New reviews, price drops, and updated rankings — once a month. No spam, ever.</p>
+          <h2>New products, straight to your inbox.</h2>
+          <p class="lead">We're always working on new printable tools. Drop your email and we'll let you know when something new lands — no spam, ever.</p>
           <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed ✓'; this.querySelector('input').value='';">
             <input type="email" placeholder="your@email.com" required aria-label="Email address" />
             <button type="submit" class="btn btn-primary">Subscribe</button>
@@ -737,7 +724,7 @@
     </section>
 
     <!-- ═══ DISCLOSURE ═════════════════════════════════════════════════ -->
-    <p class="disclosure">Home Kitchen UK is reader-supported. When you buy through links on our site, we may earn an affiliate commission. This does not affect our analysis — we do not accept free products or paid placements.</p>
+    <p class="disclosure">Home Kitchen UK may earn a small commission from Gumroad sales at no extra cost to you. Every product is created by Hermes Wealth — we only feature products we genuinely believe in.</p>
 
   </main>
 
@@ -747,12 +734,12 @@
       <div class="foot-grid">
         <div>
           <div class="foot-brand">Home<span>&amp;</span>Kitchen UK</div>
-          <p class="foot-desc">Independent home appliance reviews for UK shoppers. We analyse real customer data to rank the best products so you can buy with confidence.</p>
+          <p class="foot-desc">Independent home appliance reviews and practical printable tools for UK households.</p>
         </div>
         <div class="foot-col">
           <p class="foot-col-title">Reviews</p>
           <ul>
-                        <li><a href="/air-fryers/">Air Fryers</a></li>
+            <li><a href="/air-fryers/">Air Fryers</a></li>
             <li><a href="/kettles/">Kettles</a></li>
             <li><a href="/toasters/">Toasters</a></li>
             <li><a href="/slow-cookers/">Slow Cookers</a></li>
@@ -769,7 +756,7 @@
           <ul>
             <li><a href="/products/">Digital Products</a></li>
             <li><a href="/about/">About Us</a></li>
-            <li><a href="#methodology">Methodology</a></li>
+            <li><a href="/blog/">Blog</a></li>
             <li><a href="/disclosure/">Disclosure</a></li>
             <li><a href="/contact/">Contact</a></li>
           </ul>
@@ -785,7 +772,7 @@
       </div>
       <div class="foot-bottom">
         <span>© 2026 Home Kitchen UK. All rights reserved.</span>
-        <span class="meta">Researched. Compared. Ranked.</span>
+        <span class="meta">Researched. Compared. Ranked. Printed.</span>
       </div>
     </div>
   </footer>
