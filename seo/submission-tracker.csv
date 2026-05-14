@@ -1,0 +1,41 @@
+Order,Directory Name,URL,Submission URL,Domain Authority,Free Listing,UK Focused,Do-Follow,Category,Requires Account,Account Type,Status,Date Submitted,Login Email,Notes
+1,Google Business Profile,https://www.google.com/business/,https://business.google.com/create,96,Yes,No,Yes,general,Yes,Google Account,Pending,,,Essential for local SEO. Create a Business Profile with NAP details.
+2,LinkedIn Company Page,https://www.linkedin.com/company/,https://www.linkedin.com/company/setup/new/,95,Yes,No,Yes,social,Yes,LinkedIn Account,Pending,,,Create a company page. LinkedIn pages often rank well in search.
+3,Facebook Business Page,https://www.facebook.com/business,https://www.facebook.com/pages/create,94,Yes,No,No,social,Yes,Facebook Account,Pending,,,Create a business page with full details and NAP.
+4,Instagram Business,https://www.instagram.com/,https://www.instagram.com/accounts/professional_account/,94,Yes,No,No,social,Yes,Instagram Professional Account,Pending,,,Convert to professional account for business features and link in bio.
+5,Pinterest Business,https://www.pinterest.co.uk/,https://www.pinterest.com/business/create/,93,Yes,No,No,social,Yes,Pinterest Business Account,Pending,,,Image-driven platform perfect for kitchen and home content. High DA.
+6,Bing Places for Business,https://www.bingplaces.com/,https://www.bingplaces.com/DashBoard/Home/CreateBusiness,92,Yes,No,Yes,general,Yes,Microsoft Account,Pending,,,Microsoft's equivalent to Google Business Profile.
+7,Yelp UK,https://www.yelp.co.uk/,https://biz.yelp.co.uk/claim,91,Yes,No,No,general,Yes,Yelp for Business,Pending,,,"Claim or add your business. High DA, widely used for reviews."
+8,Reddit,https://www.reddit.com/,https://www.reddit.com/submit,91,Yes,No,No,social,Yes,Reddit Account,Pending,,,"Not a traditional directory but high-DA links from relevant subreddits (r/UKHome, r/Kitchen) provide SEO value."
+9,Trustpilot,https://uk.trustpilot.com/,https://business.trustpilot.com/,88,Yes,No,No,reviews,Yes,Trustpilot Business,Pending,,,Create a free business profile. Collect reviews for social proof and SEO.
+10,Foursquare,https://foursquare.com/,https://foursquare.com/business/claim,86,Yes,No,No,local,Yes,Foursquare Account,Pending,,,Claim/create business listing. Used by many apps for location data.
+11,Crunchbase,https://www.crunchbase.com/,https://www.crunchbase.com/add-new,82,Yes,No,Yes,business,Yes,Crunchbase Account,Pending,,,Business information platform. Free company profile adds credibility.
+12,Houzz UK,https://www.houzz.co.uk/,https://www.houzz.co.uk/professionals,76,Yes,No,Yes,home_garden,Yes,Houzz Pro Account (Free Tier),Pending,,,Home & garden focused. Perfect for kitchen appliances. Free professional profile.
+13,SiteJabber UK,https://www.sitejabber.com/,https://www.sitejabber.com/claim,74,Yes,No,No,reviews,Yes,SiteJabber Business,Pending,,,Consumer review platform. Claim your business for free.
+14,Yell.com,https://www.yell.com/,https://www.yell.com/free-listing/,72,Yes,Yes,Yes,general,Yes,Yell Account,Pending,,,UK's leading business directory. Free basic listing available.
+15,Bark.com,https://www.bark.com/,https://www.bark.com/en/gb/signup/professional/,68,Yes,Yes,No,services,Yes,Bark Professional Account,Pending,,,Service marketplace. Free for professionals to create profile and receive leads.
+16,Checkatrade,https://www.checkatrade.com/,https://www.checkatrade.com/join/,64,No,Yes,Yes,trades,Yes,Checkatrade Account,Pending,,,UK trades directory. Has vetting process - may not be suitable for review sites.
+17,192.com,https://www.192.com/,https://www.192.com/businesses/,58,Yes,Yes,Yes,general,Yes,192.com Account,Pending,,,UK directory service with business listings. High DA.
+18,Rated People,https://www.ratedpeople.com/,https://www.ratedpeople.com/tradespeople/signup,58,Yes,Yes,No,trades,Yes,Rated People Account,Pending,,,UK trades directory with reviews. Free basic profile.
+19,My Builder,https://www.mybuilder.com/,https://www.mybuilder.com/tradesperson/signup,57,Yes,Yes,No,trades,Yes,My Builder Account,Pending,,,UK tradesperson directory. Free to sign up and list.
+20,Thomson Local,https://www.thomsonlocal.com/,https://www.thomsonlocal.com/add-business,56,Yes,Yes,Yes,general,Yes,Thomson Local Account,Pending,,,"Former phone book company, now online directory."
+21,Hotfrog UK,https://www.hotfrog.co.uk/,https://www.hotfrog.co.uk/AddYourBusiness,55,Yes,Yes,Yes,general,Yes,Hotfrog Account,Pending,,,Popular free UK business directory. Good for SEO backlinks.
+22,FreeIndex,https://www.freeindex.co.uk/,https://www.freeindex.co.uk/register,54,Yes,Yes,Yes,general,Yes,FreeIndex Account,Pending,,,"Dedicated UK business directory. As the name suggests, listings are free."
+23,Trust A Trader,https://www.trustatrader.com/,https://www.trustatrader.com/join,54,No,Yes,Yes,trades,Yes,Trust A Trader Account,Pending,,,UK trader directory with paid membership model. Free tier very limited.
+24,Infobel UK,https://www.infobel.com/en/uk,https://www.infobel.com/en/uk/business/Add,52,Yes,No,Yes,general,Yes,Infobel Account,Pending,,,International telephone directory with UK section.
+25,Cylex UK,https://www.cylex-uk.co.uk/,https://www.cylex-uk.co.uk/add-company.html,50,Yes,Yes,Yes,general,Yes,Cylex Account,Pending,,,UK branch of Cylex business directory. Free listings with do-follow links.
+26,Scoot,https://www.scoot.co.uk/,https://www.scoot.co.uk/Add-Your-Business/,46,Yes,Yes,Yes,general,Yes,Scoot Account,Pending,,,UK business directory formerly known as Scoot.com.
+27,Touch Local,https://www.touchlocal.com/,https://www.touchlocal.com/add-business,44,Yes,Yes,Yes,local,Yes,Touch Local Account,Pending,,,Local UK business directory. Good for local SEO signals.
+28,Brownbook,https://www.brownbook.net/,https://www.brownbook.net/business/add/,44,Yes,No,Yes,general,Yes,Brownbook Account,Pending,,,Global directory with good UK presence. Do-follow links.
+29,The Best Of UK,https://www.thebestof.co.uk/,https://www.thebestof.co.uk/local/business,44,Yes,Yes,Yes,local,Yes,The Best Of Account,Pending,,,Curated local UK business directory. May require approval.
+30,Quotatis UK,https://www.quotatis.co.uk/,https://www.quotatis.co.uk/join,42,Yes,Yes,No,home_garden,Yes,Quotatis Account,Pending,,,UK home improvement lead generation. Relevant for kitchen appliance reviews.
+31,Bizify,https://www.bizify.co.uk/,https://www.bizify.co.uk/add-business,35,Yes,Yes,Yes,general,Yes,Bizify Account,Pending,,,UK-focused business directory with free basic listing.
+32,Yalwa UK,https://www.yalwa.co.uk/,https://www.yalwa.co.uk/post.html,34,Yes,Yes,Yes,general,Yes,Yalwa Account,Pending,,,UK classifieds and business directory with free listings.
+33,MisterWhat UK,https://www.misterwhat.co.uk/,https://www.misterwhat.co.uk/add-company,34,Yes,Yes,Yes,general,Yes,MisterWhat Account,Pending,,,"UK business directory, part of the MisterWhat network."
+34,Opendi UK,https://www.opendi.co.uk/,https://www.opendi.co.uk/add-business.html,32,Yes,Yes,Yes,general,Yes,Opendi Account,Pending,,,UK branch of international Opendi directory.
+35,Approved Business,https://www.approvedbusiness.co.uk/,https://www.approvedbusiness.co.uk/register.aspx,32,Yes,Yes,Yes,general,Yes,Approved Business Account,Pending,,,UK business directory requiring approval of listings.
+36,Tupalo UK,https://www.tupalo.co.uk/,https://www.tupalo.co.uk/en/add,32,Yes,Yes,Yes,general,Yes,Tupalo Account,Pending,,,UK business directory. Social features with reviews.
+37,Business Magnet,https://www.businessmagnet.co.uk/,https://www.businessmagnet.co.uk/addbusiness.php,30,Yes,Yes,Yes,general,Yes,Business Magnet Account,Pending,,,UK business directory with free listings and categories.
+38,CityLocal Pro,https://www.citylocal.co.uk/,https://www.citylocal.co.uk/frontend/login.php?action=register,30,Yes,Yes,Yes,local,Yes,CityLocal Account,Pending,,,Hyperlocal UK business directory.
+39,UK Small Business Directory,https://www.uksmallbusinessdirectory.co.uk/,https://www.uksmallbusinessdirectory.co.uk/addlisting.asp,28,Yes,Yes,Yes,general,No,none,Pending,,,Specialised in UK small businesses. No account needed for submission.
+40,Tipped UK,https://www.tipped.co.uk/,https://www.tipped.co.uk/register.php,28,Yes,Yes,Yes,reviews,Yes,Tipped Account,Pending,,,UK reviews and business directory. Can receive customer tips/recommendations.
