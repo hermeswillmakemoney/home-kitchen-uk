@@ -891,6 +891,74 @@
                 justify-content: center;
             }
         }
+
+        /* ---- Cross-Links Section ---- */
+        .cross-links {
+            margin-bottom: 32px;
+        }
+        .cross-links h2 {
+            margin-bottom: 20px;
+        }
+        .cross-links-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        @media (max-width: 700px) {
+            .cross-links-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .cross-link-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+        }
+        .cross-link-card.cross-link-product {
+            background: var(--accent-light);
+            border-color: var(--accent-border);
+        }
+        .cross-link-badge {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 4px 10px;
+            border-radius: 4px;
+            background: var(--accent);
+            color: var(--bg-white);
+            margin-bottom: 12px;
+        }
+        .cross-link-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+        .cross-link-card p {
+            font-size: 0.9rem;
+            margin-bottom: 14px;
+        }
+        .cross-link-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .cross-link-card ul li {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.88rem;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+        }
+        .cross-link-card ul li:last-child {
+            border-bottom: none;
+        }
+        .cross-link-card ul li a {
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -1585,6 +1653,33 @@
             <h2>Ready to Upgrade Your Morning Brew?</h2>
             <p>Whichever kettle you choose from our roundup, you'll be enjoying faster, better-tasting hot drinks from day one. Browse our top picks and find your perfect kettle.</p>
             <a href="#review-smeg" class="cta-btn primary">See Our Top Pick</a>
+        </section>
+
+        <!-- ===================== -->
+        <!-- CROSS-LINKS           -->
+        <!-- ===================== -->
+
+        <section class="cross-links">
+            <h2>While you're here...</h2>
+
+            <div class="cross-links-grid">
+                <div class="cross-link-card cross-link-product">
+                    <span class="cross-link-badge">Free Planner</span>
+                    <h3>Get our Household Planner Bundle</h3>
+                    <p>Kitchen appliance cheat sheets, cleaning schedules, and a meal-prep planner — everything you need to run a smoother kitchen.</p>
+                    <a href="/products/" class="cta-btn primary">Browse the bundle &rarr;</a>
+                </div>
+
+                <div class="cross-link-card">
+                    <h3>Also see...</h3>
+                    <ul>
+                        <li><strong>Reviews:</strong> <a href="/toasters/">Best Toasters UK</a> &mdash; the perfect partner for your morning cuppa</li>
+                        <li><strong>Reviews:</strong> <a href="/coffee-machines/">Best Coffee Machines UK</a> &mdash; for when instant won't cut it</li>
+                        <li><strong>Comparison:</strong> <a href="/comparisons/sage-vs-delonghi-coffee/">Sage vs De'Longhi Coffee Machines</a> &mdash; bean-to-cup showdown</li>
+                        <li><strong>Blog:</strong> <a href="/blog/descale-kettle-complete-guide/">How to Descale Your Kettle</a> &mdash; keep it boiling like new</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
     </div>
