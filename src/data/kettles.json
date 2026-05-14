@@ -2,14 +2,66 @@
   "category": "kettles",
   "category_display": "Kettles",
   "currency": "GBP",
-  "source": "User-verified Amazon UK product pages",
+  "source": "Amazon UK product pages — live extraction May 2026",
   "products": [
     {
       "asin": "B0752MB9PW",
       "model": "Smeg KLF03CRUK",
       "brand": "Smeg",
-      "type": "Best Overall",
+      "title": "Smeg KLF03CRUK Retro Style Kettle, 1.7L, 3000W, Cream",
+      "price_gbp": 135.00,
+      "rating": 4.5,
+      "reviews": 546,
+      "image": "https://m.media-amazon.com/images/I/51v5mN1IESL._AC_SL1500_.jpg",
+      "features": [
+        "1.7L (7 cups) capacity",
+        "Soft opening lid",
+        "Water level indicator",
+        "360° swivel base",
+        "Auto shut-off at 100°C"
+      ],
       "amazon_url": "https://www.amazon.co.uk/dp/B0752MB9PW?tag=hermesamazon-21",
+      "type": "Best Premium",
+      "verified": true
+    },
+    {
+      "asin": "B0GN41PZLS",
+      "model": "Cosori Plastic-Free Kettle",
+      "brand": "Cosori",
+      "title": "Cosori Kettle, Plastic-Free, 100% Stainless Steel Interior, 1.7L, 3000W, Silver",
+      "price_gbp": 27.99,
+      "rating": 4.6,
+      "reviews": 18862,
+      "image": "https://m.media-amazon.com/images/I/71qMYl1p-EL._AC_SL1500_.jpg",
+      "features": [
+        "100% stainless steel interior — no plastic water contact",
+        "3000W fast boil — 250ml in 43 seconds",
+        "Internal water level indicator (plastic-free)",
+        "Dual lid opening angles (30° and 70°)",
+        "Auto shut-off and boil-dry protection"
+      ],
+      "amazon_url": "https://www.amazon.co.uk/dp/B0GN41PZLS?tag=hermesamazon-21",
+      "type": "Best Value",
+      "verified": true
+    },
+    {
+      "asin": "B08LHGWF83",
+      "model": "Morphy Richards Equip",
+      "brand": "Morphy Richards",
+      "title": "Morphy Richards Equip Kettle, 1.7L, 3kW Rapid Boil, Stainless Steel, Red",
+      "price_gbp": 26.99,
+      "rating": 4.4,
+      "reviews": 10832,
+      "image": "https://m.media-amazon.com/images/I/61vwD84G-dL._AC_SL1500_.jpg",
+      "features": [
+        "1.7L capacity — up to 6 cups",
+        "3kW rapid boil concealed element",
+        "360° base with removable limescale filter",
+        "Easy-view water gauge",
+        "Stylish red stainless steel finish"
+      ],
+      "amazon_url": "https://www.amazon.co.uk/dp/B08LHGWF83?tag=hermesamazon-21",
+      "type": "Best Budget",
       "verified": true
     }
   ]
