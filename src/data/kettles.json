@@ -2,52 +2,15 @@
   "category": "kettles",
   "category_display": "Kettles",
   "currency": "GBP",
-  "source": "T3.com research May 2026",
+  "source": "User-verified Amazon UK product pages",
   "products": [
     {
-      "model": "Smeg KLF03",
+      "asin": "B0752MB9PW",
+      "model": "Smeg KLF03CRUK",
       "brand": "Smeg",
       "type": "Best Overall",
-      "specs": {
-        "capacity": "1.7L",
-        "power": "3000W"
-      }
-    },
-    {
-      "model": "KitchenAid Variable Temperature 5KEK1722",
-      "brand": "KitchenAid",
-      "type": "Best Multi-Temp",
-      "specs": {
-        "capacity": "1.5L",
-        "power": "3000W"
-      }
-    },
-    {
-      "model": "Ninja Perfect Temperature Kettle",
-      "brand": "Ninja",
-      "type": "Best Fast-Boil",
-      "specs": {
-        "capacity": "1.7L",
-        "power": "3000W"
-      }
-    },
-    {
-      "model": "Dualit Dome",
-      "brand": "Dualit",
-      "type": "Best Large",
-      "specs": {
-        "capacity": "1.7L",
-        "power": "3000W"
-      }
-    },
-    {
-      "model": "Breville Edge Low Steam",
-      "brand": "Breville",
-      "type": "Best Compact",
-      "specs": {
-        "capacity": "1.7L",
-        "power": "3000W"
-      }
+      "amazon_url": "https://www.amazon.co.uk/dp/B0752MB9PW?tag=hermesamazon-21",
+      "verified": true
     }
   ]
 }

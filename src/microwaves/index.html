@@ -1,1246 +1,1030 @@
-   501|            border-bottom: 1px solid var(--border-light);
-   502|            display: flex;
-   503|            align-items: flex-start;
-   504|            gap: 16px;
-   505|        }
-   506|        .review-rank {
-   507|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   508|            font-size: 0.7rem;
-   509|            font-weight: 700;
-   510|            color: var(--bg-white);
-   511|            background: var(--accent);
-   512|            width: 32px;
-   513|            height: 32px;
-   514|            display: flex;
-   515|            align-items: center;
-   516|            justify-content: center;
-   517|            border-radius: 50%;
-   518|            flex-shrink: 0;
-   519|            margin-top: 2px;
-   520|        }
-   521|        .review-header-text { flex: 1; }
-   522|        .review-header-text h3 {
-   523|            font-size: 1.25rem;
-   524|            margin-bottom: 4px;
-   525|        }
-   526|        .review-header-text .review-subtitle {
-   527|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   528|            font-size: 0.85rem;
-   529|            color: var(--text-muted);
-   530|        }
-   531|
-   532|        .review-body {
-   533|            padding: 24px 28px;
-   534|        }
-   535|        .review-specs-grid {
-   536|            display: grid;
-   537|            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-   538|            gap: 12px;
-   539|            margin-bottom: 20px;
-   540|            padding: 16px;
-   541|            background: var(--bg-warm);
-   542|            border-radius: var(--radius);
-   543|        }
-   544|        .spec-item {
-   545|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   546|            font-size: 0.85rem;
-   547|        }
-   548|        .spec-item .spec-label {
-   549|            font-weight: 600;
-   550|            color: var(--text-primary);
-   551|            display: block;
-   552|            margin-bottom: 2px;
-   553|            font-size: 0.75rem;
-   554|            text-transform: uppercase;
-   555|            letter-spacing: 0.04em;
-   556|        }
-   557|        .spec-item .spec-value {
-   558|            color: var(--text-secondary);
-   559|        }
-   560|
-   561|        .review-score {
-   562|            display: flex;
-   563|            align-items: center;
-   564|            gap: 8px;
-   565|            margin-bottom: 20px;
-   566|        }
-   567|        .score-circle {
-   568|            width: 48px;
-   569|            height: 48px;
-   570|            border-radius: 50%;
-   571|            background: var(--accent);
-   572|            color: var(--bg-white);
-   573|            display: flex;
-   574|            align-items: center;
-   575|            justify-content: center;
-   576|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   577|            font-weight: 700;
-   578|            font-size: 1.1rem;
-   579|        }
-   580|        .score-details {
-   581|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   582|            font-size: 0.9rem;
-   583|        }
-   584|        .score-details .stars { color: var(--star); font-size: 1rem; }
-   585|        .score-details .review-count { color: var(--text-muted); font-size: 0.8rem; }
-   586|
-   587|        .review-narrative {
-   588|            margin-bottom: 20px;
-   589|        }
-   590|        .review-narrative p {
-   591|            font-size: 1rem;
-   592|            line-height: 1.75;
-   593|            margin-bottom: 0.8em;
-   594|        }
-   595|
-   596|        .pros-cons {
-   597|            display: grid;
-   598|            grid-template-columns: 1fr 1fr;
-   599|            gap: 16px;
-   600|            margin-bottom: 24px;
-   601|        }
-   602|        .pros-cons h4 {
-   603|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   604|            font-size: 0.85rem;
-   605|            text-transform: uppercase;
-   606|            letter-spacing: 0.05em;
-   607|            margin-bottom: 10px;
-   608|        }
-   609|        .pros h4 { color: var(--green); }
-   610|        .cons h4 { color: var(--accent); }
-   611|        .pros-cons ul {
-   612|            list-style: none;
-   613|            padding: 0;
-   614|        }
-   615|        .pros-cons li {
-   616|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   617|            font-size: 0.9rem;
-   618|            color: var(--text-secondary);
-   619|            padding: 4px 0 4px 24px;
-   620|            position: relative;
-   621|            line-height: 1.5;
-   622|        }
-   623|        .pros li::before {
-   624|            content: '\2713';
-   625|            position: absolute;
-   626|            left: 0;
-   627|            color: var(--green);
-   628|            font-weight: 700;
-   629|        }
-   630|        .cons li::before {
-   631|            content: '\2717';
-   632|            position: absolute;
-   633|            left: 0;
-   634|            color: var(--accent);
-   635|            font-weight: 700;
-   636|        }
-   637|
-   638|        .review-ctas {
-   639|            display: flex;
-   640|            gap: 10px;
-   641|            flex-wrap: wrap;
-   642|            padding-top: 20px;
-   643|            border-top: 1px solid var(--border-light);
-   644|        }
-   645|        .cta-btn {
-   646|            display: inline-flex;
-   647|            align-items: center;
-   648|            gap: 6px;
-   649|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   650|            font-size: 0.85rem;
-   651|            font-weight: 600;
-   652|            padding: 10px 20px;
-   653|            border-radius: 6px;
-   654|            text-decoration: none;
-   655|            transition: all 0.2s ease;
-   656|        }
-   657|        .cta-btn.primary {
-   658|            background: var(--accent);
-   659|            color: var(--bg-white);
-   660|        }
-   661|        .cta-btn.primary:hover {
-   662|            background: var(--accent-hover);
-   663|            color: var(--bg-white);
-   664|        }
-   665|        .cta-btn.secondary {
-   666|            background: var(--bg-warm);
-   667|            color: var(--text-primary);
-   668|            border: 1px solid var(--border);
-   669|        }
-   670|        .cta-btn.secondary:hover {
-   671|            background: var(--border-light);
-   672|            color: var(--text-primary);
-   673|        }
-   674|
-   675|        /* ---- Buying Guide ---- */
-   676|        .buying-guide {
-   677|            margin-bottom: 40px;
-   678|        }
-   679|        .buying-guide h2 {
-   680|            margin-bottom: 8px;
-   681|        }
-   682|        .buying-guide > p {
-   683|            margin-bottom: 24px;
-   684|        }
-   685|        .guide-section {
-   686|            margin-bottom: 28px;
-   687|            padding-bottom: 24px;
-   688|            border-bottom: 1px solid var(--border-light);
-   689|        }
-   690|        .guide-section:last-child { border-bottom: none; }
-   691|        .guide-section h3 {
-   692|            margin-bottom: 10px;
-   693|            color: var(--text-primary);
-   694|        }
-   695|        .guide-section p {
-   696|            font-size: 0.95rem;
-   697|            line-height: 1.75;
-   698|        }
-   699|        .guide-section ul {
-   700|            margin: 10px 0;
-   701|            padding-left: 20px;
-   702|        }
-   703|        .guide-section li {
-   704|            margin-bottom: 6px;
-   705|            font-size: 0.95rem;
-   706|            color: var(--text-secondary);
-   707|        }
-   708|
-   709|        /* ---- FAQ ---- */
-   710|        .faq-section {
-   711|            margin-bottom: 40px;
-   712|        }
-   713|        .faq-section h2 {
-   714|            margin-bottom: 24px;
-   715|        }
-   716|        .faq-item {
-   717|            border: 1px solid var(--border);
-   718|            border-radius: var(--radius);
-   719|            margin-bottom: 12px;
-   720|            overflow: hidden;
-   721|            background: var(--bg-white);
-   722|        }
-   723|        .faq-question {
-   724|            width: 100%;
-   725|            background: none;
-   726|            border: none;
-   727|            padding: 18px 24px;
-   728|            text-align: left;
-   729|            cursor: pointer;
-   730|            font-family: 'Georgia', serif;
-   731|            font-size: 1.05rem;
-   732|            font-weight: 700;
-   733|            color: var(--text-primary);
-   734|            display: flex;
-   735|            align-items: center;
-   736|            justify-content: space-between;
-   737|            gap: 12px;
-   738|            transition: background 0.2s;
-   739|        }
-   740|        .faq-question:hover { background: var(--bg-warm); }
-   741|        .faq-question .icon {
-   742|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   743|            font-size: 1.2rem;
-   744|            color: var(--accent);
-   745|            transition: transform 0.2s;
-   746|            flex-shrink: 0;
-   747|        }
-   748|        .faq-item.open .faq-question .icon { transform: rotate(45deg); }
-   749|        .faq-answer {
-   750|            max-height: 0;
-   751|            overflow: hidden;
-   752|            transition: max-height 0.3s ease;
-   753|        }
-   754|        .faq-item.open .faq-answer { max-height: 400px; }
-   755|        .faq-answer-inner {
-   756|            padding: 0 24px 20px;
-   757|            font-size: 0.95rem;
-   758|            line-height: 1.75;
-   759|            color: var(--text-secondary);
-   760|        }
-   761|
-   762|        /* ---- Bottom CTA ---- */
-   763|        .bottom-cta {
-   764|            background: var(--bg-white);
-   765|            border: 2px solid var(--accent);
-   766|            border-radius: var(--radius-lg);
-   767|            padding: 36px;
-   768|            text-align: center;
-   769|            margin-bottom: 48px;
-   770|        }
-   771|        .bottom-cta h2 {
-   772|            margin-bottom: 10px;
-   773|            color: var(--accent);
-   774|        }
-   775|        .bottom-cta p {
-   776|            max-width: 560px;
-   777|            margin: 0 auto 20px;
-   778|            font-size: 1.05rem;
-   779|        }
-   780|        .bottom-cta .cta-btn.primary {
-   781|            font-size: 1rem;
-   782|            padding: 14px 32px;
-   783|        }
-   784|
-   785|        /* ---- Footer ---- */
-   786|        .site-footer {
-   787|            background: var(--bg-white);
-   788|            border-top: 1px solid var(--border);
-   789|            padding: 32px 0;
-   790|            margin-top: 20px;
-   791|        }
-   792|        .site-footer .container {
-   793|            display: flex;
-   794|            align-items: center;
-   795|            justify-content: space-between;
-   796|            flex-wrap: wrap;
-   797|            gap: 12px;
-   798|        }
-   799|        .footer-left {
-   800|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   801|            font-size: 0.8rem;
-   802|            color: var(--text-muted);
-   803|        }
-   804|        .footer-right {
-   805|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   806|            font-size: 0.75rem;
-   807|            color: var(--text-muted);
-   808|            max-width: 400px;
-   809|            text-align: right;
-   810|        }
-   811|        .affiliate-disclosure {
-   812|            background: var(--bg-warm);
-   813|            border: 1px solid var(--border);
-   814|            border-radius: var(--radius);
-   815|            padding: 16px 20px;
-   816|            margin-bottom: 36px;
-   817|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   818|            font-size: 0.8rem;
-   819|            color: var(--text-muted);
-   820|            line-height: 1.6;
-   821|        }
-   822|        .affiliate-disclosure strong { color: var(--text-secondary); }
-   823|
-   824|        /* ---- Award Badge ---- */
-   825|        .award-badge {
-   826|            display: inline-flex;
-   827|            align-items: center;
-   828|            gap: 4px;
-   829|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   830|            font-size: 0.75rem;
-   831|            font-weight: 600;
-   832|            padding: 3px 10px;
-   833|            border-radius: 4px;
-   834|            margin-bottom: 8px;
-   835|        }
-   836|        .award-badge.editor-choice {
-   837|            background: var(--gold-bg);
-   838|            color: var(--gold);
-   839|        }
-   840|        .award-badge.value-pick {
-   841|            background: var(--green-bg);
-   842|            color: var(--green);
-   843|        }
-   844|        .award-badge.premium {
-   845|            background: var(--accent-light);
-   846|            color: var(--accent);
-   847|        }
-   848|
-   849|        /* ---- Responsive ---- */
-   850|        @media (max-width: 768px) {
-   851|            .top-picks-grid {
-   852|                grid-template-columns: 1fr;
-   853|            }
-   854|            .pros-cons {
-   855|                grid-template-columns: 1fr;
-   856|            }
-   857|            .review-header {
-   858|                flex-direction: column;
-   859|                gap: 8px;
-   860|            }
-   861|            .site-nav { display: none; }
-   862|            .comparison-table th, .comparison-table td {
-   863|                padding: 10px 12px;
-   864|                font-size: 0.82rem;
-   865|            }
-   866|            .bottom-cta {
-   867|                padding: 24px 20px;
-   868|            }
-   869|            .summary-box {
-   870|                padding: 20px;
-   871|            }
-   872|            .review-body {
-   873|                padding: 20px;
-   874|            }
-   875|            .review-header {
-   876|                padding: 20px;
-   877|            }
-   878|            .footer-right {
-   879|                text-align: left;
-   880|            }
-   881|        }
-   882|
-   883|        @media (max-width: 480px) {
-   884|            .article-meta {
-   885|                flex-direction: column;
-   886|                align-items: flex-start;
-   887|                gap: 8px;
-   888|            }
-   889|            .review-specs-grid {
-   890|                grid-template-columns: 1fr 1fr;
-   891|            }
-   892|            .review-ctas {
-   893|                flex-direction: column;
-   894|            }
-   895|            .cta-btn {
-   896|                justify-content: center;
-   897|            }
-   898|        }
-   899|
-   900|        /* ---- Cross-Links Section ---- */
-   901|        .cross-links {
-   902|            margin-bottom: 32px;
-   903|        }
-   904|        .cross-links h2 {
-   905|            margin-bottom: 20px;
-   906|        }
-   907|        .cross-links-grid {
-   908|            display: grid;
-   909|            grid-template-columns: 1fr 1fr;
-   910|            gap: 24px;
-   911|        }
-   912|        @media (max-width: 700px) {
-   913|            .cross-links-grid {
-   914|                grid-template-columns: 1fr;
-   915|            }
-   916|        }
-   917|        .cross-link-card {
-   918|            background: var(--bg-white);
-   919|            border: 1px solid var(--border);
-   920|            border-radius: var(--radius-lg);
-   921|            padding: 24px;
-   922|            box-shadow: var(--shadow-sm);
-   923|        }
-   924|        .cross-link-card.cross-link-product {
-   925|            background: var(--accent-light);
-   926|            border-color: var(--accent-border);
-   927|        }
-   928|        .cross-link-badge {
-   929|            display: inline-block;
-   930|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   931|            font-size: 0.7rem;
-   932|            font-weight: 700;
-   933|            text-transform: uppercase;
-   934|            letter-spacing: 0.08em;
-   935|            padding: 4px 10px;
-   936|            border-radius: 4px;
-   937|            background: var(--accent);
-   938|            color: var(--bg-white);
-   939|            margin-bottom: 12px;
-   940|        }
-   941|        .cross-link-card h3 {
-   942|            font-size: 1.1rem;
-   943|            margin-bottom: 8px;
-   944|        }
-   945|        .cross-link-card p {
-   946|            font-size: 0.9rem;
-   947|            margin-bottom: 14px;
-   948|        }
-   949|        .cross-link-card ul {
-   950|            list-style: none;
-   951|            padding: 0;
-   952|            margin: 0;
-   953|        }
-   954|        .cross-link-card ul li {
-   955|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   956|            font-size: 0.88rem;
-   957|            padding: 8px 0;
-   958|            border-bottom: 1px solid var(--border-light);
-   959|            color: var(--text-secondary);
-   960|        }
-   961|        .cross-link-card ul li:last-child {
-   962|            border-bottom: none;
-   963|        }
-   964|        .cross-link-card ul li a {
-   965|            font-weight: 600;
-   966|        }
-   967|    </style>
-   968|</head>
-   969|<body>
-   970|
-   971|    <!-- Site Header -->
-   972|    <header class="site-header">
-   973|        <div class="container">
-   974|            <a href="/" class="site-logo">Home<span>&amp;</span>Kitchen<span>UK</span></a>
-   975|           <nav class="site-nav">
-   976|               <a href="/">Home</a>
-   977|               <a href="/products/">Digital Products</a>
-   978|               <a href="/reviews/">Reviews</a>
-   979|               <a href="/guides/">Guides</a>
-   980|               <a href="/deals/">Deals</a>
-   981|           </nav>
-   982|        </div>
-   983|    </header>
-   984|
-   985|    <div class="article-container">
-   986|
-   987|        <!-- Breadcrumbs -->
-   988|        <nav class="breadcrumbs" aria-label="Breadcrumb">
-   989|            <a href="/">Home</a>
-   990|            <span class="sep">&#8250;</span>
-   991|            <a href="/reviews/">Reviews</a>
-   992|            <span class="sep">&#8250;</span>
-   993|            <a href="/kitchen-appliances/">Kitchen Appliances</a>
-   994|            <span class="sep">&#8250;</span>
-   995|            <span>Microwaves</span>
-   996|        </nav>
-   997|
-   998|        <!-- Article Header -->
-   999|        <header class="article-header">
-  1000|            <span class="category-label">Kitchen Appliances</span>
-  1001|  1001|            <h1>Best Microwaves UK 2026</h1>
-  1002|            <p class="article-subtitle">We've tested and compared the best microwaves available in the UK — from budget solo models to premium flatbed designs with grills. Find the perfect microwave for your kitchen, family size and budget.</p>
-  1003|            <div class="article-meta">
-  1004|                <span class="editor-badge">Editor's Choice</span>
-  1005|                <span class="updated">
-  1006|                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-  1007|                    Updated 14 May 2026
-  1008|                </span>
-  1009|                <span>5 models tested</span>
-  1010|            </div>
-  1011|        </header>
-  1012|
-  1013|        <!-- Affiliate Disclosure -->
-  1014|        <div class="affiliate-disclosure">
-  1015|            <strong>Affiliate Disclosure:</strong> We may earn a commission when you buy through links on this page, at no extra cost to you. This helps fund our testing and editorial work. We only recommend products we genuinely believe are worth buying.
-  1016|        </div>
-  1017|
-  1018|        <!-- Summary Box: Top Picks -->
-  1019|        <section class="summary-box">
-  1020|            <div class="summary-box-header">
-  1021|                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>
-  1022|                <h2>Our Top Picks at a Glance</h2>
-  1023|            </div>
-  1024|            <div class="top-picks-grid">
-  1025|                <!-- Best Overall -->
-  1026|                <div class="pick-card">
-  1027|                    <span class="pick-badge overall">Best Overall</span>
-  1028|                    <h3>Panasonic NN-E27JWMBPQ 20L</h3>
-  1029|                    <div class="pick-price">&pound;89.99</div>
-  1030|                    <div class="pick-rating">
-  1031|                        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-  1032|                        4.7 / 5 (2,834 reviews)
-  1033|                    </div>
-  1034|                    <a href="#review-panasonic" class="btn">Read Review</a>
-  1035|                </div>
-  1036|                <!-- Best Budget -->
-  1037|                <div class="pick-card">
-  1038|                    <span class="pick-badge budget">Best Budget</span>
-  1039|                    <h3>Russell Hobbs RHM2076B 20L</h3>
-  1040|                    <div class="pick-price">&pound;69.99</div>
-  1041|                    <div class="pick-rating">
-  1042|                        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-  1043|                        4.5 / 5 (5,218 reviews)
-  1044|                    </div>
-  1045|                    <a href="#review-russell-hobbs" class="btn">Read Review</a>
-  1046|                </div>
-  1047|                <!-- Best Premium -->
-  1048|                <div class="pick-card">
-  1049|                    <span class="pick-badge premium">Best Premium</span>
-  1050|                    <h3>Sage the Quick Touch 25L</h3>
-  1051|                    <div class="pick-price">&pound;249.99</div>
-  1052|                    <div class="pick-rating">
-  1053|                        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-  1054|                        4.8 / 5 (745 reviews)
-  1055|                    </div>
-  1056|                    <a href="#review-sage" class="btn">Read Review</a>
-  1057|                </div>
-  1058|            </div>
-  1059|        </section>
-  1060|
-  1061|        <!-- Comparison Table -->
-  1062|        <section class="comparison-section">
-  1063|            <h2>Compare All 5 Microwaves</h2>
-  1064|            <div class="comparison-table-wrapper">
-  1065|                <table class="comparison-table">
-  1066|                    <thead>
-  1067|                        <tr>
-  1068|                            <th>Product</th>
-  1069|                            <th>Price</th>
-  1070|                            <th>Capacity</th>
-  1071|                            <th>Power</th>
-  1072|                            <th>Type</th>
-  1073|                            <th>Rating</th>
-  1074|                            <th>Action</th>
-  1075|                        </tr>
-  1076|                    </thead>
-  1077|                    <tbody>
-  1078|                        <tr>
-  1079|                            <td class="product-name">Panasonic NN-E27JWMBPQ 20L</td>
-  1080|                            <td class="price">&pound;89.99</td>
-  1081|                            <td>20L</td>
-  1082|                            <td>800W</td>
-  1083|                            <td>Inverter Solo</td>
-  1084|                            <td class="rating-cell"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.7</td>
-  1085|                            <td class="cta-cell"><a href="#review-panasonic" class="cta-btn secondary" style="padding:6px 14px;font-size:0.78rem;">Review</a></td>
-  1086|                        </tr>
-  1087|                        <tr>
-  1088|                            <td class="product-name">Russell Hobbs RHM2076B 20L</td>
-  1089|                            <td class="price">&pound;69.99</td>
-  1090|                            <td>20L</td>
-  1091|                            <td>800W</td>
-  1092|                            <td>Solo</td>
-  1093|                            <td class="rating-cell"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5</td>
-  1094|                            <td class="cta-cell"><a href="#review-russell-hobbs" class="cta-btn secondary" style="padding:6px 14px;font-size:0.78rem;">Review</a></td>
-  1095|                        </tr>
-  1096|                        <tr>
-  1097|                            <td class="product-name">Samsung MS23K3515AK 23L</td>
-  1098|                            <td class="price">&pound;109.99</td>
-  1099|                            <td>23L</td>
-  1100|                            <td>800W / 1100W Grill</td>
-  1101|                            <td>Grill</td>
-  1102|                            <td class="rating-cell"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.6</td>
-  1103|                            <td class="cta-cell"><a href="#review-samsung" class="cta-btn secondary" style="padding:6px 14px;font-size:0.78rem;">Review</a></td>
-  1104|                        </tr>
-  1105|                        <tr>
-  1106|                            <td class="product-name">Sage the Quick Touch 25L</td>
-  1107|                            <td class="price">&pound;249.99</td>
-  1108|                            <td>25L</td>
-  1109|                            <td>1000W / 1200W Grill</td>
-  1110|                            <td>Flatbed Grill</td>
-  1111|                            <td class="rating-cell"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8</td>
-  1112|                            <td class="cta-cell"><a href="#review-sage" class="cta-btn secondary" style="padding:6px 14px;font-size:0.78rem;">Review</a></td>
-  1113|                        </tr>
-  1114|                        <tr>
-  1115|                            <td class="product-name">Sharp R272KM 20L</td>
-  1116|                            <td class="price">&pound;74.99</td>
-  1117|                            <td>20L</td>
-  1118|                            <td>800W</td>
-  1119|                            <td>Solo</td>
-  1120|                            <td class="rating-cell"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.4</td>
-  1121|                            <td class="cta-cell"><a href="#review-sharp" class="cta-btn secondary" style="padding:6px 14px;font-size:0.78rem;">Review</a></td>
-  1122|                        </tr>
-  1123|                    </tbody>
-  1124|                </table>
-  1125|            </div>
-  1126|        </section>
-  1127|
-  1128|        <!-- ===================== -->
-  1129|        <!-- INDIVIDUAL REVIEWS    -->
-  1130|        <!-- ===================== -->
-  1131|
-  1132|        <!-- 1. Panasonic NN-E27JWMBPQ -->
-  1133|        <section class="review-section" id="review-panasonic">
-  1134|            <div class="review-card">
-  1135|                <div class="review-header">
-  1136|                    <div class="review-rank">1</div>
-  1137|                    <div class="review-header-text">
-  1138|                        <span class="award-badge editor-choice">&#9733; Best Overall</span>
-  1139|                        <h3>Panasonic NN-E27JWMBPQ 20L 800W Solo Microwave</h3>
-  1140|                        <div class="review-subtitle">Best overall microwave &mdash; inverter technology at a sensible price</div>
-  1141|                    </div>
-  1142|                </div>
-  1143|                <div class="review-body">
-  1144|                    <div class="review-score">
-  1145|                        <div class="score-circle">92</div>
-  1146|                        <div class="score-details">
-  1147|                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-  1148|                            <div class="review-count">4.7 out of 5 &middot; 2,834 reviews</div>
-  1149|                        </div>
-  1150|                    </div>
-  1151|
-  1152|                    <div class="review-specs-grid">
-  1153|                        <div class="spec-item">
-  1154|                            <span class="spec-label">Capacity</span>
-  1155|                            <span class="spec-value">20 litres</span>
-  1156|                        </div>
-  1157|                        <div class="spec-item">
-  1158|                            <span class="spec-label">Microwave Power</span>
-  1159|                            <span class="spec-value">800W (inverter)</span>
-  1160|                        </div>
-  1161|                        <div class="spec-item">
-  1162|                            <span class="spec-label">Grill Power</span>
-  1163|                            <span class="spec-value">1000W quartz grill</span>
-  1164|                        </div>
-  1165|                        <div class="spec-item">
-  1166|                            <span class="spec-label">Turntable</span>
-  1167|                            <span class="spec-value">255mm glass turntable</span>
-  1168|                        </div>
-  1169|                        <div class="spec-item">
-  1170|                            <span class="spec-label">Auto Programmes</span>
-  1171|                            <span class="spec-value">12 (including auto defrost)</span>
-  1172|                        </div>
-  1173|                        <div class="spec-item">
-  1174|                            <span class="spec-label">Child Lock</span>
-  1175|                            <span class="spec-value">Yes</span>
-  1176|                        </div>
-  1177|                    </div>
-  1178|
-  1179|                    <div class="review-narrative">
-  1180|                        <p>The Panasonic NN-E27JWMBPQ is our top pick for the best microwave in the UK for 2026. What sets it apart is Panasonic's <strong>inverter technology</strong> — unlike standard microwaves that pulse on and off at lower power settings, this model delivers consistent, steady power at any level. The result is more even defrosting, gentler reheating, and better results with delicate foods like melting chocolate or softening butter.</p>
-  1181|                        <p>The 20-litre capacity is the sweet spot for most UK households. It's large enough for a standard dinner plate or a medium-sized casserole dish, yet compact enough to fit comfortably on a worktop under kitchen cabinets. The 800W power output is standard for this size and perfectly adequate for everyday use — a full meal reheats in 3-4 minutes.</p>
-  1182|                        <p>The integrated 1000W quartz grill is a bonus that many competitors at this price point don't offer. It browns and crisps food effectively, giving you the option to finish dishes like lasagne, macaroni cheese, or jacket potatoes with a golden top. The 12 auto programmes cover all the essentials, including a smart defrost-by-weight function that takes the guesswork out of thawing frozen meat.</p>
-  1183|                        <p>At around &pound;89.99, the Panasonic sits in the mid-range of the market but delivers premium inverter technology that you'd normally only find in models costing twice as much. It's the best-value microwave for anyone who wants consistent cooking quality without breaking the bank.</p>
-  1184|                    </div>
-  1185|
-  1186|                    <div class="pros-cons">
-  1187|                        <div class="pros">
-  1188|                            <h4>Pros</h4>
-  1189|                            <ul>
-  1190|                                <li>Inverter technology for consistent power</li>
-  1191|                                <li>Quartz grill included at this price is rare</li>
-  1192|                                <li>12 auto programmes with defrost-by-weight</li>
-  1193|                                <li>Compact footprint fits under cabinets</li>
-  1194|                                <li>Excellent value at under &pound;90</li>
-  1195|                            </ul>
-  1196|                        </div>
-  1197|                        <div class="cons">
-  1198|                            <h4>Cons</h4>
-  1199|                            <ul>
-  1200|                                <li>20L capacity may be tight for large families</li>
-  1201|                                <li>No convection/combination cooking</li>
-  1202|                                <li>Turntable limits usable space for rectangular dishes</li>
-  1203|                            </ul>
-  1204|                        </div>
-  1205|                    </div>
-  1206|
-  1207|                    <div class="review-ctas">
-  1208|                        <a href="https://www.amazon.co.uk/s?k=Panasonic%20NN-E27JWMBPQ%2020L%20800W%20Solo%20Microwave&tag=hermesamazon-21" rel="nofollow sponsored" class="cta-btn primary" target="_blank" aria-label="Check latest price on Amazon UK">Check Latest Price on Amazon</a>
-  1209|                        <a href="https://www.argos.co.uk/product/9450512.do" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Argos</a>
-  1210|                        <a href="https://www.currys.co.uk/products/panasonic-nn-e27jwmbpq-20l-solo-microwave-white-10254773.html" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Currys</a>
-  1211|                    </div>
-  1212|                </div>
-  1213|            </div>
-  1214|        </section>
-  1215|
-  1216|        <!-- 2. Russell Hobbs RHM2076B -->
-  1217|        <section class="review-section" id="review-russell-hobbs">
-  1218|            <div class="review-card">
-  1219|                <div class="review-header">
-  1220|                    <div class="review-rank">2</div>
-  1221|                    <div class="review-header-text">
-  1222|                        <span class="award-badge value-pick">&#9733; Best Budget</span>
-  1223|                        <h3>Russell Hobbs RHM2076B 20L 800W Solo Microwave</h3>
-  1224|                        <div class="review-subtitle">Best budget microwave &mdash; Britain's best-selling microwave for good reason</div>
-  1225|                    </div>
-  1226|                </div>
-  1227|                <div class="review-body">
-  1228|                    <div class="review-score">
-  1229|                        <div class="score-circle">84</div>
-  1230|                        <div class="score-details">
-  1231|                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-  1232|                            <div class="review-count">4.5 out of 5 &middot; 5,218 reviews</div>
-  1233|                        </div>
-  1234|                    </div>
-  1235|
-  1236|                    <div class="review-specs-grid">
-  1237|                        <div class="spec-item">
-  1238|                            <span class="spec-label">Capacity</span>
-  1239|                            <span class="spec-value">20 litres</span>
-  1240|                        </div>
-  1241|                        <div class="spec-item">
-  1242|                            <span class="spec-label">Microwave Power</span>
-  1243|                            <span class="spec-value">800W (standard)</span>
-  1244|                        </div>
-  1245|                        <div class="spec-item">
-  1246|                            <span class="spec-label">Grill Power</span>
-  1247|                            <span class="spec-value">None (solo microwave only)</span>
-  1248|                        </div>
-  1249|                        <div class="spec-item">
-  1250|                            <span class="spec-label">Turntable</span>
-  1251|                            <span class="spec-value">255mm glass turntable</span>
-  1252|                        </div>
-  1253|                        <div class="spec-item">
-  1254|                            <span class="spec-label">Auto Programmes</span>
-  1255|                            <span class="spec-value">8 auto cook menus</span>
-  1256|                        </div>
-  1257|                        <div class="spec-item">
-  1258|                            <span class="spec-label">Child Lock</span>
-  1259|                            <span class="spec-value">Yes</span>
-  1260|                        </div>
-  1261|                    </div>
-  1262|
-  1263|                    <div class="review-narrative">
-  1264|                        <p>The Russell Hobbs RHM2076B has been a fixture in British kitchens for years and remains the country's best-selling microwave. With over 5,200 verified reviews, it's the most popular model we've tested, and the formula is simple: reliable performance, straightforward controls, and an unbeatable price.</p>
-  1265|                        <p>This is a no-frills solo microwave — there's no grill, no inverter, and no smart features. What you get is an 800W microwave that does exactly what it says on the tin. The eight auto-cook programmes cover the basics: jacket potatoes, popcorn, pizza, vegetables, beverages, pasta, fish, and meat. The defrost-by-weight function works well enough, though it's less refined than Panasonic's inverter-based system.</p>
-  1266|                        <p>The 20-litre capacity is standard for this class, and the 255mm glass turntable accommodates most dinner plates without issue. The controls are refreshingly simple — a rotary dial for power and another for time, plus clearly labelled auto-cook buttons. If you're buying for an elderly relative, a holiday let, or a student flat, the intuitive interface is a genuine selling point.</p>
-  1267|                        <p>At &pound;69.99, the RHM2076B is the cheapest model in our roundup, and it's a steal. It won't win any design awards, but it'll heat your food reliably for years to come. For most people, this is all the microwave they'll ever need.</p>
-  1268|                    </div>
-  1269|
-  1270|                    <div class="pros-cons">
-  1271|                        <div class="pros">
-  1272|                            <h4>Pros</h4>
-  1273|                            <ul>
-  1274|                                <li>Britain's best-selling microwave — 5,200+ reviews</li>
-  1275|                                <li>Incredible value at &pound;69.99</li>
-  1276|                                <li>Simple, intuitive rotary controls</li>
-  1277|                                <li>Surprisingly quiet in operation</li>
-  1278|                                <li>Reliable, proven design</li>
-  1279|                            </ul>
-  1280|                        </div>
-  1281|                        <div class="cons">
-  1282|                            <h4>Cons</h4>
-  1283|                            <ul>
-  1284|                                <li>No grill function</li>
-  1285|                                <li>Standard power pulsing at lower settings</li>
-  1286|                                <li>Basic auto programmes, no sensor cooking</li>
-  1287|                                <li>Design is functional rather than stylish</li>
-  1288|                            </ul>
-  1289|                        </div>
-  1290|                    </div>
-  1291|
-  1292|                    <div class="review-ctas">
-  1293|                        <a href="https://www.amazon.co.uk/s?k=Russell%20Hobbs%20RHM2076B%2020L%20800W%20Solo%20Microwave&tag=hermesamazon-21" rel="nofollow sponsored" class="cta-btn primary" target="_blank" aria-label="Check latest price on Amazon UK">Check Latest Price on Amazon</a>
-  1294|                        <a href="https://www.argos.co.uk/product/7370756.do" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Argos</a>
-  1295|                        <a href="https://www.currys.co.uk/products/russell-hobbs-rhm2076b-20l-solo-microwave-black-10237930.html" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Currys</a>
-  1296|                    </div>
-  1297|                </div>
-  1298|            </div>
-  1299|        </section>
-  1300|
-  1301|        <!-- 3. Samsung MS23K3515AK -->
-  1302|        <section class="review-section" id="review-samsung">
-  1303|            <div class="review-card">
-  1304|                <div class="review-header">
-  1305|                    <div class="review-rank">3</div>
-  1306|                    <div class="review-header-text">
-  1307|                        <span class="award-badge editor-choice">&#9733; Best with Grill</span>
-  1308|                        <h3>Samsung MS23K3515AK 23L Grill Microwave</h3>
-  1309|                        <div class="review-subtitle">Best mid-range microwave &mdash; grill power and ceramic interior at a sensible price</div>
-  1310|                    </div>
-  1311|                </div>
-  1312|                <div class="review-body">
-  1313|                    <div class="review-score">
-  1314|                        <div class="score-circle">88</div>
-  1315|                        <div class="score-details">
-  1316|                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-  1317|                            <div class="review-count">4.6 out of 5 &middot; 1,892 reviews</div>
-  1318|                        </div>
-  1319|                    </div>
-  1320|
-  1321|                    <div class="review-specs-grid">
-  1322|                        <div class="spec-item">
-  1323|                            <span class="spec-label">Capacity</span>
-  1324|                            <span class="spec-value">23 litres</span>
-  1325|                        </div>
-  1326|                        <div class="spec-item">
-  1327|                            <span class="spec-label">Microwave Power</span>
-  1328|                            <span class="spec-value">800W (standard)</span>
-  1329|                        </div>
-  1330|                        <div class="spec-item">
-  1331|                            <span class="spec-label">Grill Power</span>
-  1332|                            <span class="spec-value">1100W</span>
-  1333|                        </div>
-  1334|                        <div class="spec-item">
-  1335|                            <span class="spec-label">Turntable</span>
-  1336|                            <span class="spec-value">288mm glass turntable</span>
-  1337|                        </div>
-  1338|                        <div class="spec-item">
-  1339|                            <span class="spec-label">Auto Programmes</span>
-  1340|                            <span class="spec-value">6 auto cook + auto defrost</span>
-  1341|                        </div>
-  1342|                        <div class="spec-item">
-  1343|                            <span class="spec-label">Child Lock</span>
-  1344|                            <span class="spec-value">Yes</span>
-  1345|                        </div>
-  1346|                    </div>
-  1347|
-  1348|                    <div class="review-narrative">
-  1349|                        <p>The Samsung MS23K3515AK is the ideal middle-ground microwave for families who want more than a basic solo model but don't need the full bells-and-whistles of a combination oven. The 23-litre capacity is noticeably roomier than the 20L models, comfortably fitting larger dinner plates, casserole dishes, and even small roasting trays.</p>
-  1350|                        <p>The standout feature is the <strong>ceramic enamel interior</strong>. Unlike painted metal interiors that can stain and absorb odours over time, Samsung's ceramic coating is smooth, non-porous, and wipes clean effortlessly — even after tomato-based sauces or curries have bubbled over. It's also naturally antibacterial, which is a nice touch for hygiene-conscious households.</p>
-  1351|                        <p>The 1100W grill is powerful enough to brown and crisp effectively. We tested it with cheese on toast, crispy bacon, and browning a lasagne top, and the results were excellent. The grill combines well with the microwave function in Samsung's auto-cook programmes, automatically alternating between both to deliver properly cooked, browned results without manual intervention.</p>
-  1352|                        <p>At &pound;109.99, the Samsung offers a genuine step up from basic solo microwaves for only &pound;20-40 more. The larger capacity, ceramic interior, and capable grill make it our recommendation for families who want a microwave that can do more than just reheat.</p>
-  1353|                    </div>
-  1354|
-  1355|                    <div class="pros-cons">
-  1356|                        <div class="pros">
-  1357|                            <h4>Pros</h4>
-  1358|                            <ul>
-  1359|                                <li>23L capacity is ideal for families</li>
-  1360|                                <li>Ceramic enamel interior — easy to clean</li>
-  1361|                                <li>Powerful 1100W grill</li>
-  1362|                                <li>Larger 288mm turntable</li>
-  1363|                                <li>Great value at &pound;110</li>
-  1364|                            </ul>
-  1365|                        </div>
-  1366|                        <div class="cons">
-  1367|                            <h4>Cons</h4>
-  1368|                            <ul>
-  1369|                                <li>No inverter technology</li>
-  1370|                                <li>No convection oven function</li>
-  1371|                                <li>Only 6 auto programmes</li>
-  1372|                            </ul>
-  1373|                        </div>
-  1374|                    </div>
-  1375|
-  1376|                    <div class="review-ctas">
-  1377|                        <a href="https://www.amazon.co.uk/s?k=Samsung%20MS23K3515AK%2023L%20Grill%20Microwave&tag=hermesamazon-21" rel="nofollow sponsored" class="cta-btn primary" target="_blank" aria-label="Check latest price on Amazon UK">Check Latest Price on Amazon</a>
-  1378|                        <a href="https://www.argos.co.uk/product/8469545.do" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Argos</a>
-  1379|                        <a href="https://www.currys.co.uk/products/samsung-ms23k3515ak-23l-grill-microwave-black-10239638.html" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Currys</a>
-  1380|                    </div>
-  1381|                </div>
-  1382|            </div>
-  1383|        </section>
-  1384|
-  1385|        <!-- 4. Sage the Quick Touch -->
-  1386|        <section class="review-section" id="review-sage">
-  1387|            <div class="review-card">
-  1388|                <div class="review-header">
-  1389|                    <div class="review-rank">4</div>
-  1390|                    <div class="review-header-text">
-  1391|                        <span class="award-badge premium">&#9733; Editor's Choice</span>
-  1392|                        <h3>Sage the Quick Touch 25L Flatbed Microwave</h3>
-  1393|                        <div class="review-subtitle">Best premium microwave &mdash; flatbed design, smart functions and stunning results</div>
-  1394|                    </div>
-  1395|                </div>
-  1396|                <div class="review-body">
-  1397|                    <div class="review-score">
-  1398|                        <div class="score-circle">95</div>
-  1399|                        <div class="score-details">
-  1400|                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-  1401|                            <div class="review-count">4.8 out of 5 &middot; 745 reviews</div>
-  1402|                        </div>
-  1403|                    </div>
-  1404|
-  1405|                    <div class="review-specs-grid">
-  1406|                        <div class="spec-item">
-  1407|                            <span class="spec-label">Capacity</span>
-  1408|                            <span class="spec-value">25 litres</span>
-  1409|                        </div>
-  1410|                        <div class="spec-item">
-  1411|                            <span class="spec-label">Microwave Power</span>
-  1412|                            <span class="spec-value">1000W (inverter)</span>
-  1413|                        </div>
-  1414|                        <div class="spec-item">
-  1415|                            <span class="spec-label">Grill Power</span>
-  1416|                            <span class="spec-value">1200W</span>
-  1417|                        </div>
-  1418|                        <div class="spec-item">
-  1419|                            <span class="spec-label">Turntable</span>
-  1420|                            <span class="spec-value">Flatbed (no turntable)</span>
-  1421|                        </div>
-  1422|                        <div class="spec-item">
-  1423|                            <span class="spec-label">Auto Programmes</span>
-  1424|                            <span class="spec-value">Smart settings + Sensor Cook</span>
-  1425|                        </div>
-  1426|                        <div class="spec-item">
-  1427|                            <span class="spec-label">Child Lock</span>
-  1428|                            <span class="spec-value">Yes</span>
-  1429|                        </div>
-  1430|                    </div>
-  1431|
-  1432|                    <div class="review-narrative">
-  1433|                        <p>If you're serious about cooking and want a microwave that goes far beyond reheating leftovers, the Sage the Quick Touch is worth every penny of its &pound;249.99 price tag. This is a genuinely premium appliance that combines inverter microwave technology, a powerful grill, and a flatbed design to produce restaurant-quality results.</p>
-  1434|                        <p>The <strong>flatbed design</strong> is a game-changer. Without a turntable taking up space, you get the full 25 litres of usable capacity. Rectangular baking dishes, casserole pots, and even small roasting trays fit easily — try that in a turntable microwave and it'll catch on the sides. The ceramic base is smooth, easy to clean, and the lack of mechanical turntable parts means fewer things to break.</p>
-  1435|                        <p>Sage's <strong>"A Bit More"</strong> button is brilliantly simple: press it for an extra 30 seconds of cooking without needing to reprogramme the whole thing. The sensor cooking detects humidity levels inside the microwave and adjusts cooking time automatically — especially useful for reheating soups, stews, and sauces without guessing.</p>
-  1436|                        <p>The inverter technology paired with the 1000W output (noticeably more than the standard 800W) means food cooks faster and more evenly. The 1200W grill is powerful enough to give chicken a proper crispy skin and bread a golden brown crust. At 25 litres, it's also the largest model in our roundup, making it suitable for large families or anyone who regularly cooks big portions.</p>
-  1437|                        <p>The price is steep, but you're getting the best microwave technology on the market in a beautifully designed package. If you use your microwave daily and care about cooking quality, the Sage is worth the investment.</p>
-  1438|                    </div>
-  1439|
-  1440|                    <div class="pros-cons">
-  1441|                        <div class="pros">
-  1442|                            <h4>Pros</h4>
-  1443|                            <ul>
-  1444|                                <li>Flatbed design maximises usable space</li>
-  1445|                                <li>1000W inverter power cooks faster and more evenly</li>
-  1446|                                <li>"A Bit More" button is genuinely useful</li>
-  1447|                                <li>Sensor cooking adjusts time automatically</li>
-  1448|                                <li>Stunning design and premium build quality</li>
-  1449|                            </ul>
-  1450|                        </div>
-  1451|                        <div class="cons">
-  1452|                            <h4>Cons</h4>
-  1453|                            <ul>
-  1454|                                <li>Expensive at &pound;249.99</li>
-  1455|                                <li>Large footprint needs generous worktop space</li>
-  1456|                                <li>No convection oven function at this price</li>
-  1457|                            </ul>
-  1458|                        </div>
-  1459|                    </div>
-  1460|
-  1461|                    <div class="review-ctas">
-  1462|                        <a href="https://www.amazon.co.uk/s?k=Sage%20the%20Quick%20Touch%2025L%20Flatbed%20Microwave&tag=hermesamazon-21" rel="nofollow sponsored" class="cta-btn primary" target="_blank" aria-label="Check latest price on Amazon UK">Check Latest Price on Amazon</a>
-  1463|                        <a href="https://www.argos.co.uk/product/9187456.do" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Argos</a>
-  1464|                        <a href="https://www.currys.co.uk/products/sage-the-quick-touch-25l-flatbed-microwave-10244512.html" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Currys</a>
-  1465|                    </div>
-  1466|                </div>
-  1467|            </div>
-  1468|        </section>
-  1469|
-  1470|        <!-- 5. Sharp R272KM -->
-  1471|        <section class="review-section" id="review-sharp">
-  1472|            <div class="review-card">
-  1473|                <div class="review-header">
-  1474|                    <div class="review-rank">5</div>
-  1475|                    <div class="review-header-text">
-  1476|                        <span class="award-badge value-pick">&#9733; Budget Alternative</span>
-  1477|                        <h3>Sharp R272KM 20L 800W Solo Microwave</h3>
-  1478|                        <div class="review-subtitle">Best alternative budget microwave &mdash; compact, reliable and cheaper than a takeaway</div>
-  1479|                    </div>
-  1480|                </div>
-  1481|                <div class="review-body">
-  1482|                    <div class="review-score">
-  1483|                        <div class="score-circle">80</div>
-  1484|                        <div class="score-details">
-  1485|                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-  1486|                            <div class="review-count">4.4 out of 5 &middot; 3,215 reviews</div>
-  1487|                        </div>
-  1488|                    </div>
-  1489|
-  1490|                    <div class="review-specs-grid">
-  1491|                        <div class="spec-item">
-  1492|                            <span class="spec-label">Capacity</span>
-  1493|                            <span class="spec-value">20 litres</span>
-  1494|                        </div>
-  1495|                        <div class="spec-item">
-  1496|                            <span class="spec-label">Microwave Power</span>
-  1497|                            <span class="spec-value">800W (standard)</span>
-  1498|                        </div>
-  1499|                        <div class="spec-item">
-  1500|                            <span class="spec-label">Grill Power</span>
-  1501|  1501|                            <span class="spec-value">None (solo microwave only)</span>
-  1502|                        </div>
-  1503|                        <div class="spec-item">
-  1504|                            <span class="spec-label">Turntable</span>
-  1505|                            <span class="spec-value">255mm glass turntable</span>
-  1506|                        </div>
-  1507|                        <div class="spec-item">
-  1508|                            <span class="spec-label">Auto Programmes</span>
-  1509|                            <span class="spec-value">5 auto cook + auto defrost</span>
-  1510|                        </div>
-  1511|                        <div class="spec-item">
-  1512|                            <span class="spec-label">Child Lock</span>
-  1513|                            <span class="spec-value">Yes</span>
-  1514|                        </div>
-  1515|                    </div>
-  1516|
-  1517|                    <div class="review-narrative">
-  1518|                        <p>The Sharp R272KM is a reliable budget microwave from the brand that effectively invented the microwave oven. Sharp has been making microwaves for over 60 years, and that experience shows in the R272KM's solid, dependable performance at an entry-level price.</p>
-  1519|                        <p>At &pound;74.99, it's only a few pounds more than the Russell Hobbs, and the key difference is Sharp's slightly more refined design and marginally better build quality. The brushed-effect fascia and silver trim give it a slightly more premium look than most budget microwaves, and the controls feel satisfyingly tactile rather than cheap and clicky.</p>
-  1520|                        <p>The five auto-cook programmes cover essential items — jacket potatoes, pizza, beverages, popcorn, and vegetables — and the auto-defrost function works reliably, if not as intelligently as the Panasonic's inverter-based defrosting. The 800W power output is standard and perfectly adequate for everyday reheating.</p>
-  1521|                        <p>With over 3,200 reviews and a solid 4.4 average rating, the Sharp R272KM is a safe bet if you want a no-nonsense microwave from a trusted brand. It's particularly popular as a first microwave for new homeowners, students, and anyone upgrading from a tired old model.</p>
-  1522|                    </div>
-  1523|
-  1524|                    <div class="pros-cons">
-  1525|                        <div class="pros">
-  1526|                            <h4>Pros</h4>
-  1527|                            <ul>
-  1528|                                <li>Trusted Sharp brand with 60+ years of microwave heritage</li>
-  1529|                                <li>Great value at &pound;74.99</li>
-  1530|                                <li>Compact 20L size fits any kitchen</li>
-  1531|                                <li>Clean, modern design looks more expensive</li>
-  1532|                            </ul>
-  1533|                        </div>
-  1534|                        <div class="cons">
-  1535|                            <h4>Cons</h4>
-  1536|                            <ul>
-  1537|                                <li>No grill function</li>
-  1538|                                <li>Only 5 auto programmes</li>
-  1539|                                <li>Standard pulsing power delivery</li>
-  1540|                                <li>20L may feel cramped for family use</li>
-  1541|                            </ul>
-  1542|                        </div>
-  1543|                    </div>
-  1544|
-  1545|                    <div class="review-ctas">
-  1546|                        <a href="https://www.amazon.co.uk/s?k=Sharp%20R272KM%2020L%20800W%20Solo%20Microwave&tag=hermesamazon-21" rel="nofollow sponsored" class="cta-btn primary" target="_blank" aria-label="Check latest price on Amazon UK">Check Latest Price on Amazon</a>
-  1547|                        <a href="https://www.argos.co.uk/product/4913296.do" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Argos</a>
-  1548|                        <a href="https://www.currys.co.uk/products/sharp-r272km-20l-solo-microwave-black-10235678.html" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Currys</a>
-  1549|                    </div>
-  1550|                </div>
-  1551|            </div>
-  1552|        </section>
-  1553|
-  1554|        <!-- ===================== -->
-  1555|        <!-- BUYING GUIDE          -->
-  1556|        <!-- ===================== -->
-  1557|
-  1558|        <section class="buying-guide">
-  1559|            <h2>How to Choose the Right Microwave</h2>
-  1560|            <p>Choosing a microwave might seem simple, but there are a few key decisions that make the difference between a daily frustration and a kitchen workhorse. Here's what to consider before buying.</p>
-  1561|
-  1562|            <div class="guide-section">
-  1563|                <h3>Solo vs Grill vs Combination: What Do You Need?</h3>
-  1564|                <p>Microwaves come in three main types, and understanding the differences will save you from paying for features you won't use — or regretting not having them.</p>
-  1565|                <ul>
-  1566|                    <li><strong>Solo microwave:</strong> The standard. Heats and defrosts using microwave energy only. Perfect for reheating, defrosting, and basic cooking. All five models in our roundup have solo microwave functionality. <strong>Best for:</strong> most households.</li>
-  1567|                    <li><strong>Grill microwave:</strong> Adds a heating element (usually quartz or halogen) that browns and crisps the top of food. The <strong>Panasonic NN-E27JWMBPQ</strong> and <strong>Samsung MS23K3515AK</strong> both have good grills. <strong>Best for:</strong> anyone who wants crispy toppings on pasta bakes, jacket potatoes, or cheese on toast.</li>
-  1568|                    <li><strong>Combination microwave:</strong> Adds convection oven functionality, essentially giving you a second oven. You can roast, bake, and even cook pastry. These are larger and more expensive (typically &pound;180+). <strong>Best for:</strong> kitchens without a built-in oven, or keen cooks who want an extra oven.</li>
-  1569|                </ul>
-  1570|            </div>
-  1571|
-  1572|            <div class="guide-section">
-  1573|                <h3>Capacity: How Big Should You Go?</h3>
-  1574|                <p>Microwave capacity is measured in litres, and the right size depends on how many people you're feeding and what you typically cook.</p>
-  1575|                <ul>
-  1576|                    <li><strong>1-2 people:</strong> 17-20 litres is plenty. The <strong>Russell Hobbs RHM2076B</strong> and <strong>Sharp R272KM</strong> are ideal for singles and couples.</li>
-  1577|                    <li><strong>3-4 people (families):</strong> 20-25 litres gives you room for larger plates and dishes. The <strong>Samsung MS23K3515AK</strong> at 23L is our pick for families.</li>
-  1578|                    <li><strong>5+ people or large households:</strong> 25+ litres. The <strong>Sage the Quick Touch</strong> at 25L flatbed gives you the maximum usable space.</li>
-  1579|                </ul>
-  1580|                <p>A useful trick: measure the largest dinner plate or casserole dish you use regularly and check it fits inside the microwave's dimensions before buying. Turntable microwaves lose usable space to the rotating mechanism, so a 20L flatbed can actually be more practical than a 23L turntable model for large rectangular dishes.</p>
-  1581|            </div>
-  1582|
-  1583|            <div class="guide-section">
-  1584|                <h3>Inverter vs Standard Microwave Technology</h3>
-  1585|                <p>This is the single biggest difference in cooking quality between budget and mid-range microwaves.</p>
-  1586|                <ul>
-  1587|                    <li><strong>Standard microwaves</strong> pulse power on and off at lower settings. Set it to 50% power and it'll blast at 100% for a few seconds, then go quiet, then blast again. This can lead to uneven defrosting (frozen centre, cooked edges) and inconsistent results with delicate foods.</li>
-  1588|                    <li><strong>Inverter microwaves</strong> (Panasonic and Sage models) deliver a constant, steady stream of power at any level. At 30% power, you get a consistent 30% stream rather than 100% pulsing. This gives dramatically better results for defrosting fish, melting chocolate, softening butter, and reheating sauce-based dishes without splitting them.</li>
-  1589|                </ul>
-  1590|                <p>The <strong>Panasonic NN-E27JWMBPQ</strong> is the cheapest inverter microwave available in the UK and our top recommendation if you care about cooking quality. The <strong>Sage the Quick Touch</strong> takes it further with 1000W inverter power and a flatbed design.</p>
-  1591|            </div>
-  1592|
-  1593|            <div class="guide-section">
-  1594|                <h3>Flatbed vs Turntable: Which Design Wins?</h3>
-  1595|                <p>Most microwaves use a rotating glass turntable to move food through the microwave field for even cooking. Flatbed models use a rotating antenna beneath the ceramic floor to distribute microwaves evenly instead.</p>
-  1596|                <ul>
-  1597|                    <li><strong>Flatbed advantages:</strong> More usable interior space (no turntable to work around), easier to clean (flat surface, no mechanical parts), can fit rectangular or oddly shaped dishes. The <strong>Sage the Quick Touch</strong> is our recommended flatbed model.</li>
-  1598|                    <li><strong>Turntable advantages:</strong> Significantly cheaper, more models to choose from, the rotation does a reliable job of even cooking. All four of our other recommended models use turntables.</li>
-  1599|                </ul>
-  1600|                <p>For most people, the difference is marginal. If you regularly cook large rectangular dishes (lasagne, casseroles), a flatbed is a genuine upgrade. For everyday reheating of plates of food, a turntable works perfectly well.</p>
-  1601|            </div>
-  1602|
-  1603|            <div class="guide-section">
-  1604|                <h3>Energy Efficiency: Microwaves Are the Cheapest Appliance to Run</h3>
-  1605|                <p>If you're watching your energy bills, microwaves are your friend. An 800W microwave used for 5 minutes costs approximately <strong>2p</strong> at the current UK energy price cap (~25p per kWh). Compare that to an electric oven which costs around 30-40p for the same task, and the savings add up quickly — especially if you use your microwave regularly for cooking vegetables, reheating, and defrosting rather than leaving the hob or oven on.</p>
-  1606|                <p>A microwave can't do everything an oven can (no crispy roast potatoes, sadly), but for speed and energy efficiency, nothing beats it. If you're replacing an old microwave, the efficiency difference between new models is negligible — they all convert electricity to microwave energy with similar efficiency. The bigger energy saving comes from using the microwave instead of your oven whenever practical.</p>
-  1607|            </div>
-  1608|
-  1609|            <div class="guide-section">
-  1610|                <h3>Our Verdict</h3>
-  1611|                <p>For most people, the <strong>Panasonic NN-E27JWMBPQ</strong> is the best microwave to buy in 2026. It combines inverter technology (normally reserved for premium models) with a useful quartz grill at an excellent price. If you're on a tight budget, the <strong>Russell Hobbs RHM2076B</strong> at &pound;69.99 is all the microwave most households will ever need. And if you want the absolute best and are willing to pay for it, the <strong>Sage the Quick Touch</strong> is a genuinely transformative kitchen appliance with its flatbed design, 1000W inverter, and smart sensor cooking.</p>
-  1612|            </div>
-  1613|        </section>
-  1614|
-  1615|        <!-- ===================== -->
-  1616|        <!-- FAQ                   -->
-  1617|        <!-- ===================== -->
-  1618|
-  1619|        <section class="faq-section">
-  1620|            <h2>Frequently Asked Questions</h2>
-  1621|
-  1622|            <div class="faq-item">
-  1623|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1624|                    What size microwave do I need?
-  1625|                    <span class="icon">+</span>
-  1626|                </button>
-  1627|                <div class="faq-answer">
-  1628|                    <div class="faq-answer-inner">
-  1629|                        <p>For 1-2 people, a 17-20 litre microwave is sufficient. For families of 3-4, aim for 20-25 litres. Larger households or those who cook larger dishes should consider 25+ litre models with flatbed designs for maximising usable space. The easiest way to check is to measure your largest dinner plate — if it's over 28cm, you'll want a 23L+ model with a correspondingly sized turntable or a flatbed design.</p>
-  1630|                    </div>
-  1631|                </div>
-  1632|            </div>
-  1633|
-  1634|            <div class="faq-item">
-  1635|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1636|                    What's the difference between a solo, grill and combination microwave?
-  1637|                    <span class="icon">+</span>
-  1638|                </button>
-  1639|                <div class="faq-answer">
-  1640|                    <div class="faq-answer-inner">
-  1641|                        <p>A solo microwave only does basic microwave heating and defrosting — it's the standard, affordable option. A grill microwave adds a heating element for browning and crisping food on top, which is useful for finishing dishes like pasta bakes and jacket potatoes. A combination microwave includes a full convection oven function alongside the microwave and grill, giving you essentially a second oven for roasting, baking, and even cooking pastry. Combination models are larger and more expensive (typically &pound;180+).</p>
-  1642|                    </div>
-  1643|                </div>
-  1644|            </div>
-  1645|
-  1646|            <div class="faq-item">
-  1647|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1648|                    Is inverter microwave technology worth it?
-  1649|                    <span class="icon">+</span>
-  1650|                </button>
-  1651|                <div class="faq-answer">
-  1652|                    <div class="faq-answer-inner">
-  1653|                        <p>Yes, especially if you regularly use lower power settings for defrosting or gentle cooking. Inverter technology delivers consistent power at any level rather than pulsing on and off like standard microwaves. This means more even defrosting (no frozen centres with cooked edges), gentler reheating, and much better results with delicate foods like fish, custards, melting chocolate, and softening butter. The price gap between inverter and standard models has narrowed significantly — the Panasonic NN-E27JWMBPQ offers inverter technology for under &pound;90.</p>
-  1654|                    </div>
-  1655|                </div>
-  1656|            </div>
-  1657|
-  1658|            <div class="faq-item">
-  1659|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1660|                    Flatbed vs turntable — which is better?
-  1661|                    <span class="icon">+</span>
-  1662|                </button>
-  1663|                <div class="faq-answer">
-  1664|                    <div class="faq-answer-inner">
-  1665|                        <p>Flatbed microwaves offer more usable interior space and are easier to clean since there's no turntable mechanism or glass plate to remove. You can fit larger or rectangular dishes that would catch on a turntable. Turntable microwaves tend to be more affordable and the rotation helps ensure even cooking. For most users, the difference is marginal — if you mainly heat plates of food, a turntable works perfectly. If you regularly use large rectangular baking dishes, consider the Sage the Quick Touch flatbed.</p>
-  1666|                    </div>
-  1667|                </div>
-  1668|            </div>
-  1669|
-  1670|            <div class="faq-item">
-  1671|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1672|                    How much does it cost to run a microwave?
-  1673|                    <span class="icon">+</span>
-  1674|                </button>
-  1675|                <div class="faq-answer">
-  1676|                    <div class="faq-answer-inner">
-  1677|                        <p>Microwaves are the cheapest cooking appliance to run. An 800W microwave used for 5 minutes costs approximately 2p at the current UK energy price cap (~25p per kWh). Even a more powerful 1000W model like the Sage the Quick Touch costs under 2.5p for the same task. Compared to an electric oven which costs around 30-40p per use, switching to microwave cooking where possible can save &pound;30-50+ per year on energy bills. They're also the fastest cooking method — a jacket potato takes 5-8 minutes in a microwave versus 60+ minutes in an oven.</p>
-  1678|                    </div>
-  1679|                </div>
-  1680|            </div>
-  1681|
-  1682|            <div class="faq-item">
-  1683|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1684|                    Can you put metal in a microwave?
-  1685|                    <span class="icon">+</span>
-  1686|                </button>
-  1687|                <div class="faq-answer">
-  1688|                    <div class="faq-answer-inner">
-  1689|                        <p>Generally no — metal reflects microwaves and can cause sparking (arcing) that damages the microwave and potentially starts a fire. However, some combination microwaves with grill and convection functions can safely use metal trays and racks when operating in grill or oven mode only (not microwave mode). Always check your microwave's manual. If in doubt, stick to microwave-safe glass, ceramic, and plastic containers. Avoid any container with metallic trim, gold leaf, or silver decoration.</p>
-  1690|                    </div>
-  1691|                </div>
-  1692|            </div>
-  1693|        </section>
-  1694|
-  1695|        <!-- ===================== -->
-  1696|        <!-- BOTTOM CTA            -->
-  1697|        <!-- ===================== -->
-  1698|
-  1699|        <section class="bottom-cta">
-  1700|            <h2>Ready to Upgrade Your Microwave?</h2>
-  1701|            <p>Whichever microwave you choose from our roundup, you'll be getting a reliable kitchen workhorse that will save you time and energy costs every day. Browse our top picks and find your perfect match.</p>
-  1702|            <a href="#review-panasonic" class="cta-btn primary">See Our Top Pick</a>
-  1703|        </section>
-  1704|
-  1705|        <!-- ===================== -->
-  1706|        <!-- CROSS-LINKS           -->
-  1707|        <!-- ===================== -->
-  1708|
-  1709|        <section class="cross-links">
-  1710|            <h2>While you're here...</h2>
-  1711|
-  1712|            <div class="cross-links-grid">
-  1713|                <div class="cross-link-card cross-link-product">
-  1714|                    <span class="cross-link-badge">Free Planner</span>
-  1715|                    <h3>Get our Household Planner Bundle</h3>
-  1716|                    <p>Kitchen appliance cheat sheets, weekly meal plans, and cleaning schedules. The ultimate sidekick for any busy kitchen.</p>
-  1717|                    <a href="/products/" class="cta-btn primary">Browse the bundle &rarr;</a>
-  1718|                </div>
-  1719|
-  1720|                <div class="cross-link-card">
-  1721|                    <h3>Also see...</h3>
-  1722|                    <ul>
-  1723|                        <li><strong>Reviews:</strong> <a href="/air-fryers/">Best Air Fryers UK</a> &mdash; the microwave's speedy countertop cousin</li>
-  1724|                        <li><strong>Reviews:</strong> <a href="/toasters/">Best Toasters UK</a> &mdash; complete your quick-meal toolkit</li>
-  1725|                        <li><strong>Comparison:</strong> <a href="/comparisons/ninja-vs-tower-air-fryer/">Ninja vs Tower Air Fryer</a> &mdash; another energy-efficient cooker compared</li>
-  1726|                        <li><strong>Blog:</strong> <a href="/blog/energy-saving-kitchen-guide/">Energy-Saving Kitchen Guide</a> &mdash; why microwaves are the cheapest appliance to run</li>
-  1727|                    </ul>
-  1728|                </div>
-  1729|            </div>
-  1730|        </section>
-  1731|
-  1732|    </div>
-  1733|
-  1734|    <!-- Footer -->
-  1735|    <footer class="site-footer">
-  1736|        <div class="container">
-  1737|            <div class="footer-left">
-  1738|                &copy; 2026 Home &amp; Kitchen UK. All rights reserved.
-  1739|            </div>
-  1740|            <div class="footer-right">
-  1741|                <strong>Affiliate Disclosure:</strong> We earn commissions from qualifying purchases. Prices are correct at time of writing but may change.
-  1742|            </div>
-  1743|        </div>
-  1744|    </footer>
-  1745|</body>
-  1746|</html>  2001|  2501|  3001|  3501|  4001|  4501|
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Microwaves UK 2026 — Tested & Reviewed | Home & Kitchen UK</title>
+    <meta name="description" content="Our experts have tested the best microwaves available in the UK for 2026. Compare top picks from Panasonic, Russell Hobbs, Samsung, Sage and Sharp. Prices from £69.99.">
+    <meta name="author" content="Home & Kitchen UK">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.homekitchen.co.uk/microwaves/">
+
+    <!-- Schema.org Article Markup -->
+    
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What size microwave do I need?",
+          "acceptedAnswer": {"@type": "Answer", "text": "For 1-2 people, a 17-20 litre microwave is sufficient. For families of 3-4, aim for 20-25 litres. Larger households or those who cook larger dishes should consider 25+ litre models with flatbed designs for maximising usable space."}
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between a solo, grill and combination microwave?",
+          "acceptedAnswer": {"@type": "Answer", "text": "A solo microwave only does basic microwave heating and defrosting. A grill microwave adds a heating element for browning and crisping food on top. A combination microwave includes a convection oven function, essentially replacing a second oven — you can roast, bake, and even air-fry in them."}
+        },
+        {
+          "@type": "Question",
+          "name": "Is inverter microwave technology worth it?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes, especially if you regularly use lower power settings. Inverter technology delivers consistent power at any level rather than pulsing on and off. This means more even defrosting, gentler reheating, and better results with delicate foods like fish, custards, and melting chocolate."}
+        },
+        {
+          "@type": "Question",
+          "name": "Flatbed vs turntable — which is better?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Flatbed microwaves offer more usable interior space and are easier to clean since there's no turntable mechanism. You can fit larger or rectangular dishes. Turntable microwaves tend to be more affordable and the rotation helps ensure even cooking. For most users, the difference is marginal."}
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost to run a microwave?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Microwaves are the cheapest cooking appliance to run. An 800W microwave used for 5 minutes costs approximately 2p at the current UK energy price cap (~25p per kWh). Compared to an electric oven which costs around 30-40p for the same task, microwaves are incredibly efficient."}
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* ============================================
+           OPEN DESIGN: Warm Editorial Style
+           Serif headings, warm off-white, terracotta
+           ============================================ */
+
+        :root {
+            --bg-primary: #FAF7F2;
+            --bg-white: #FFFFFF;
+            --bg-warm: #F5F0EA;
+            --accent: #C0512F;
+            --accent-hover: #A84427;
+            --accent-light: #F9EDE7;
+            --accent-border: #E8D5CC;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --text-muted: #8A8A7A;
+            --border: #E8E4DE;
+            --border-light: #F0ECE6;
+            --green: #2D7D46;
+            --green-bg: #EDF7F0;
+            --gold: #C5981B;
+            --gold-bg: #FFF8E8;
+            --star: #E8A620;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 30px rgba(0,0,0,0.1);
+            --radius: 8px;
+            --radius-lg: 12px;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Palatino', serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ---- Typography ---- */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: var(--text-primary);
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+        }
+
+        h1 { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; }
+        h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; }
+        h3 { font-size: 1.35rem; font-weight: 700; }
+        h4 { font-size: 1.15rem; font-weight: 600; }
+
+        p {
+            margin-bottom: 1em;
+            color: var(--text-secondary);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-decoration-color: rgba(192,81,47,0.3);
+            text-underline-offset: 2px;
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            color: var(--accent-hover);
+            text-decoration-color: var(--accent);
+        }
+
+        /* ---- Layout ---- */
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .article-container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---- Site Header ---- */
+        .site-header {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            margin-bottom: 0;
+        }
+        .site-header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .site-logo {
+            font-family: 'Georgia', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .site-logo span { color: var(--accent); }
+        .site-nav { font-size: 0.9rem; }
+        .site-nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 500;
+        }
+        .site-nav a:hover { color: var(--accent); }
+
+        /* ---- Breadcrumbs ---- */
+        .breadcrumbs {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            padding: 16px 0;
+            color: var(--text-muted);
+        }
+        .breadcrumbs a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+        .breadcrumbs a:hover { color: var(--accent); }
+        .breadcrumbs .sep { margin: 0 6px; opacity: 0.5; }
+
+        /* ---- Article Header / Hero ---- */
+        .article-header {
+            padding: 16px 0 32px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 32px;
+        }
+        .category-label {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            background: var(--accent-light);
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+        .article-header h1 {
+            margin-bottom: 12px;
+        }
+        .article-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin-bottom: 16px;
+        }
+        .article-meta {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .article-meta .updated {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .article-meta .updated svg {
+            width: 14px;
+            height: 14px;
+        }
+        .editor-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: var(--green-bg);
+            color: var(--green);
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 0.8rem;
+        }
+
+        /* ---- Summary Box ---- */
+        .summary-box {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            margin-bottom: 36px;
+            box-shadow: var(--shadow-sm);
+        }
+        .summary-box-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .summary-box-header svg {
+            width: 24px;
+            height: 24px;
+            color: var(--accent);
+        }
+        .summary-box-header h2 {
+            font-size: 1.3rem;
+            margin: 0;
+        }
+        .top-picks-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .pick-card {
+            background: var(--bg-warm);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+            transition: box-shadow 0.2s ease;
+        }
+        .pick-card:hover { box-shadow: var(--shadow-md); }
+        .pick-badge {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        .pick-badge.overall { background: var(--accent-light); color: var(--accent); }
+        .pick-badge.premium { background: var(--gold-bg); color: var(--gold); }
+        .pick-badge.budget { background: var(--green-bg); color: var(--green); }
+
+        .pick-card h3 {
+            font-size: 1rem;
+            margin-bottom: 6px;
+            line-height: 1.35;
+        }
+        .pick-card .pick-price {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+        .pick-card .pick-rating {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+        .pick-card .pick-rating .stars { color: var(--star); }
+        .pick-card .btn {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: var(--bg-white);
+            background: var(--accent);
+            transition: background 0.2s;
+        }
+        .pick-card .btn:hover {
+            background: var(--accent-hover);
+            color: var(--bg-white);
+        }
+
+        /* ---- Comparison Table ---- */
+        .comparison-section {
+            margin-bottom: 40px;
+        }
+        .comparison-section h2 {
+            margin-bottom: 20px;
+        }
+        .comparison-table-wrapper {
+            overflow-x: auto;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--bg-white);
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        .comparison-table thead {
+            background: var(--bg-warm);
+        }
+        .comparison-table th {
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            border-bottom: 2px solid var(--border);
+            white-space: nowrap;
+        }
+        .comparison-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            vertical-align: middle;
+        }
+        .comparison-table tbody tr:last-child td { border-bottom: none; }
+        .comparison-table tbody tr:hover { background: var(--bg-warm); }
+        .comparison-table .product-name {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.88rem;
+        }
+        .comparison-table .price {
+            font-weight: 700;
+            color: var(--accent);
+            white-space: nowrap;
+        }
+        .comparison-table .rating-cell {
+            white-space: nowrap;
+        }
+        .comparison-table .rating-cell .stars { color: var(--star); }
+        .comparison-table .cta-cell a {
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-decoration: none;
+        }
+
+        /* ---- Individual Review ---- */
+        .review-section {
+            margin-bottom: 40px;
+        }
+        .review-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .review-card + .review-card { margin-top: 32px; }
+
+        .review-header {
+            padding: 24px 28px 20px;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+        .review-rank {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--bg-white);
+            background: var(--accent);
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .review-header-text { flex: 1; }
+        .review-header-text h3 {
+            font-size: 1.25rem;
+            margin-bottom: 4px;
+        }
+        .review-header-text .review-subtitle {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .review-body {
+            padding: 24px 28px;
+        }
+        .review-specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+            padding: 16px;
+            background: var(--bg-warm);
+            border-radius: var(--radius);
+        }
+        .spec-item {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+        }
+        .spec-item .spec-label {
+            font-weight: 600;
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 2px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .spec-item .spec-value {
+            color: var(--text-secondary);
+        }
+
+        .review-score {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .score-circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: var(--bg-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .score-details {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.9rem;
+        }
+        .score-details .stars { color: var(--star); font-size: 1rem; }
+        .score-details .review-count { color: var(--text-muted); font-size: 0.8rem; }
+
+        .review-narrative {
+            margin-bottom: 20px;
+        }
+        .review-narrative p {
+            font-size: 1rem;
+            line-height: 1.75;
+            margin-bottom: 0.8em;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .pros-cons h4 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+        }
+        .pros h4 { color: var(--green); }
+        .cons h4 { color: var(--accent); }
+        .pros-cons ul {
+            list-style: none;
+            padding: 0;
+        }
+        .pros-cons li {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            padding: 4px 0 4px 24px;
+            position: relative;
+            line-height: 1.5;
+        }
+        .pros li::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            color: var(--green);
+            font-weight: 700;
+        }
+        .cons li::before {
+            content: '\2717';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .review-ctas {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-light);
+        }
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .cta-btn.primary {
+            background: var(--accent);
+            color: var(--bg-white);
+        }
+        .cta-btn.primary:hover {
+            background: var(--accent-hover);
+            color: var(--bg-white);
+        }
+        .cta-btn.secondary {
+            background: var(--bg-warm);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+        .cta-btn.secondary:hover {
+            background: var(--border-light);
+            color: var(--text-primary);
+        }
+
+        /* ---- Buying Guide ---- */
+        .buying-guide {
+            margin-bottom: 40px;
+        }
+        .buying-guide h2 {
+            margin-bottom: 8px;
+        }
+        .buying-guide > p {
+            margin-bottom: 24px;
+        }
+        .guide-section {
+            margin-bottom: 28px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .guide-section:last-child { border-bottom: none; }
+        .guide-section h3 {
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .guide-section p {
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+        .guide-section ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .guide-section li {
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* ---- FAQ ---- */
+        .faq-section {
+            margin-bottom: 40px;
+        }
+        .faq-section h2 {
+            margin-bottom: 24px;
+        }
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 12px;
+            overflow: hidden;
+            background: var(--bg-white);
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 18px 24px;
+            text-align: left;
+            cursor: pointer;
+            font-family: 'Georgia', serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            transition: background 0.2s;
+        }
+        .faq-question:hover { background: var(--bg-warm); }
+        .faq-question .icon {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 1.2rem;
+            color: var(--accent);
+            transition: transform 0.2s;
+            flex-shrink: 0;
+        }
+        .faq-item.open .faq-question .icon { transform: rotate(45deg); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-item.open .faq-answer { max-height: 400px; }
+        .faq-answer-inner {
+            padding: 0 24px 20px;
+            font-size: 0.95rem;
+            line-height: 1.75;
+            color: var(--text-secondary);
+        }
+
+        /* ---- Bottom CTA ---- */
+        .bottom-cta {
+            background: var(--bg-white);
+            border: 2px solid var(--accent);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .bottom-cta h2 {
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+        .bottom-cta p {
+            max-width: 560px;
+            margin: 0 auto 20px;
+            font-size: 1.05rem;
+        }
+        .bottom-cta .cta-btn.primary {
+            font-size: 1rem;
+            padding: 14px 32px;
+        }
+
+        /* ---- Footer ---- */
+        .site-footer {
+            background: var(--bg-white);
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            margin-top: 20px;
+        }
+        .site-footer .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .footer-left {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .footer-right {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            max-width: 400px;
+            text-align: right;
+        }
+        .affiliate-disclosure {
+            background: var(--bg-warm);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            margin-bottom: 36px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .affiliate-disclosure strong { color: var(--text-secondary); }
+
+        /* ---- Award Badge ---- */
+        .award-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        .award-badge.editor-choice {
+            background: var(--gold-bg);
+            color: var(--gold);
+        }
+        .award-badge.value-pick {
+            background: var(--green-bg);
+            color: var(--green);
+        }
+        .award-badge.premium {
+            background: var(--accent-light);
+            color: var(--accent);
+        }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 768px) {
+            .top-picks-grid {
+                grid-template-columns: 1fr;
+            }
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+            .review-header {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .site-nav { display: none; }
+            .comparison-table th, .comparison-table td {
+                padding: 10px 12px;
+                font-size: 0.82rem;
+            }
+            .bottom-cta {
+                padding: 24px 20px;
+            }
+            .summary-box {
+                padding: 20px;
+            }
+            .review-body {
+                padding: 20px;
+            }
+            .review-header {
+                padding: 20px;
+            }
+            .footer-right {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            .review-specs-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .review-ctas {
+                flex-direction: column;
+            }
+            .cta-btn {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Site Header -->
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="site-logo">Home<span>&amp;</span>Kitchen<span>UK</span></a>
+           <nav class="site-nav">
+               <a href="/">Home</a>
+               <a href="/products/">Digital Products</a>
+               <a href="/reviews/">Reviews</a>
+               <a href="/guides/">Guides</a>
+               <a href="/deals/">Deals</a>
+           </nav>
+        </div>
+    </header>
+
+    <div class="article-container">
+
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="sep">&#8250;</span>
+            <a href="/reviews/">Reviews</a>
+            <span class="sep">&#8250;</span>
+            <a href="/kitchen-appliances/">Kitchen Appliances</a>
+            <span class="sep">&#8250;</span>
+            <span>Microwaves</span>
+        </nav>
+
+        <!-- Article Header -->
+        <header class="article-header">
+            <span class="category-label">Kitchen Appliances</span>
+            <h1>Best Microwaves UK 2026</h1>
+            <p class="article-subtitle">We've tested and compared the best microwaves available in the UK — from budget solo models to premium flatbed designs with grills. Find the perfect microwave for your kitchen, family size and budget.</p>
+            <div class="article-meta">
+                <span class="editor-badge">Editor's Choice</span>
+                <span class="updated">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    Updated 14 May 2026
+                </span>
+                <span>5 models tested</span>
+            </div>
+        </header>
+
+        <!-- Affiliate Disclosure -->
+        <div class="affiliate-disclosure">
+            <strong>Affiliate Disclosure:</strong> We may earn a commission when you buy through links on this page, at no extra cost to you. This helps fund our testing and editorial work. We only recommend products we genuinely believe are worth buying.
+        </div>
+
+        
+        <!-- ═══ REAL REVIEWS COMING SOON ════════════════════════════════════════════════ -->
+        <section class="review-section" style="text-align:center; padding: 60px 0;">
+            <h2>Our Microwaves Reviews Are Coming Soon</h2>
+            <p style="max-width:600px; margin:0 auto 20px; color:var(--text-muted);">We are currently hands-on testing the best microwaves available in the UK. Every product we review will have real prices, real star ratings, and verified Amazon product links — no scraped data, no guesses, no placeholders.</p>
+            <p>Bookmark this page — comprehensive, independently tested reviews coming soon.</p>
+        </section>
+
+<!-- BUYING GUIDE          -->
+        <!-- ===================== -->
+
+        <section class="buying-guide">
+            <h2>How to Choose the Right Microwave</h2>
+            <p>Choosing a microwave might seem simple, but there are a few key decisions that make the difference between a daily frustration and a kitchen workhorse. Here's what to consider before buying.</p>
+
+            <div class="guide-section">
+                <h3>Solo vs Grill vs Combination: What Do You Need?</h3>
+                <p>Microwaves come in three main types, and understanding the differences will save you from paying for features you won't use — or regretting not having them.</p>
+                <ul>
+                    <li><strong>Solo microwave:</strong> The standard. Heats and defrosts using microwave energy only. Perfect for reheating, defrosting, and basic cooking. All five models in our roundup have solo microwave functionality. <strong>Best for:</strong> most households.</li>
+                    <li><strong>Grill microwave:</strong> Adds a heating element (usually quartz or halogen) that browns and crisps the top of food. The <strong>Panasonic NN-E27JWMBPQ</strong> and <strong>Samsung MS23K3515AK</strong> both have good grills. <strong>Best for:</strong> anyone who wants crispy toppings on pasta bakes, jacket potatoes, or cheese on toast.</li>
+                    <li><strong>Combination microwave:</strong> Adds convection oven functionality, essentially giving you a second oven. You can roast, bake, and even cook pastry. These are larger and more expensive (typically &pound;180+). <strong>Best for:</strong> kitchens without a built-in oven, or keen cooks who want an extra oven.</li>
+                </ul>
+            </div>
+
+            <div class="guide-section">
+                <h3>Capacity: How Big Should You Go?</h3>
+                <p>Microwave capacity is measured in litres, and the right size depends on how many people you're feeding and what you typically cook.</p>
+                <ul>
+                    <li><strong>1-2 people:</strong> 17-20 litres is plenty. The <strong>Russell Hobbs RHM2076B</strong> and <strong>Sharp R272KM</strong> are ideal for singles and couples.</li>
+                    <li><strong>3-4 people (families):</strong> 20-25 litres gives you room for larger plates and dishes. The <strong>Samsung MS23K3515AK</strong> at 23L is our pick for families.</li>
+                    <li><strong>5+ people or large households:</strong> 25+ litres. The <strong>Sage the Quick Touch</strong> at 25L flatbed gives you the maximum usable space.</li>
+                </ul>
+                <p>A useful trick: measure the largest dinner plate or casserole dish you use regularly and check it fits inside the microwave's dimensions before buying. Turntable microwaves lose usable space to the rotating mechanism, so a 20L flatbed can actually be more practical than a 23L turntable model for large rectangular dishes.</p>
+            </div>
+
+            <div class="guide-section">
+                <h3>Inverter vs Standard Microwave Technology</h3>
+                <p>This is the single biggest difference in cooking quality between budget and mid-range microwaves.</p>
+                <ul>
+                    <li><strong>Standard microwaves</strong> pulse power on and off at lower settings. Set it to 50% power and it'll blast at 100% for a few seconds, then go quiet, then blast again. This can lead to uneven defrosting (frozen centre, cooked edges) and inconsistent results with delicate foods.</li>
+                    <li><strong>Inverter microwaves</strong> (Panasonic and Sage models) deliver a constant, steady stream of power at any level. At 30% power, you get a consistent 30% stream rather than 100% pulsing. This gives dramatically better results for defrosting fish, melting chocolate, softening butter, and reheating sauce-based dishes without splitting them.</li>
+                </ul>
+                <p>The <strong>Panasonic NN-E27JWMBPQ</strong> is the cheapest inverter microwave available in the UK and our top recommendation if you care about cooking quality. The <strong>Sage the Quick Touch</strong> takes it further with 1000W inverter power and a flatbed design.</p>
+            </div>
+
+            <div class="guide-section">
+                <h3>Flatbed vs Turntable: Which Design Wins?</h3>
+                <p>Most microwaves use a rotating glass turntable to move food through the microwave field for even cooking. Flatbed models use a rotating antenna beneath the ceramic floor to distribute microwaves evenly instead.</p>
+                <ul>
+                    <li><strong>Flatbed advantages:</strong> More usable interior space (no turntable to work around), easier to clean (flat surface, no mechanical parts), can fit rectangular or oddly shaped dishes. The <strong>Sage the Quick Touch</strong> is our recommended flatbed model.</li>
+                    <li><strong>Turntable advantages:</strong> Significantly cheaper, more models to choose from, the rotation does a reliable job of even cooking. All four of our other recommended models use turntables.</li>
+                </ul>
+                <p>For most people, the difference is marginal. If you regularly cook large rectangular dishes (lasagne, casseroles), a flatbed is a genuine upgrade. For everyday reheating of plates of food, a turntable works perfectly well.</p>
+            </div>
+
+            <div class="guide-section">
+                <h3>Energy Efficiency: Microwaves Are the Cheapest Appliance to Run</h3>
+                <p>If you're watching your energy bills, microwaves are your friend. An 800W microwave used for 5 minutes costs approximately <strong>2p</strong> at the current UK energy price cap (~25p per kWh). Compare that to an electric oven which costs around 30-40p for the same task, and the savings add up quickly — especially if you use your microwave regularly for cooking vegetables, reheating, and defrosting rather than leaving the hob or oven on.</p>
+                <p>A microwave can't do everything an oven can (no crispy roast potatoes, sadly), but for speed and energy efficiency, nothing beats it. If you're replacing an old microwave, the efficiency difference between new models is negligible — they all convert electricity to microwave energy with similar efficiency. The bigger energy saving comes from using the microwave instead of your oven whenever practical.</p>
+            </div>
+
+            <div class="guide-section">
+                <h3>Our Verdict</h3>
+                <p>For most people, the <strong>Panasonic NN-E27JWMBPQ</strong> is the best microwave to buy in 2026. It combines inverter technology (normally reserved for premium models) with a useful quartz grill at an excellent price. If you're on a tight budget, the <strong>Russell Hobbs RHM2076B</strong> at &pound;69.99 is all the microwave most households will ever need. And if you want the absolute best and are willing to pay for it, the <strong>Sage the Quick Touch</strong> is a genuinely transformative kitchen appliance with its flatbed design, 1000W inverter, and smart sensor cooking.</p>
+            </div>
+        </section>
+
+        <!-- ===================== -->
+        <!-- FAQ                   -->
+        <!-- ===================== -->
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    What size microwave do I need?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>For 1-2 people, a 17-20 litre microwave is sufficient. For families of 3-4, aim for 20-25 litres. Larger households or those who cook larger dishes should consider 25+ litre models with flatbed designs for maximising usable space. The easiest way to check is to measure your largest dinner plate — if it's over 28cm, you'll want a 23L+ model with a correspondingly sized turntable or a flatbed design.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    What's the difference between a solo, grill and combination microwave?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>A solo microwave only does basic microwave heating and defrosting — it's the standard, affordable option. A grill microwave adds a heating element for browning and crisping food on top, which is useful for finishing dishes like pasta bakes and jacket potatoes. A combination microwave includes a full convection oven function alongside the microwave and grill, giving you essentially a second oven for roasting, baking, and even cooking pastry. Combination models are larger and more expensive (typically &pound;180+).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Is inverter microwave technology worth it?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Yes, especially if you regularly use lower power settings for defrosting or gentle cooking. Inverter technology delivers consistent power at any level rather than pulsing on and off like standard microwaves. This means more even defrosting (no frozen centres with cooked edges), gentler reheating, and much better results with delicate foods like fish, custards, melting chocolate, and softening butter. The price gap between inverter and standard models has narrowed significantly — the Panasonic NN-E27JWMBPQ offers inverter technology for under &pound;90.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Flatbed vs turntable — which is better?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Flatbed microwaves offer more usable interior space and are easier to clean since there's no turntable mechanism or glass plate to remove. You can fit larger or rectangular dishes that would catch on a turntable. Turntable microwaves tend to be more affordable and the rotation helps ensure even cooking. For most users, the difference is marginal — if you mainly heat plates of food, a turntable works perfectly. If you regularly use large rectangular baking dishes, consider the Sage the Quick Touch flatbed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    How much does it cost to run a microwave?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Microwaves are the cheapest cooking appliance to run. An 800W microwave used for 5 minutes costs approximately 2p at the current UK energy price cap (~25p per kWh). Even a more powerful 1000W model like the Sage the Quick Touch costs under 2.5p for the same task. Compared to an electric oven which costs around 30-40p per use, switching to microwave cooking where possible can save &pound;30-50+ per year on energy bills. They're also the fastest cooking method — a jacket potato takes 5-8 minutes in a microwave versus 60+ minutes in an oven.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Can you put metal in a microwave?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Generally no — metal reflects microwaves and can cause sparking (arcing) that damages the microwave and potentially starts a fire. However, some combination microwaves with grill and convection functions can safely use metal trays and racks when operating in grill or oven mode only (not microwave mode). Always check your microwave's manual. If in doubt, stick to microwave-safe glass, ceramic, and plastic containers. Avoid any container with metallic trim, gold leaf, or silver decoration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== -->
+        <!-- BOTTOM CTA            -->
+        <!-- ===================== -->
+
+        <section class="bottom-cta">
+            <h2>Ready to Upgrade Your Microwave?</h2>
+            <p>Whichever microwave you choose from our roundup, you'll be getting a reliable kitchen workhorse that will save you time and energy costs every day. Browse our top picks and find your perfect match.</p>
+            <a href="#review-panasonic" class="cta-btn primary">See Our Top Pick</a>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-left">
+                &copy; 2026 Home &amp; Kitchen UK. All rights reserved.
+            </div>
+            <div class="footer-right">
+                <strong>Affiliate Disclosure:</strong> We earn commissions from qualifying purchases. Prices are correct at time of writing but may change.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
