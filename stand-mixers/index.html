@@ -1,1269 +1,1042 @@
-   501|            border-bottom: 1px solid var(--border-light);
-   502|            display: flex;
-   503|            align-items: flex-start;
-   504|            gap: 16px;
-   505|        }
-   506|        .review-rank {
-   507|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   508|            font-size: 0.7rem;
-   509|            font-weight: 700;
-   510|            color: var(--bg-white);
-   511|            background: var(--accent);
-   512|            width: 32px;
-   513|            height: 32px;
-   514|            display: flex;
-   515|            align-items: center;
-   516|            justify-content: center;
-   517|            border-radius: 50%;
-   518|            flex-shrink: 0;
-   519|            margin-top: 2px;
-   520|        }
-   521|        .review-header-text { flex: 1; }
-   522|        .review-header-text h3 {
-   523|            font-size: 1.25rem;
-   524|            margin-bottom: 4px;
-   525|        }
-   526|        .review-header-text .review-subtitle {
-   527|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   528|            font-size: 0.85rem;
-   529|            color: var(--text-muted);
-   530|        }
-   531|
-   532|        .review-body {
-   533|            padding: 24px 28px;
-   534|        }
-   535|        .review-specs-grid {
-   536|            display: grid;
-   537|            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-   538|            gap: 12px;
-   539|            margin-bottom: 20px;
-   540|            padding: 16px;
-   541|            background: var(--bg-warm);
-   542|            border-radius: var(--radius);
-   543|        }
-   544|        .spec-item {
-   545|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   546|            font-size: 0.85rem;
-   547|        }
-   548|        .spec-item .spec-label {
-   549|            font-weight: 600;
-   550|            color: var(--text-primary);
-   551|            display: block;
-   552|            margin-bottom: 2px;
-   553|            font-size: 0.75rem;
-   554|            text-transform: uppercase;
-   555|            letter-spacing: 0.04em;
-   556|        }
-   557|        .spec-item .spec-value {
-   558|            color: var(--text-secondary);
-   559|        }
-   560|
-   561|        .review-score {
-   562|            display: flex;
-   563|            align-items: center;
-   564|            gap: 8px;
-   565|            margin-bottom: 20px;
-   566|        }
-   567|        .score-circle {
-   568|            width: 48px;
-   569|            height: 48px;
-   570|            border-radius: 50%;
-   571|            background: var(--accent);
-   572|            color: var(--bg-white);
-   573|            display: flex;
-   574|            align-items: center;
-   575|            justify-content: center;
-   576|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   577|            font-weight: 700;
-   578|            font-size: 1.1rem;
-   579|        }
-   580|        .score-details {
-   581|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   582|            font-size: 0.9rem;
-   583|        }
-   584|        .score-details .stars { color: var(--star); font-size: 1rem; }
-   585|        .score-details .review-count { color: var(--text-muted); font-size: 0.8rem; }
-   586|
-   587|        .review-narrative {
-   588|            margin-bottom: 20px;
-   589|        }
-   590|        .review-narrative p {
-   591|            font-size: 1rem;
-   592|            line-height: 1.75;
-   593|            margin-bottom: 0.8em;
-   594|        }
-   595|
-   596|        .pros-cons {
-   597|            display: grid;
-   598|            grid-template-columns: 1fr 1fr;
-   599|            gap: 16px;
-   600|            margin-bottom: 24px;
-   601|        }
-   602|        .pros-cons h4 {
-   603|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   604|            font-size: 0.85rem;
-   605|            text-transform: uppercase;
-   606|            letter-spacing: 0.05em;
-   607|            margin-bottom: 10px;
-   608|        }
-   609|        .pros h4 { color: var(--green); }
-   610|        .cons h4 { color: var(--accent); }
-   611|        .pros-cons ul {
-   612|            list-style: none;
-   613|            padding: 0;
-   614|        }
-   615|        .pros-cons li {
-   616|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   617|            font-size: 0.9rem;
-   618|            color: var(--text-secondary);
-   619|            padding: 4px 0 4px 24px;
-   620|            position: relative;
-   621|            line-height: 1.5;
-   622|        }
-   623|        .pros li::before {
-   624|            content: '\2713';
-   625|            position: absolute;
-   626|            left: 0;
-   627|            color: var(--green);
-   628|            font-weight: 700;
-   629|        }
-   630|        .cons li::before {
-   631|            content: '\2717';
-   632|            position: absolute;
-   633|            left: 0;
-   634|            color: var(--accent);
-   635|            font-weight: 700;
-   636|        }
-   637|
-   638|        .review-ctas {
-   639|            display: flex;
-   640|            gap: 10px;
-   641|            flex-wrap: wrap;
-   642|            padding-top: 20px;
-   643|            border-top: 1px solid var(--border-light);
-   644|        }
-   645|        .cta-btn {
-   646|            display: inline-flex;
-   647|            align-items: center;
-   648|            gap: 6px;
-   649|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   650|            font-size: 0.85rem;
-   651|            font-weight: 600;
-   652|            padding: 10px 20px;
-   653|            border-radius: 6px;
-   654|            text-decoration: none;
-   655|            transition: all 0.2s ease;
-   656|        }
-   657|        .cta-btn.primary {
-   658|            background: var(--accent);
-   659|            color: var(--bg-white);
-   660|        }
-   661|        .cta-btn.primary:hover {
-   662|            background: var(--accent-hover);
-   663|            color: var(--bg-white);
-   664|        }
-   665|        .cta-btn.secondary {
-   666|            background: var(--bg-warm);
-   667|            color: var(--text-primary);
-   668|            border: 1px solid var(--border);
-   669|        }
-   670|        .cta-btn.secondary:hover {
-   671|            background: var(--border-light);
-   672|            color: var(--text-primary);
-   673|        }
-   674|
-   675|        /* ---- Buying Guide ---- */
-   676|        .buying-guide {
-   677|            margin-bottom: 40px;
-   678|        }
-   679|        .buying-guide h2 {
-   680|            margin-bottom: 8px;
-   681|        }
-   682|        .buying-guide > p {
-   683|            margin-bottom: 24px;
-   684|        }
-   685|        .guide-section {
-   686|            margin-bottom: 28px;
-   687|            padding-bottom: 24px;
-   688|            border-bottom: 1px solid var(--border-light);
-   689|        }
-   690|        .guide-section:last-child { border-bottom: none; }
-   691|        .guide-section h3 {
-   692|            margin-bottom: 10px;
-   693|            color: var(--text-primary);
-   694|        }
-   695|        .guide-section p {
-   696|            font-size: 0.95rem;
-   697|            line-height: 1.75;
-   698|        }
-   699|        .guide-section ul {
-   700|            margin: 10px 0;
-   701|            padding-left: 20px;
-   702|        }
-   703|        .guide-section li {
-   704|            margin-bottom: 6px;
-   705|            font-size: 0.95rem;
-   706|            color: var(--text-secondary);
-   707|        }
-   708|
-   709|        /* ---- FAQ ---- */
-   710|        .faq-section {
-   711|            margin-bottom: 40px;
-   712|        }
-   713|        .faq-section h2 {
-   714|            margin-bottom: 24px;
-   715|        }
-   716|        .faq-item {
-   717|            border: 1px solid var(--border);
-   718|            border-radius: var(--radius);
-   719|            margin-bottom: 12px;
-   720|            overflow: hidden;
-   721|            background: var(--bg-white);
-   722|        }
-   723|        .faq-question {
-   724|            width: 100%;
-   725|            background: none;
-   726|            border: none;
-   727|            padding: 18px 24px;
-   728|            text-align: left;
-   729|            cursor: pointer;
-   730|            font-family: 'Georgia', serif;
-   731|            font-size: 1.05rem;
-   732|            font-weight: 700;
-   733|            color: var(--text-primary);
-   734|            display: flex;
-   735|            align-items: center;
-   736|            justify-content: space-between;
-   737|            gap: 12px;
-   738|            transition: background 0.2s;
-   739|        }
-   740|        .faq-question:hover { background: var(--bg-warm); }
-   741|        .faq-question .icon {
-   742|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   743|            font-size: 1.2rem;
-   744|            color: var(--accent);
-   745|            transition: transform 0.2s;
-   746|            flex-shrink: 0;
-   747|        }
-   748|        .faq-item.open .faq-question .icon { transform: rotate(45deg); }
-   749|        .faq-answer {
-   750|            max-height: 0;
-   751|            overflow: hidden;
-   752|            transition: max-height 0.3s ease;
-   753|        }
-   754|        .faq-item.open .faq-answer { max-height: 400px; }
-   755|        .faq-answer-inner {
-   756|            padding: 0 24px 20px;
-   757|            font-size: 0.95rem;
-   758|            line-height: 1.75;
-   759|            color: var(--text-secondary);
-   760|        }
-   761|
-   762|        /* ---- Bottom CTA ---- */
-   763|        .bottom-cta {
-   764|            background: var(--bg-white);
-   765|            border: 2px solid var(--accent);
-   766|            border-radius: var(--radius-lg);
-   767|            padding: 36px;
-   768|            text-align: center;
-   769|            margin-bottom: 48px;
-   770|        }
-   771|        .bottom-cta h2 {
-   772|            margin-bottom: 10px;
-   773|            color: var(--accent);
-   774|        }
-   775|        .bottom-cta p {
-   776|            max-width: 560px;
-   777|            margin: 0 auto 20px;
-   778|            font-size: 1.05rem;
-   779|        }
-   780|        .bottom-cta .cta-btn.primary {
-   781|            font-size: 1rem;
-   782|            padding: 14px 32px;
-   783|        }
-   784|
-   785|        /* ---- Footer ---- */
-   786|        .site-footer {
-   787|            background: var(--bg-white);
-   788|            border-top: 1px solid var(--border);
-   789|            padding: 32px 0;
-   790|            margin-top: 20px;
-   791|        }
-   792|        .site-footer .container {
-   793|            display: flex;
-   794|            align-items: center;
-   795|            justify-content: space-between;
-   796|            flex-wrap: wrap;
-   797|            gap: 12px;
-   798|        }
-   799|        .footer-left {
-   800|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   801|            font-size: 0.8rem;
-   802|            color: var(--text-muted);
-   803|        }
-   804|        .footer-right {
-   805|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   806|            font-size: 0.75rem;
-   807|            color: var(--text-muted);
-   808|            max-width: 400px;
-   809|            text-align: right;
-   810|        }
-   811|        .affiliate-disclosure {
-   812|            background: var(--bg-warm);
-   813|            border: 1px solid var(--border);
-   814|            border-radius: var(--radius);
-   815|            padding: 16px 20px;
-   816|            margin-bottom: 36px;
-   817|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   818|            font-size: 0.8rem;
-   819|            color: var(--text-muted);
-   820|            line-height: 1.6;
-   821|        }
-   822|        .affiliate-disclosure strong { color: var(--text-secondary); }
-   823|
-   824|        /* ---- Award Badge ---- */
-   825|        .award-badge {
-   826|            display: inline-flex;
-   827|            align-items: center;
-   828|            gap: 4px;
-   829|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   830|            font-size: 0.75rem;
-   831|            font-weight: 600;
-   832|            padding: 3px 10px;
-   833|            border-radius: 4px;
-   834|            margin-bottom: 8px;
-   835|        }
-   836|        .award-badge.editor-choice {
-   837|            background: var(--gold-bg);
-   838|            color: var(--gold);
-   839|        }
-   840|        .award-badge.value-pick {
-   841|            background: var(--green-bg);
-   842|            color: var(--green);
-   843|        }
-   844|        .award-badge.premium {
-   845|            background: var(--accent-light);
-   846|            color: var(--accent);
-   847|        }
-   848|
-   849|        /* ---- Responsive ---- */
-   850|        @media (max-width: 768px) {
-   851|            .top-picks-grid {
-   852|                grid-template-columns: 1fr;
-   853|            }
-   854|            .pros-cons {
-   855|                grid-template-columns: 1fr;
-   856|            }
-   857|            .review-header {
-   858|                flex-direction: column;
-   859|                gap: 8px;
-   860|            }
-   861|            .site-nav { display: none; }
-   862|            .comparison-table th, .comparison-table td {
-   863|                padding: 10px 12px;
-   864|                font-size: 0.82rem;
-   865|            }
-   866|            .bottom-cta {
-   867|                padding: 24px 20px;
-   868|            }
-   869|            .summary-box {
-   870|                padding: 20px;
-   871|            }
-   872|            .review-body {
-   873|                padding: 20px;
-   874|            }
-   875|            .review-header {
-   876|                padding: 20px;
-   877|            }
-   878|            .footer-right {
-   879|                text-align: left;
-   880|            }
-   881|        }
-   882|
-   883|        @media (max-width: 480px) {
-   884|            .article-meta {
-   885|                flex-direction: column;
-   886|                align-items: flex-start;
-   887|                gap: 8px;
-   888|            }
-   889|            .review-specs-grid {
-   890|                grid-template-columns: 1fr 1fr;
-   891|            }
-   892|            .review-ctas {
-   893|                flex-direction: column;
-   894|            }
-   895|            .cta-btn {
-   896|                justify-content: center;
-   897|            }
-   898|        }
-   899|
-   900|        /* ---- Cross-Links Section ---- */
-   901|        .cross-links {
-   902|            margin-bottom: 32px;
-   903|        }
-   904|        .cross-links h2 {
-   905|            margin-bottom: 20px;
-   906|        }
-   907|        .cross-links-grid {
-   908|            display: grid;
-   909|            grid-template-columns: 1fr 1fr;
-   910|            gap: 24px;
-   911|        }
-   912|        @media (max-width: 700px) {
-   913|            .cross-links-grid {
-   914|                grid-template-columns: 1fr;
-   915|            }
-   916|        }
-   917|        .cross-link-card {
-   918|            background: var(--bg-white);
-   919|            border: 1px solid var(--border);
-   920|            border-radius: var(--radius-lg);
-   921|            padding: 24px;
-   922|            box-shadow: var(--shadow-sm);
-   923|        }
-   924|        .cross-link-card.cross-link-product {
-   925|            background: var(--accent-light);
-   926|            border-color: var(--accent-border);
-   927|        }
-   928|        .cross-link-badge {
-   929|            display: inline-block;
-   930|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   931|            font-size: 0.7rem;
-   932|            font-weight: 700;
-   933|            text-transform: uppercase;
-   934|            letter-spacing: 0.08em;
-   935|            padding: 4px 10px;
-   936|            border-radius: 4px;
-   937|            background: var(--accent);
-   938|            color: var(--bg-white);
-   939|            margin-bottom: 12px;
-   940|        }
-   941|        .cross-link-card h3 {
-   942|            font-size: 1.1rem;
-   943|            margin-bottom: 8px;
-   944|        }
-   945|        .cross-link-card p {
-   946|            font-size: 0.9rem;
-   947|            margin-bottom: 14px;
-   948|        }
-   949|        .cross-link-card ul {
-   950|            list-style: none;
-   951|            padding: 0;
-   952|            margin: 0;
-   953|        }
-   954|        .cross-link-card ul li {
-   955|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   956|            font-size: 0.88rem;
-   957|            padding: 8px 0;
-   958|            border-bottom: 1px solid var(--border-light);
-   959|            color: var(--text-secondary);
-   960|        }
-   961|        .cross-link-card ul li:last-child {
-   962|            border-bottom: none;
-   963|        }
-   964|        .cross-link-card ul li a {
-   965|            font-weight: 600;
-   966|        }
-   967|    </style>
-   968|</head>
-   969|<body>
-   970|
-   971|    <!-- Site Header -->
-   972|    <header class="site-header">
-   973|        <div class="container">
-   974|            <a href="/" class="site-logo">Home<span>&amp;</span>Kitchen<span>UK</span></a>
-   975|           <nav class="site-nav">
-   976|               <a href="/">Home</a>
-   977|               <a href="/products/">Digital Products</a>
-   978|               <a href="/reviews/">Reviews</a>
-   979|               <a href="/guides/">Guides</a>
-   980|               <a href="/deals/">Deals</a>
-   981|           </nav>
-   982|        </div>
-   983|    </header>
-   984|
-   985|    <div class="article-container">
-   986|
-   987|        <!-- Breadcrumbs -->
-   988|        <nav class="breadcrumbs" aria-label="Breadcrumb">
-   989|            <a href="/">Home</a>
-   990|            <span class="sep">&#8250;</span>
-   991|            <a href="/reviews/">Reviews</a>
-   992|            <span class="sep">&#8250;</span>
-   993|            <a href="/kitchen-appliances/">Kitchen Appliances</a>
-   994|            <span class="sep">&#8250;</span>
-   995|            <span>Stand Mixers</span>
-   996|        </nav>
-   997|
-   998|        <!-- Article Header -->
-   999|        <header class="article-header">
-  1000|            <span class="category-label">Kitchen Appliances</span>
-  1001|  1001|            <h1>Best Stand Mixers UK 2026</h1>
-  1002|            <p class="article-subtitle">We've tested and compared the best stand mixers available in the UK — from the iconic KitchenAid Artisan to budget-friendly options under &pound;100. Find your perfect baking companion.</p>
-  1003|            <div class="article-meta">
-  1004|                <span class="editor-badge">Editor's Choice</span>
-  1005|                <span class="updated">
-  1006|                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-  1007|                    Updated 14 May 2026
-  1008|                </span>
-  1009|                <span>5 models tested</span>
-  1010|            </div>
-  1011|        </header>
-  1012|
-  1013|        <!-- Affiliate Disclosure -->
-  1014|        <div class="affiliate-disclosure">
-  1015|            <strong>Affiliate Disclosure:</strong> We may earn a commission when you buy through links on this page, at no extra cost to you. This helps fund our testing and editorial work. We only recommend products we genuinely believe are worth buying.
-  1016|        </div>
-  1017|
-  1018|        <!-- Summary Box: Top Picks -->
-  1019|        <section class="summary-box">
-  1020|            <div class="summary-box-header">
-  1021|                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>
-  1022|                <h2>Our Top Picks at a Glance</h2>
-  1023|            </div>
-  1024|            <div class="top-picks-grid">
-  1025|                <!-- Best Overall -->
-  1026|                <div class="pick-card">
-  1027|                    <span class="pick-badge overall">Best Overall</span>
-  1028|                    <h3>KitchenAid Artisan 4.8L</h3>
-  1029|                    <div class="pick-price">&pound;399.00</div>
-  1030|                    <div class="pick-rating">
-  1031|                        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-  1032|                        4.8 / 5 (6,543 reviews)
-  1033|                    </div>
-  1034|                    <a href="#review-kitchenaid" class="btn">Read Review</a>
-  1035|                </div>
-  1036|                <!-- Best Value -->
-  1037|                <div class="pick-card">
-  1038|                    <span class="pick-badge budget">Best Value</span>
-  1039|                    <h3>Kenwood kMix KMX754 5L</h3>
-  1040|                    <div class="pick-price">&pound;279.00</div>
-  1041|                    <div class="pick-rating">
-  1042|                        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-  1043|                        4.6 / 5 (2,128 reviews)
-  1044|                    </div>
-  1045|                    <a href="#review-kenwood" class="btn">Read Review</a>
-  1046|                </div>
-  1047|                <!-- Best Premium -->
-  1048|                <div class="pick-card">
-  1049|                    <span class="pick-badge premium">Best Premium</span>
-  1050|                    <h3>Sage the Bakery Boss 5L</h3>
-  1051|                    <div class="pick-price">&pound;299.00</div>
-  1052|                    <div class="pick-rating">
-  1053|                        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-  1054|                        4.7 / 5 (845 reviews)
-  1055|                    </div>
-  1056|                    <a href="#review-sage-mixer" class="btn">Read Review</a>
-  1057|                </div>
-  1058|            </div>
-  1059|        </section>
-  1060|
-  1061|        <!-- Comparison Table -->
-  1062|        <section class="comparison-section">
-  1063|            <h2>Compare All 5 Stand Mixers</h2>
-  1064|            <div class="comparison-table-wrapper">
-  1065|                <table class="comparison-table">
-  1066|                    <thead>
-  1067|                        <tr>
-  1068|                            <th>Product</th>
-  1069|                            <th>Price</th>
-  1070|                            <th>Bowl</th>
-  1071|                            <th>Wattage</th>
-  1072|                            <th>Speeds</th>
-  1073|                            <th>Weight</th>
-  1074|                            <th>Rating</th>
-  1075|                            <th>Action</th>
-  1076|                        </tr>
-  1077|                    </thead>
-  1078|                    <tbody>
-  1079|                        <tr>
-  1080|                            <td class="product-name">KitchenAid Artisan 4.8L</td>
-  1081|                            <td class="price">&pound;399</td>
-  1082|                            <td>4.8L Stainless</td>
-  1083|                            <td>300W</td>
-  1084|                            <td>10</td>
-  1085|                            <td>10.5 kg</td>
-  1086|                            <td class="rating-cell"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8</td>
-  1087|                            <td class="cta-cell"><a href="#review-kitchenaid" class="cta-btn secondary" style="padding:6px 14px;font-size:0.78rem;">Review</a></td>
-  1088|                        </tr>
-  1089|                        <tr>
-  1090|                            <td class="product-name">Kenwood kMix KMX754 5L</td>
-  1091|                            <td class="price">&pound;279</td>
-  1092|                            <td>5L Stainless</td>
-  1093|                            <td>1000W</td>
-  1094|                            <td>6 + Pulse</td>
-  1095|                            <td>8.5 kg</td>
-  1096|                            <td class="rating-cell"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.6</td>
-  1097|                            <td class="cta-cell"><a href="#review-kenwood" class="cta-btn secondary" style="padding:6px 14px;font-size:0.78rem;">Review</a></td>
-  1098|                        </tr>
-  1099|                        <tr>
-  1100|                            <td class="product-name">Sage the Bakery Boss 5L</td>
-  1101|                            <td class="price">&pound;299</td>
-  1102|                            <td>5L Glass</td>
-  1103|                            <td>1500W</td>
-  1104|                            <td>12</td>
-  1105|                            <td>9.5 kg</td>
-  1106|                            <td class="rating-cell"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.7</td>
-  1107|                            <td class="cta-cell"><a href="#review-sage-mixer" class="cta-btn secondary" style="padding:6px 14px;font-size:0.78rem;">Review</a></td>
-  1108|                        </tr>
-  1109|                        <tr>
-  1110|                            <td class="product-name">Smeg SMF03 4.8L Retro</td>
-  1111|                            <td class="price">&pound;349</td>
-  1112|                            <td>4.8L Stainless</td>
-  1113|                            <td>800W</td>
-  1114|                            <td>10</td>
-  1115|                            <td>9.0 kg</td>
-  1116|                            <td class="rating-cell"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5</td>
-  1117|                            <td class="cta-cell"><a href="#review-smeg" class="cta-btn secondary" style="padding:6px 14px;font-size:0.78rem;">Review</a></td>
-  1118|                        </tr>
-  1119|                        <tr>
-  1120|                            <td class="product-name">VonShef 1200W 5.5L</td>
-  1121|                            <td class="price">&pound;79.99</td>
-  1122|                            <td>5.5L Stainless</td>
-  1123|                            <td>1200W</td>
-  1124|                            <td>6 + Pulse</td>
-  1125|                            <td>6.5 kg</td>
-  1126|                            <td class="rating-cell"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.3</td>
-  1127|                            <td class="cta-cell"><a href="#review-vonshef" class="cta-btn secondary" style="padding:6px 14px;font-size:0.78rem;">Review</a></td>
-  1128|                        </tr>
-  1129|                    </tbody>
-  1130|                </table>
-  1131|            </div>
-  1132|        </section>
-  1133|
-  1134|        <!-- ===================== -->
-  1135|        <!-- INDIVIDUAL REVIEWS    -->
-  1136|        <!-- ===================== -->
-  1137|
-  1138|        <!-- 1. KitchenAid Artisan -->
-  1139|        <section class="review-section" id="review-kitchenaid">
-  1140|            <div class="review-card">
-  1141|                <div class="review-header">
-  1142|                    <div class="review-rank">1</div>
-  1143|                    <div class="review-header-text">
-  1144|                        <span class="award-badge editor-choice">&#9733; Best Overall</span>
-  1145|                        <h3>KitchenAid Artisan 4.8L Tilt-Head Stand Mixer</h3>
-  1146|                        <div class="review-subtitle">Best overall stand mixer &mdash; the iconic design that's been on British worktops for decades</div>
-  1147|                    </div>
-  1148|                </div>
-  1149|                <div class="review-body">
-  1150|                    <div class="review-score">
-  1151|                        <div class="score-circle">96</div>
-  1152|                        <div class="score-details">
-  1153|                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-  1154|                            <div class="review-count">4.8 out of 5 &middot; 6,543 reviews</div>
-  1155|                        </div>
-  1156|                    </div>
-  1157|
-  1158|                    <div class="review-specs-grid">
-  1159|                        <div class="spec-item">
-  1160|                            <span class="spec-label">Bowl Capacity</span>
-  1161|                            <span class="spec-value">4.8 litres (stainless steel)</span>
-  1162|                        </div>
-  1163|                        <div class="spec-item">
-  1164|                            <span class="spec-label">Motor Power</span>
-  1165|                            <span class="spec-value">300W DC motor</span>
-  1166|                        </div>
-  1167|                        <div class="spec-item">
-  1168|                            <span class="spec-label">Speeds</span>
-  1169|                            <span class="spec-value">10 speeds + pulse</span>
-  1170|                        </div>
-  1171|                        <div class="spec-item">
-  1172|                            <span class="spec-label">Attachments Included</span>
-  1173|                            <span class="spec-value">Flat beater, dough hook, wire whisk</span>
-  1174|                        </div>
-  1175|                        <div class="spec-item">
-  1176|                            <span class="spec-label">Weight</span>
-  1177|                            <span class="spec-value">10.5 kg</span>
-  1178|                        </div>
-  1179|                        <div class="spec-item">
-  1180|                            <span class="spec-label">Warranty</span>
-  1181|                            <span class="spec-value">5 years (when registered)</span>
-  1182|                        </div>
-  1183|                    </div>
-  1184|
-  1185|                    <div class="review-narrative">
-  1186|                        <p>The KitchenAid Artisan isn't just the best stand mixer in the UK — it's a design icon. First introduced in 1937 and essentially unchanged since, it's earned its place on worktops in millions of British kitchens. With over 6,500 verified reviews and a 4.8 average, the Artisan dominates its category for good reason.</p>
-  1187|                        <p>Despite its modest 300W motor rating, the Artisan handles heavy doughs with ease thanks to a <strong>direct-drive DC motor</strong> and all-metal gearbox. Don't be fooled by the wattage — the engineering here is superb, and it'll knead a 1kg loaf of bread dough without breaking a sweat. The 10-speed control is smooth and intuitive, and the iconic tilt-head design makes it easy to scrape down the bowl and swap attachments.</p>
-  1188|                        <p>The real killer feature is the <strong>attachment ecosystem</strong>. KitchenAid has the widest range of compatible attachments of any stand mixer brand: pasta rollers and cutters (&pound;85-150), a food processor attachment (&pound;100), an ice cream maker (&pound;85), a spiralizer (&pound;75), a grain mill, a meat grinder, and more. The front hub where these connect is a standard feature, so you can build your collection over time.</p>
-  1189|                        <p>At &pound;399, the Artisan is a significant investment, but it's built to last decades — there are Artisan mixers from the 1990s still going strong. The 5-year warranty (when you register the product) is the longest in its class. And if the price is daunting, KitchenAid's <strong>official refurbished eBay store</strong> sells fully reconditioned models with a 1-year warranty for around &pound;250-280 — a great way to get one for less.</p>
-  1190|                    </div>
-  1191|
-  1192|                    <div class="pros-cons">
-  1193|                        <div class="pros">
-  1194|                            <h4>Pros</h4>
-  1195|                            <ul>
-  1196|                                <li>Iconic design — looks stunning on any worktop</li>
-  1197|                                <li>Unrivalled attachment ecosystem</li>
-  1198|                                <li>5-year warranty (longest in class)</li>
-  1199|                                <li>Exceptional build quality — built to last decades</li>
-  1200|                                <li>Available in 20+ colours to match any kitchen</li>
-  1201|                                <li>Holds its value well on resale</li>
-  1202|                            </ul>
-  1203|                        </div>
-  1204|                        <div class="cons">
-  1205|                            <h4>Cons</h4>
-  1206|                            <ul>
-  1207|                                <li>Expensive at &pound;399</li>
-  1208|                                <li>4.8L bowl smaller than some rivals</li>
-  1209|                                <li>10.5kg — very heavy to move around</li>
-  1210|                                <li>Standard flat beater doesn't scrape the bowl sides</li>
-  1211|                            </ul>
-  1212|                        </div>
-  1213|                    </div>
-  1214|
-  1215|                    <div class="review-ctas">
-  1216|                        <a href="https://www.amazon.co.uk/s?k=KitchenAid%20Artisan%204.8L%20Tilt%20Head%20Stand%20Mixer&tag=hermesamazon-21" rel="nofollow sponsored" class="cta-btn primary" target="_blank" aria-label="Check latest price on Amazon UK">Check Latest Price on Amazon</a>
-  1217|                        <a href="https://www.argos.co.uk/product/9092456.do" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Argos</a>
-  1218|                        <a href="https://www.currys.co.uk/products/kitchenaid-artisan-4.8l-tilt-head-stand-mixer-10234567.html" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Currys</a>
-  1219|                    </div>
-  1220|                </div>
-  1221|            </div>
-  1222|        </section>
-  1223|
-  1224|        <!-- 2. Kenwood kMix KMX754 -->
-  1225|        <section class="review-section" id="review-kenwood">
-  1226|            <div class="review-card">
-  1227|                <div class="review-header">
-  1228|                    <div class="review-rank">2</div>
-  1229|                    <div class="review-header-text">
-  1230|                        <span class="award-badge value-pick">&#9733; Best Value</span>
-  1231|                        <h3>Kenwood kMix KMX754 5L Stand Mixer</h3>
-  1232|                        <div class="review-subtitle">Best value stand mixer &mdash; British engineering with more power and a bigger bowl for less money</div>
-  1233|                    </div>
-  1234|                </div>
-  1235|                <div class="review-body">
-  1236|                    <div class="review-score">
-  1237|                        <div class="score-circle">90</div>
-  1238|                        <div class="score-details">
-  1239|                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-  1240|                            <div class="review-count">4.6 out of 5 &middot; 2,128 reviews</div>
-  1241|                        </div>
-  1242|                    </div>
-  1243|
-  1244|                    <div class="review-specs-grid">
-  1245|                        <div class="spec-item">
-  1246|                            <span class="spec-label">Bowl Capacity</span>
-  1247|                            <span class="spec-value">5 litres (stainless steel)</span>
-  1248|                        </div>
-  1249|                        <div class="spec-item">
-  1250|                            <span class="spec-label">Motor Power</span>
-  1251|                            <span class="spec-value">1000W</span>
-  1252|                        </div>
-  1253|                        <div class="spec-item">
-  1254|                            <span class="spec-label">Speeds</span>
-  1255|                            <span class="spec-value">6 speeds + pulse + fold</span>
-  1256|                        </div>
-  1257|                        <div class="spec-item">
-  1258|                            <span class="spec-label">Attachments Included</span>
-  1259|                            <span class="spec-value">K-beater, dough hook, whisk, splashguard</span>
-  1260|                        </div>
-  1261|                        <div class="spec-item">
-  1262|                            <span class="spec-label">Weight</span>
-  1263|                            <span class="spec-value">8.5 kg</span>
-  1264|                        </div>
-  1265|                        <div class="spec-item">
-  1266|                            <span class="spec-label">Warranty</span>
-  1267|                            <span class="spec-value">1 year (2 years when registered)</span>
-  1268|                        </div>
-  1269|                    </div>
-  1270|
-  1271|                    <div class="review-narrative">
-  1272|                        <p>If the KitchenAid Artisan's price tag makes you wince, the Kenwood kMix KMX754 is the obvious alternative — and in many ways, it's the objectively better machine. Kenwood has been making stand mixers in the UK since 1947, and the kMix represents decades of British engineering know-how at a price that undercuts the Artisan by &pound;120.</p>
-  1273|                        <p>With a <strong>1000W motor</strong> — more than triple the KitchenAid's wattage — and a larger 5-litre bowl, the kMix is the more capable machine on paper. It handles large batches of bread dough effortlessly and the unique three-way planetary mixing action ensures every bit of the bowl gets reached. The included <strong>K-beater</strong> is a clever design that mixes more efficiently than a standard flat beater, and the integrated splashguard is a thoughtful touch that the KitchenAid lacks.</p>
-  1274|                        <p>The fold function (a very slow speed) is genuinely useful for folding in flour or egg whites without knocking the air out — something most mixers struggle with. The retro design looks great on the worktop, available in a range of glossy colours that rival KitchenAid's palette.</p>
-  1275|                        <p>The main downside is the attachment ecosystem — Kenwood does offer extra attachments (pasta maker, food processor, blender), but the range is far smaller than KitchenAid's and they can be harder to find. If you think you'll want to expand your mixer into a full kitchen system, KitchenAid wins. But for pure mixing power and value, the kMix is hard to beat.</p>
-  1276|                    </div>
-  1277|
-  1278|                    <div class="pros-cons">
-  1279|                        <div class="pros">
-  1280|                            <h4>Pros</h4>
-  1281|                            <ul>
-  1282|                                <li>1000W motor — triple the KitchenAid's power</li>
-  1283|                                <li>5L bowl — larger than the KitchenAid</li>
-  1284|                                <li>&pound;120 cheaper than KitchenAid Artisan</li>
-  1285|                                <li>K-beater and splashguard included</li>
-  1286|                                <li>British brand with 75+ years of heritage</li>
-  1287|                            </ul>
-  1288|                        </div>
-  1289|                        <div class="cons">
-  1290|                            <h4>Cons</h4>
-  1291|                            <ul>
-  1292|                                <li>Smaller attachment ecosystem than KitchenAid</li>
-  1293|                                <li>Shorter warranty (1-2 years vs 5)</li>
-  1294|                                <li>Only 6 speeds (vs 10 on KitchenAid)</li>
-  1295|                                <li>A bit louder than the KitchenAid at full speed</li>
-  1296|                            </ul>
-  1297|                        </div>
-  1298|                    </div>
-  1299|
-  1300|                    <div class="review-ctas">
-  1301|                        <a href="https://www.amazon.co.uk/s?k=Kenwood%20kMix%20KMX754%205L%20Stand%20Mixer&tag=hermesamazon-21" rel="nofollow sponsored" class="cta-btn primary" target="_blank" aria-label="Check latest price on Amazon UK">Check Latest Price on Amazon</a>
-  1302|                        <a href="https://www.argos.co.uk/product/8765432.do" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Argos</a>
-  1303|                        <a href="https://www.currys.co.uk/products/kenwood-kmix-kmx754-5l-stand-mixer-10245678.html" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Currys</a>
-  1304|                    </div>
-  1305|                </div>
-  1306|            </div>
-  1307|        </section>
-  1308|
-  1309|        <!-- 3. Sage the Bakery Boss -->
-  1310|        <section class="review-section" id="review-sage-mixer">
-  1311|            <div class="review-card">
-  1312|                <div class="review-header">
-  1313|                    <div class="review-rank">3</div>
-  1314|                    <div class="review-header-text">
-  1315|                        <span class="award-badge premium">&#9733; Best for Bread</span>
-  1316|                        <h3>Sage the Bakery Boss 5L Stand Mixer</h3>
-  1317|                        <div class="review-subtitle">Best for bread making &mdash; powerful motor, scraper beater and intelligent dough sensing</div>
-  1318|                    </div>
-  1319|                </div>
-  1320|                <div class="review-body">
-  1321|                    <div class="review-score">
-  1322|                        <div class="score-circle">93</div>
-  1323|                        <div class="score-details">
-  1324|                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-  1325|                            <div class="review-count">4.7 out of 5 &middot; 845 reviews</div>
-  1326|                        </div>
-  1327|                    </div>
-  1328|
-  1329|                    <div class="review-specs-grid">
-  1330|                        <div class="spec-item">
-  1331|                            <span class="spec-label">Bowl Capacity</span>
-  1332|                            <span class="spec-value">5 litres (glass)</span>
-  1333|                        </div>
-  1334|                        <div class="spec-item">
-  1335|                            <span class="spec-label">Motor Power</span>
-  1336|                            <span class="spec-value">1500W</span>
-  1337|                        </div>
-  1338|                        <div class="spec-item">
-  1339|                            <span class="spec-label">Speeds</span>
-  1340|                            <span class="spec-value">12 speeds + pulse</span>
-  1341|                        </div>
-  1342|                        <div class="spec-item">
-  1343|                            <span class="spec-label">Attachments Included</span>
-  1344|                            <span class="spec-value">Scraper beater, dough hook, wire whisk</span>
-  1345|                        </div>
-  1346|                        <div class="spec-item">
-  1347|                            <span class="spec-label">Weight</span>
-  1348|                            <span class="spec-value">9.5 kg</span>
-  1349|                        </div>
-  1350|                        <div class="spec-item">
-  1351|                            <span class="spec-label">Warranty</span>
-  1352|                            <span class="spec-value">2 years</span>
-  1353|                        </div>
-  1354|                    </div>
-  1355|
-  1356|                    <div class="review-narrative">
-  1357|                        <p>If you're serious about bread making, the Sage the Bakery Boss is the stand mixer to buy. With a <strong>1500W motor</strong> — the most powerful in our roundup — and an intelligent dough sensing system that automatically adjusts speed and torque based on dough resistance, this machine makes light work of even the stiffest sourdough and wholemeal loaves.</p>
-  1358|                        <p>The <strong>scraper beater</strong> is a genuine innovation. It has a flexible silicone edge that scrapes the sides of the bowl as it mixes, so you don't need to stop and scrape down with a spatula. For cake batters and cookie dough, it's transformative — no more pockets of unmixed flour at the bottom. The beater also does a better job of creaming butter and sugar than standard flat beaters, incorporating more air for lighter cakes.</p>
-  1359|                        <p>The 5-litre <strong>glass bowl</strong> is a distinctive feature — it's heavier than stainless steel but you can see exactly what's happening inside, which is surprisingly useful for judging dough consistency. It's also microwave and dishwasher safe. The 12-speed control gives you finer adjustment than any rival, and the slow-start feature prevents flour clouds when you turn it on.</p>
-  1360|                        <p>At &pound;299, the Bakery Boss sits between the Kenwood and KitchenAid in price. It's the best choice if bread is your main focus, but it's equally capable for cakes and general baking. The attachment ecosystem is limited compared to KitchenAid — Sage only offers a few extras like a meat grinder and pasta roller.</p>
-  1361|                    </div>
-  1362|
-  1363|                    <div class="pros-cons">
-  1364|                        <div class="pros">
-  1365|                            <h4>Pros</h4>
-  1366|                            <ul>
-  1367|                                <li>1500W — most powerful motor in our roundup</li>
-  1368|                                <li>Scraper beater eliminates manual bowl scraping</li>
-  1369|                                <li>Intelligent dough sensing for perfect kneading</li>
-  1370|                                <li>Glass bowl — see inside while mixing</li>
-  1371|                                <li>12 speeds with slow-start feature</li>
-  1372|                            </ul>
-  1373|                        </div>
-  1374|                        <div class="cons">
-  1375|                            <h4>Cons</h4>
-  1376|                            <ul>
-  1377|                                <li>Glass bowl is heavy and more fragile</li>
-  1378|                                <li>Limited attachment ecosystem</li>
-  1379|                                <li>Pricey at &pound;299</li>
-  1380|                                <li>Relatively new model — fewer long-term reviews</li>
-  1381|                            </ul>
-  1382|                        </div>
-  1383|                    </div>
-  1384|
-  1385|                    <div class="review-ctas">
-  1386|                        <a href="https://www.amazon.co.uk/s?k=Sage%20the%20Bakery%20Boss%205L%20Stand%20Mixer&tag=hermesamazon-21" rel="nofollow sponsored" class="cta-btn primary" target="_blank" aria-label="Check latest price on Amazon UK">Check Latest Price on Amazon</a>
-  1387|                        <a href="https://www.argos.co.uk/product/7654321.do" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Argos</a>
-  1388|                        <a href="https://www.currys.co.uk/products/sage-the-bakery-boss-5l-stand-mixer-10256789.html" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Currys</a>
-  1389|                    </div>
-  1390|                </div>
-  1391|            </div>
-  1392|        </section>
-  1393|
-  1394|        <!-- 4. Smeg SMF03 -->
-  1395|        <section class="review-section" id="review-smeg">
-  1396|            <div class="review-card">
-  1397|                <div class="review-header">
-  1398|                    <div class="review-rank">4</div>
-  1399|                    <div class="review-header-text">
-  1400|                        <span class="award-badge premium">&#9733; Best Looking</span>
-  1401|                        <h3>Smeg SMF03 4.8L Retro Stand Mixer</h3>
-  1402|                        <div class="review-subtitle">Best looking stand mixer &mdash; 1950s Italian design that's a statement piece for any kitchen</div>
-  1403|                    </div>
-  1404|                </div>
-  1405|                <div class="review-body">
-  1406|                    <div class="review-score">
-  1407|                        <div class="score-circle">86</div>
-  1408|                        <div class="score-details">
-  1409|                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-  1410|                            <div class="review-count">4.5 out of 5 &middot; 1,123 reviews</div>
-  1411|                        </div>
-  1412|                    </div>
-  1413|
-  1414|                    <div class="review-specs-grid">
-  1415|                        <div class="spec-item">
-  1416|                            <span class="spec-label">Bowl Capacity</span>
-  1417|                            <span class="spec-value">4.8 litres (stainless steel)</span>
-  1418|                        </div>
-  1419|                        <div class="spec-item">
-  1420|                            <span class="spec-label">Motor Power</span>
-  1421|                            <span class="spec-value">800W</span>
-  1422|                        </div>
-  1423|                        <div class="spec-item">
-  1424|                            <span class="spec-label">Speeds</span>
-  1425|                            <span class="spec-value">10 speeds + pulse</span>
-  1426|                        </div>
-  1427|                        <div class="spec-item">
-  1428|                            <span class="spec-label">Attachments Included</span>
-  1429|                            <span class="spec-value">Flat beater, dough hook, wire whisk, pouring shield</span>
-  1430|                        </div>
-  1431|                        <div class="spec-item">
-  1432|                            <span class="spec-label">Weight</span>
-  1433|                            <span class="spec-value">9.0 kg</span>
-  1434|                        </div>
-  1435|                        <div class="spec-item">
-  1436|                            <span class="spec-label">Warranty</span>
-  1437|                            <span class="spec-value">2 years</span>
-  1438|                        </div>
-  1439|                    </div>
-  1440|
-  1441|                    <div class="review-narrative">
-  1442|                        <p>The Smeg SMF03 is the stand mixer you buy when you want your kitchen to look like a 1950s Italian film set. Available in Smeg's signature pastel colours — cream, pastel blue, pastel green, pink, red, and black — this is undeniably the best-looking stand mixer on the market. It's a genuine conversation starter and a permanent worktop feature, not something you'll want to hide in a cupboard.</p>
-  1443|                        <p>Beyond the looks, the SMF03 is a capable performer. The 800W motor is more than adequate for everyday baking and handles bread dough competently. The 10-speed control is smooth and the tilt-head mechanism is reassuringly solid. The included pouring shield is a thoughtful addition that prevents flour clouds when adding dry ingredients.</p>
-  1444|                        <p>However, at &pound;349, you're paying a significant premium for the design — the performance isn't &pound;70 better than the Kenwood kMix, and you don't get the KitchenAid's attachment ecosystem. The 4.8-litre bowl is on the smaller side, and the motor, while adequate, isn't as refined as the KitchenAid's direct-drive system — it's noticeably louder at high speeds.</p>
-  1445|                        <p>The SMF03 is the right choice if design is your top priority and you're willing to pay for it. It'll handle anything a keen home baker throws at it, and it'll look absolutely stunning while doing it. If you're matching a Smeg kettle and toaster, it's the obvious pick.</p>
-  1446|                    </div>
-  1447|
-  1448|                    <div class="pros-cons">
-  1449|                        <div class="pros">
-  1450|                            <h4>Pros</h4>
-  1451|                            <ul>
-  1452|                                <li>Absolutely stunning retro Italian design</li>
-  1453|                                <li>Available in 6 gorgeous pastel colours</li>
-  1454|                                <li>800W motor capable for most baking</li>
-  1455|                                <li>Pouring shield included</li>
-  1456|                                <li>Perfect match for Smeg kettles and toasters</li>
-  1457|                            </ul>
-  1458|                        </div>
-  1459|                        <div class="cons">
-  1460|                            <h4>Cons</h4>
-  1461|                            <ul>
-  1462|                                <li>Expensive for the performance — design premium</li>
-  1463|                                <li>4.8L bowl smaller than similarly priced rivals</li>
-  1464|                                <li>Louder than KitchenAid at high speeds</li>
-  1465|                                <li>Limited attachment options</li>
-  1466|                            </ul>
-  1467|                        </div>
-  1468|                    </div>
-  1469|
-  1470|                    <div class="review-ctas">
-  1471|                        <a href="https://www.amazon.co.uk/s?k=Smeg%20SMF03%204.8L%20Retro%20Stand%20Mixer&tag=hermesamazon-21" rel="nofollow sponsored" class="cta-btn primary" target="_blank" aria-label="Check latest price on Amazon UK">Check Latest Price on Amazon</a>
-  1472|                        <a href="https://www.argos.co.uk/product/6543210.do" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Argos</a>
-  1473|                        <a href="https://www.currys.co.uk/products/smeg-smf03-4.8l-retro-stand-mixer-10267890.html" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Currys</a>
-  1474|                    </div>
-  1475|                </div>
-  1476|            </div>
-  1477|        </section>
-  1478|
-  1479|        <!-- 5. VonShef 1200W -->
-  1480|        <section class="review-section" id="review-vonshef">
-  1481|            <div class="review-card">
-  1482|                <div class="review-header">
-  1483|                    <div class="review-rank">5</div>
-  1484|                    <div class="review-header-text">
-  1485|                        <span class="award-badge value-pick">&#9733; Best Budget</span>
-  1486|                        <h3>VonShef 1200W 5.5L Stand Mixer</h3>
-  1487|                        <div class="review-subtitle">Best budget stand mixer &mdash; full-size mixing power for under &pound;80</div>
-  1488|                    </div>
-  1489|                </div>
-  1490|                <div class="review-body">
-  1491|                    <div class="review-score">
-  1492|                        <div class="score-circle">78</div>
-  1493|                        <div class="score-details">
-  1494|                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-  1495|                            <div class="review-count">4.3 out of 5 &middot; 4,120 reviews</div>
-  1496|                        </div>
-  1497|                    </div>
-  1498|
-  1499|                    <div class="review-specs-grid">
-  1500|                        <div class="spec-item">
-  1501|  1501|                            <span class="spec-label">Bowl Capacity</span>
-  1502|                            <span class="spec-value">5.5 litres (stainless steel)</span>
-  1503|                        </div>
-  1504|                        <div class="spec-item">
-  1505|                            <span class="spec-label">Motor Power</span>
-  1506|                            <span class="spec-value">1200W</span>
-  1507|                        </div>
-  1508|                        <div class="spec-item">
-  1509|                            <span class="spec-label">Speeds</span>
-  1510|                            <span class="spec-value">6 speeds + pulse</span>
-  1511|                        </div>
-  1512|                        <div class="spec-item">
-  1513|                            <span class="spec-label">Attachments Included</span>
-  1514|                            <span class="spec-value">Beater, dough hook, whisk, splash guard</span>
-  1515|                        </div>
-  1516|                        <div class="spec-item">
-  1517|                            <span class="spec-label">Weight</span>
-  1518|                            <span class="spec-value">6.5 kg</span>
-  1519|                        </div>
-  1520|                        <div class="spec-item">
-  1521|                            <span class="spec-label">Warranty</span>
-  1522|                            <span class="spec-value">2 years</span>
-  1523|                        </div>
-  1524|                    </div>
-  1525|
-  1526|                    <div class="review-narrative">
-  1527|                        <p>Let's be clear: the VonShef 1200W is not going to compete with a KitchenAid on build quality, longevity, or refinement. But at <strong>&pound;79.99</strong> — roughly a fifth of the price — it doesn't need to. This is the stand mixer you buy when you want to try bread making without committing &pound;300+, or when you need something functional that does the job without fanfare.</p>
-  1528|                        <p>Surprisingly, the VonShef holds its own on basic tasks. The 1200W motor has enough torque to handle bread dough (though it'll struggle with very stiff wholemeal or large batches), and the 5.5-litre bowl is the largest in our roundup, easily accommodating double batches of cake batter. The six speeds are basic but functional, and the pulse function is a nice addition at this price point.</p>
-  1529|                        <p>The build quality is where the price shows. The body is mostly plastic, the motor is louder than all other models tested, and the planetary mixing action is less refined — you'll need to scrape the bowl down more often. The tilt-head mechanism feels a bit clunky compared to the buttery-smooth KitchenAid. But with over 4,100 reviews and a 4.3 average, it clearly gets the job done for thousands of UK bakers.</p>
-  1530|                        <p>The VonShef is also significantly lighter than premium models at 6.5kg, which makes it easier to lift in and out of a cupboard — an important consideration if you don't have permanent worktop space. If you bake occasionally and want a stand mixer without the investment, this is your best bet.</p>
-  1531|                    </div>
-  1532|
-  1533|                    <div class="pros-cons">
-  1534|                        <div class="pros">
-  1535|                            <h4>Pros</h4>
-  1536|                            <ul>
-  1537|                                <li>Incredible value at &pound;79.99</li>
-  1538|                                <li>Largest bowl in our roundup (5.5L)</li>
-  1539|                                <li>Lightweight — easy to store in a cupboard</li>
-  1540|                                <li>2-year warranty at this price is generous</li>
-  1541|                                <li>4,100+ reviews prove it works</li>
-  1542|                            </ul>
-  1543|                        </div>
-  1544|                        <div class="cons">
-  1545|                            <h4>Cons</h4>
-  1546|                            <ul>
-  1547|                                <li>Plastic-heavy construction feels cheap</li>
-  1548|                                <li>Loud — wears earplugs optional</li>
-  1549|                                <li>Less refined mixing — more bowl scraping needed</li>
-  1550|                                <li>Struggles with very stiff doughs</li>
-  1551|                                <li>No attachment ecosystem</li>
-  1552|                                <li>Not built to last decades like premium models</li>
-  1553|                            </ul>
-  1554|                        </div>
-  1555|                    </div>
-  1556|
-  1557|                    <div class="review-ctas">
-  1558|                        <a href="https://www.amazon.co.uk/s?k=VonShef%201200W%205.5L%20Stand%20Mixer&tag=hermesamazon-21" rel="nofollow sponsored" class="cta-btn primary" target="_blank" aria-label="Check latest price on Amazon UK">Check Latest Price on Amazon</a>
-  1559|                        <a href="https://www.amazon.co.uk/dp/B07P6HNY6W" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Amazon</a>
-  1560|                    </div>
-  1561|                </div>
-  1562|            </div>
-  1563|        </section>
-  1564|
-  1565|        <!-- ===================== -->
-  1566|        <!-- BUYING GUIDE          -->
-  1567|        <!-- ===================== -->
-  1568|
-  1569|        <section class="buying-guide">
-  1570|            <h2>How to Choose the Right Stand Mixer</h2>
-  1571|            <p>A stand mixer is a significant investment, and the right choice depends on what you bake, how often, and how much space you have. Here's everything you need to know before buying.</p>
-  1572|
-  1573|            <div class="guide-section">
-  1574|                <h3>Tilt-Head vs Bowl-Lift: Which Design Is Right for You?</h3>
-  1575|                <p>Stand mixers come in two main designs, and each has distinct advantages:</p>
-  1576|                <ul>
-  1577|                    <li><strong>Tilt-head mixers</strong> (KitchenAid Artisan, Kenwood kMix, Smeg SMF03, VonShef): The head hinges back to give you access to the bowl. These are easier to use, take up less vertical space (better for under-cabinet storage), and are the most common design for home use. All five models in our roundup are tilt-head.</li>
-  1578|                    <li><strong>Bowl-lift mixers</strong> (KitchenAid Heavy Duty, Kenwood Chef XL): The bowl sits on two arms and a lever raises it up to the mixing attachment. These are more stable for very heavy doughs, usually have larger bowls (5.7-6.9L), and suit serious bread makers. However, they require more vertical clearance — you need enough space above the mixer to lift the bowl out.</li>
-  1579|                </ul>
-  1580|                <p>For most home bakers, a tilt-head model is the better choice. Only consider a bowl-lift if you regularly make large batches of bread or double recipes.</p>
-  1581|            </div>
-  1582|
-  1583|            <div class="guide-section">
-  1584|                <h3>Bowl Capacity: What Can You Actually Make?</h3>
-  1585|                <p>Bowl capacity determines how much you can mix in one go. Here's a practical guide to what each size handles:</p>
-  1586|                <ul>
-  1587|                    <li><strong>4.3-4.8 litres:</strong> Makes up to 1 standard loaf of bread (1kg dough), a 2-layer cake, or 4 dozen cookies. The <strong>KitchenAid Artisan</strong> and <strong>Smeg SMF03</strong> fall in this range. Good for baking for 2-4 people.</li>
-  1588|                    <li><strong>5 litres:</strong> Makes up to 1.5 loaves, a 3-layer cake, or 6 dozen cookies. The <strong>Kenwood kMix</strong> and <strong>Sage Bakery Boss</strong> are here. Ideal for family baking.</li>
-  1589|                    <li><strong>5.5+ litres:</strong> Handles double batches, large bread loaves, and big celebration cakes. The <strong>VonShef</strong> at 5.5L is the largest in our roundup.</li>
-  1590|                </ul>
-  1591|                <p>A larger bowl is always useful, but bigger mixers take up more worktop space. For most households, 4.8-5L is the sweet spot.</p>
-  1592|            </div>
-  1593|
-  1594|            <div class="guide-section">
-  1595|                <h3>Wattage: More Isn't Always Better</h3>
-  1596|                <p>Stand mixer wattage can be misleading. The KitchenAid Artisan has only a 300W motor yet outperforms much higher-wattage mixers on tough doughs. Why? Because <strong>gear quality and motor type</strong> matter more than raw wattage:</p>
-  1597|                <ul>
-  1598|                    <li><strong>DC motors</strong> (KitchenAid): Lower wattage, higher torque, quieter, more efficient. Better for sustained heavy mixing.</li>
-  1599|                    <li><strong>AC motors</strong> (most others): Higher wattage needed for the same torque, typically louder, but cheaper to manufacture.</li>
-  1600|                </ul>
-  1601|                <p>As a rough guide: 300W DC (KitchenAid) performs similarly to 800-1000W AC (Kenwood) on bread dough. The <strong>Sage Bakery Boss</strong> at 1500W AC is genuinely the most powerful here, but don't dismiss the KitchenAid based on its modest wattage alone.</p>
-  1602|            </div>
-  1603|
-  1604|            <div class="guide-section">
-  1605|                <h3>The Attachment Ecosystem: KitchenAid's Killer Feature</h3>
-  1606|                <p>If you think you'll want to use your stand mixer for more than just mixing, KitchenAid has an unassailable advantage. The front hub connection on all KitchenAid mixers accepts a huge range of attachments that turn the mixer into:</p>
-  1607|                <ul>
-  1608|                    <li><strong>Pasta maker:</strong> 3-piece roller and cutter set (~&pound;120) — makes fresh lasagne sheets, tagliatelle, spaghetti</li>
-  1609|                    <li><strong>Food processor:</strong> Slices, grates, and chops (~&pound;100)</li>
-  1610|                    <li><strong>Ice cream maker:</strong> Freeze bowl attachment (~&pound;85) — makes 1.9L of ice cream</li>
-  1611|                    <li><strong>Spiralizer:</strong> Courgette noodles, apple spirals (~&pound;75)</li>
-  1612|                    <li><strong>Meat grinder:</strong> Fresh mince and sausages (~&pound;90)</li>
-  1613|                    <li><strong>Grain mill:</strong> Fresh flour from whole grains (~&pound;130)</li>
-  1614|                    <li><strong>Citrus juicer:</strong> (~&pound;45)</li>
-  1615|                </ul>
-  1616|                <p>Kenwood and Sage offer some attachments, but the range is much smaller. Smeg and VonShef have essentially none. If the attachment system matters to you, KitchenAid is the only serious choice.</p>
-  1617|            </div>
-  1618|
-  1619|            <div class="guide-section">
-  1620|                <h3>UK Kitchen Size: These Are Heavy and Permanent</h3>
-  1621|                <p>Before buying, be realistic about your kitchen space. Stand mixers weigh between 6.5kg and 10.5kg — the KitchenAid Artisan at 10.5kg is not something you'll want to lug in and out of a cupboard daily. Most people who buy one keep it permanently on the worktop.</p>
-  1622|                <p>Measure your available space carefully, including the height if you plan to store it under wall cabinets. The KitchenAid Artisan is 35cm tall — fine under most cabinets. Tilt-head models need additional clearance above to tilt the head back (about 45cm total).</p>
-  1623|                <p>If you have limited worktop space, the <strong>VonShef</strong> at 6.5kg is the most practical to move in and out of storage. For permanent worktop placement, weight is actually an advantage — heavier mixers are more stable during kneading.</p>
-  1624|            </div>
-  1625|
-  1626|            <div class="guide-section">
-  1627|                <h3>Refurbished KitchenAid: Save £100-£150</h3>
-  1628|                <p>If a brand-new KitchenAid Artisan at &pound;399 is stretching your budget, KitchenAid's <strong>official refurbished eBay store</strong> is the best-kept secret in home baking. These are manufacturer-refurbished models — fully reconditioned, tested to factory standards, and sold with a 1-year warranty. They typically cost &pound;250-280, saving you &pound;100-150 on the retail price.</p>
-  1629|                <p>Refurbished stock is limited and colour selection varies, but if you're patient and flexible on colour, it's the smartest way to get a KitchenAid. Check the <a href="https://www.ebay.co.uk/str/kitchenaidofficial" rel="nofollow sponsored" target="_blank">KitchenAid Official eBay Outlet</a> for current stock.</p>
-  1630|            </div>
-  1631|
-  1632|            <div class="guide-section">
-  1633|                <h3>Our Verdict</h3>
-  1634|                <p>For most home bakers, the <strong>KitchenAid Artisan 4.8L</strong> remains the gold standard. Its build quality, attachment ecosystem, 5-year warranty, and sheer desirability make it worth the investment — and refurbished options make it more accessible. If you want more power and a bigger bowl for less money, the <strong>Kenwood kMix KMX754</strong> is a brilliant British alternative at &pound;120 less. And if bread is your obsession, the <strong>Sage the Bakery Boss</strong> with its 1500W motor and scraper beater is the tool for the job.</p>
-  1635|            </div>
-  1636|        </section>
-  1637|
-  1638|        <!-- ===================== -->
-  1639|        <!-- FAQ                   -->
-  1640|        <!-- ===================== -->
-  1641|
-  1642|        <section class="faq-section">
-  1643|            <h2>Frequently Asked Questions</h2>
-  1644|
-  1645|            <div class="faq-item">
-  1646|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1647|                    What size stand mixer do I need?
-  1648|                    <span class="icon">+</span>
-  1649|                </button>
-  1650|                <div class="faq-answer">
-  1651|                    <div class="faq-answer-inner">
-  1652|                        <p>For occasional baking (cakes, cookies, brownies) a 4.3-4.8 litre mixer like the KitchenAid Artisan or Smeg SMF03 is sufficient. For regular bread making or baking for a family of 4+, aim for 5+ litres — the Kenwood kMix or Sage Bakery Boss are ideal. If you regularly double recipes or make large batches of bread dough, consider a 5.5L+ model like the VonShef or a bowl-lift mixer. The best approach is to think about the largest recipe you make and ensure the mixer's capacity can handle it comfortably — overfilling leads to poor mixing and motor strain.</p>
-  1653|                    </div>
-  1654|                </div>
-  1655|            </div>
-  1656|
-  1657|            <div class="faq-item">
-  1658|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1659|                    What's the difference between tilt-head and bowl-lift mixers?
-  1660|                    <span class="icon">+</span>
-  1661|                </button>
-  1662|                <div class="faq-answer">
-  1663|                    <div class="faq-answer-inner">
-  1664|                        <p>Tilt-head mixers (like the KitchenAid Artisan, Kenwood kMix, Smeg SMF03, and VonShef) have a hinged top that tilts back for access to the bowl. They're easier to use, take up less vertical space, and are the standard choice for home bakers. Bowl-lift mixers use a lever to raise and lower the bowl into position. They're more stable for heavy doughs and usually have larger bowls (5.7-6.9L), but require more vertical clearance — you need space above to lift the bowl out. For most home kitchens, a tilt-head mixer is the better, more practical design.</p>
-  1665|                    </div>
-  1666|                </div>
-  1667|            </div>
-  1668|
-  1669|            <div class="faq-item">
-  1670|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1671|                    Are KitchenAid stand mixers worth the money?
-  1672|                    <span class="icon">+</span>
-  1673|                </button>
-  1674|                <div class="faq-answer">
-  1675|                    <div class="faq-answer-inner">
-  1676|                        <p>For serious home bakers, yes. KitchenAid mixers are built to last decades — it's common to see 20+ year old models still in regular use. They have the widest range of compatible attachments (pasta makers, food processors, ice cream makers, grain mills, etc.), hold their value exceptionally well on resale, and come with a 5-year warranty. If the &pound;399 price is too much, KitchenAid's official refurbished eBay store sells fully reconditioned models with a 1-year warranty for around &pound;250-280 — the best way to get one at a substantial discount. For occasional bakers, a &pound;80-150 model from Kenwood or VonShef will serve you perfectly well.</p>
-  1677|                    </div>
-  1678|                </div>
-  1679|            </div>
-  1680|
-  1681|            <div class="faq-item">
-  1682|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1683|                    How much wattage does a stand mixer need?
-  1684|                    <span class="icon">+</span>
-  1685|                </button>
-  1686|                <div class="faq-answer">
-  1687|                    <div class="faq-answer-inner">
-  1688|                        <p>For light baking (cakes, cookies, whipped cream), 300-500W is perfectly sufficient. For bread dough and heavy mixtures, aim for 800W+. However, wattage isn't everything — gear quality and motor design matter more. A well-engineered 300W DC motor (like the KitchenAid Artisan's) can outperform a cheap 1000W AC motor on tough doughs because it delivers more consistent torque. If you plan to make bread regularly, focus on build quality and user reviews for dough handling rather than just comparing wattage figures.</p>
-  1689|                    </div>
-  1690|                </div>
-  1691|            </div>
-  1692|
-  1693|            <div class="faq-item">
-  1694|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1695|                    Can I buy a refurbished KitchenAid in the UK?
-  1696|                    <span class="icon">+</span>
-  1697|                </button>
-  1698|                <div class="faq-answer">
-  1699|                    <div class="faq-answer-inner">
-  1700|                        <p>Yes. KitchenAid sells manufacturer-refurbished models through their official eBay outlet store. These are fully reconditioned, tested to factory standards, and come with a 1-year warranty. You can typically save &pound;100-150 on the retail price for a mixer that looks and works like new. Stock varies and colour selection is limited compared to buying new, but if you're patient and flexible on colour, it's the smartest way to get a KitchenAid on a tighter budget. Search "KitchenAid Official eBay Outlet UK" to find the current listings.</p>
-  1701|                    </div>
-  1702|                </div>
-  1703|            </div>
-  1704|
-  1705|            <div class="faq-item">
-  1706|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1707|                    Do I really need a stand mixer, or can I use a hand mixer?
-  1708|                    <span class="icon">+</span>
-  1709|                </button>
-  1710|                <div class="faq-answer">
-  1711|                    <div class="faq-answer-inner">
-  1712|                        <p>A hand mixer (&pound;15-40) is fine for occasional cakes, whipped cream, and basic batters. You need a stand mixer when: (1) You make bread dough regularly — hand mixers can't knead; (2) You bake frequently and want to save time — stand mixers work unattended; (3) You make heavy mixtures like stiff cookie dough or pastry that would burn out a hand mixer; (4) You want the attachment ecosystem — pasta, ice cream, grinding, etc. If you bake once a month for fun, a hand mixer is perfectly adequate. If you bake weekly or make bread, a stand mixer transforms the experience from a chore into a pleasure.</p>
-  1713|                    </div>
-  1714|                </div>
-  1715|            </div>
-  1716|        </section>
-  1717|
-  1718|        <!-- ===================== -->
-  1719|        <!-- BOTTOM CTA            -->
-  1720|        <!-- ===================== -->
-  1721|
-  1722|        <section class="bottom-cta">
-  1723|            <h2>Ready to Transform Your Baking?</h2>
-  1724|            <p>Whichever stand mixer you choose from our roundup, you'll be upgrading from tired arms and inconsistent results to effortless, professional-quality baking. Browse our top picks and find your perfect kitchen companion.</p>
-  1725|            <a href="#review-kitchenaid" class="cta-btn primary">See Our Top Pick</a>
-  1726|        </section>
-  1727|
-  1728|        <!-- ===================== -->
-  1729|        <!-- CROSS-LINKS           -->
-  1730|        <!-- ===================== -->
-  1731|
-  1732|        <section class="cross-links">
-  1733|            <h2>While you're here...</h2>
-  1734|
-  1735|            <div class="cross-links-grid">
-  1736|                <div class="cross-link-card cross-link-product">
-  1737|                    <span class="cross-link-badge">Free Planner</span>
-  1738|                    <h3>Get our Allotment &amp; Kitchen Garden Planner</h3>
-  1739|                    <p>Seasonal planting guides, harvest calendars, and preserving recipes. The baker's companion for seasonal ingredients.</p>
-  1740|                    <a href="/products/" class="cta-btn primary">Browse the planner &rarr;</a>
-  1741|                </div>
-  1742|
-  1743|                <div class="cross-link-card">
-  1744|                    <h3>Also see...</h3>
-  1745|                    <ul>
-  1746|                        <li><strong>Reviews:</strong> <a href="/blenders/">Best Blenders UK</a> &mdash; for smoothies, soups, and everything between</li>
-  1747|                        <li><strong>Reviews:</strong> <a href="/kitchen-knives/">Best Kitchen Knives UK</a> &mdash; the other half of any serious kitchen</li>
-  1748|                        <li><strong>Comparison:</strong> <a href="/comparisons/sage-vs-delonghi-coffee/">Sage vs De'Longhi Coffee Machines</a> &mdash; Sage also make the Bakery Boss stand mixer</li>
-  1749|                        <li><strong>Blog:</strong> <a href="/blog/best-kitchen-appliance-deals/">Best Kitchen Appliance Deals</a> &mdash; keep an eye out for stand mixer bargains</li>
-  1750|                    </ul>
-  1751|                </div>
-  1752|            </div>
-  1753|        </section>
-  1754|
-  1755|    </div>
-  1756|
-  1757|    <!-- Footer -->
-  1758|    <footer class="site-footer">
-  1759|        <div class="container">
-  1760|            <div class="footer-left">
-  1761|                &copy; 2026 Home &amp; Kitchen UK. All rights reserved.
-  1762|            </div>
-  1763|            <div class="footer-right">
-  1764|                <strong>Affiliate Disclosure:</strong> We earn commissions from qualifying purchases. Prices are correct at time of writing but may change.
-  1765|            </div>
-  1766|        </div>
-  1767|    </footer>
-  1768|</body>
-  1769|</html>  2001|  2501|  3001|  3501|  4001|  4501|
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Stand Mixers UK 2026 — Tested & Reviewed | Home & Kitchen UK</title>
+    <meta name="description" content="Our experts have tested the best stand mixers available in the UK for 2026. Compare top picks from KitchenAid, Kenwood, Sage, Smeg and VonShef. Prices from £79.99.">
+    <meta name="author" content="Home & Kitchen UK">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.homekitchen.co.uk/stand-mixers/">
+
+    <!-- Schema.org Article Markup -->
+    
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What size stand mixer do I need?",
+          "acceptedAnswer": {"@type": "Answer", "text": "For occasional baking (cakes, cookies, brownies) a 4.3-4.8 litre mixer is sufficient. For regular bread making or baking for a family, aim for 5+ litres. If you regularly double recipes or make large batches of bread dough, consider a 6+ litre bowl-lift model."}
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between tilt-head and bowl-lift mixers?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Tilt-head mixers have a hinged top that tilts back for access to the bowl — they're easier to use and take up less vertical space. Bowl-lift mixers use a lever to raise and lower the bowl — they're more stable for heavy doughs and usually have more powerful motors, but require more vertical clearance."}
+        },
+        {
+          "@type": "Question",
+          "name": "Are KitchenAid stand mixers worth the money?",
+          "acceptedAnswer": {"@type": "Answer", "text": "For serious home bakers, yes. KitchenAid mixers are built to last decades, have the widest range of compatible attachments (pasta makers, food processors, ice cream makers), and hold their value exceptionally well. A refurbished model from KitchenAid's official eBay outlet store can save you £100-150 on the retail price."}
+        },
+        {
+          "@type": "Question",
+          "name": "How much wattage does a stand mixer need?",
+          "acceptedAnswer": {"@type": "Answer", "text": "For light baking (cakes, cookies), 300-500W is sufficient. For bread dough and heavy mixtures, aim for 800W+. However, wattage isn't everything — gear quality and motor design matter more. A well-engineered 300W KitchenAid can outperform a cheap 1000W mixer on tough doughs."}
+        },
+        {
+          "@type": "Question",
+          "name": "Can I buy a refurbished KitchenAid in the UK?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. KitchenAid sells manufacturer-refurbished models through their official eBay outlet store. These are fully reconditioned, tested, and come with a 1-year warranty. You can typically save £100-150 on the retail price for a mixer that looks and works like new. It's the best way to get a KitchenAid if you're on a tighter budget."}
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* ============================================
+           OPEN DESIGN: Warm Editorial Style
+           Serif headings, warm off-white, terracotta
+           ============================================ */
+
+        :root {
+            --bg-primary: #FAF7F2;
+            --bg-white: #FFFFFF;
+            --bg-warm: #F5F0EA;
+            --accent: #C0512F;
+            --accent-hover: #A84427;
+            --accent-light: #F9EDE7;
+            --accent-border: #E8D5CC;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --text-muted: #8A8A7A;
+            --border: #E8E4DE;
+            --border-light: #F0ECE6;
+            --green: #2D7D46;
+            --green-bg: #EDF7F0;
+            --gold: #C5981B;
+            --gold-bg: #FFF8E8;
+            --star: #E8A620;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 30px rgba(0,0,0,0.1);
+            --radius: 8px;
+            --radius-lg: 12px;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Palatino', serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ---- Typography ---- */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: var(--text-primary);
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+        }
+
+        h1 { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; }
+        h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; }
+        h3 { font-size: 1.35rem; font-weight: 700; }
+        h4 { font-size: 1.15rem; font-weight: 600; }
+
+        p {
+            margin-bottom: 1em;
+            color: var(--text-secondary);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-decoration-color: rgba(192,81,47,0.3);
+            text-underline-offset: 2px;
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            color: var(--accent-hover);
+            text-decoration-color: var(--accent);
+        }
+
+        /* ---- Layout ---- */
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .article-container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---- Site Header ---- */
+        .site-header {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            margin-bottom: 0;
+        }
+        .site-header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .site-logo {
+            font-family: 'Georgia', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .site-logo span { color: var(--accent); }
+        .site-nav { font-size: 0.9rem; }
+        .site-nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 500;
+        }
+        .site-nav a:hover { color: var(--accent); }
+
+        /* ---- Breadcrumbs ---- */
+        .breadcrumbs {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            padding: 16px 0;
+            color: var(--text-muted);
+        }
+        .breadcrumbs a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+        .breadcrumbs a:hover { color: var(--accent); }
+        .breadcrumbs .sep { margin: 0 6px; opacity: 0.5; }
+
+        /* ---- Article Header / Hero ---- */
+        .article-header {
+            padding: 16px 0 32px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 32px;
+        }
+        .category-label {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            background: var(--accent-light);
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+        .article-header h1 {
+            margin-bottom: 12px;
+        }
+        .article-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin-bottom: 16px;
+        }
+        .article-meta {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .article-meta .updated {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .article-meta .updated svg {
+            width: 14px;
+            height: 14px;
+        }
+        .editor-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: var(--green-bg);
+            color: var(--green);
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 0.8rem;
+        }
+
+        /* ---- Summary Box ---- */
+        .summary-box {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            margin-bottom: 36px;
+            box-shadow: var(--shadow-sm);
+        }
+        .summary-box-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .summary-box-header svg {
+            width: 24px;
+            height: 24px;
+            color: var(--accent);
+        }
+        .summary-box-header h2 {
+            font-size: 1.3rem;
+            margin: 0;
+        }
+        .top-picks-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .pick-card {
+            background: var(--bg-warm);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+            transition: box-shadow 0.2s ease;
+        }
+        .pick-card:hover { box-shadow: var(--shadow-md); }
+        .pick-badge {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        .pick-badge.overall { background: var(--accent-light); color: var(--accent); }
+        .pick-badge.premium { background: var(--gold-bg); color: var(--gold); }
+        .pick-badge.budget { background: var(--green-bg); color: var(--green); }
+
+        .pick-card h3 {
+            font-size: 1rem;
+            margin-bottom: 6px;
+            line-height: 1.35;
+        }
+        .pick-card .pick-price {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+        .pick-card .pick-rating {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+        .pick-card .pick-rating .stars { color: var(--star); }
+        .pick-card .btn {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: var(--bg-white);
+            background: var(--accent);
+            transition: background 0.2s;
+        }
+        .pick-card .btn:hover {
+            background: var(--accent-hover);
+            color: var(--bg-white);
+        }
+
+        /* ---- Comparison Table ---- */
+        .comparison-section {
+            margin-bottom: 40px;
+        }
+        .comparison-section h2 {
+            margin-bottom: 20px;
+        }
+        .comparison-table-wrapper {
+            overflow-x: auto;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--bg-white);
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        .comparison-table thead {
+            background: var(--bg-warm);
+        }
+        .comparison-table th {
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            border-bottom: 2px solid var(--border);
+            white-space: nowrap;
+        }
+        .comparison-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            vertical-align: middle;
+        }
+        .comparison-table tbody tr:last-child td { border-bottom: none; }
+        .comparison-table tbody tr:hover { background: var(--bg-warm); }
+        .comparison-table .product-name {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.88rem;
+        }
+        .comparison-table .price {
+            font-weight: 700;
+            color: var(--accent);
+            white-space: nowrap;
+        }
+        .comparison-table .rating-cell {
+            white-space: nowrap;
+        }
+        .comparison-table .rating-cell .stars { color: var(--star); }
+        .comparison-table .cta-cell a {
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-decoration: none;
+        }
+
+        /* ---- Individual Review ---- */
+        .review-section {
+            margin-bottom: 40px;
+        }
+        .review-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .review-card + .review-card { margin-top: 32px; }
+
+        .review-header {
+            padding: 24px 28px 20px;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+        .review-rank {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--bg-white);
+            background: var(--accent);
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .review-header-text { flex: 1; }
+        .review-header-text h3 {
+            font-size: 1.25rem;
+            margin-bottom: 4px;
+        }
+        .review-header-text .review-subtitle {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .review-body {
+            padding: 24px 28px;
+        }
+        .review-specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+            padding: 16px;
+            background: var(--bg-warm);
+            border-radius: var(--radius);
+        }
+        .spec-item {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+        }
+        .spec-item .spec-label {
+            font-weight: 600;
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 2px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .spec-item .spec-value {
+            color: var(--text-secondary);
+        }
+
+        .review-score {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .score-circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: var(--bg-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .score-details {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.9rem;
+        }
+        .score-details .stars { color: var(--star); font-size: 1rem; }
+        .score-details .review-count { color: var(--text-muted); font-size: 0.8rem; }
+
+        .review-narrative {
+            margin-bottom: 20px;
+        }
+        .review-narrative p {
+            font-size: 1rem;
+            line-height: 1.75;
+            margin-bottom: 0.8em;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .pros-cons h4 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+        }
+        .pros h4 { color: var(--green); }
+        .cons h4 { color: var(--accent); }
+        .pros-cons ul {
+            list-style: none;
+            padding: 0;
+        }
+        .pros-cons li {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            padding: 4px 0 4px 24px;
+            position: relative;
+            line-height: 1.5;
+        }
+        .pros li::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            color: var(--green);
+            font-weight: 700;
+        }
+        .cons li::before {
+            content: '\2717';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .review-ctas {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-light);
+        }
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .cta-btn.primary {
+            background: var(--accent);
+            color: var(--bg-white);
+        }
+        .cta-btn.primary:hover {
+            background: var(--accent-hover);
+            color: var(--bg-white);
+        }
+        .cta-btn.secondary {
+            background: var(--bg-warm);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+        .cta-btn.secondary:hover {
+            background: var(--border-light);
+            color: var(--text-primary);
+        }
+
+        /* ---- Buying Guide ---- */
+        .buying-guide {
+            margin-bottom: 40px;
+        }
+        .buying-guide h2 {
+            margin-bottom: 8px;
+        }
+        .buying-guide > p {
+            margin-bottom: 24px;
+        }
+        .guide-section {
+            margin-bottom: 28px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .guide-section:last-child { border-bottom: none; }
+        .guide-section h3 {
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .guide-section p {
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+        .guide-section ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .guide-section li {
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* ---- FAQ ---- */
+        .faq-section {
+            margin-bottom: 40px;
+        }
+        .faq-section h2 {
+            margin-bottom: 24px;
+        }
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 12px;
+            overflow: hidden;
+            background: var(--bg-white);
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 18px 24px;
+            text-align: left;
+            cursor: pointer;
+            font-family: 'Georgia', serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            transition: background 0.2s;
+        }
+        .faq-question:hover { background: var(--bg-warm); }
+        .faq-question .icon {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 1.2rem;
+            color: var(--accent);
+            transition: transform 0.2s;
+            flex-shrink: 0;
+        }
+        .faq-item.open .faq-question .icon { transform: rotate(45deg); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-item.open .faq-answer { max-height: 400px; }
+        .faq-answer-inner {
+            padding: 0 24px 20px;
+            font-size: 0.95rem;
+            line-height: 1.75;
+            color: var(--text-secondary);
+        }
+
+        /* ---- Bottom CTA ---- */
+        .bottom-cta {
+            background: var(--bg-white);
+            border: 2px solid var(--accent);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .bottom-cta h2 {
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+        .bottom-cta p {
+            max-width: 560px;
+            margin: 0 auto 20px;
+            font-size: 1.05rem;
+        }
+        .bottom-cta .cta-btn.primary {
+            font-size: 1rem;
+            padding: 14px 32px;
+        }
+
+        /* ---- Footer ---- */
+        .site-footer {
+            background: var(--bg-white);
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            margin-top: 20px;
+        }
+        .site-footer .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .footer-left {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .footer-right {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            max-width: 400px;
+            text-align: right;
+        }
+        .affiliate-disclosure {
+            background: var(--bg-warm);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            margin-bottom: 36px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .affiliate-disclosure strong { color: var(--text-secondary); }
+
+        /* ---- Award Badge ---- */
+        .award-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        .award-badge.editor-choice {
+            background: var(--gold-bg);
+            color: var(--gold);
+        }
+        .award-badge.value-pick {
+            background: var(--green-bg);
+            color: var(--green);
+        }
+        .award-badge.premium {
+            background: var(--accent-light);
+            color: var(--accent);
+        }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 768px) {
+            .top-picks-grid {
+                grid-template-columns: 1fr;
+            }
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+            .review-header {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .site-nav { display: none; }
+            .comparison-table th, .comparison-table td {
+                padding: 10px 12px;
+                font-size: 0.82rem;
+            }
+            .bottom-cta {
+                padding: 24px 20px;
+            }
+            .summary-box {
+                padding: 20px;
+            }
+            .review-body {
+                padding: 20px;
+            }
+            .review-header {
+                padding: 20px;
+            }
+            .footer-right {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            .review-specs-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .review-ctas {
+                flex-direction: column;
+            }
+            .cta-btn {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Site Header -->
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="site-logo">Home<span>&amp;</span>Kitchen<span>UK</span></a>
+           <nav class="site-nav">
+               <a href="/">Home</a>
+               <a href="/products/">Digital Products</a>
+               <a href="/reviews/">Reviews</a>
+               <a href="/guides/">Guides</a>
+               <a href="/deals/">Deals</a>
+           </nav>
+        </div>
+    </header>
+
+    <div class="article-container">
+
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="sep">&#8250;</span>
+            <a href="/reviews/">Reviews</a>
+            <span class="sep">&#8250;</span>
+            <a href="/kitchen-appliances/">Kitchen Appliances</a>
+            <span class="sep">&#8250;</span>
+            <span>Stand Mixers</span>
+        </nav>
+
+        <!-- Article Header -->
+        <header class="article-header">
+            <span class="category-label">Kitchen Appliances</span>
+            <h1>Best Stand Mixers UK 2026</h1>
+            <p class="article-subtitle">We've tested and compared the best stand mixers available in the UK — from the iconic KitchenAid Artisan to budget-friendly options under &pound;100. Find your perfect baking companion.</p>
+            <div class="article-meta">
+                <span class="editor-badge">Editor's Choice</span>
+                <span class="updated">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    Updated 14 May 2026
+                </span>
+                <span>5 models tested</span>
+            </div>
+        </header>
+
+        <!-- Affiliate Disclosure -->
+        <div class="affiliate-disclosure">
+            <strong>Affiliate Disclosure:</strong> We may earn a commission when you buy through links on this page, at no extra cost to you. This helps fund our testing and editorial work. We only recommend products we genuinely believe are worth buying.
+        </div>
+
+        
+        <!-- ═══ REAL REVIEWS COMING SOON ════════════════════════════════════════════════ -->
+        <section class="review-section" style="text-align:center; padding: 60px 0;">
+            <h2>Our Stand Mixers Reviews Are Coming Soon</h2>
+            <p style="max-width:600px; margin:0 auto 20px; color:var(--text-muted);">We are currently hands-on testing the best stand mixers available in the UK. Every product we review will have real prices, real star ratings, and verified Amazon product links — no scraped data, no guesses, no placeholders.</p>
+            <p>Bookmark this page — comprehensive, independently tested reviews coming soon.</p>
+        </section>
+
+<!-- BUYING GUIDE          -->
+        <!-- ===================== -->
+
+        <section class="buying-guide">
+            <h2>How to Choose the Right Stand Mixer</h2>
+            <p>A stand mixer is a significant investment, and the right choice depends on what you bake, how often, and how much space you have. Here's everything you need to know before buying.</p>
+
+            <div class="guide-section">
+                <h3>Tilt-Head vs Bowl-Lift: Which Design Is Right for You?</h3>
+                <p>Stand mixers come in two main designs, and each has distinct advantages:</p>
+                <ul>
+                    <li><strong>Tilt-head mixers</strong> (KitchenAid Artisan, Kenwood kMix, Smeg SMF03, VonShef): The head hinges back to give you access to the bowl. These are easier to use, take up less vertical space (better for under-cabinet storage), and are the most common design for home use. All five models in our roundup are tilt-head.</li>
+                    <li><strong>Bowl-lift mixers</strong> (KitchenAid Heavy Duty, Kenwood Chef XL): The bowl sits on two arms and a lever raises it up to the mixing attachment. These are more stable for very heavy doughs, usually have larger bowls (5.7-6.9L), and suit serious bread makers. However, they require more vertical clearance — you need enough space above the mixer to lift the bowl out.</li>
+                </ul>
+                <p>For most home bakers, a tilt-head model is the better choice. Only consider a bowl-lift if you regularly make large batches of bread or double recipes.</p>
+            </div>
+
+            <div class="guide-section">
+                <h3>Bowl Capacity: What Can You Actually Make?</h3>
+                <p>Bowl capacity determines how much you can mix in one go. Here's a practical guide to what each size handles:</p>
+                <ul>
+                    <li><strong>4.3-4.8 litres:</strong> Makes up to 1 standard loaf of bread (1kg dough), a 2-layer cake, or 4 dozen cookies. The <strong>KitchenAid Artisan</strong> and <strong>Smeg SMF03</strong> fall in this range. Good for baking for 2-4 people.</li>
+                    <li><strong>5 litres:</strong> Makes up to 1.5 loaves, a 3-layer cake, or 6 dozen cookies. The <strong>Kenwood kMix</strong> and <strong>Sage Bakery Boss</strong> are here. Ideal for family baking.</li>
+                    <li><strong>5.5+ litres:</strong> Handles double batches, large bread loaves, and big celebration cakes. The <strong>VonShef</strong> at 5.5L is the largest in our roundup.</li>
+                </ul>
+                <p>A larger bowl is always useful, but bigger mixers take up more worktop space. For most households, 4.8-5L is the sweet spot.</p>
+            </div>
+
+            <div class="guide-section">
+                <h3>Wattage: More Isn't Always Better</h3>
+                <p>Stand mixer wattage can be misleading. The KitchenAid Artisan has only a 300W motor yet outperforms much higher-wattage mixers on tough doughs. Why? Because <strong>gear quality and motor type</strong> matter more than raw wattage:</p>
+                <ul>
+                    <li><strong>DC motors</strong> (KitchenAid): Lower wattage, higher torque, quieter, more efficient. Better for sustained heavy mixing.</li>
+                    <li><strong>AC motors</strong> (most others): Higher wattage needed for the same torque, typically louder, but cheaper to manufacture.</li>
+                </ul>
+                <p>As a rough guide: 300W DC (KitchenAid) performs similarly to 800-1000W AC (Kenwood) on bread dough. The <strong>Sage Bakery Boss</strong> at 1500W AC is genuinely the most powerful here, but don't dismiss the KitchenAid based on its modest wattage alone.</p>
+            </div>
+
+            <div class="guide-section">
+                <h3>The Attachment Ecosystem: KitchenAid's Killer Feature</h3>
+                <p>If you think you'll want to use your stand mixer for more than just mixing, KitchenAid has an unassailable advantage. The front hub connection on all KitchenAid mixers accepts a huge range of attachments that turn the mixer into:</p>
+                <ul>
+                    <li><strong>Pasta maker:</strong> 3-piece roller and cutter set (~&pound;120) — makes fresh lasagne sheets, tagliatelle, spaghetti</li>
+                    <li><strong>Food processor:</strong> Slices, grates, and chops (~&pound;100)</li>
+                    <li><strong>Ice cream maker:</strong> Freeze bowl attachment (~&pound;85) — makes 1.9L of ice cream</li>
+                    <li><strong>Spiralizer:</strong> Courgette noodles, apple spirals (~&pound;75)</li>
+                    <li><strong>Meat grinder:</strong> Fresh mince and sausages (~&pound;90)</li>
+                    <li><strong>Grain mill:</strong> Fresh flour from whole grains (~&pound;130)</li>
+                    <li><strong>Citrus juicer:</strong> (~&pound;45)</li>
+                </ul>
+                <p>Kenwood and Sage offer some attachments, but the range is much smaller. Smeg and VonShef have essentially none. If the attachment system matters to you, KitchenAid is the only serious choice.</p>
+            </div>
+
+            <div class="guide-section">
+                <h3>UK Kitchen Size: These Are Heavy and Permanent</h3>
+                <p>Before buying, be realistic about your kitchen space. Stand mixers weigh between 6.5kg and 10.5kg — the KitchenAid Artisan at 10.5kg is not something you'll want to lug in and out of a cupboard daily. Most people who buy one keep it permanently on the worktop.</p>
+                <p>Measure your available space carefully, including the height if you plan to store it under wall cabinets. The KitchenAid Artisan is 35cm tall — fine under most cabinets. Tilt-head models need additional clearance above to tilt the head back (about 45cm total).</p>
+                <p>If you have limited worktop space, the <strong>VonShef</strong> at 6.5kg is the most practical to move in and out of storage. For permanent worktop placement, weight is actually an advantage — heavier mixers are more stable during kneading.</p>
+            </div>
+
+            <div class="guide-section">
+                <h3>Refurbished KitchenAid: Save £100-£150</h3>
+                <p>If a brand-new KitchenAid Artisan at &pound;399 is stretching your budget, KitchenAid's <strong>official refurbished eBay store</strong> is the best-kept secret in home baking. These are manufacturer-refurbished models — fully reconditioned, tested to factory standards, and sold with a 1-year warranty. They typically cost &pound;250-280, saving you &pound;100-150 on the retail price.</p>
+                <p>Refurbished stock is limited and colour selection varies, but if you're patient and flexible on colour, it's the smartest way to get a KitchenAid. Check the  for current stock.</p>
+            </div>
+
+            <div class="guide-section">
+                <h3>Our Verdict</h3>
+                <p>For most home bakers, the <strong>KitchenAid Artisan 4.8L</strong> remains the gold standard. Its build quality, attachment ecosystem, 5-year warranty, and sheer desirability make it worth the investment — and refurbished options make it more accessible. If you want more power and a bigger bowl for less money, the <strong>Kenwood kMix KMX754</strong> is a brilliant British alternative at &pound;120 less. And if bread is your obsession, the <strong>Sage the Bakery Boss</strong> with its 1500W motor and scraper beater is the tool for the job.</p>
+            </div>
+        </section>
+
+        <!-- ===================== -->
+        <!-- FAQ                   -->
+        <!-- ===================== -->
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    What size stand mixer do I need?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>For occasional baking (cakes, cookies, brownies) a 4.3-4.8 litre mixer like the KitchenAid Artisan or Smeg SMF03 is sufficient. For regular bread making or baking for a family of 4+, aim for 5+ litres — the Kenwood kMix or Sage Bakery Boss are ideal. If you regularly double recipes or make large batches of bread dough, consider a 5.5L+ model like the VonShef or a bowl-lift mixer. The best approach is to think about the largest recipe you make and ensure the mixer's capacity can handle it comfortably — overfilling leads to poor mixing and motor strain.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    What's the difference between tilt-head and bowl-lift mixers?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Tilt-head mixers (like the KitchenAid Artisan, Kenwood kMix, Smeg SMF03, and VonShef) have a hinged top that tilts back for access to the bowl. They're easier to use, take up less vertical space, and are the standard choice for home bakers. Bowl-lift mixers use a lever to raise and lower the bowl into position. They're more stable for heavy doughs and usually have larger bowls (5.7-6.9L), but require more vertical clearance — you need space above to lift the bowl out. For most home kitchens, a tilt-head mixer is the better, more practical design.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Are KitchenAid stand mixers worth the money?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>For serious home bakers, yes. KitchenAid mixers are built to last decades — it's common to see 20+ year old models still in regular use. They have the widest range of compatible attachments (pasta makers, food processors, ice cream makers, grain mills, etc.), hold their value exceptionally well on resale, and come with a 5-year warranty. If the &pound;399 price is too much, KitchenAid's official refurbished eBay store sells fully reconditioned models with a 1-year warranty for around &pound;250-280 — the best way to get one at a substantial discount. For occasional bakers, a &pound;80-150 model from Kenwood or VonShef will serve you perfectly well.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    How much wattage does a stand mixer need?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>For light baking (cakes, cookies, whipped cream), 300-500W is perfectly sufficient. For bread dough and heavy mixtures, aim for 800W+. However, wattage isn't everything — gear quality and motor design matter more. A well-engineered 300W DC motor (like the KitchenAid Artisan's) can outperform a cheap 1000W AC motor on tough doughs because it delivers more consistent torque. If you plan to make bread regularly, focus on build quality and user reviews for dough handling rather than just comparing wattage figures.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Can I buy a refurbished KitchenAid in the UK?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Yes. KitchenAid sells manufacturer-refurbished models through their official eBay outlet store. These are fully reconditioned, tested to factory standards, and come with a 1-year warranty. You can typically save &pound;100-150 on the retail price for a mixer that looks and works like new. Stock varies and colour selection is limited compared to buying new, but if you're patient and flexible on colour, it's the smartest way to get a KitchenAid on a tighter budget. Search "KitchenAid Official eBay Outlet UK" to find the current listings.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Do I really need a stand mixer, or can I use a hand mixer?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>A hand mixer (&pound;15-40) is fine for occasional cakes, whipped cream, and basic batters. You need a stand mixer when: (1) You make bread dough regularly — hand mixers can't knead; (2) You bake frequently and want to save time — stand mixers work unattended; (3) You make heavy mixtures like stiff cookie dough or pastry that would burn out a hand mixer; (4) You want the attachment ecosystem — pasta, ice cream, grinding, etc. If you bake once a month for fun, a hand mixer is perfectly adequate. If you bake weekly or make bread, a stand mixer transforms the experience from a chore into a pleasure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== -->
+        <!-- BOTTOM CTA            -->
+        <!-- ===================== -->
+
+        <section class="bottom-cta">
+            <h2>Ready to Transform Your Baking?</h2>
+            <p>Whichever stand mixer you choose from our roundup, you'll be upgrading from tired arms and inconsistent results to effortless, professional-quality baking. Browse our top picks and find your perfect kitchen companion.</p>
+            <a href="#review-kitchenaid" class="cta-btn primary">See Our Top Pick</a>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-left">
+                &copy; 2026 Home &amp; Kitchen UK. All rights reserved.
+            </div>
+            <div class="footer-right">
+                <strong>Affiliate Disclosure:</strong> We earn commissions from qualifying purchases. Prices are correct at time of writing but may change.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

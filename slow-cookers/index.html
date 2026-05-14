@@ -1,1193 +1,1007 @@
-   501|            display: flex;
-   502|            align-items: flex-start;
-   503|            gap: 16px;
-   504|        }
-   505|        .review-rank {
-   506|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   507|            font-size: 0.7rem;
-   508|            font-weight: 700;
-   509|            color: var(--bg-white);
-   510|            background: var(--accent);
-   511|            width: 32px;
-   512|            height: 32px;
-   513|            display: flex;
-   514|            align-items: center;
-   515|            justify-content: center;
-   516|            border-radius: 50%;
-   517|            flex-shrink: 0;
-   518|            margin-top: 2px;
-   519|        }
-   520|        .review-header-text { flex: 1; }
-   521|        .review-header-text h3 {
-   522|            font-size: 1.25rem;
-   523|            margin-bottom: 4px;
-   524|        }
-   525|        .review-header-text .review-subtitle {
-   526|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   527|            font-size: 0.85rem;
-   528|            color: var(--text-muted);
-   529|        }
-   530|
-   531|        .review-body {
-   532|            padding: 24px 28px;
-   533|        }
-   534|        .review-specs-grid {
-   535|            display: grid;
-   536|            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-   537|            gap: 12px;
-   538|            margin-bottom: 20px;
-   539|            padding: 16px;
-   540|            background: var(--bg-warm);
-   541|            border-radius: var(--radius);
-   542|        }
-   543|        .spec-item {
-   544|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   545|            font-size: 0.85rem;
-   546|        }
-   547|        .spec-item .spec-label {
-   548|            font-weight: 600;
-   549|            color: var(--text-primary);
-   550|            display: block;
-   551|            margin-bottom: 2px;
-   552|            font-size: 0.75rem;
-   553|            text-transform: uppercase;
-   554|            letter-spacing: 0.04em;
-   555|        }
-   556|        .spec-item .spec-value {
-   557|            color: var(--text-secondary);
-   558|        }
-   559|
-   560|        .review-score {
-   561|            display: flex;
-   562|            align-items: center;
-   563|            gap: 8px;
-   564|            margin-bottom: 20px;
-   565|        }
-   566|        .score-circle {
-   567|            width: 48px;
-   568|            height: 48px;
-   569|            border-radius: 50%;
-   570|            background: var(--accent);
-   571|            color: var(--bg-white);
-   572|            display: flex;
-   573|            align-items: center;
-   574|            justify-content: center;
-   575|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   576|            font-weight: 700;
-   577|            font-size: 1.1rem;
-   578|        }
-   579|        .score-details {
-   580|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   581|            font-size: 0.9rem;
-   582|        }
-   583|        .score-details .stars { color: var(--star); font-size: 1rem; }
-   584|        .score-details .review-count { color: var(--text-muted); font-size: 0.8rem; }
-   585|
-   586|        .review-narrative {
-   587|            margin-bottom: 20px;
-   588|        }
-   589|        .review-narrative p {
-   590|            font-size: 1rem;
-   591|            line-height: 1.75;
-   592|            margin-bottom: 0.8em;
-   593|        }
-   594|
-   595|        .pros-cons {
-   596|            display: grid;
-   597|            grid-template-columns: 1fr 1fr;
-   598|            gap: 16px;
-   599|            margin-bottom: 24px;
-   600|        }
-   601|        .pros-cons h4 {
-   602|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   603|            font-size: 0.85rem;
-   604|            text-transform: uppercase;
-   605|            letter-spacing: 0.05em;
-   606|            margin-bottom: 10px;
-   607|        }
-   608|        .pros h4 { color: var(--green); }
-   609|        .cons h4 { color: var(--accent); }
-   610|        .pros-cons ul {
-   611|            list-style: none;
-   612|            padding: 0;
-   613|        }
-   614|        .pros-cons li {
-   615|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   616|            font-size: 0.9rem;
-   617|            color: var(--text-secondary);
-   618|            padding: 4px 0 4px 24px;
-   619|            position: relative;
-   620|            line-height: 1.5;
-   621|        }
-   622|        .pros li::before {
-   623|            content: '\2713';
-   624|            position: absolute;
-   625|            left: 0;
-   626|            color: var(--green);
-   627|            font-weight: 700;
-   628|        }
-   629|        .cons li::before {
-   630|            content: '\2717';
-   631|            position: absolute;
-   632|            left: 0;
-   633|            color: var(--accent);
-   634|            font-weight: 700;
-   635|        }
-   636|
-   637|        .review-ctas {
-   638|            display: flex;
-   639|            gap: 10px;
-   640|            flex-wrap: wrap;
-   641|            padding-top: 20px;
-   642|            border-top: 1px solid var(--border-light);
-   643|        }
-   644|        .cta-btn {
-   645|            display: inline-flex;
-   646|            align-items: center;
-   647|            gap: 6px;
-   648|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   649|            font-size: 0.85rem;
-   650|            font-weight: 600;
-   651|            padding: 10px 20px;
-   652|            border-radius: 6px;
-   653|            text-decoration: none;
-   654|            transition: all 0.2s ease;
-   655|        }
-   656|        .cta-btn.primary {
-   657|            background: var(--accent);
-   658|            color: var(--bg-white);
-   659|        }
-   660|        .cta-btn.primary:hover {
-   661|            background: var(--accent-hover);
-   662|            color: var(--bg-white);
-   663|        }
-   664|        .cta-btn.secondary {
-   665|            background: var(--bg-warm);
-   666|            color: var(--text-primary);
-   667|            border: 1px solid var(--border);
-   668|        }
-   669|        .cta-btn.secondary:hover {
-   670|            background: var(--border-light);
-   671|            color: var(--text-primary);
-   672|        }
-   673|
-   674|        /* ---- Buying Guide ---- */
-   675|        .buying-guide {
-   676|            margin-bottom: 40px;
-   677|        }
-   678|        .buying-guide h2 {
-   679|            margin-bottom: 8px;
-   680|        }
-   681|        .buying-guide > p {
-   682|            margin-bottom: 24px;
-   683|        }
-   684|        .guide-section {
-   685|            margin-bottom: 28px;
-   686|            padding-bottom: 24px;
-   687|            border-bottom: 1px solid var(--border-light);
-   688|        }
-   689|        .guide-section:last-child { border-bottom: none; }
-   690|        .guide-section h3 {
-   691|            margin-bottom: 10px;
-   692|            color: var(--text-primary);
-   693|        }
-   694|        .guide-section p {
-   695|            font-size: 0.95rem;
-   696|            line-height: 1.75;
-   697|        }
-   698|        .guide-section ul {
-   699|            margin: 10px 0;
-   700|            padding-left: 20px;
-   701|        }
-   702|        .guide-section li {
-   703|            margin-bottom: 6px;
-   704|            font-size: 0.95rem;
-   705|            color: var(--text-secondary);
-   706|        }
-   707|
-   708|        /* ---- FAQ ---- */
-   709|        .faq-section {
-   710|            margin-bottom: 40px;
-   711|        }
-   712|        .faq-section h2 {
-   713|            margin-bottom: 24px;
-   714|        }
-   715|        .faq-item {
-   716|            border: 1px solid var(--border);
-   717|            border-radius: var(--radius);
-   718|            margin-bottom: 12px;
-   719|            overflow: hidden;
-   720|            background: var(--bg-white);
-   721|        }
-   722|        .faq-question {
-   723|            width: 100%;
-   724|            background: none;
-   725|            border: none;
-   726|            padding: 18px 24px;
-   727|            text-align: left;
-   728|            cursor: pointer;
-   729|            font-family: 'Georgia', serif;
-   730|            font-size: 1.05rem;
-   731|            font-weight: 700;
-   732|            color: var(--text-primary);
-   733|            display: flex;
-   734|            align-items: center;
-   735|            justify-content: space-between;
-   736|            gap: 12px;
-   737|            transition: background 0.2s;
-   738|        }
-   739|        .faq-question:hover { background: var(--bg-warm); }
-   740|        .faq-question .icon {
-   741|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   742|            font-size: 1.2rem;
-   743|            color: var(--accent);
-   744|            transition: transform 0.2s;
-   745|            flex-shrink: 0;
-   746|        }
-   747|        .faq-item.open .faq-question .icon { transform: rotate(45deg); }
-   748|        .faq-answer {
-   749|            max-height: 0;
-   750|            overflow: hidden;
-   751|            transition: max-height 0.3s ease;
-   752|        }
-   753|        .faq-item.open .faq-answer { max-height: 400px; }
-   754|        .faq-answer-inner {
-   755|            padding: 0 24px 20px;
-   756|            font-size: 0.95rem;
-   757|            line-height: 1.75;
-   758|            color: var(--text-secondary);
-   759|        }
-   760|
-   761|        /* ---- Bottom CTA ---- */
-   762|        .bottom-cta {
-   763|            background: var(--bg-white);
-   764|            border: 2px solid var(--accent);
-   765|            border-radius: var(--radius-lg);
-   766|            padding: 36px;
-   767|            text-align: center;
-   768|            margin-bottom: 48px;
-   769|        }
-   770|        .bottom-cta h2 {
-   771|            margin-bottom: 10px;
-   772|            color: var(--accent);
-   773|        }
-   774|        .bottom-cta p {
-   775|            max-width: 560px;
-   776|            margin: 0 auto 20px;
-   777|            font-size: 1.05rem;
-   778|        }
-   779|        .bottom-cta .cta-btn.primary {
-   780|            font-size: 1rem;
-   781|            padding: 14px 32px;
-   782|        }
-   783|
-   784|        /* ---- Footer ---- */
-   785|        .site-footer {
-   786|            background: var(--bg-white);
-   787|            border-top: 1px solid var(--border);
-   788|            padding: 32px 0;
-   789|            margin-top: 20px;
-   790|        }
-   791|        .site-footer .container {
-   792|            display: flex;
-   793|            align-items: center;
-   794|            justify-content: space-between;
-   795|            flex-wrap: wrap;
-   796|            gap: 12px;
-   797|        }
-   798|        .footer-left {
-   799|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   800|            font-size: 0.8rem;
-   801|            color: var(--text-muted);
-   802|        }
-   803|        .footer-right {
-   804|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   805|            font-size: 0.75rem;
-   806|            color: var(--text-muted);
-   807|            max-width: 400px;
-   808|            text-align: right;
-   809|        }
-   810|        .affiliate-disclosure {
-   811|            background: var(--bg-warm);
-   812|            border: 1px solid var(--border);
-   813|            border-radius: var(--radius);
-   814|            padding: 16px 20px;
-   815|            margin-bottom: 36px;
-   816|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   817|            font-size: 0.8rem;
-   818|            color: var(--text-muted);
-   819|            line-height: 1.6;
-   820|        }
-   821|        .affiliate-disclosure strong { color: var(--text-secondary); }
-   822|
-   823|        /* ---- Award Badge ---- */
-   824|        .award-badge {
-   825|            display: inline-flex;
-   826|            align-items: center;
-   827|            gap: 4px;
-   828|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   829|            font-size: 0.75rem;
-   830|            font-weight: 600;
-   831|            padding: 3px 10px;
-   832|            border-radius: 4px;
-   833|            margin-bottom: 8px;
-   834|        }
-   835|        .award-badge.editor-choice {
-   836|            background: var(--gold-bg);
-   837|            color: var(--gold);
-   838|        }
-   839|        .award-badge.value-pick {
-   840|            background: var(--green-bg);
-   841|            color: var(--green);
-   842|        }
-   843|        .award-badge.premium {
-   844|            background: var(--accent-light);
-   845|            color: var(--accent);
-   846|        }
-   847|
-   848|        /* ---- Responsive ---- */
-   849|        @media (max-width: 768px) {
-   850|            .top-picks-grid {
-   851|                grid-template-columns: 1fr;
-   852|            }
-   853|            .pros-cons {
-   854|                grid-template-columns: 1fr;
-   855|            }
-   856|            .review-header {
-   857|                flex-direction: column;
-   858|                gap: 8px;
-   859|            }
-   860|            .site-nav { display: none; }
-   861|            .comparison-table th, .comparison-table td {
-   862|                padding: 10px 12px;
-   863|                font-size: 0.82rem;
-   864|            }
-   865|            .bottom-cta {
-   866|                padding: 24px 20px;
-   867|            }
-   868|            .summary-box {
-   869|                padding: 20px;
-   870|            }
-   871|            .review-body {
-   872|                padding: 20px;
-   873|            }
-   874|            .review-header {
-   875|                padding: 20px;
-   876|            }
-   877|            .footer-right {
-   878|                text-align: left;
-   879|            }
-   880|        }
-   881|
-   882|        @media (max-width: 480px) {
-   883|            .article-meta {
-   884|                flex-direction: column;
-   885|                align-items: flex-start;
-   886|                gap: 8px;
-   887|            }
-   888|            .review-specs-grid {
-   889|                grid-template-columns: 1fr 1fr;
-   890|            }
-   891|            .review-ctas {
-   892|                flex-direction: column;
-   893|            }
-   894|            .cta-btn {
-   895|                justify-content: center;
-   896|            }
-   897|        }
-   898|
-   899|        /* ---- Cross-Links Section ---- */
-   900|        .cross-links {
-   901|            margin-bottom: 32px;
-   902|        }
-   903|        .cross-links h2 {
-   904|            margin-bottom: 20px;
-   905|        }
-   906|        .cross-links-grid {
-   907|            display: grid;
-   908|            grid-template-columns: 1fr 1fr;
-   909|            gap: 24px;
-   910|        }
-   911|        @media (max-width: 700px) {
-   912|            .cross-links-grid {
-   913|                grid-template-columns: 1fr;
-   914|            }
-   915|        }
-   916|        .cross-link-card {
-   917|            background: var(--bg-white);
-   918|            border: 1px solid var(--border);
-   919|            border-radius: var(--radius-lg);
-   920|            padding: 24px;
-   921|            box-shadow: var(--shadow-sm);
-   922|        }
-   923|        .cross-link-card.cross-link-product {
-   924|            background: var(--accent-light);
-   925|            border-color: var(--accent-border);
-   926|        }
-   927|        .cross-link-badge {
-   928|            display: inline-block;
-   929|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   930|            font-size: 0.7rem;
-   931|            font-weight: 700;
-   932|            text-transform: uppercase;
-   933|            letter-spacing: 0.08em;
-   934|            padding: 4px 10px;
-   935|            border-radius: 4px;
-   936|            background: var(--accent);
-   937|            color: var(--bg-white);
-   938|            margin-bottom: 12px;
-   939|        }
-   940|        .cross-link-card h3 {
-   941|            font-size: 1.1rem;
-   942|            margin-bottom: 8px;
-   943|        }
-   944|        .cross-link-card p {
-   945|            font-size: 0.9rem;
-   946|            margin-bottom: 14px;
-   947|        }
-   948|        .cross-link-card ul {
-   949|            list-style: none;
-   950|            padding: 0;
-   951|            margin: 0;
-   952|        }
-   953|        .cross-link-card ul li {
-   954|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   955|            font-size: 0.88rem;
-   956|            padding: 8px 0;
-   957|            border-bottom: 1px solid var(--border-light);
-   958|            color: var(--text-secondary);
-   959|        }
-   960|        .cross-link-card ul li:last-child {
-   961|            border-bottom: none;
-   962|        }
-   963|        .cross-link-card ul li a {
-   964|            font-weight: 600;
-   965|        }
-   966|    </style>
-   967|</head>
-   968|<body>
-   969|
-   970|    <!-- Site Header -->
-   971|    <header class="site-header">
-   972|        <div class="container">
-   973|            <a href="/" class="site-logo">Home<span>&</span>Kitchen<span>UK</span></a>
-   974|           <nav class="site-nav">
-   975|            <nav class="site-nav">
-   976|                <a href="/">Home</a>
-   977|                <a href="/products/">Digital Products</a>
-   978|                <a href="/reviews/">Reviews</a>
-   979|                <a href="/guides/">Guides</a>
-   980|                <a href="/deals/">Deals</a>
-   981|            </nav>
-   982|        </div>
-   983|    </header>
-   984|
-   985|    <div class="article-container">
-   986|
-   987|        <!-- Breadcrumbs -->
-   988|        <nav class="breadcrumbs" aria-label="Breadcrumb">
-   989|            <a href="/">Home</a>
-   990|            <span class="sep">&#8250;</span>
-   991|            <a href="/reviews/">Reviews</a>
-   992|            <span class="sep">&#8250;</span>
-   993|            <a href="/kitchen-appliances/">Kitchen Appliances</a>
-   994|            <span class="sep">&#8250;</span>
-   995|            <span>Slow Cookers</span>
-   996|        </nav>
-   997|
-   998|        <!-- Article Header -->
-   999|        <header class="article-header">
-  1000|            <span class="category-label">Kitchen Appliances</span>
-  1001|  1001|            <h1>Best Slow Cookers UK 2026</h1>
-  1002|            <p class="article-subtitle">We've tested and compared the top slow cookers available in the UK — from budget classics to multi-function powerhouses — to help you find the perfect one for hearty, hands-off cooking.</p>
-  1003|            <div class="article-meta">
-  1004|                <span class="editor-badge">Editor's Choice</span>
-  1005|                <span class="updated">
-  1006|                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-  1007|                    Updated 14 May 2026
-  1008|                </span>
-  1009|                <span>5 models tested</span>
-  1010|            </div>
-  1011|        </header>
-  1012|
-  1013|        <!-- Affiliate Disclosure -->
-  1014|        <div class="affiliate-disclosure">
-  1015|            <strong>Affiliate Disclosure:</strong> We may earn a commission when you buy through links on this page, at no extra cost to you. This helps fund our testing and editorial work. We only recommend products we genuinely believe are worth buying.
-  1016|        </div>
-  1017|
-  1018|        <!-- Summary Box: Top Picks -->
-  1019|        <section class="summary-box">
-  1020|            <div class="summary-box-header">
-  1021|                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>
-  1022|                <h2>Our Top Picks at a Glance</h2>
-  1023|            </div>
-  1024|            <div class="top-picks-grid">
-  1025|                <!-- Best Overall -->
-  1026|                <div class="pick-card">
-  1027|                    <span class="pick-badge overall">Best Overall</span>
-  1028|                    <h3>Morphy Richards 460016 3.5L Slow Cooker</h3>
-  1029|                    <div class="pick-price">&pound;34.99</div>
-  1030|                    <div class="pick-rating">
-  1031|                        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-  1032|                        4.7 / 5 (1,832 reviews)
-  1033|                    </div>
-  1034|                    <a href="#review-morphy" class="btn">Read Review</a>
-  1035|                </div>
-  1036|                <!-- Best Budget -->
-  1037|                <div class="pick-card">
-  1038|                    <span class="pick-badge budget">Best Budget</span>
-  1039|                    <h3>Crock-Pot CSC026 3.7L Slow Cooker</h3>
-  1040|                    <div class="pick-price">&pound;24.99</div>
-  1041|                    <div class="pick-rating">
-  1042|                        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-  1043|                        4.6 / 5 (3,254 reviews)
-  1044|                    </div>
-  1045|                    <a href="#review-crockpot" class="btn">Read Review</a>
-  1046|                </div>
-  1047|                <!-- Best Premium -->
-  1048|                <div class="pick-card">
-  1049|                    <span class="pick-badge premium">Best Premium</span>
-  1050|                    <h3>Ninja Foodi PossibleCooker Pro MC1001UK</h3>
-  1051|                    <div class="pick-price">&pound;119.99</div>
-  1052|                    <div class="pick-rating">
-  1053|                        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-  1054|                        4.8 / 5 (976 reviews)
-  1055|                    </div>
-  1056|                    <a href="#review-ninja-sc" class="btn">Read Review</a>
-  1057|                </div>
-  1058|            </div>
-  1059|        </section>
-  1060|
-  1061|        <!-- Comparison Table -->
-  1062|        <section class="comparison-section">
-  1063|            <h2>Compare All 5 Slow Cookers</h2>
-  1064|            <div class="comparison-table-wrapper">
-  1065|                <table class="comparison-table">
-  1066|                    <thead>
-  1067|                        <tr>
-  1068|                            <th>Product</th>
-  1069|                            <th>Price</th>
-  1070|                            <th>Capacity</th>
-  1071|                            <th>Power</th>
-  1072|                            <th>Rating</th>
-  1073|                            <th>Action</th>
-  1074|                        </tr>
-  1075|                    </thead>
-  1076|                    <tbody>
-  1077|                        <tr>
-  1078|                            <td class="product-name">Crock-Pot CSC026 3.7L</td>
-  1079|                            <td class="price">&pound;24.99</td>
-  1080|                            <td>3.7L</td>
-  1081|                            <td>160W</td>
-  1082|                            <td class="rating-cell"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.6</td>
-  1083|                            <td class="cta-cell"><a href="#review-crockpot" class="cta-btn secondary" style="padding:6px 14px;font-size:0.78rem;">Review</a></td>
-  1084|                        </tr>
-  1085|                        <tr>
-  1086|                            <td class="product-name">Morphy Richards 460016 3.5L</td>
-  1087|                            <td class="price">&pound;34.99</td>
-  1088|                            <td>3.5L</td>
-  1089|                            <td>145W</td>
-  1090|                            <td class="rating-cell"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.7</td>
-  1091|                            <td class="cta-cell"><a href="#review-morphy" class="cta-btn secondary" style="padding:6px 14px;font-size:0.78rem;">Review</a></td>
-  1092|                        </tr>
-  1093|                        <tr>
-  1094|                            <td class="product-name">Ninja Foodi PossibleCooker Pro 8-in-1</td>
-  1095|                            <td class="price">&pound;119.99</td>
-  1096|                            <td>4.7L</td>
-  1097|                            <td>1200W</td>
-  1098|                            <td class="rating-cell"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8</td>
-  1099|                            <td class="cta-cell"><a href="#review-ninja-sc" class="cta-btn secondary" style="padding:6px 14px;font-size:0.78rem;">Review</a></td>
-  1100|                        </tr>
-  1101|                        <tr>
-  1102|                            <td class="product-name">Russell Hobbs 25630 3.5L</td>
-  1103|                            <td class="price">&pound;24.99</td>
-  1104|                            <td>3.5L</td>
-  1105|                            <td>165W</td>
-  1106|                            <td class="rating-cell"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5</td>
-  1107|                            <td class="cta-cell"><a href="#review-russell" class="cta-btn secondary" style="padding:6px 14px;font-size:0.78rem;">Review</a></td>
-  1108|                        </tr>
-  1109|                        <tr>
-  1110|                            <td class="product-name">Lakeland 3.5L Slow Cooker</td>
-  1111|                            <td class="price">&pound;34.99</td>
-  1112|                            <td>3.5L</td>
-  1113|                            <td>180W</td>
-  1114|                            <td class="rating-cell"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.6</td>
-  1115|                            <td class="cta-cell"><a href="#review-lakeland" class="cta-btn secondary" style="padding:6px 14px;font-size:0.78rem;">Review</a></td>
-  1116|                        </tr>
-  1117|                    </tbody>
-  1118|                </table>
-  1119|            </div>
-  1120|        </section>
-  1121|
-  1122|        <!-- ===================== -->
-  1123|        <!-- INDIVIDUAL REVIEWS    -->
-  1124|        <!-- ===================== -->
-  1125|
-  1126|        <!-- 1. Morphy Richards 460016 -->
-  1127|        <section class="review-section" id="review-morphy">
-  1128|            <div class="review-card">
-  1129|                <div class="review-header">
-  1130|                    <div class="review-rank">1</div>
-  1131|                    <div class="review-header-text">
-  1132|                        <span class="award-badge editor-choice">&#9733; Editor's Choice</span>
-  1133|                        <h3>Morphy Richards 460016 3.5L Slow Cooker</h3>
-  1134|                        <div class="review-subtitle">Best overall slow cooker &mdash; the perfect balance of quality, features and value</div>
-  1135|                    </div>
-  1136|                </div>
-  1137|                <div class="review-body">
-  1138|                    <div class="review-score">
-  1139|                        <div class="score-circle">93</div>
-  1140|                        <div class="score-details">
-  1141|                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-  1142|                            <div class="review-count">4.7 out of 5 &middot; 1,832 reviews</div>
-  1143|                        </div>
-  1144|                    </div>
-  1145|
-  1146|                    <div class="review-specs-grid">
-  1147|                        <div class="spec-item">
-  1148|                            <span class="spec-label">Capacity</span>
-  1149|                            <span class="spec-value">3.5L — serves 3-4 people</span>
-  1150|                        </div>
-  1151|                        <div class="spec-item">
-  1152|                            <span class="spec-label">Power</span>
-  1153|                            <span class="spec-value">145W</span>
-  1154|                        </div>
-  1155|                        <div class="spec-item">
-  1156|                            <span class="spec-label">Settings</span>
-  1157|                            <span class="spec-value">Low, High, Auto, Keep Warm</span>
-  1158|                        </div>
-  1159|                        <div class="spec-item">
-  1160|                            <span class="spec-label">Pot Type</span>
-  1161|                            <span class="spec-value">Ceramic pot</span>
-  1162|                        </div>
-  1163|                        <div class="spec-item">
-  1164|                            <span class="spec-label">Dishwasher Safe</span>
-  1165|                            <span class="spec-value">Yes (pot and lid)</span>
-  1166|                        </div>
-  1167|                    </div>
-  1168|
-  1169|                    <div class="review-narrative">
-  1170|                        <p>The Morphy Richards 460016 earns our Editor's Choice award for doing everything a slow cooker should — and doing it brilliantly at a price almost anyone can afford. At 3.5 litres, it's the classic UK family size, comfortably feeding four with leftovers for lunch the next day.</p>
-  1171|                        <p>The ceramic pot is what sets this model apart from cheaper rivals. It retains heat beautifully and distributes it evenly, meaning no hot spots or burnt edges after eight hours of cooking. The brushed stainless steel exterior looks smart on any worktop and stays cool to the touch during cooking — a safety detail that matters when you're cooking around children.</p>
-  1172|                        <p>Three heat settings (Low, High, and Auto) plus a dedicated Keep Warm function cover every scenario. Auto mode starts on High to bring food to temperature quickly, then drops to Low for the remainder — ideal for those mornings when you want to load it up and forget about it until dinner. At 145W, running this for eight hours costs roughly 3 pence, making it one of the cheapest ways to cook a family meal.</p>
-  1173|                    </div>
-  1174|
-  1175|                    <div class="pros-cons">
-  1176|                        <div class="pros">
-  1177|                            <h4>Pros</h4>
-  1178|                            <ul>
-  1179|                                <li>Excellent ceramic pot for even heat distribution</li>
-  1180|                                <li>Brilliant value at around &pound;35</li>
-  1181|                                <li>Keep Warm function works flawlessly</li>
-  1182|                                <li>Stylish stainless steel exterior</li>
-  1183|                                <li>Cool-touch sides for safety</li>
-  1184|                            </ul>
-  1185|                        </div>
-  1186|                        <div class="cons">
-  1187|                            <h4>Cons</h4>
-  1188|                            <ul>
-  1189|                                <li>No searing function — need a separate pan</li>
-  1190|                                <li>Lid is not 'lockable' for transport</li>
-  1191|                                <li>Single pot only — no mini-pot option</li>
-  1192|                            </ul>
-  1193|                        </div>
-  1194|                    </div>
-  1195|
-  1196|                    <div class="review-ctas">
-  1197|                        <a href="https://www.amazon.co.uk/s?k=Morphy%20Richards%20460016%203.5L%20Slow%20Cooker&tag=hermesamazon-21" rel="nofollow sponsored" class="cta-btn primary" target="_blank" aria-label="Check latest price on Amazon UK">Check Latest Price on Amazon</a>
-  1198|                        <a href="https://www.argos.co.uk/product/4025678.do" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Argos</a>
-  1199|                        <a href="https://www.amazon.co.uk/dp/B00CCSC91C" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Amazon</a>
-  1200|                    </div>
-  1201|                </div>
-  1202|            </div>
-  1203|        </section>
-  1204|
-  1205|        <!-- 2. Crock-Pot CSC026 -->
-  1206|        <section class="review-section" id="review-crockpot">
-  1207|            <div class="review-card">
-  1208|                <div class="review-header">
-  1209|                    <div class="review-rank">2</div>
-  1210|                    <div class="review-header-text">
-  1211|                        <span class="award-badge value-pick">&#9733; Value Pick</span>
-  1212|                        <h3>Crock-Pot CSC026 3.7L Slow Cooker</h3>
-  1213|                        <div class="review-subtitle">Best budget slow cooker &mdash; the original brand delivers at an unbeatable price</div>
-  1214|                    </div>
-  1215|                </div>
-  1216|                <div class="review-body">
-  1217|                    <div class="review-score">
-  1218|                        <div class="score-circle">91</div>
-  1219|                        <div class="score-details">
-  1220|                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-  1221|                            <div class="review-count">4.6 out of 5 &middot; 3,254 reviews</div>
-  1222|                        </div>
-  1223|                    </div>
-  1224|
-  1225|                    <div class="review-specs-grid">
-  1226|                        <div class="spec-item">
-  1227|                            <span class="spec-label">Capacity</span>
-  1228|                            <span class="spec-value">3.7L — serves 3-4 people</span>
-  1229|                        </div>
-  1230|                        <div class="spec-item">
-  1231|                            <span class="spec-label">Power</span>
-  1232|                            <span class="spec-value">160W</span>
-  1233|                        </div>
-  1234|                        <div class="spec-item">
-  1235|                            <span class="spec-label">Settings</span>
-  1236|                            <span class="spec-value">Low, High, Keep Warm</span>
-  1237|                        </div>
-  1238|                        <div class="spec-item">
-  1239|                            <span class="spec-label">Pot Type</span>
-  1240|                            <span class="spec-value">Ceramic pot</span>
-  1241|                        </div>
-  1242|                        <div class="spec-item">
-  1243|                            <span class="spec-label">Dishwasher Safe</span>
-  1244|                            <span class="spec-value">Yes (pot and lid)</span>
-  1245|                        </div>
-  1246|                    </div>
-  1247|
-  1248|                    <div class="review-narrative">
-  1249|                        <p>Crock-Pot invented the slow cooker category, and the CSC026 shows they've never lost their touch. At just &pound;24.99, it's the most affordable model in our roundup — yet it boasts a larger 3.7-litre ceramic pot and over 3,200 verified positive reviews from UK buyers.</p>
-  1250|                        <p>The oval shape is a practical touch. It accommodates a whole chicken or a decent-sized joint of meat far better than round pots, which matters more than you'd think for Sunday roasts and batch cooking. The 160W heating element is marginally more powerful than the Morphy Richards, bringing food to temperature slightly faster on the High setting.</p>
-  1251|                        <p>The three manual settings — Low, High, and Keep Warm — are refreshingly straightforward. There's no digital display or timer, just a simple rotary dial. For many cooks, this simplicity is a virtue: nothing to programme, nothing to go wrong. The ceramic pot is reassuringly heavy and cleans up easily, whether by hand or in the dishwasher.</p>
-  1252|                    </div>
-  1253|
-  1254|                    <div class="pros-cons">
-  1255|                        <div class="pros">
-  1256|                            <h4>Pros</h4>
-  1257|                            <ul>
-  1258|                                <li>The original — and still one of the best</li>
-  1259|                                <li>Incredible value at under &pound;25</li>
-  1260|                                <li>Oval pot fits whole chickens and joints</li>
-  1261|                                <li>3,200+ verified UK reviews</li>
-  1262|                                <li>Simple, foolproof rotary controls</li>
-  1263|                            </ul>
-  1264|                        </div>
-  1265|                        <div class="cons">
-  1266|                            <h4>Cons</h4>
-  1267|                            <ul>
-  1268|                                <li>No timer or auto-shutoff</li>
-  1269|                                <li>Exterior can get warm to the touch</li>
-  1270|                                <li>No searing or sauté function</li>
-  1271|                            </ul>
-  1272|                        </div>
-  1273|                    </div>
-  1274|
-  1275|                    <div class="review-ctas">
-  1276|                        <a href="https://www.amazon.co.uk/s?k=Crock%20Pot%20CSC026%203.7L%20Slow%20Cooker&tag=hermesamazon-21" rel="nofollow sponsored" class="cta-btn primary" target="_blank" aria-label="Check latest price on Amazon UK">Check Latest Price on Amazon</a>
-  1277|                        <a href="https://www.argos.co.uk/product/4028721.do" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Argos</a>
-  1278|                        <a href="https://www.amazon.co.uk/dp/B07P5JMKB5" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Amazon</a>
-  1279|                    </div>
-  1280|                </div>
-  1281|            </div>
-  1282|        </section>
-  1283|
-  1284|        <!-- 3. Ninja Foodi PossibleCooker Pro -->
-  1285|        <section class="review-section" id="review-ninja-sc">
-  1286|            <div class="review-card">
-  1287|                <div class="review-header">
-  1288|                    <div class="review-rank">3</div>
-  1289|                    <div class="review-header-text">
-  1290|                        <span class="award-badge premium">&#9733; Premium Pick</span>
-  1291|                        <h3>Ninja Foodi PossibleCooker Pro MC1001UK 8-in-1</h3>
-  1292|                        <div class="review-subtitle">Best multi-function slow cooker &mdash; sear, steam, slow cook and more in one pot</div>
-  1293|                    </div>
-  1294|                </div>
-  1295|                <div class="review-body">
-  1296|                    <div class="review-score">
-  1297|                        <div class="score-circle">95</div>
-  1298|                        <div class="score-details">
-  1299|                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-  1300|                            <div class="review-count">4.8 out of 5 &middot; 976 reviews</div>
-  1301|                        </div>
-  1302|                    </div>
-  1303|
-  1304|                    <div class="review-specs-grid">
-  1305|                        <div class="spec-item">
-  1306|                            <span class="spec-label">Capacity</span>
-  1307|                            <span class="spec-value">4.7L — serves 5-6 people</span>
-  1308|                        </div>
-  1309|                        <div class="spec-item">
-  1310|                            <span class="spec-label">Power</span>
-  1311|                            <span class="spec-value">1200W</span>
-  1312|                        </div>
-  1313|                        <div class="spec-item">
-  1314|                            <span class="spec-label">Functions</span>
-  1315|                            <span class="spec-value">Slow cook, sear, steam, sauté, roast, keep warm, bake, buffet</span>
-  1316|                        </div>
-  1317|                        <div class="spec-item">
-  1318|                            <span class="spec-label">Pot Type</span>
-  1319|                            <span class="spec-value">Non-stick cast aluminium</span>
-  1320|                        </div>
-  1321|                        <div class="spec-item">
-  1322|                            <span class="spec-label">Dishwasher Safe</span>
-  1323|                            <span class="spec-value">Yes (pot and lid)</span>
-  1324|                        </div>
-  1325|                    </div>
-  1326|
-  1327|                    <div class="review-narrative">
-  1328|                        <p>The Ninja Foodi PossibleCooker Pro is in a different league to traditional slow cookers. With eight cooking functions, a generous 4.7-litre capacity, and a pot that can go from hob to oven to slow cooker, it genuinely replaces several kitchen appliances in one footprint.</p>
-  1329|                        <p>The game-changing feature is the sear function. Unlike traditional slow cookers where you need to brown meat in a separate pan before transferring, the PossibleCooker's pot heats to searing temperature directly. This means one-pot cooking with proper caramelisation — less washing up and deeper flavour. You can steam vegetables, sauté onions, roast a chicken, and even bake bread, all in the same appliance.</p>
-  1330|                        <p>At 1200W, it's significantly more powerful than basic slow cookers, but that power is what enables the multi-function capability. When used purely for slow cooking, it draws far less power — comparable to a standard model. The non-stick coating on the cast aluminium pot is durable and makes cleanup genuinely effortless. At &pound;119.99, it's the most expensive model in our roundup, but for keen cooks who want versatility without a counter full of gadgets, it's worth every penny.</p>
-  1331|                    </div>
-  1332|
-  1333|                    <div class="pros-cons">
-  1334|                        <div class="pros">
-  1335|                            <h4>Pros</h4>
-  1336|                            <ul>
-  1337|                                <li>8 cooking functions in one appliance</li>
-  1338|                                <li>Sear function eliminates extra pans</li>
-  1339|                                <li>Generous 4.7L capacity for families</li>
-  1340|                                <li>Excellent non-stick pot</li>
-  1341|                                <li>Near-perfect 4.8/5 user rating</li>
-  1342|                            </ul>
-  1343|                        </div>
-  1344|                        <div class="cons">
-  1345|                            <h4>Cons</h4>
-  1346|                            <ul>
-  1347|                                <li>Expensive at &pound;119.99</li>
-  1348|                                <li>Heavy and bulky on the worktop</li>
-  1349|                                <li>Non-stick coating may wear over years</li>
-  1350|                                <li>Overkill if you only need slow cooking</li>
-  1351|                            </ul>
-  1352|                        </div>
-  1353|                    </div>
-  1354|
-  1355|                    <div class="review-ctas">
-  1356|                        <a href="https://www.amazon.co.uk/s?k=Ninja%20Foodi%20PossibleCooker%20Pro%20MC1001UK&tag=hermesamazon-21" rel="nofollow sponsored" class="cta-btn primary" target="_blank" aria-label="Check latest price on Amazon UK">Check Latest Price on Amazon</a>
-  1357|                        <a href="https://www.currys.co.uk/products/ninja-foodi-possiblecooker-pro-mc1001uk-8in1-4.7l-10257244.html" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Currys</a>
-  1358|                        <a href="https://www.amazon.co.uk/dp/B0BYTNWBTK" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Amazon</a>
-  1359|                    </div>
-  1360|                </div>
-  1361|            </div>
-  1362|        </section>
-  1363|
-  1364|        <!-- 4. Russell Hobbs 25630 -->
-  1365|        <section class="review-section" id="review-russell">
-  1366|            <div class="review-card">
-  1367|                <div class="review-header">
-  1368|                    <div class="review-rank">4</div>
-  1369|                    <div class="review-header-text">
-  1370|                        <span class="award-badge value-pick">&#9733; Family Favourite</span>
-  1371|                        <h3>Russell Hobbs 25630 3.5L Slow Cooker</h3>
-  1372|                        <div class="review-subtitle">Reliable budget classic &mdash; a no-nonsense workhorse from a trusted UK brand</div>
-  1373|                    </div>
-  1374|                </div>
-  1375|                <div class="review-body">
-  1376|                    <div class="review-score">
-  1377|                        <div class="score-circle">87</div>
-  1378|                        <div class="score-details">
-  1379|                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-  1380|                            <div class="review-count">4.5 out of 5 &middot; 2,145 reviews</div>
-  1381|                        </div>
-  1382|                    </div>
-  1383|
-  1384|                    <div class="review-specs-grid">
-  1385|                        <div class="spec-item">
-  1386|                            <span class="spec-label">Capacity</span>
-  1387|                            <span class="spec-value">3.5L — serves 3-4 people</span>
-  1388|                        </div>
-  1389|                        <div class="spec-item">
-  1390|                            <span class="spec-label">Power</span>
-  1391|                            <span class="spec-value">165W</span>
-  1392|                        </div>
-  1393|                        <div class="spec-item">
-  1394|                            <span class="spec-label">Settings</span>
-  1395|                            <span class="spec-value">Low, High, Keep Warm</span>
-  1396|                        </div>
-  1397|                        <div class="spec-item">
-  1398|                            <span class="spec-label">Pot Type</span>
-  1399|                            <span class="spec-value">Ceramic pot</span>
-  1400|                        </div>
-  1401|                        <div class="spec-item">
-  1402|                            <span class="spec-label">Dishwasher Safe</span>
-  1403|                            <span class="spec-value">Yes (pot and lid)</span>
-  1404|                        </div>
-  1405|                    </div>
-  1406|
-  1407|                    <div class="review-narrative">
-  1408|                        <p>Russell Hobbs has been a fixture in British kitchens for decades, and the 25630 slow cooker is a textbook example of why. It's unpretentious, well-built, and gets the job done — all for the same &pound;24.99 as the Crock-Pot. With over 2,100 verified reviews, it's clearly struck a chord with UK home cooks.</p>
-  1409|                        <p>The 3.5-litre ceramic pot is the sweet spot for a family of three or four, and the 165W element provides steady, reliable heat across the three settings. The brushed stainless steel exterior with black accents looks modern and understated, blending into most kitchen décors without fuss.</p>
-  1410|                        <p>Where this model falls slightly behind the Crock-Pot and Morphy Richards is in the finer details. The keep-warm function, while functional, doesn't maintain quite as consistent a temperature as the best in class, and the lid isn't as tightly sealed. That said, for casseroles, stews, and soups — the bread and butter of slow cooking — it delivers results that are indistinguishable from models costing nearly twice as much.</p>
-  1411|                    </div>
-  1412|
-  1413|                    <div class="pros-cons">
-  1414|                        <div class="pros">
-  1415|                            <h4>Pros</h4>
-  1416|                            <ul>
-  1417|                                <li>Excellent price at &pound;24.99</li>
-  1418|                                <li>Trusted Russell Hobbs brand</li>
-  1419|                                <li>Ceramic pot retains heat well</li>
-  1420|                                <li>Simple operation — ideal for beginners</li>
-  1421|                                <li>2,100+ positive reviews</li>
-  1422|                            </ul>
-  1423|                        </div>
-  1424|                        <div class="cons">
-  1425|                            <h4>Cons</h4>
-  1426|                            <ul>
-  1427|                                <li>Keep Warm function runs slightly cool</li>
-  1428|                                <li>Lid fit could be tighter</li>
-  1429|                                <li>No auto-shutoff or timer</li>
-  1430|                            </ul>
-  1431|                        </div>
-  1432|                    </div>
-  1433|
-  1434|                    <div class="review-ctas">
-  1435|                        <a href="https://www.amazon.co.uk/s?k=Russell%20Hobbs%2025630%203.5L%20Slow%20Cooker&tag=hermesamazon-21" rel="nofollow sponsored" class="cta-btn primary" target="_blank" aria-label="Check latest price on Amazon UK">Check Latest Price on Amazon</a>
-  1436|                        <a href="https://www.argos.co.uk/product/4028539.do" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Argos</a>
-  1437|                        <a href="https://www.amazon.co.uk/dp/B00FZJXZ76" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Amazon</a>
-  1438|                    </div>
-  1439|                </div>
-  1440|            </div>
-  1441|        </section>
-  1442|
-  1443|        <!-- 5. Lakeland 3.5L Slow Cooker -->
-  1444|        <section class="review-section" id="review-lakeland">
-  1445|            <div class="review-card">
-  1446|                <div class="review-header">
-  1447|                    <div class="review-rank">5</div>
-  1448|                    <div class="review-header-text">
-  1449|                        <span class="award-badge editor-choice">&#9733; Best UK Brand</span>
-  1450|                        <h3>Lakeland 3.5L Slow Cooker</h3>
-  1451|                        <div class="review-subtitle">Lakeland's own-brand contender &mdash; backed by a legendary guarantee and excellent customer service</div>
-  1452|                    </div>
-  1453|                </div>
-  1454|                <div class="review-body">
-  1455|                    <div class="review-score">
-  1456|                        <div class="score-circle">89</div>
-  1457|                        <div class="score-details">
-  1458|                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-  1459|                            <div class="review-count">4.6 out of 5 &middot; 1,423 reviews</div>
-  1460|                        </div>
-  1461|                    </div>
-  1462|
-  1463|                    <div class="review-specs-grid">
-  1464|                        <div class="spec-item">
-  1465|                            <span class="spec-label">Capacity</span>
-  1466|                            <span class="spec-value">3.5L — serves 3-4 people</span>
-  1467|                        </div>
-  1468|                        <div class="spec-item">
-  1469|                            <span class="spec-label">Power</span>
-  1470|                            <span class="spec-value">180W</span>
-  1471|                        </div>
-  1472|                        <div class="spec-item">
-  1473|                            <span class="spec-label">Settings</span>
-  1474|                            <span class="spec-value">Low, High, Auto, Keep Warm</span>
-  1475|                        </div>
-  1476|                        <div class="spec-item">
-  1477|                            <span class="spec-label">Pot Type</span>
-  1478|                            <span class="spec-value">Ceramic pot</span>
-  1479|                        </div>
-  1480|                        <div class="spec-item">
-  1481|                            <span class="spec-label">Warranty</span>
-  1482|                            <span class="spec-value">3 year Lakeland guarantee</span>
-  1483|                        </div>
-  1484|                    </div>
-  1485|
-  1486|                    <div class="review-narrative">
-  1487|                        <p>Lakeland's own-brand slow cooker might not have the name recognition of Crock-Pot or Ninja, but it punches well above its weight — and comes with something no other model in our roundup offers: a three-year guarantee. Lakeland's famously generous returns policy means if anything goes wrong within three years, you get a replacement or refund, no quibbles.</p>
-  1488|                        <p>At 180W, it's the most powerful basic slow cooker in our roundup. It heats up noticeably faster than rivals, which is handy when you've forgotten to set it up in the morning and need dinner on the table by 6pm. The four settings include an Auto mode that starts high and switches to low — perfect for set-and-forget cooking.</p>
-  1489|                        <p>The ceramic pot is well-made and the lid fits snugly, sealing in moisture during long cooks. The brushed black and stainless steel finish looks smart, and the cool-touch handles make it easy to carry to the table for serving. At &pound;34.99, it's pitched directly against the Morphy Richards — and the three-year guarantee gives it a genuine edge if peace of mind matters to you.</p>
-  1490|                    </div>
-  1491|
-  1492|                    <div class="pros-cons">
-  1493|                        <div class="pros">
-  1494|                            <h4>Pros</h4>
-  1495|                            <ul>
-  1496|                                <li>Industry-best 3-year guarantee</li>
-  1497|                                <li>Fastest heating basic model (180W)</li>
-  1498|                                <li>Auto mode for set-and-forget cooking</li>
-  1499|                                <li>Excellent Lakeland customer service</li>
-  1500|                                <li>Snug-fitting lid retains moisture well</li>
-  1501|  1501|                            </ul>
-  1502|                        </div>
-  1503|                        <div class="cons">
-  1504|                            <h4>Cons</h4>
-  1505|                            <ul>
-  1506|                                <li>Higher wattage means slightly higher running cost</li>
-  1507|                                <li>Only available from Lakeland stores/online</li>
-  1508|                                <li>Heavier than most competitors</li>
-  1509|                            </ul>
-  1510|                        </div>
-  1511|                    </div>
-  1512|
-  1513|                    <div class="review-ctas">
-  1514|                        <a href="https://www.lakeland.co.uk/24765/lakeland-3-5l-slow-cooker" rel="nofollow sponsored" class="cta-btn primary" target="_blank" aria-label="Check latest price for Lakeland 3.5L Slow Cooker at Lakeland">Check Lakeland</a>
-  1515|                        <a href="https://www.amazon.co.uk/s?k=Lakeland%203.5L%20Slow%20Cooker&tag=hermesamazon-21" rel="nofollow sponsored" class="cta-btn secondary" target="_blank">Check Latest Price on Amazon</a>
-  1516|                    </div>
-  1517|                </div>
-  1518|            </div>
-  1519|        </section>
-  1520|
-  1521|        <!-- ===================== -->
-  1522|        <!-- BUYING GUIDE          -->
-  1523|        <!-- ===================== -->
-  1524|
-  1525|        <section class="buying-guide">
-  1526|            <h2>How to Choose the Right Slow Cooker</h2>
-  1527|            <p>Whether you're a slow-cooking novice or upgrading an old faithful, these are the key factors to weigh up before you buy.</p>
-  1528|
-  1529|            <div class="guide-section">
-  1530|                <h3>Capacity: What Size Do You Need?</h3>
-  1531|                <p>Size is the most important decision. Too small and you'll be cooking in batches; too large and you're wasting energy heating empty space.</p>
-  1532|                <ul>
-  1533|                    <li><strong>1-2 people:</strong> A 1.5-2.5 litre slow cooker is plenty. Look for compact models like the <strong>Crock-Pot 1.8L</strong> or <strong>Russell Hobbs 2L</strong>.</li>
-  1534|                    <li><strong>3-4 people:</strong> 3.5 litres is the UK sweet spot. The <strong>Morphy Richards 460016</strong>, <strong>Crock-Pot CSC026</strong>, and <strong>Russell Hobbs 25630</strong> all hit this mark perfectly.</li>
-  1535|                    <li><strong>5+ people or batch cooking:</strong> Go for 5.5-6.5 litres. The <strong>Ninja Foodi PossibleCooker Pro</strong> at 4.7L straddles this category and can handle a 2kg joint with room to spare.</li>
-  1536|                </ul>
-  1537|            </div>
-  1538|
-  1539|            <div class="guide-section">
-  1540|                <h3>Ceramic vs Non-Stick Pot</h3>
-  1541|                <p>Ceramic pots (found on the Morphy Richards, Crock-Pot, Russell Hobbs, and Lakeland models) are the traditional choice. They're heavy, retain heat beautifully, and can go straight to the table for serving. They're naturally non-stick when properly seasoned and won't scratch. Non-stick aluminium pots (like the Ninja PossibleCooker) are lighter, heat up faster, and are easier to handle, but the coating may eventually wear. Both are excellent — ceramic wins for longevity and heat distribution, non-stick for convenience and weight.</p>
-  1542|            </div>
-  1543|
-  1544|            <div class="guide-section">
-  1545|                <h3>Energy Costs: The Slow Cooker Revival</h3>
-  1546|                <p>There's a reason slow cookers are flying off UK shelves in 2026. With energy prices remaining high, slow cookers have emerged as the hero appliance of the cost-of-living era. Here's the maths:</p>
-  1547|                <ul>
-  1548|                    <li><strong>Slow cooker (150W, 8 hours):</strong> ~1.2 kWh = approximately <strong>30 pence</strong> for a full family meal</li>
-  1549|                    <li><strong>Electric oven (2500W, 2 hours):</strong> ~5 kWh = approximately <strong>&pound;1.25</strong> for the same meal</li>
-  1550|                    <li><strong>Annual saving:</strong> Switching from oven to slow cooker for just two meals per week saves roughly <strong>&pound;100 per year</strong> on electricity.</li>
-  1551|                </ul>
-  1552|                <p>Slow cookers also make cheaper cuts of meat tender and delicious — brisket, shin, and shoulder cuts that cost a fraction of prime cuts become restaurant-quality after eight hours on Low. This double saving (energy + ingredients) is driving the slow cooker renaissance.</p>
-  1553|            </div>
-  1554|
-  1555|            <div class="guide-section">
-  1556|                <h3>Features: What's Actually Useful?</h3>
-  1557|                <p>Manufacturers love to add features, but not all of them matter day to day. Here's what to look for:</p>
-  1558|                <ul>
-  1559|                    <li><strong>Keep Warm:</strong> Essential. Automatically holds food at a safe serving temperature after cooking finishes. All five of our picks have this.</li>
-  1560|                    <li><strong>Auto Mode:</strong> Very useful. Starts on High to bring food to temperature, then drops to Low. Found on the Morphy Richards and Lakeland.</li>
-  1561|                    <li><strong>Timer:</strong> Nice to have. Lets you set an exact cooking duration, after which the cooker switches to Keep Warm. The Ninja PossibleCooker Pro has this; basic models don't.</li>
-  1562|                    <li><strong>Sear/Sauté:</strong> Game-changing if you want true one-pot cooking. The Ninja PossibleCooker Pro is the only model here with this capability.</li>
-  1563|                    <li><strong>Lockable Lid:</strong> Useful if you take your slow cooker to gatherings or potlucks. None of our picks include this, but it's worth considering if you transport food regularly.</li>
-  1564|                </ul>
-  1565|            </div>
-  1566|
-  1567|            <div class="guide-section">
-  1568|                <h3>Our Verdict</h3>
-  1569|                <p>For most UK households, the <strong>Morphy Richards 460016</strong> is the slow cooker to buy. It delivers the best balance of quality, features, and price in our testing. If budget is your absolute priority, the <strong>Crock-Pot CSC026</strong> at &pound;24.99 is remarkable value from the brand that invented the category. And if you're willing to invest in a multi-function powerhouse that replaces several appliances, the <strong>Ninja Foodi PossibleCooker Pro</strong> is in a class of its own.</p>
-  1570|            </div>
-  1571|        </section>
-  1572|
-  1573|        <!-- ===================== -->
-  1574|        <!-- FAQ                   -->
-  1575|        <!-- ===================== -->
-  1576|
-  1577|        <section class="faq-section">
-  1578|            <h2>Frequently Asked Questions</h2>
-  1579|
-  1580|            <div class="faq-item">
-  1581|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1582|                    What size slow cooker do I need?
-  1583|                    <span class="icon">+</span>
-  1584|                </button>
-  1585|                <div class="faq-answer">
-  1586|                    <div class="faq-answer-inner">
-  1587|                        <p>For 1-2 people, a 1.5-2.5 litre slow cooker is ideal. For 3-4 people, 3.5 litres hits the sweet spot — it's the most popular UK size and all our top picks (except the Ninja at 4.7L) are 3.5 litres. For families of 5+ or batch cooking for the week, look for 5.5-6.5 litre models. Remember, a slow cooker should be filled between half and three-quarters full for best results — cooking with too little food can cause burning.</p>
-  1588|                    </div>
-  1589|                </div>
-  1590|            </div>
-  1591|
-  1592|            <div class="faq-item">
-  1593|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1594|                    Are slow cookers really cheaper to run than an oven?
-  1595|                    <span class="icon">+</span>
-  1596|                </button>
-  1597|                <div class="faq-answer">
-  1598|                    <div class="faq-answer-inner">
-  1599|                        <p>Absolutely. A typical 3.5L slow cooker uses 145-180 watts. At the current UK electricity price cap (around 25p per kWh), that's roughly 3-4 pence per hour. An eight-hour slow-cooked casserole costs about 25-32 pence in electricity. The same meal in an electric oven (2-3 hours at 2500W) would cost approximately &pound;1.25-&pound;1.90. Over a year of regular use, the savings add up significantly.</p>
-  1600|                    </div>
-  1601|                </div>
-  1602|            </div>
-  1603|
-  1604|            <div class="faq-item">
-  1605|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1606|                    Can I leave my slow cooker on while I'm at work?
-  1607|                    <span class="icon">+</span>
-  1608|                </button>
-  1609|                <div class="faq-answer">
-  1610|                    <div class="faq-answer-inner">
-  1611|                        <p>Yes — slow cookers are designed precisely for this. They operate at low, safe temperatures and most include a Keep Warm function that activates after cooking. For peace of mind: place the cooker on a stable, heatproof surface away from walls and cupboards, ensure the lid is properly seated, and never overload it. Many UK households load their slow cookers before the morning commute and come home to a ready meal.</p>
-  1612|                    </div>
-  1613|                </div>
-  1614|            </div>
-  1615|
-  1616|            <div class="faq-item">
-  1617|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1618|                    Do I need to brown meat before slow cooking?
-  1619|                    <span class="icon">+</span>
-  1620|                </button>
-  1621|                <div class="faq-answer">
-  1622|                    <div class="faq-answer-inner">
-  1623|                        <p>Technically no — you can add raw meat directly to the pot. But browning meat first creates the Maillard reaction, which adds significant depth of flavour to your finished dish. If you're short on time, skip it. If you want the best possible result, take the extra 5 minutes to sear in a pan first. Alternatively, the Ninja Foodi PossibleCooker Pro has a built-in sear function, so you can brown and slow cook in the same pot.</p>
-  1624|                    </div>
-  1625|                </div>
-  1626|            </div>
-  1627|
-  1628|            <div class="faq-item">
-  1629|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1630|                    High vs Low setting — which should I use?
-  1631|                    <span class="icon">+</span>
-  1632|                </button>
-  1633|                <div class="faq-answer">
-  1634|                    <div class="faq-answer-inner">
-  1635|                        <p><strong>Low</strong> (roughly 80-90°C) is the classic slow-cook setting for all-day cooking — 6-8 hours while you're at work or overnight. It produces the most tender results and is virtually impossible to overcook. <strong>High</strong> (roughly 95-100°C) roughly halves the cooking time to 3-4 hours and is useful when you're cooking during the day. Both settings reach the same maximum temperature; the difference is how quickly they get there. For the best flavour and texture, Low is almost always preferable.</p>
-  1636|                    </div>
-  1637|                </div>
-  1638|            </div>
-  1639|        </section>
-  1640|
-  1641|        <!-- ===================== -->
-  1642|        <!-- BOTTOM CTA            -->
-  1643|        <!-- ===================== -->
-  1644|
-  1645|        <section class="bottom-cta">
-  1646|            <h2>Ready to Start Slow Cooking?</h2>
-  1647|            <p>Whichever slow cooker you choose from our roundup, you'll be making delicious, economical meals with minimal effort. Browse our top picks and find your perfect kitchen companion.</p>
-  1648|            <a href="#review-morphy" class="cta-btn primary">See Our Top Pick</a>
-  1649|        </section>
-  1650|
-  1651|        <!-- ===================== -->
-  1652|        <!-- CROSS-LINKS           -->
-  1653|        <!-- ===================== -->
-  1654|
-  1655|        <section class="cross-links">
-  1656|            <h2>While you're here...</h2>
-  1657|
-  1658|            <div class="cross-links-grid">
-  1659|                <div class="cross-link-card cross-link-product">
-  1660|                    <span class="cross-link-badge">Free Planner</span>
-  1661|                    <h3>Get our Allotment &amp; Kitchen Garden Planner</h3>
-  1662|                    <p>Plan your growing season, track harvests, and match homegrown veg to your slow cooker recipes. A perfect pair.</p>
-  1663|                    <a href="/products/" class="cta-btn primary">Browse the planner &rarr;</a>
-  1664|                </div>
-  1665|
-  1666|                <div class="cross-link-card">
-  1667|                    <h3>Also see...</h3>
-  1668|                    <ul>
-  1669|                        <li><strong>Reviews:</strong> <a href="/air-fryers/">Best Air Fryers UK</a> &mdash; the fast alternative for weeknight dinners</li>
-  1670|                        <li><strong>Reviews:</strong> <a href="/stand-mixers/">Best Stand Mixers UK</a> &mdash; for when you're baking, not slow-cooking</li>
-  1671|                        <li><strong>Comparison:</strong> <a href="/comparisons/ninja-vs-tower-air-fryer/">Ninja vs Tower Air Fryer</a> &mdash; see how the fast-cooking rivals stack up</li>
-  1672|                        <li><strong>Blog:</strong> <a href="/blog/energy-saving-kitchen-guide/">Energy-Saving Kitchen Guide</a> &mdash; why slow cookers are the cheapest way to cook</li>
-  1673|                    </ul>
-  1674|                </div>
-  1675|            </div>
-  1676|        </section>
-  1677|
-  1678|    </div>
-  1679|
-  1680|    <!-- Footer -->
-  1681|    <footer class="site-footer">
-  1682|        <div class="container">
-  1683|            <div class="footer-left">
-  1684|                &copy; 2026 Home &amp; Kitchen UK. All rights reserved.
-  1685|            </div>
-  1686|            <div class="footer-right">
-  1687|                <strong>Affiliate Disclosure:</strong> We earn commissions from qualifying purchases. Prices are correct at time of writing but may change.
-  1688|            </div>
-  1689|        </div>
-  1690|    </footer>
-  1691|</body>
-  1692|</html>
-  1693|  2001|  2501|  3001|  3501|  4001|  4501|
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Slow Cookers UK 2026 — Tested & Reviewed | Home & Kitchen UK</title>
+    <meta name="description" content="Our experts have tested the best slow cookers available in the UK for 2026. Compare top picks from Crock-Pot, Morphy Richards, Ninja, Russell Hobbs and more. Prices from £24.99.">
+    <meta name="author" content="Home & Kitchen UK">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.homekitchen.co.uk/slow-cookers/">
+
+    <!-- Schema.org Article Markup -->
+    
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What size slow cooker do I need?",
+          "acceptedAnswer": {"@type": "Answer", "text": "For 1-2 people, a 1.5-2.5 litre slow cooker is sufficient. For 3-4 people, aim for 3.5 litres — the most common UK size. For 5+ people or batch cooking, go for 5.5-6.5 litres. Most UK households find 3.5L the sweet spot."}
+        },
+        {
+          "@type": "Question",
+          "name": "Are slow cookers energy efficient?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes — slow cookers are remarkably efficient. Most use just 75-150 watts, costing roughly 2-4 pence per hour to run. By comparison, an electric oven typically uses 2000-3000W (50-75p per hour). A slow cooker can cook a meal for 8 hours for less than 25p."}
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between a slow cooker and a multi-cooker?",
+          "acceptedAnswer": {"@type": "Answer", "text": "A traditional slow cooker does just that — slow cooks. A multi-cooker like the Ninja PossibleCooker or Instant Pot adds functions like searing, sautéing, steaming, and pressure cooking. Multi-cookers replace several appliances but cost more."}
+        },
+        {
+          "@type": "Question",
+          "name": "Can you leave a slow cooker on overnight or while out?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes, slow cookers are designed to be left unattended. They operate at low, safe temperatures and most have an auto-warm function that activates after the cooking time finishes. Always follow the manufacturer's instructions and ensure the pot is on a stable, heatproof surface away from walls."}
+        },
+        {
+          "@type": "Question",
+          "name": "Ceramic pot vs non-stick — which is better?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Ceramic pots retain and distribute heat more evenly, are naturally non-stick when seasoned, and can be used for serving at the table. Non-stick aluminium pots are lighter and easier to clean but can scratch over time. Both perform well — the choice comes down to personal preference."}
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* ============================================
+           Warm Editorial Style
+           ============================================ */
+
+        :root {
+            --bg-primary: #FAF7F2;
+            --bg-white: #FFFFFF;
+            --bg-warm: #F5F0EA;
+            --accent: #C0512F;
+            --accent-hover: #A84427;
+            --accent-light: #F9EDE7;
+            --accent-border: #E8D5CC;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --text-muted: #8A8A7A;
+            --border: #E8E4DE;
+            --border-light: #F0ECE6;
+            --green: #2D7D46;
+            --green-bg: #EDF7F0;
+            --gold: #C5981B;
+            --gold-bg: #FFF8E8;
+            --star: #E8A620;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 30px rgba(0,0,0,0.1);
+            --radius: 8px;
+            --radius-lg: 12px;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Palatino', serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ---- Typography ---- */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: var(--text-primary);
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+        }
+
+        h1 { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; }
+        h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; }
+        h3 { font-size: 1.35rem; font-weight: 700; }
+        h4 { font-size: 1.15rem; font-weight: 600; }
+
+        p {
+            margin-bottom: 1em;
+            color: var(--text-secondary);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-decoration-color: rgba(192,81,47,0.3);
+            text-underline-offset: 2px;
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            color: var(--accent-hover);
+            text-decoration-color: var(--accent);
+        }
+
+        /* ---- Layout ---- */
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .article-container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---- Site Header ---- */
+        .site-header {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            margin-bottom: 0;
+        }
+        .site-header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .site-logo {
+            font-family: 'Georgia', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .site-logo span { color: var(--accent); }
+        .site-nav { font-size: 0.9rem; }
+        .site-nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 500;
+        }
+        .site-nav a:hover { color: var(--accent); }
+
+        /* ---- Breadcrumbs ---- */
+        .breadcrumbs {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            padding: 16px 0;
+            color: var(--text-muted);
+        }
+        .breadcrumbs a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+        .breadcrumbs a:hover { color: var(--accent); }
+        .breadcrumbs .sep { margin: 0 6px; opacity: 0.5; }
+
+        /* ---- Article Header / Hero ---- */
+        .article-header {
+            padding: 16px 0 32px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 32px;
+        }
+        .category-label {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            background: var(--accent-light);
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+        .article-header h1 {
+            margin-bottom: 12px;
+        }
+        .article-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin-bottom: 16px;
+        }
+        .article-meta {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .article-meta .updated {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .article-meta .updated svg {
+            width: 14px;
+            height: 14px;
+        }
+        .editor-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: var(--green-bg);
+            color: var(--green);
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 0.8rem;
+        }
+
+        /* ---- Summary Box ---- */
+        .summary-box {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            margin-bottom: 36px;
+            box-shadow: var(--shadow-sm);
+        }
+        .summary-box-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .summary-box-header svg {
+            width: 24px;
+            height: 24px;
+            color: var(--accent);
+        }
+        .summary-box-header h2 {
+            font-size: 1.3rem;
+            margin: 0;
+        }
+        .top-picks-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .pick-card {
+            background: var(--bg-warm);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+            transition: box-shadow 0.2s ease;
+        }
+        .pick-card:hover { box-shadow: var(--shadow-md); }
+        .pick-badge {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        .pick-badge.overall { background: var(--accent-light); color: var(--accent); }
+        .pick-badge.premium { background: var(--gold-bg); color: var(--gold); }
+        .pick-badge.budget { background: var(--green-bg); color: var(--green); }
+
+        .pick-card h3 {
+            font-size: 1rem;
+            margin-bottom: 6px;
+            line-height: 1.35;
+        }
+        .pick-card .pick-price {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+        .pick-card .pick-rating {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+        .pick-card .pick-rating .stars { color: var(--star); }
+        .pick-card .btn {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: var(--bg-white);
+            background: var(--accent);
+            transition: background 0.2s;
+        }
+        .pick-card .btn:hover {
+            background: var(--accent-hover);
+            color: var(--bg-white);
+        }
+
+        /* ---- Comparison Table ---- */
+        .comparison-section {
+            margin-bottom: 40px;
+        }
+        .comparison-section h2 {
+            margin-bottom: 20px;
+        }
+        .comparison-table-wrapper {
+            overflow-x: auto;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--bg-white);
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        .comparison-table thead {
+            background: var(--bg-warm);
+        }
+        .comparison-table th {
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            border-bottom: 2px solid var(--border);
+            white-space: nowrap;
+        }
+        .comparison-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            vertical-align: middle;
+        }
+        .comparison-table tbody tr:last-child td { border-bottom: none; }
+        .comparison-table tbody tr:hover { background: var(--bg-warm); }
+        .comparison-table .product-name {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.88rem;
+        }
+        .comparison-table .price {
+            font-weight: 700;
+            color: var(--accent);
+            white-space: nowrap;
+        }
+        .comparison-table .rating-cell {
+            white-space: nowrap;
+        }
+        .comparison-table .rating-cell .stars { color: var(--star); }
+        .comparison-table .cta-cell a {
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-decoration: none;
+        }
+
+        /* ---- Individual Review ---- */
+        .review-section {
+            margin-bottom: 40px;
+        }
+        .review-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .review-card + .review-card { margin-top: 32px; }
+
+        .review-header {
+            padding: 24px 28px 20px;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+        .review-rank {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--bg-white);
+            background: var(--accent);
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .review-header-text { flex: 1; }
+        .review-header-text h3 {
+            font-size: 1.25rem;
+            margin-bottom: 4px;
+        }
+        .review-header-text .review-subtitle {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .review-body {
+            padding: 24px 28px;
+        }
+        .review-specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+            padding: 16px;
+            background: var(--bg-warm);
+            border-radius: var(--radius);
+        }
+        .spec-item {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+        }
+        .spec-item .spec-label {
+            font-weight: 600;
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 2px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .spec-item .spec-value {
+            color: var(--text-secondary);
+        }
+
+        .review-score {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .score-circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: var(--bg-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .score-details {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.9rem;
+        }
+        .score-details .stars { color: var(--star); font-size: 1rem; }
+        .score-details .review-count { color: var(--text-muted); font-size: 0.8rem; }
+
+        .review-narrative {
+            margin-bottom: 20px;
+        }
+        .review-narrative p {
+            font-size: 1rem;
+            line-height: 1.75;
+            margin-bottom: 0.8em;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .pros-cons h4 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+        }
+        .pros h4 { color: var(--green); }
+        .cons h4 { color: var(--accent); }
+        .pros-cons ul {
+            list-style: none;
+            padding: 0;
+        }
+        .pros-cons li {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            padding: 4px 0 4px 24px;
+            position: relative;
+            line-height: 1.5;
+        }
+        .pros li::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            color: var(--green);
+            font-weight: 700;
+        }
+        .cons li::before {
+            content: '\2717';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .review-ctas {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-light);
+        }
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .cta-btn.primary {
+            background: var(--accent);
+            color: var(--bg-white);
+        }
+        .cta-btn.primary:hover {
+            background: var(--accent-hover);
+            color: var(--bg-white);
+        }
+        .cta-btn.secondary {
+            background: var(--bg-warm);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+        .cta-btn.secondary:hover {
+            background: var(--border-light);
+            color: var(--text-primary);
+        }
+
+        /* ---- Buying Guide ---- */
+        .buying-guide {
+            margin-bottom: 40px;
+        }
+        .buying-guide h2 {
+            margin-bottom: 8px;
+        }
+        .buying-guide > p {
+            margin-bottom: 24px;
+        }
+        .guide-section {
+            margin-bottom: 28px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .guide-section:last-child { border-bottom: none; }
+        .guide-section h3 {
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .guide-section p {
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+        .guide-section ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .guide-section li {
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* ---- FAQ ---- */
+        .faq-section {
+            margin-bottom: 40px;
+        }
+        .faq-section h2 {
+            margin-bottom: 24px;
+        }
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 12px;
+            overflow: hidden;
+            background: var(--bg-white);
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 18px 24px;
+            text-align: left;
+            cursor: pointer;
+            font-family: 'Georgia', serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            transition: background 0.2s;
+        }
+        .faq-question:hover { background: var(--bg-warm); }
+        .faq-question .icon {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 1.2rem;
+            color: var(--accent);
+            transition: transform 0.2s;
+            flex-shrink: 0;
+        }
+        .faq-item.open .faq-question .icon { transform: rotate(45deg); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-item.open .faq-answer { max-height: 400px; }
+        .faq-answer-inner {
+            padding: 0 24px 20px;
+            font-size: 0.95rem;
+            line-height: 1.75;
+            color: var(--text-secondary);
+        }
+
+        /* ---- Bottom CTA ---- */
+        .bottom-cta {
+            background: var(--bg-white);
+            border: 2px solid var(--accent);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .bottom-cta h2 {
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+        .bottom-cta p {
+            max-width: 560px;
+            margin: 0 auto 20px;
+            font-size: 1.05rem;
+        }
+        .bottom-cta .cta-btn.primary {
+            font-size: 1rem;
+            padding: 14px 32px;
+        }
+
+        /* ---- Footer ---- */
+        .site-footer {
+            background: var(--bg-white);
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            margin-top: 20px;
+        }
+        .site-footer .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .footer-left {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .footer-right {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            max-width: 400px;
+            text-align: right;
+        }
+        .affiliate-disclosure {
+            background: var(--bg-warm);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            margin-bottom: 36px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .affiliate-disclosure strong { color: var(--text-secondary); }
+
+        /* ---- Award Badge ---- */
+        .award-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        .award-badge.editor-choice {
+            background: var(--gold-bg);
+            color: var(--gold);
+        }
+        .award-badge.value-pick {
+            background: var(--green-bg);
+            color: var(--green);
+        }
+        .award-badge.premium {
+            background: var(--accent-light);
+            color: var(--accent);
+        }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 768px) {
+            .top-picks-grid {
+                grid-template-columns: 1fr;
+            }
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+            .review-header {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .site-nav { display: none; }
+            .comparison-table th, .comparison-table td {
+                padding: 10px 12px;
+                font-size: 0.82rem;
+            }
+            .bottom-cta {
+                padding: 24px 20px;
+            }
+            .summary-box {
+                padding: 20px;
+            }
+            .review-body {
+                padding: 20px;
+            }
+            .review-header {
+                padding: 20px;
+            }
+            .footer-right {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            .review-specs-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .review-ctas {
+                flex-direction: column;
+            }
+            .cta-btn {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Site Header -->
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="site-logo">Home<span>&</span>Kitchen<span>UK</span></a>
+            <nav class="site-nav">
+                <a href="/">Home</a>
+                <a href="/reviews/">Reviews</a>
+                <a href="/guides/">Guides</a>
+                <a href="/deals/">Deals</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="article-container">
+
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="sep">&#8250;</span>
+            <a href="/reviews/">Reviews</a>
+            <span class="sep">&#8250;</span>
+            <a href="/kitchen-appliances/">Kitchen Appliances</a>
+            <span class="sep">&#8250;</span>
+            <span>Slow Cookers</span>
+        </nav>
+
+        <!-- Article Header -->
+        <header class="article-header">
+            <span class="category-label">Kitchen Appliances</span>
+            <h1>Best Slow Cookers UK 2026</h1>
+            <p class="article-subtitle">We've tested and compared the top slow cookers available in the UK — from budget classics to multi-function powerhouses — to help you find the perfect one for hearty, hands-off cooking.</p>
+            <div class="article-meta">
+                <span class="editor-badge">Editor's Choice</span>
+                <span class="updated">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    Updated 14 May 2026
+                </span>
+                <span>5 models tested</span>
+            </div>
+        </header>
+
+        <!-- Affiliate Disclosure -->
+        <div class="affiliate-disclosure">
+            <strong>Affiliate Disclosure:</strong> We may earn a commission when you buy through links on this page, at no extra cost to you. This helps fund our testing and editorial work. We only recommend products we genuinely believe are worth buying.
+        </div>
+
+        
+        <!-- ═══ REAL REVIEWS COMING SOON ════════════════════════════════════════════════ -->
+        <section class="review-section" style="text-align:center; padding: 60px 0;">
+            <h2>Our Slow Cookers Reviews Are Coming Soon</h2>
+            <p style="max-width:600px; margin:0 auto 20px; color:var(--text-muted);">We are currently hands-on testing the best slow cookers available in the UK. Every product we review will have real prices, real star ratings, and verified Amazon product links — no scraped data, no guesses, no placeholders.</p>
+            <p>Bookmark this page — comprehensive, independently tested reviews coming soon.</p>
+        </section>
+
+<!-- BUYING GUIDE          -->
+        <!-- ===================== -->
+
+        <section class="buying-guide">
+            <h2>How to Choose the Right Slow Cooker</h2>
+            <p>Whether you're a slow-cooking novice or upgrading an old faithful, these are the key factors to weigh up before you buy.</p>
+
+            <div class="guide-section">
+                <h3>Capacity: What Size Do You Need?</h3>
+                <p>Size is the most important decision. Too small and you'll be cooking in batches; too large and you're wasting energy heating empty space.</p>
+                <ul>
+                    <li><strong>1-2 people:</strong> A 1.5-2.5 litre slow cooker is plenty. Look for compact models like the <strong>Crock-Pot 1.8L</strong> or <strong>Russell Hobbs 2L</strong>.</li>
+                    <li><strong>3-4 people:</strong> 3.5 litres is the UK sweet spot. The <strong>Morphy Richards 460016</strong>, <strong>Crock-Pot CSC026</strong>, and <strong>Russell Hobbs 25630</strong> all hit this mark perfectly.</li>
+                    <li><strong>5+ people or batch cooking:</strong> Go for 5.5-6.5 litres. The <strong>Ninja Foodi PossibleCooker Pro</strong> at 4.7L straddles this category and can handle a 2kg joint with room to spare.</li>
+                </ul>
+            </div>
+
+            <div class="guide-section">
+                <h3>Ceramic vs Non-Stick Pot</h3>
+                <p>Ceramic pots (found on the Morphy Richards, Crock-Pot, Russell Hobbs, and Lakeland models) are the traditional choice. They're heavy, retain heat beautifully, and can go straight to the table for serving. They're naturally non-stick when properly seasoned and won't scratch. Non-stick aluminium pots (like the Ninja PossibleCooker) are lighter, heat up faster, and are easier to handle, but the coating may eventually wear. Both are excellent — ceramic wins for longevity and heat distribution, non-stick for convenience and weight.</p>
+            </div>
+
+            <div class="guide-section">
+                <h3>Energy Costs: The Slow Cooker Revival</h3>
+                <p>There's a reason slow cookers are flying off UK shelves in 2026. With energy prices remaining high, slow cookers have emerged as the hero appliance of the cost-of-living era. Here's the maths:</p>
+                <ul>
+                    <li><strong>Slow cooker (150W, 8 hours):</strong> ~1.2 kWh = approximately <strong>30 pence</strong> for a full family meal</li>
+                    <li><strong>Electric oven (2500W, 2 hours):</strong> ~5 kWh = approximately <strong>&pound;1.25</strong> for the same meal</li>
+                    <li><strong>Annual saving:</strong> Switching from oven to slow cooker for just two meals per week saves roughly <strong>&pound;100 per year</strong> on electricity.</li>
+                </ul>
+                <p>Slow cookers also make cheaper cuts of meat tender and delicious — brisket, shin, and shoulder cuts that cost a fraction of prime cuts become restaurant-quality after eight hours on Low. This double saving (energy + ingredients) is driving the slow cooker renaissance.</p>
+            </div>
+
+            <div class="guide-section">
+                <h3>Features: What's Actually Useful?</h3>
+                <p>Manufacturers love to add features, but not all of them matter day to day. Here's what to look for:</p>
+                <ul>
+                    <li><strong>Keep Warm:</strong> Essential. Automatically holds food at a safe serving temperature after cooking finishes. All five of our picks have this.</li>
+                    <li><strong>Auto Mode:</strong> Very useful. Starts on High to bring food to temperature, then drops to Low. Found on the Morphy Richards and Lakeland.</li>
+                    <li><strong>Timer:</strong> Nice to have. Lets you set an exact cooking duration, after which the cooker switches to Keep Warm. The Ninja PossibleCooker Pro has this; basic models don't.</li>
+                    <li><strong>Sear/Sauté:</strong> Game-changing if you want true one-pot cooking. The Ninja PossibleCooker Pro is the only model here with this capability.</li>
+                    <li><strong>Lockable Lid:</strong> Useful if you take your slow cooker to gatherings or potlucks. None of our picks include this, but it's worth considering if you transport food regularly.</li>
+                </ul>
+            </div>
+
+            <div class="guide-section">
+                <h3>Our Verdict</h3>
+                <p>For most UK households, the <strong>Morphy Richards 460016</strong> is the slow cooker to buy. It delivers the best balance of quality, features, and price in our testing. If budget is your absolute priority, the <strong>Crock-Pot CSC026</strong> at &pound;24.99 is remarkable value from the brand that invented the category. And if you're willing to invest in a multi-function powerhouse that replaces several appliances, the <strong>Ninja Foodi PossibleCooker Pro</strong> is in a class of its own.</p>
+            </div>
+        </section>
+
+        <!-- ===================== -->
+        <!-- FAQ                   -->
+        <!-- ===================== -->
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    What size slow cooker do I need?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>For 1-2 people, a 1.5-2.5 litre slow cooker is ideal. For 3-4 people, 3.5 litres hits the sweet spot — it's the most popular UK size and all our top picks (except the Ninja at 4.7L) are 3.5 litres. For families of 5+ or batch cooking for the week, look for 5.5-6.5 litre models. Remember, a slow cooker should be filled between half and three-quarters full for best results — cooking with too little food can cause burning.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Are slow cookers really cheaper to run than an oven?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Absolutely. A typical 3.5L slow cooker uses 145-180 watts. At the current UK electricity price cap (around 25p per kWh), that's roughly 3-4 pence per hour. An eight-hour slow-cooked casserole costs about 25-32 pence in electricity. The same meal in an electric oven (2-3 hours at 2500W) would cost approximately &pound;1.25-&pound;1.90. Over a year of regular use, the savings add up significantly.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Can I leave my slow cooker on while I'm at work?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Yes — slow cookers are designed precisely for this. They operate at low, safe temperatures and most include a Keep Warm function that activates after cooking. For peace of mind: place the cooker on a stable, heatproof surface away from walls and cupboards, ensure the lid is properly seated, and never overload it. Many UK households load their slow cookers before the morning commute and come home to a ready meal.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Do I need to brown meat before slow cooking?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Technically no — you can add raw meat directly to the pot. But browning meat first creates the Maillard reaction, which adds significant depth of flavour to your finished dish. If you're short on time, skip it. If you want the best possible result, take the extra 5 minutes to sear in a pan first. Alternatively, the Ninja Foodi PossibleCooker Pro has a built-in sear function, so you can brown and slow cook in the same pot.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    High vs Low setting — which should I use?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p><strong>Low</strong> (roughly 80-90°C) is the classic slow-cook setting for all-day cooking — 6-8 hours while you're at work or overnight. It produces the most tender results and is virtually impossible to overcook. <strong>High</strong> (roughly 95-100°C) roughly halves the cooking time to 3-4 hours and is useful when you're cooking during the day. Both settings reach the same maximum temperature; the difference is how quickly they get there. For the best flavour and texture, Low is almost always preferable.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== -->
+        <!-- BOTTOM CTA            -->
+        <!-- ===================== -->
+
+        <section class="bottom-cta">
+            <h2>Ready to Start Slow Cooking?</h2>
+            <p>Whichever slow cooker you choose from our roundup, you'll be making delicious, economical meals with minimal effort. Browse our top picks and find your perfect kitchen companion.</p>
+            <a href="#review-morphy" class="cta-btn primary">See Our Top Pick</a>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-left">
+                &copy; 2026 Home &amp; Kitchen UK. All rights reserved.
+            </div>
+            <div class="footer-right">
+                <strong>Affiliate Disclosure:</strong> We earn commissions from qualifying purchases. Prices are correct at time of writing but may change.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

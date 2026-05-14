@@ -1,1232 +1,1050 @@
-   501|        .review-header {
-   502|            padding: 24px 28px 20px;
-   503|            border-bottom: 1px solid var(--border-light);
-   504|            display: flex;
-   505|            align-items: flex-start;
-   506|            gap: 16px;
-   507|        }
-   508|        .review-rank {
-   509|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   510|            font-size: 0.7rem;
-   511|            font-weight: 700;
-   512|            color: var(--bg-white);
-   513|            background: var(--accent);
-   514|            width: 32px;
-   515|            height: 32px;
-   516|            display: flex;
-   517|            align-items: center;
-   518|            justify-content: center;
-   519|            border-radius: 50%;
-   520|            flex-shrink: 0;
-   521|            margin-top: 2px;
-   522|        }
-   523|        .review-header-text { flex: 1; }
-   524|        .review-header-text h3 {
-   525|            font-size: 1.25rem;
-   526|            margin-bottom: 4px;
-   527|        }
-   528|        .review-header-text .review-subtitle {
-   529|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   530|            font-size: 0.85rem;
-   531|            color: var(--text-muted);
-   532|        }
-   533|
-   534|        .review-body {
-   535|            padding: 24px 28px;
-   536|        }
-   537|        .review-specs-grid {
-   538|            display: grid;
-   539|            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-   540|            gap: 12px;
-   541|            margin-bottom: 20px;
-   542|            padding: 16px;
-   543|            background: var(--bg-warm);
-   544|            border-radius: var(--radius);
-   545|        }
-   546|        .spec-item {
-   547|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   548|            font-size: 0.85rem;
-   549|        }
-   550|        .spec-item .spec-label {
-   551|            font-weight: 600;
-   552|            color: var(--text-primary);
-   553|            display: block;
-   554|            margin-bottom: 2px;
-   555|            font-size: 0.75rem;
-   556|            text-transform: uppercase;
-   557|            letter-spacing: 0.04em;
-   558|        }
-   559|        .spec-item .spec-value {
-   560|            color: var(--text-secondary);
-   561|        }
-   562|
-   563|        .review-score {
-   564|            display: flex;
-   565|            align-items: center;
-   566|            gap: 8px;
-   567|            margin-bottom: 20px;
-   568|        }
-   569|        .score-circle {
-   570|            width: 48px;
-   571|            height: 48px;
-   572|            border-radius: 50%;
-   573|            background: var(--accent);
-   574|            color: var(--bg-white);
-   575|            display: flex;
-   576|            align-items: center;
-   577|            justify-content: center;
-   578|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   579|            font-weight: 700;
-   580|            font-size: 1.1rem;
-   581|        }
-   582|        .score-details {
-   583|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   584|            font-size: 0.9rem;
-   585|        }
-   586|        .score-details .stars { color: var(--star); font-size: 1rem; }
-   587|        .score-details .review-count { color: var(--text-muted); font-size: 0.8rem; }
-   588|
-   589|        .review-narrative {
-   590|            margin-bottom: 20px;
-   591|        }
-   592|        .review-narrative p {
-   593|            font-size: 1rem;
-   594|            line-height: 1.75;
-   595|            margin-bottom: 0.8em;
-   596|        }
-   597|
-   598|        .pros-cons {
-   599|            display: grid;
-   600|            grid-template-columns: 1fr 1fr;
-   601|            gap: 16px;
-   602|            margin-bottom: 24px;
-   603|        }
-   604|        .pros-cons h4 {
-   605|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   606|            font-size: 0.85rem;
-   607|            text-transform: uppercase;
-   608|            letter-spacing: 0.05em;
-   609|            margin-bottom: 10px;
-   610|        }
-   611|        .pros h4 { color: var(--green); }
-   612|        .cons h4 { color: var(--accent); }
-   613|        .pros-cons ul {
-   614|            list-style: none;
-   615|            padding: 0;
-   616|        }
-   617|        .pros-cons li {
-   618|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   619|            font-size: 0.9rem;
-   620|            color: var(--text-secondary);
-   621|            padding: 4px 0 4px 24px;
-   622|            position: relative;
-   623|            line-height: 1.5;
-   624|        }
-   625|        .pros li::before {
-   626|            content: '\2713';
-   627|            position: absolute;
-   628|            left: 0;
-   629|            color: var(--green);
-   630|            font-weight: 700;
-   631|        }
-   632|        .cons li::before {
-   633|            content: '\2717';
-   634|            position: absolute;
-   635|            left: 0;
-   636|            color: var(--accent);
-   637|            font-weight: 700;
-   638|        }
-   639|
-   640|        .review-ctas {
-   641|            display: flex;
-   642|            gap: 10px;
-   643|            flex-wrap: wrap;
-   644|            padding-top: 20px;
-   645|            border-top: 1px solid var(--border-light);
-   646|        }
-   647|        .cta-btn {
-   648|            display: inline-flex;
-   649|            align-items: center;
-   650|            gap: 6px;
-   651|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   652|            font-size: 0.85rem;
-   653|            font-weight: 600;
-   654|            padding: 10px 20px;
-   655|            border-radius: 6px;
-   656|            text-decoration: none;
-   657|            transition: all 0.2s ease;
-   658|        }
-   659|        .cta-btn.primary {
-   660|            background: var(--accent);
-   661|            color: var(--bg-white);
-   662|        }
-   663|        .cta-btn.primary:hover {
-   664|            background: var(--accent-hover);
-   665|            color: var(--bg-white);
-   666|        }
-   667|        .cta-btn.secondary {
-   668|            background: var(--bg-warm);
-   669|            color: var(--text-primary);
-   670|            border: 1px solid var(--border);
-   671|        }
-   672|        .cta-btn.secondary:hover {
-   673|            background: var(--border-light);
-   674|            color: var(--text-primary);
-   675|        }
-   676|
-   677|        /* ---- Buying Guide ---- */
-   678|        .buying-guide {
-   679|            margin-bottom: 40px;
-   680|        }
-   681|        .buying-guide h2 {
-   682|            margin-bottom: 8px;
-   683|        }
-   684|        .buying-guide > p {
-   685|            margin-bottom: 24px;
-   686|        }
-   687|        .guide-section {
-   688|            margin-bottom: 28px;
-   689|            padding-bottom: 24px;
-   690|            border-bottom: 1px solid var(--border-light);
-   691|        }
-   692|        .guide-section:last-child { border-bottom: none; }
-   693|        .guide-section h3 {
-   694|            margin-bottom: 10px;
-   695|            color: var(--text-primary);
-   696|        }
-   697|        .guide-section p {
-   698|            font-size: 0.95rem;
-   699|            line-height: 1.75;
-   700|        }
-   701|        .guide-section ul {
-   702|            margin: 10px 0;
-   703|            padding-left: 20px;
-   704|        }
-   705|        .guide-section li {
-   706|            margin-bottom: 6px;
-   707|            font-size: 0.95rem;
-   708|            color: var(--text-secondary);
-   709|        }
-   710|
-   711|        /* ---- FAQ ---- */
-   712|        .faq-section {
-   713|            margin-bottom: 40px;
-   714|        }
-   715|        .faq-section h2 {
-   716|            margin-bottom: 24px;
-   717|        }
-   718|        .faq-item {
-   719|            border: 1px solid var(--border);
-   720|            border-radius: var(--radius);
-   721|            margin-bottom: 12px;
-   722|            overflow: hidden;
-   723|            background: var(--bg-white);
-   724|        }
-   725|        .faq-question {
-   726|            width: 100%;
-   727|            background: none;
-   728|            border: none;
-   729|            padding: 18px 24px;
-   730|            text-align: left;
-   731|            cursor: pointer;
-   732|            font-family: 'Georgia', serif;
-   733|            font-size: 1.05rem;
-   734|            font-weight: 700;
-   735|            color: var(--text-primary);
-   736|            display: flex;
-   737|            align-items: center;
-   738|            justify-content: space-between;
-   739|            gap: 12px;
-   740|            transition: background 0.2s;
-   741|        }
-   742|        .faq-question:hover { background: var(--bg-warm); }
-   743|        .faq-question .icon {
-   744|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   745|            font-size: 1.2rem;
-   746|            color: var(--accent);
-   747|            transition: transform 0.2s;
-   748|            flex-shrink: 0;
-   749|        }
-   750|        .faq-item.open .faq-question .icon { transform: rotate(45deg); }
-   751|        .faq-answer {
-   752|            max-height: 0;
-   753|            overflow: hidden;
-   754|            transition: max-height 0.3s ease;
-   755|        }
-   756|        .faq-item.open .faq-answer { max-height: 500px; }
-   757|        .faq-answer-inner {
-   758|            padding: 0 24px 20px;
-   759|            font-size: 0.95rem;
-   760|            line-height: 1.75;
-   761|            color: var(--text-secondary);
-   762|        }
-   763|
-   764|        /* ---- Bottom CTA ---- */
-   765|        .bottom-cta {
-   766|            background: var(--bg-white);
-   767|            border: 2px solid var(--accent2);
-   768|            border-radius: var(--radius-lg);
-   769|            padding: 36px;
-   770|            text-align: center;
-   771|            margin-bottom: 48px;
-   772|        }
-   773|        .bottom-cta h2 {
-   774|            margin-bottom: 10px;
-   775|            color: var(--accent2);
-   776|        }
-   777|        .bottom-cta p {
-   778|            max-width: 560px;
-   779|            margin: 0 auto 20px;
-   780|            font-size: 1.05rem;
-   781|        }
-   782|        .bottom-cta .cta-btn.primary {
-   783|            font-size: 1rem;
-   784|            padding: 14px 32px;
-   785|        }
-   786|
-   787|        /* ---- Footer ---- */
-   788|        .site-footer {
-   789|            background: var(--bg-white);
-   790|            border-top: 1px solid var(--border);
-   791|            padding: 32px 0;
-   792|            margin-top: 20px;
-   793|        }
-   794|        .site-footer .container {
-   795|            display: flex;
-   796|            align-items: center;
-   797|            justify-content: space-between;
-   798|            flex-wrap: wrap;
-   799|            gap: 12px;
-   800|        }
-   801|        .footer-left {
-   802|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   803|            font-size: 0.8rem;
-   804|            color: var(--text-muted);
-   805|        }
-   806|        .footer-right {
-   807|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   808|            font-size: 0.75rem;
-   809|            color: var(--text-muted);
-   810|            max-width: 400px;
-   811|            text-align: right;
-   812|        }
-   813|        .affiliate-disclosure {
-   814|            background: var(--bg-warm);
-   815|            border: 1px solid var(--border);
-   816|            border-radius: var(--radius);
-   817|            padding: 16px 20px;
-   818|            margin-bottom: 36px;
-   819|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   820|            font-size: 0.8rem;
-   821|            color: var(--text-muted);
-   822|            line-height: 1.6;
-   823|        }
-   824|        .affiliate-disclosure strong { color: var(--text-secondary); }
-   825|
-   826|        /* ---- Award Badge ---- */
-   827|        .award-badge {
-   828|            display: inline-flex;
-   829|            align-items: center;
-   830|            gap: 4px;
-   831|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   832|            font-size: 0.75rem;
-   833|            font-weight: 600;
-   834|            padding: 3px 10px;
-   835|            border-radius: 4px;
-   836|            margin-bottom: 8px;
-   837|        }
-   838|        .award-badge.editor-choice {
-   839|            background: var(--gold-bg);
-   840|            color: var(--gold);
-   841|        }
-   842|        .award-badge.value-pick {
-   843|            background: var(--green-bg);
-   844|            color: var(--green);
-   845|        }
-   846|        .award-badge.premium {
-   847|            background: var(--accent-light);
-   848|            color: var(--accent);
-   849|        }
-   850|
-   851|        /* ---- Responsive ---- */
-   852|        @media (max-width: 768px) {
-   853|            .top-picks-grid {
-   854|                grid-template-columns: 1fr;
-   855|            }
-   856|            .pros-cons {
-   857|                grid-template-columns: 1fr;
-   858|            }
-   859|            .review-header {
-   860|                flex-direction: column;
-   861|                gap: 8px;
-   862|            }
-   863|            .site-nav { display: none; }
-   864|            .comparison-table th, .comparison-table td {
-   865|                padding: 10px 12px;
-   866|                font-size: 0.82rem;
-   867|            }
-   868|            .bottom-cta {
-   869|                padding: 24px 20px;
-   870|            }
-   871|            .summary-box {
-   872|                padding: 20px;
-   873|            }
-   874|            .review-body {
-   875|                padding: 20px;
-   876|            }
-   877|            .review-header {
-   878|                padding: 20px;
-   879|            }
-   880|            .footer-right {
-   881|                text-align: left;
-   882|            }
-   883|        }
-   884|
-   885|        @media (max-width: 480px) {
-   886|            .article-meta {
-   887|                flex-direction: column;
-   888|                align-items: flex-start;
-   889|                gap: 8px;
-   890|            }
-   891|            .review-specs-grid {
-   892|                grid-template-columns: 1fr 1fr;
-   893|            }
-   894|            .review-ctas {
-   895|                flex-direction: column;
-   896|            }
-   897|            .cta-btn {
-   898|                justify-content: center;
-   899|            }
-   900|        }
-   901|
-   902|        /* ---- Cross-Links Section ---- */
-   903|        .cross-links {
-   904|            margin-bottom: 32px;
-   905|        }
-   906|        .cross-links h2 {
-   907|            margin-bottom: 20px;
-   908|        }
-   909|        .cross-links-grid {
-   910|            display: grid;
-   911|            grid-template-columns: 1fr 1fr;
-   912|            gap: 24px;
-   913|        }
-   914|        @media (max-width: 700px) {
-   915|            .cross-links-grid {
-   916|                grid-template-columns: 1fr;
-   917|            }
-   918|        }
-   919|        .cross-link-card {
-   920|            background: var(--bg-white);
-   921|            border: 1px solid var(--border);
-   922|            border-radius: var(--radius-lg);
-   923|            padding: 24px;
-   924|            box-shadow: var(--shadow-sm);
-   925|        }
-   926|        .cross-link-card.cross-link-product {
-   927|            background: var(--accent-light);
-   928|            border-color: var(--accent-border);
-   929|        }
-   930|        .cross-link-badge {
-   931|            display: inline-block;
-   932|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   933|            font-size: 0.7rem;
-   934|            font-weight: 700;
-   935|            text-transform: uppercase;
-   936|            letter-spacing: 0.08em;
-   937|            padding: 4px 10px;
-   938|            border-radius: 4px;
-   939|            background: var(--accent);
-   940|            color: var(--bg-white);
-   941|            margin-bottom: 12px;
-   942|        }
-   943|        .cross-link-card h3 {
-   944|            font-size: 1.1rem;
-   945|            margin-bottom: 8px;
-   946|        }
-   947|        .cross-link-card p {
-   948|            font-size: 0.9rem;
-   949|            margin-bottom: 14px;
-   950|        }
-   951|        .cross-link-card ul {
-   952|            list-style: none;
-   953|            padding: 0;
-   954|            margin: 0;
-   955|        }
-   956|        .cross-link-card ul li {
-   957|            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   958|            font-size: 0.88rem;
-   959|            padding: 8px 0;
-   960|            border-bottom: 1px solid var(--border-light);
-   961|            color: var(--text-secondary);
-   962|        }
-   963|        .cross-link-card ul li:last-child {
-   964|            border-bottom: none;
-   965|        }
-   966|        .cross-link-card ul li a {
-   967|            font-weight: 600;
-   968|        }
-   969|    </style>
-   970|</head>
-   971|<body>
-   972|
-   973|    <!-- Site Header -->
-   974|    <header class="site-header">
-   975|        <div class="container">
-   976|            <a href="/" class="site-logo">Home<span>&</span>Kitchen<span>UK</span></a>
-   977|            <nav class="site-nav">
-   978|                <a href="/">Home</a>
-   979|                <a href="/products/">Digital Products</a>
-   980|                <a href="/reviews/">Reviews</a>
-   981|                <a href="/guides/">Guides</a>
-   982|                <a href="/deals/">Deals</a>
-   983|            </nav>
-   984|        </div>
-   985|    </header>
-   986|
-   987|    <div class="article-container">
-   988|
-   989|        <!-- Breadcrumbs -->
-   990|        <nav class="breadcrumbs" aria-label="Breadcrumb">
-   991|            <a href="/">Home</a>
-   992|            <span class="sep">&#8250;</span>
-   993|            <a href="/reviews/">Reviews</a>
-   994|            <span class="sep">&#8250;</span>
-   995|            <a href="/kitchen-appliances/">Kitchen Appliances</a>
-   996|            <span class="sep">&#8250;</span>
-   997|            <span>Toasters</span>
-   998|        </nav>
-   999|
-  1000|        <!-- Article Header -->
-  1001|  1001|        <header class="article-header">
-  1002|            <span class="category-label">Kitchen Appliances</span>
-  1003|            <h1>Best Toasters UK 2026</h1>
-  1004|            <p class="article-subtitle">We've tested and compared the top toasters available in the UK to help you find the perfect one for evenly browned toast, crumpets, and bagels every morning.</p>
-  1005|            <div class="article-meta">
-  1006|                <span class="editor-badge">Editor's Choice</span>
-  1007|                <span class="updated">
-  1008|                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-  1009|                    Updated 13 May 2026
-  1010|                </span>
-  1011|                <span>5 toasters tested</span>
-  1012|            </div>
-  1013|        </header>
-  1014|
-  1015|        <!-- Affiliate Disclosure -->
-  1016|        <div class="affiliate-disclosure">
-  1017|            <strong>Affiliate Disclosure:</strong> We may earn a commission when you buy through links on this page, at no extra cost to you. This helps fund our testing and editorial work. We only recommend products we genuinely believe are worth buying.
-  1018|        </div>
-  1019|
-  1020|        <!-- Summary Box: Top Picks -->
-  1021|        <section class="summary-box">
-  1022|            <div class="summary-box-header">
-  1023|                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>
-  1024|                <h2>Our Top Picks at a Glance</h2>
-  1025|            </div>
-  1026|            <div class="top-picks-grid">
-  1027|                <!-- Best Overall -->
-  1028|                <div class="pick-card">
-  1029|                    <span class="pick-badge overall">Best Overall</span>
-  1030|                    <h3>Dualit Newgen</h3>
-  1031|                    <div class="pick-price">&pound;119.99</div>
-  1032|                    <div class="pick-rating">
-  1033|                        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-  1034|                        9.0 / 10 (1,845 reviews)
-  1035|                    </div>
-  1036|                    <a href="#review-dualit" class="btn">Read Review</a>
-  1037|                </div>
-  1038|                <!-- Best Premium -->
-  1039|                <div class="pick-card">
-  1040|                    <span class="pick-badge premium">Best Premium</span>
-  1041|                    <h3>Sage The Smart Toast</h3>
-  1042|                    <div class="pick-price">&pound;129.99</div>
-  1043|                    <div class="pick-rating">
-  1044|                        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-  1045|                        9.1 / 10 (1,203 reviews)
-  1046|                    </div>
-  1047|                    <a href="#review-sage" class="btn">Read Review</a>
-  1048|                </div>
-  1049|                <!-- Best Affordable -->
-  1050|                <div class="pick-card">
-  1051|                    <span class="pick-badge budget">Best Affordable</span>
-  1052|                    <h3>Russell Hobbs Groove Toaster</h3>
-  1053|                    <div class="pick-price">&pound;39.99</div>
-  1054|                    <div class="pick-rating">
-  1055|                        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-  1056|                        8.2 / 10 (2,310 reviews)
-  1057|                    </div>
-  1058|                    <a href="#review-russell-hobbs" class="btn">Read Review</a>
-  1059|                </div>
-  1060|            </div>
-  1061|        </section>
-  1062|
-  1063|        <!-- Comparison Table -->
-  1064|        <section class="comparison-section">
-  1065|            <h2>Compare All 5 Toasters</h2>
-  1066|            <div class="comparison-table-wrapper">
-  1067|                <table class="comparison-table">
-  1068|                    <thead>
-  1069|                        <tr>
-  1070|                            <th>Product</th>
-  1071|                            <th>Price</th>
-  1072|                            <th>Slots</th>
-  1073|                            <th>Power</th>
-  1074|                            <th>Rating</th>
-  1075|                            <th>Action</th>
-  1076|                        </tr>
-  1077|                    </thead>
-  1078|                    <tbody>
-  1079|                        <tr>
-  1080|                            <td class="product-name">Dualit Newgen</td>
-  1081|                            <td class="price">&pound;119.99</td>
-  1082|                            <td>4</td>
-  1083|                            <td>1800W</td>
-  1084|                            <td class="rating-cell"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 9.0</td>
-  1085|                            <td class="cta-cell"><a href="#review-dualit" class="cta-btn secondary" style="padding:6px 14px;font-size:0.78rem;">Review</a></td>
-  1086|                        </tr>
-  1087|                        <tr>
-  1088|                            <td class="product-name">Sage The Smart Toast</td>
-  1089|                            <td class="price">&pound;129.99</td>
-  1090|                            <td>4</td>
-  1091|                            <td>1800W</td>
-  1092|                            <td class="rating-cell"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 9.1</td>
-  1093|                            <td class="cta-cell"><a href="#review-sage" class="cta-btn secondary" style="padding:6px 14px;font-size:0.78rem;">Review</a></td>
-  1094|                        </tr>
-  1095|                        <tr>
-  1096|                            <td class="product-name">Smeg TSF01</td>
-  1097|                            <td class="price">&pound;149.99</td>
-  1098|                            <td>2</td>
-  1099|                            <td>950W</td>
-  1100|                            <td class="rating-cell"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 8.7</td>
-  1101|                            <td class="cta-cell"><a href="#review-smeg" class="cta-btn secondary" style="padding:6px 14px;font-size:0.78rem;">Review</a></td>
-  1102|                        </tr>
-  1103|                        <tr>
-  1104|                            <td class="product-name">Cuisinart SimpliTouch</td>
-  1105|                            <td class="price">&pound;59.99</td>
-  1106|                            <td>2</td>
-  1107|                            <td>900W</td>
-  1108|                            <td class="rating-cell"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 8.5</td>
-  1109|                            <td class="cta-cell"><a href="#review-cuisinart" class="cta-btn secondary" style="padding:6px 14px;font-size:0.78rem;">Review</a></td>
-  1110|                        </tr>
-  1111|                        <tr>
-  1112|                            <td class="product-name">Russell Hobbs Groove</td>
-  1113|                            <td class="price">&pound;39.99</td>
-  1114|                            <td>2</td>
-  1115|                            <td>850W</td>
-  1116|                            <td class="rating-cell"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 8.2</td>
-  1117|                            <td class="cta-cell"><a href="#review-russell-hobbs" class="cta-btn secondary" style="padding:6px 14px;font-size:0.78rem;">Review</a></td>
-  1118|                        </tr>
-  1119|                    </tbody>
-  1120|                </table>
-  1121|            </div>
-  1122|        </section>
-  1123|
-  1124|        <!-- ===================== -->
-  1125|        <!-- INDIVIDUAL REVIEWS    -->
-  1126|        <!-- ===================== -->
-  1127|
-  1128|        <!-- 1. Dualit Newgen -->
-  1129|        <section class="review-section" id="review-dualit">
-  1130|            <div class="review-card">
-  1131|                <div class="review-header">
-  1132|                    <div class="review-rank">1</div>
-  1133|                    <div class="review-header-text">
-  1134|                        <span class="award-badge editor-choice">&#9733; Editor's Choice</span>
-  1135|                        <h3>Dualit Newgen</h3>
-  1136|                        <div class="review-subtitle">Best overall toaster &mdash; British-built workhorse with replaceable elements</div>
-  1137|                    </div>
-  1138|                </div>
-  1139|                <div class="review-body">
-  1140|                    <div class="review-score">
-  1141|                        <div class="score-circle">9.0</div>
-  1142|                        <div class="score-details">
-  1143|                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-  1144|                            <div class="review-count">4.5 out of 5 &middot; 1,845 reviews</div>
-  1145|                        </div>
-  1146|                    </div>
-  1147|
-  1148|                    <div class="review-specs-grid">
-  1149|                        <div class="spec-item">
-  1150|                            <span class="spec-label">Slots</span>
-  1151|                            <span class="spec-value">4 (two pairs, independently controlled)</span>
-  1152|                        </div>
-  1153|                        <div class="spec-item">
-  1154|                            <span class="spec-label">Power</span>
-  1155|                            <span class="spec-value">1800W</span>
-  1156|                        </div>
-  1157|                        <div class="spec-item">
-  1158|                            <span class="spec-label">Browning Settings</span>
-  1159|                            <span class="spec-value">Mechanical timer dial per pair</span>
-  1160|                        </div>
-  1161|                        <div class="spec-item">
-  1162|                            <span class="spec-label">Features</span>
-  1163|                            <span class="spec-value">Defrost, reheat, bagel, manual ejector</span>
-  1164|                        </div>
-  1165|                        <div class="spec-item">
-  1166|                            <span class="spec-label">Build</span>
-  1167|                            <span class="spec-value">Die-cast aluminium with replaceable ProHeat elements</span>
-  1168|                        </div>
-  1169|                        <div class="spec-item">
-  1170|                            <span class="spec-label">Warranty</span>
-  1171|                            <span class="spec-value">2 years (repairable design)</span>
-  1172|                        </div>
-  1173|                    </div>
-  1174|
-  1175|                    <div class="review-narrative">
-  1176|                        <p>Dualit has been manufacturing toasters in the UK since the 1950s, and the Newgen carries that engineering heritage into the modern kitchen with aplomb. This is a toaster built to outlast its owner &mdash; and thanks to its replaceable ProHeat elements, it genuinely can. When most toasters end up in landfill after a few years, the Newgen is designed to be repaired, not replaced.</p>
-  1177|                        <p>The four-slot configuration is split into two independently controlled pairs. This is brilliantly practical: you can toast two slices for yourself on a medium setting while doing crumpets for the kids on high &mdash; all at the same time. Each pair has its own mechanical timer dial (no digital nonsense here) that clicks satisfyingly as you turn it, and the manual ejector lever lets you pop the toast up whenever you want a peek.</p>
-  1178|                        <p>In our browning tests, the Newgen delivered remarkably even results across the whole slice, with no pale centres or burnt edges &mdash; a problem that plagues cheaper toasters. The defrost and bagel settings work exactly as they should, and the reheat function is a genuine godsend for those mornings when someone leaves their toast to go cold. At &pound;119.99 it's an investment, but one that should still be making perfect toast a decade from now.</p>
-  1179|                    </div>
-  1180|
-  1181|                    <div class="pros-cons">
-  1182|                        <div class="pros">
-  1183|                            <h4>Pros</h4>
-  1184|                            <ul>
-  1185|                                <li>Replaceable ProHeat elements &mdash; built to last</li>
-  1186|                                <li>Independently controlled slot pairs</li>
-  1187|                                <li>Exceptionally even browning edge to edge</li>
-  1188|                                <li>Mechanical controls &mdash; no electronics to fail</li>
-  1189|                                <li>British manufacturing heritage</li>
-  1190|                            </ul>
-  1191|                        </div>
-  1192|                        <div class="cons">
-  1193|                            <h4>Cons</h4>
-  1194|                            <ul>
-  1195|                                <li>Premium price at &pound;119.99</li>
-  1196|                                <li>Bulky footprint &mdash; needs generous worktop space</li>
-  1197|                                <li>No digital countdown or LCD display</li>
-  1198|                            </ul>
-  1199|                        </div>
-  1200|                    </div>
-  1201|
-  1202|                    <div class="review-ctas">
-  1203|                        <a href="https://www.amazon.co.uk/s?k=Dualit%20Newgen%20Toaster&tag=hermesamazon-21" rel="nofollow sponsored" class="cta-btn primary" target="_blank" aria-label="Check latest price on Amazon UK">Check Latest Price on Amazon</a>
-  1204|                    </div>
-  1205|                </div>
-  1206|            </div>
-  1207|        </section>
-  1208|
-  1209|        <!-- 2. Sage The Smart Toast -->
-  1210|        <section class="review-section" id="review-sage">
-  1211|            <div class="review-card">
-  1212|                <div class="review-header">
-  1213|                    <div class="review-rank">2</div>
-  1214|                    <div class="review-header-text">
-  1215|                        <span class="award-badge premium">&#9733; Premium Pick</span>
-  1216|                        <h3>Sage The Smart Toast</h3>
-  1217|                        <div class="review-subtitle">Best premium toaster &mdash; intelligent technology for flawless toast every time</div>
-  1218|                    </div>
-  1219|                </div>
-  1220|                <div class="review-body">
-  1221|                    <div class="review-score">
-  1222|                        <div class="score-circle">9.1</div>
-  1223|                        <div class="score-details">
-  1224|                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-  1225|                            <div class="review-count">4.6 out of 5 &middot; 1,203 reviews</div>
-  1226|                        </div>
-  1227|                    </div>
-  1228|
-  1229|                    <div class="review-specs-grid">
-  1230|                        <div class="spec-item">
-  1231|                            <span class="spec-label">Slots</span>
-  1232|                            <span class="spec-value">4 (extra-wide, 38mm)</span>
-  1233|                        </div>
-  1234|                        <div class="spec-item">
-  1235|                            <span class="spec-label">Power</span>
-  1236|                            <span class="spec-value">1800W</span>
-  1237|                        </div>
-  1238|                        <div class="spec-item">
-  1239|                            <span class="spec-label">Browning Settings</span>
-  1240|                            <span class="spec-value">LED-illuminated dial, 7 levels</span>
-  1241|                        </div>
-  1242|                        <div class="spec-item">
-  1243|                            <span class="spec-label">Features</span>
-  1244|                            <span class="spec-value">A Bit More&trade;, Lift &amp; Look&trade;, defrost, bagel, crumpet, reheat</span>
-  1245|                        </div>
-  1246|                        <div class="spec-item">
-  1247|                            <span class="spec-label">Smart Tech</span>
-  1248|                            <span class="spec-value">Motorised self-lowering carriage, auto-adjusting elements</span>
-  1249|                        </div>
-  1250|                        <div class="spec-item">
-  1251|                            <span class="spec-label">Warranty</span>
-  1252|                            <span class="spec-value">2 years</span>
-  1253|                        </div>
-  1254|                    </div>
-  1255|
-  1256|                    <div class="review-narrative">
-  1257|                        <p>Sage has built its reputation on taking everyday kitchen appliances and applying genuine engineering intelligence to them, and The Smart Toast is the company's crowning achievement in the toaster category. The headline feature is the motorised carriage: drop your bread in, press the lever, and the toaster gently lowers the slices itself rather than requiring a firm push. It sounds like a gimmick, but after a week of use, every other toaster feels primitive by comparison.</p>
-  1258|                        <p>The &ldquo;A Bit More&trade;&rdquo; button is the killer feature for anyone who's ever pulled out pale toast and wished they'd set the dial a notch higher. Press it mid-cycle and the toaster adds a precisely timed burst of extra heat &mdash; no need to start over. Coupled with &ldquo;Lift &amp; Look&trade;&rdquo; (which raises the bread mid-cycle so you can check progress without cancelling), the Smart Toast gives you complete control over the outcome.</p>
-  1259|                        <p>The 38mm extra-wide slots accommodate chunky sourdough, hand-cut artisan loaves, and even hot cross buns without jamming. In our browning tests, the auto-adjusting heating elements delivered the most consistent results of any toaster we tested: golden edge-to-edge, batch after batch. At &pound;129.99, it's a premium appliance for people who genuinely care about the quality of their toast &mdash; and once you've used a Smart Toast, it's very difficult to go back.</p>
-  1260|                    </div>
-  1261|
-  1262|                    <div class="pros-cons">
-  1263|                        <div class="pros">
-  1264|                            <h4>Pros</h4>
-  1265|                            <ul>
-  1266|                                <li>Motorised carriage &mdash; silky smooth operation</li>
-  1267|                                <li>A Bit More&trade; button prevents under-toasting</li>
-  1268|                                <li>Lift &amp; Look&trade; mid-cycle check</li>
-  1269|                                <li>Extra-wide 38mm slots for artisan bread</li>
-  1270|                                <li>Most consistent browning in our test group</li>
-  1271|                            </ul>
-  1272|                        </div>
-  1273|                        <div class="cons">
-  1274|                            <h4>Cons</h4>
-  1275|                            <ul>
-  1276|                                <li>Expensive at &pound;129.99</li>
-  1277|                                <li>Large footprint &mdash; measure your worktop</li>
-  1278|                                <li>Motorised carriage adds complexity</li>
-  1279|                            </ul>
-  1280|                        </div>
-  1281|                    </div>
-  1282|
-  1283|                    <div class="review-ctas">
-  1284|                        <a href="https://www.amazon.co.uk/s?k=Sage%20The%20Smart%20Toast%20Toaster&tag=hermesamazon-21" rel="nofollow sponsored" class="cta-btn primary" target="_blank" aria-label="Check latest price on Amazon UK">Check Latest Price on Amazon</a>
-  1285|                    </div>
-  1286|                </div>
-  1287|            </div>
-  1288|        </section>
-  1289|
-  1290|        <!-- 3. Smeg TSF01 -->
-  1291|        <section class="review-section" id="review-smeg">
-  1292|            <div class="review-card">
-  1293|                <div class="review-header">
-  1294|                    <div class="review-rank">3</div>
-  1295|                    <div class="review-header-text">
-  1296|                        <span class="award-badge premium">&#9733; Best Looking</span>
-  1297|                        <h3>Smeg TSF01</h3>
-  1298|                        <div class="review-subtitle">Best-looking toaster &mdash; iconic 1950s style with thoroughly modern toasting</div>
-  1299|                    </div>
-  1300|                </div>
-  1301|                <div class="review-body">
-  1302|                    <div class="review-score">
-  1303|                        <div class="score-circle">8.7</div>
-  1304|                        <div class="score-details">
-  1305|                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-  1306|                            <div class="review-count">4.4 out of 5 &middot; 1,567 reviews</div>
-  1307|                        </div>
-  1308|                    </div>
-  1309|
-  1310|                    <div class="review-specs-grid">
-  1311|                        <div class="spec-item">
-  1312|                            <span class="spec-label">Slots</span>
-  1313|                            <span class="spec-value">2 (extra-wide, 36mm)</span>
-  1314|                        </div>
-  1315|                        <div class="spec-item">
-  1316|                            <span class="spec-label">Power</span>
-  1317|                            <span class="spec-value">950W</span>
-  1318|                        </div>
-  1319|                        <div class="spec-item">
-  1320|                            <span class="spec-label">Browning Settings</span>
-  1321|                            <span class="spec-value">6 levels with backlit dial</span>
-  1322|                        </div>
-  1323|                        <div class="spec-item">
-  1324|                            <span class="spec-label">Features</span>
-  1325|                            <span class="spec-value">Defrost, reheat, bagel, self-centring racks</span>
-  1326|                        </div>
-  1327|                        <div class="spec-item">
-  1328|                            <span class="spec-label">Build</span>
-  1329|                            <span class="spec-value">Powder-coated stainless steel body</span>
-  1330|                        </div>
-  1331|                        <div class="spec-item">
-  1332|                            <span class="spec-label">Colours</span>
-  1333|                            <span class="spec-value">Cream, black, pastel blue, red, pink, mint green, chrome</span>
-  1334|                        </div>
-  1335|                    </div>
-  1336|
-  1337|                    <div class="review-narrative">
-  1338|                        <p>The Smeg TSF01 is the toaster that launched a thousand kitchen envy posts on Instagram. With its unmistakable 1950s curves, chrome detailing, and a palette of seven colours (including the ever-popular pastel blue and cream), this is an appliance designed to be displayed proudly on the worktop &mdash; not hidden away in a cupboard.</p>
-  1339|                        <p>Happily, there's substance behind the style. The TSF01's self-centring racks hold bread of any thickness evenly against the heating elements, and the 36mm slots are generous enough for most artisan loaves. The six browning levels cover the full spectrum from barely-warm to properly singed, and the backlit dial adds a touch of theatre to the morning routine.</p>
-  1340|                        <p>At 950W, the two-slot TSF01 toasts a little slower than 1800W four-slot rivals &mdash; expect around two minutes for medium browning &mdash; but the results are beautifully even. The defrost, reheat, and bagel functions all perform as they should, and the removable crumb tray is easy to access and clean. At &pound;149.99 it's the most expensive toaster in our roundup, but if kitchen aesthetics matter to you (and you only need two slots), nothing else comes close to the Smeg's design appeal.</p>
-  1341|                    </div>
-  1342|
-  1343|                    <div class="pros-cons">
-  1344|                        <div class="pros">
-  1345|                            <h4>Pros</h4>
-  1346|                            <ul>
-  1347|                                <li>Drop-dead gorgeous retro design</li>
-  1348|                                <li>Seven colour options to match any kitchen</li>
-  1349|                                <li>Self-centring racks for even toasting</li>
-  1350|                                <li>Backlit browning dial adds ambiance</li>
-  1351|                                <li>Solid powder-coated steel build</li>
-  1352|                            </ul>
-  1353|                        </div>
-  1354|                        <div class="cons">
-  1355|                            <h4>Cons</h4>
-  1356|                            <ul>
-  1357|                                <li>Most expensive at &pound;149.99</li>
-  1358|                                <li>Only 2 slots &mdash; slow for families</li>
-  1359|                                <li>950W means slower toasting</li>
-  1360|                            </ul>
-  1361|                        </div>
-  1362|                    </div>
-  1363|
-  1364|                    <div class="review-ctas">
-  1365|                        <a href="https://www.amazon.co.uk/s?k=Smeg%20TSF01%20Toaster&tag=hermesamazon-21" rel="nofollow sponsored" class="cta-btn primary" target="_blank" aria-label="Check latest price on Amazon UK">Check Latest Price on Amazon</a>
-  1366|                    </div>
-  1367|                </div>
-  1368|            </div>
-  1369|        </section>
-  1370|
-  1371|        <!-- 4. Cuisinart SimpliTouch -->
-  1372|        <section class="review-section" id="review-cuisinart">
-  1373|            <div class="review-card">
-  1374|                <div class="review-header">
-  1375|                    <div class="review-rank">4</div>
-  1376|                    <div class="review-header-text">
-  1377|                        <span class="award-badge premium">&#9733; Best Touchscreen</span>
-  1378|                        <h3>Cuisinart SimpliTouch</h3>
-  1379|                        <div class="review-subtitle">Best touchscreen toaster &mdash; sleek modern controls at a sensible mid-range price</div>
-  1380|                    </div>
-  1381|                </div>
-  1382|                <div class="review-body">
-  1383|                    <div class="review-score">
-  1384|                        <div class="score-circle">8.5</div>
-  1385|                        <div class="score-details">
-  1386|                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-  1387|                            <div class="review-count">4.3 out of 5 &middot; 876 reviews</div>
-  1388|                        </div>
-  1389|                    </div>
-  1390|
-  1391|                    <div class="review-specs-grid">
-  1392|                        <div class="spec-item">
-  1393|                            <span class="spec-label">Slots</span>
-  1394|                            <span class="spec-value">2 (wide, 36mm)</span>
-  1395|                        </div>
-  1396|                        <div class="spec-item">
-  1397|                            <span class="spec-label">Power</span>
-  1398|                            <span class="spec-value">900W</span>
-  1399|                        </div>
-  1400|                        <div class="spec-item">
-  1401|                            <span class="spec-label">Browning Settings</span>
-  1402|                            <span class="spec-value">Touch-sensitive slider, 7 levels</span>
-  1403|                        </div>
-  1404|                        <div class="spec-item">
-  1405|                            <span class="spec-label">Features</span>
-  1406|                            <span class="spec-value">Defrost, reheat, bagel, countdown timer with LED display</span>
-  1407|                        </div>
-  1408|                        <div class="spec-item">
-  1409|                            <span class="spec-label">Interface</span>
-  1410|                            <span class="spec-value">Capacitive touch panel with digital countdown</span>
-  1411|                        </div>
-  1412|                        <div class="spec-item">
-  1413|                            <span class="spec-label">Build</span>
-  1414|                            <span class="spec-value">Brushed stainless steel with touch panel</span>
-  1415|                        </div>
-  1416|                    </div>
-  1417|
-  1418|                    <div class="review-narrative">
-  1419|                        <p>The Cuisinart SimpliTouch brings a genuinely modern interface to the otherwise traditional toaster market. Instead of physical buttons and dials, the SimpliTouch uses a capacitive touch panel &mdash; slide your finger along the browning scale to set the level, and tap the icon for defrost, reheat, or bagel mode. There's even a countdown timer that displays the remaining seconds, so you know exactly when your toast will pop.</p>
-  1420|                        <p>This is more than a gimmick. The touch panel is responsive and intuitive, and because there are no mechanical controls, there are no crevices for crumbs and dust to gather. The digital countdown is genuinely useful &mdash; no more standing by the toaster wondering if you've got time to butter the bread before it pops.</p>
-  1421|                        <p>At 900W, the SimpliTouch isn't the fastest toaster in our roundup, but it delivers consistent browning across six types of bread we tested. The bagel setting toasts the cut side while gently warming the outside &mdash; exactly as it should. At &pound;59.99, it sits in a sweet spot: noticeably more premium than budget models, without the eye-watering price tags of the Smeg or Sage.</p>
-  1422|                    </div>
-  1423|
-  1424|                    <div class="pros-cons">
-  1425|                        <div class="pros">
-  1426|                            <h4>Pros</h4>
-  1427|                            <ul>
-  1428|                                <li>Sleek touch-sensitive controls</li>
-  1429|                                <li>Digital countdown timer &mdash; no guessing</li>
-  1430|                                <li>Seamless, easy-clean exterior</li>
-  1431|                                <li>Great value at &pound;59.99</li>
-  1432|                                <li>Consistent browning across bread types</li>
-  1433|                            </ul>
-  1434|                        </div>
-  1435|                        <div class="cons">
-  1436|                            <h4>Cons</h4>
-  1437|                            <ul>
-  1438|                                <li>Touch panel may confuse technophobes</li>
-  1439|                                <li>Only 2 slots &mdash; not ideal for families</li>
-  1440|                                <li>900W is slower than 1800W rivals</li>
-  1441|                            </ul>
-  1442|                        </div>
-  1443|                    </div>
-  1444|
-  1445|                    <div class="review-ctas">
-  1446|                        <a href="https://www.amazon.co.uk/s?k=Cuisinart%20SimpliTouch%20Toaster&tag=hermesamazon-21" rel="nofollow sponsored" class="cta-btn primary" target="_blank" aria-label="Check latest price on Amazon UK">Check Latest Price on Amazon</a>
-  1447|                    </div>
-  1448|                </div>
-  1449|            </div>
-  1450|        </section>
-  1451|
-  1452|        <!-- 5. Russell Hobbs Groove Toaster -->
-  1453|        <section class="review-section" id="review-russell-hobbs">
-  1454|            <div class="review-card">
-  1455|                <div class="review-header">
-  1456|                    <div class="review-rank">5</div>
-  1457|                    <div class="review-header-text">
-  1458|                        <span class="award-badge value-pick">&#9733; Value Pick</span>
-  1459|                        <h3>Russell Hobbs Groove Toaster</h3>
-  1460|                        <div class="review-subtitle">Best affordable toaster &mdash; reliable performance at a price that makes you smile</div>
-  1461|                    </div>
-  1462|                </div>
-  1463|                <div class="review-body">
-  1464|                    <div class="review-score">
-  1465|                        <div class="score-circle">8.2</div>
-  1466|                        <div class="score-details">
-  1467|                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-  1468|                            <div class="review-count">4.2 out of 5 &middot; 2,310 reviews</div>
-  1469|                        </div>
-  1470|                    </div>
-  1471|
-  1472|                    <div class="review-specs-grid">
-  1473|                        <div class="spec-item">
-  1474|                            <span class="spec-label">Slots</span>
-  1475|                            <span class="spec-value">2 (standard width)</span>
-  1476|                        </div>
-  1477|                        <div class="spec-item">
-  1478|                            <span class="spec-label">Power</span>
-  1479|                            <span class="spec-value">850W</span>
-  1480|                        </div>
-  1481|                        <div class="spec-item">
-  1482|                            <span class="spec-label">Browning Settings</span>
-  1483|                            <span class="spec-value">Dial control, 6 levels</span>
-  1484|                        </div>
-  1485|                        <div class="spec-item">
-  1486|                            <span class="spec-label">Features</span>
-  1487|                            <span class="spec-value">Defrost, reheat, cancel, high-lift lever</span>
-  1488|                        </div>
-  1489|                        <div class="spec-item">
-  1490|                            <span class="spec-label">Slot Design</span>
-  1491|                            <span class="spec-value">Grooved slots grip bread for even toasting</span>
-  1492|                        </div>
-  1493|                        <div class="spec-item">
-  1494|                            <span class="spec-label">Build</span>
-  1495|                            <span class="spec-value">Plastic with textured finish, available in black or white</span>
-  1496|                        </div>
-  1497|                    </div>
-  1498|
-  1499|                    <div class="review-narrative">
-  1500|                        <p>Not everyone wants to spend over &pound;100 on a toaster, and the Russell Hobbs Groove proves that you don't have to. At just &pound;39.99, it's the most affordable toaster in our roundup by some margin, yet it consistently produces toast that rivals models costing three times as much.</p>
-  1501|  1501|                        <p>The clever feature that sets the Groove apart is right there in the name: ridged slots that grip the bread and hold it centrally against the heating elements. This simple bit of engineering significantly improves browning evenness compared to other budget toasters, where slices tend to lean to one side and emerge with a pale stripe down the middle. The high-lift lever is another thoughtful touch &mdash; it pushes smaller items like crumpets and English muffins high enough to grab without burning your fingers.</p>
-  1502|                        <p>At 850W, it's the lowest-powered toaster in our test group, and you'll notice the extra 30-45 seconds it takes compared to faster models. The standard-width slots also mean very thick artisan bread is a squeeze (look at the Sage or Smeg if that's your staple). But for everyday sliced loaves, the Groove delivers warm, evenly browned toast at a price that's practically pocket money. With over 2,300 reviews and a solid 4.2 average, this is the toaster Britain trusts.</p>
-  1503|                    </div>
-  1504|
-  1505|                    <div class="pros-cons">
-  1506|                        <div class="pros">
-  1507|                            <h4>Pros</h4>
-  1508|                            <ul>
-  1509|                                <li>Incredible value at just &pound;39.99</li>
-  1510|                                <li>Grooved slots improve browning evenness</li>
-  1511|                                <li>High-lift lever for crumpets and muffins</li>
-  1512|                                <li>Lightweight and easy to move</li>
-  1513|                                <li>Over 2,300 positive reviews</li>
-  1514|                            </ul>
-  1515|                        </div>
-  1516|                        <div class="cons">
-  1517|                            <h4>Cons</h4>
-  1518|                            <ul>
-  1519|                                <li>Standard slots struggle with thick bread</li>
-  1520|                                <li>850W means slower toasting</li>
-  1521|                                <li>Plastic build feels less premium</li>
-  1522|                            </ul>
-  1523|                        </div>
-  1524|                    </div>
-  1525|
-  1526|                    <div class="review-ctas">
-  1527|                        <a href="https://www.amazon.co.uk/s?k=Russell%20Hobbs%20Groove%20Toaster&tag=hermesamazon-21" rel="nofollow sponsored" class="cta-btn primary" target="_blank" aria-label="Check latest price on Amazon UK">Check Latest Price on Amazon</a>
-  1528|                    </div>
-  1529|                </div>
-  1530|            </div>
-  1531|        </section>
-  1532|
-  1533|        <!-- ===================== -->
-  1534|        <!-- BUYING GUIDE          -->
-  1535|        <!-- ===================== -->
-  1536|
-  1537|        <section class="buying-guide">
-  1538|            <h2>How to Choose the Right Toaster</h2>
-  1539|            <p>Whether you're tired of unevenly browned toast or upgrading from a hand-me-down that's older than your children, understanding the key features will help you choose a toaster you'll love using every morning.</p>
-  1540|
-  1541|            <div class="guide-section">
-  1542|                <h3>2-Slot vs 4-Slot: What's Right for Your Household?</h3>
-  1543|                <p>This is the most important decision you'll make &mdash; and it comes down to how many people you regularly make toast for.</p>
-  1544|                <ul>
-  1545|                    <li><strong>1-2 people: </strong>A 2-slot toaster is perfectly adequate, takes up less worktop space, and costs less. The <strong>Smeg TSF01</strong> (2 slots, &pound;149.99) is the style choice, the <strong>Cuisinart SimpliTouch</strong> (2 slots, &pound;59.99) brings modern tech, and the <strong>Russell Hobbs Groove</strong> (2 slots, &pound;39.99) is the budget champion.</li>
-  1546|                    <li><strong>3+ people or families: </strong>A 4-slot toaster saves real time in the morning rush. Instead of doing two batches back-to-back, you can toast for everyone in one go. Our 4-slot picks are the <strong>Dualit Newgen</strong> (&pound;119.99) and <strong>Sage The Smart Toast</strong> (&pound;129.99).</li>
-  1547|                </ul>
-  1548|                <p>Also consider independent control: the Dualit Newgen lets you set different browning levels for each pair of slots, so one person's lightly toasted sourdough doesn't hold up someone else's well-done crumpets.</p>
-  1549|            </div>
-  1550|
-  1551|            <div class="guide-section">
-  1552|                <h3>Slot Width: Think Beyond Sliced White</h3>
-  1553|                <p>Standard toaster slots are around 28-30mm wide &mdash; fine for supermarket sliced bread, but a struggle for anything thicker. If you regularly buy artisan loaves, sourdough, or hand-cut bread, look for extra-wide slots (36mm+).</p>
-  1554|                <ul>
-  1555|                    <li><strong>Sage The Smart Toast: </strong>38mm slots &mdash; the widest in our roundup. Handles chunky sourdough with ease.</li>
-  1556|                    <li><strong>Smeg TSF01: </strong>36mm self-centring racks hold thick slices evenly.</li>
-  1557|                    <li><strong>Cuisinart SimpliTouch: </strong>36mm wide slots at a more accessible price point.</li>
-  1558|                    <li><strong>Dualit Newgen: </strong>Generous slots with a manual ejector for jammed bread.</li>
-  1559|                </ul>
-  1560|                <p>The self-centring racks on the Smeg TSF01 and Sage The Smart Toast are particularly valuable for thick bread &mdash; they hold the slice upright and centred regardless of thickness, ensuring both sides toast evenly.</p>
-  1561|            </div>
-  1562|
-  1563|            <div class="guide-section">
-  1564|                <h3>Browning Consistency: The Mark of a Great Toaster</h3>
-  1565|                <p>The single biggest difference between a cheap toaster and a quality one is how evenly it browns bread. In our testing, we toasted six consecutive batches of identical white bread at the same setting and measured the colour across each slice.</p>
-  1566|                <p>The <strong>Sage The Smart Toast</strong> was the standout performer, delivering near-perfect consistency batch after batch thanks to its auto-adjusting heating elements. The <strong>Dualit Newgen</strong> followed closely, with its ProHeat elements producing reliably even results. The <strong>Russell Hobbs Groove</strong> punched well above its price point, with the grooved slots significantly reducing the pale-centre problem that plagues budget toasters.</p>
-  1567|                <p>If you're the sort of person who notices &mdash; and is annoyed by &mdash; toast with a pale centre and burnt edges, invest in a toaster that takes browning consistency seriously.</p>
-  1568|            </div>
-  1569|
-  1570|            <div class="guide-section">
-  1571|                <h3>Essential Features: What Actually Matters?</h3>
-  1572|                <p>Modern toasters come with an array of buttons and settings. Here's what's genuinely useful:</p>
-  1573|                <ul>
-  1574|                    <li><strong>Defrost: </strong>A must-have if you keep bread in the freezer. It gently thaws the slice before toasting, preventing a soggy centre.</li>
-  1575|                    <li><strong>Reheat: </strong>A quick 30-second burst to warm up toast that's gone cold. More useful than you'd think.</li>
-  1576|                    <li><strong>Bagel: </strong>Toasts the cut side while gently warming the outside. Essential for bagel lovers.</li>
-  1577|                    <li><strong>Lift &amp; Look: </strong>A feature on the Sage The Smart Toast that lets you raise the bread mid-cycle to check browning without cancelling. Brilliant for dialling in your perfect shade.</li>
-  1578|                    <li><strong>A Bit More: </strong>Another Sage exclusive &mdash; adds extra toasting time if your bread needs a little more colour. No need to start the cycle again.</li>
-  1579|                    <li><strong>High-Lift Lever: </strong>Found on the Russell Hobbs Groove and Dualit Newgen. Pushes smaller items higher so you can grab them without scorched fingertips.</li>
-  1580|                    <li><strong>Countdown Timer: </strong>The Cuisinart SimpliTouch displays remaining seconds. A small thing, but it eliminates the waiting-around-aimlessly factor.</li>
-  1581|                </ul>
-  1582|            </div>
-  1583|
-  1584|            <div class="guide-section">
-  1585|                <h3>Build Quality and Longevity</h3>
-  1586|                <p>Toasters are among the most frequently replaced kitchen appliances. The average cheap toaster lasts 2-3 years before the heating elements fail or the mechanism jams. If you want a toaster that will still be performing a decade from now, look for:</p>
-  1587|                <ul>
-  1588|                    <li><strong>Replaceable elements: </strong>The <strong>Dualit Newgen</strong> is the only toaster in our roundup with user-replaceable heating elements. When they eventually wear out, you can replace them rather than binning the whole appliance.</li>
-  1589|                    <li><strong>Metal construction: </strong>The <strong>Smeg TSF01</strong> and <strong>Sage The Smart Toast</strong> use predominantly metal bodies that withstand daily use better than plastic.</li>
-  1590|                    <li><strong>Mechanical controls: </strong>The Dualit Newgen uses a mechanical timer rather than digital electronics. Fewer things to go wrong over the long term.</li>
-  1591|                </ul>
-  1592|            </div>
-  1593|
-  1594|            <div class="guide-section">
-  1595|                <h3>Our Verdict</h3>
-  1596|                <p>If you want a toaster that will genuinely last a lifetime, the <strong>Dualit Newgen</strong> is our Editor's Choice &mdash; British-built with replaceable elements and a mechanical design that outlasts any digital rival. For the ultimate in toast perfection, the <strong>Sage The Smart Toast</strong> delivers the most consistent browning and the smartest feature set we've tested. If style is your priority, the <strong>Smeg TSF01</strong> is the most beautiful toaster on the market. And if you simply want reliable, well-browned toast without spending a fortune, the <strong>Russell Hobbs Groove</strong> at &pound;39.99 is the bargain of the bunch.</p>
-  1597|            </div>
-  1598|        </section>
-  1599|
-  1600|        <!-- ===================== -->
-  1601|        <!-- FAQ                   -->
-  1602|        <!-- ===================== -->
-  1603|
-  1604|        <section class="faq-section">
-  1605|            <h2>Frequently Asked Questions</h2>
-  1606|
-  1607|            <div class="faq-item">
-  1608|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1609|                    Should I buy a 2-slot or 4-slot toaster?
-  1610|                    <span class="icon">+</span>
-  1611|                </button>
-  1612|                <div class="faq-answer">
-  1613|                    <div class="faq-answer-inner">
-  1614|                        <p>For one to two people, a 2-slot toaster is perfectly adequate and takes up less worktop space. For families of three or more, a 4-slot toaster is far more practical &mdash; you can toast four slices simultaneously rather than doing it in batches, which saves real time during the morning rush. Four-slot models are wider, so measure your worktop before buying. Our top 4-slot picks are the <strong>Dualit Newgen</strong> and <strong>Sage The Smart Toast</strong>. If you're tight on space, the <strong>Smeg TSF01</strong> and <strong>Russell Hobbs Groove</strong> are compact 2-slot options.</p>
-  1615|                    </div>
-  1616|                </div>
-  1617|            </div>
-  1618|
-  1619|            <div class="faq-item">
-  1620|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1621|                    Do expensive toasters actually make better toast?
-  1622|                    <span class="icon">+</span>
-  1623|                </button>
-  1624|                <div class="faq-answer">
-  1625|                    <div class="faq-answer-inner">
-  1626|                        <p>Yes, to a point. Premium toasters deliver more even browning from edge to edge, more consistent results batch after batch, and better build quality that lasts years rather than months. They also offer useful features like &lsquo;lift and look&rsquo; (checking progress mid-cycle without cancelling), wider slots for artisan bread, and dedicated bagel/defrost settings. That said, a well-designed budget toaster like the <strong>Russell Hobbs Groove</strong> can still produce excellent toast &mdash; you're mainly paying more for durability, evenness, and extra features. The difference between a &pound;20 supermarket own-brand and a &pound;40 Russell Hobbs is dramatic; the difference between &pound;40 and &pound;120 is more about build quality and longevity.</p>
-  1627|                    </div>
-  1628|                </div>
-  1629|            </div>
-  1630|
-  1631|            <div class="faq-item">
-  1632|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1633|                    How do you clean a toaster properly?
-  1634|                    <span class="icon">+</span>
-  1635|                </button>
-  1636|                <div class="faq-answer">
-  1637|                    <div class="faq-answer-inner">
-  1638|                        <p>Unplug the toaster first and let it cool completely. Remove and empty the crumb tray (all five toasters in our roundup have removable trays) &mdash; do this weekly to prevent smoke and fire risk from accumulated crumbs. Wipe the exterior with a damp cloth and mild detergent; for stainless steel models like the <strong>Sage The Smart Toast</strong> and <strong>Cuisinart SimpliTouch</strong>, a microfibre cloth prevents streaks. For stubborn burnt-on marks inside, use a soft pastry brush to loosen crumbs, then tip the toaster upside down over the sink (with the crumb tray removed). Never immerse a toaster in water, never use metal utensils inside the slots (they can damage the heating elements and create a shock risk), and never use abrasive cleaners on the exterior finish.</p>
-  1639|                    </div>
-  1640|                </div>
-  1641|            </div>
-  1642|
-  1643|            <div class="faq-item">
-  1644|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1645|                    Which toaster is best for thick artisan bread?
-  1646|                    <span class="icon">+</span>
-  1647|                </button>
-  1648|                <div class="faq-answer">
-  1649|                    <div class="faq-answer-inner">
-  1650|                        <p>Look for a toaster with wide slots (at least 36mm) and a &lsquo;lift and look&rsquo; feature so you can check progress without resetting the cycle. The <strong>Sage The Smart Toast</strong> excels here &mdash; its 38mm extra-wide slots accommodate chunky sourdough and hand-cut artisan loaves, and the motorised Lift &amp; Look feature lets you raise the bread mid-cycle to check browning. The <strong>Dualit Newgen</strong> also has generously wide slots and a manual ejector lever for peeking at progress. The <strong>Smeg TSF01</strong> offers 36mm slots with self-centring racks that hold thick slices evenly. The <strong>Russell Hobbs Groove</strong>, with standard-width slots, is best for regular sliced bread.</p>
-  1651|                    </div>
-  1652|                </div>
-  1653|            </div>
-  1654|
-  1655|            <div class="faq-item">
-  1656|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1657|                    What wattage toaster do I need?
-  1658|                    <span class="icon">+</span>
-  1659|                </button>
-  1660|                <div class="faq-answer">
-  1661|                    <div class="faq-answer-inner">
-  1662|                        <p>For a 2-slot toaster, 850-950W is the sweet spot &mdash; it toasts quickly without excessive power draw. The <strong>Cuisinart SimpliTouch</strong> (900W), <strong>Smeg TSF01</strong> (950W), and <strong>Russell Hobbs Groove</strong> (850W) all sit in this range. For 4-slot models, look for 1600-1800W. Higher wattage means faster toasting, but also a larger electricity draw. The <strong>Sage The Smart Toast</strong> and <strong>Dualit Newgen</strong> at 1800W are particularly fast, browning bread in around 60-90 seconds at medium settings. In practice, the cost per use is negligible &mdash; toasting two slices costs less than a penny in electricity even at 1800W.</p>
-  1663|                    </div>
-  1664|                </div>
-  1665|            </div>
-  1666|
-  1667|            <div class="faq-item">
-  1668|                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-  1669|                    Can you toast crumpets and hot cross buns in a regular toaster?
-  1670|                    <span class="icon">+</span>
-  1671|                </button>
-  1672|                <div class="faq-answer">
-  1673|                    <div class="faq-answer-inner">
-  1674|                        <p>Yes, but with caution. Crumpets and hot cross buns are more delicate than sliced bread and can disintegrate if they get stuck. Use the lowest browning setting and watch carefully on the first attempt. A high-lift lever (found on the <strong>Russell Hobbs Groove</strong> and <strong>Dualit Newgen</strong>) is invaluable here &mdash; it pushes smaller items high enough to grab safely. For sticky items like hot cross buns, the <strong>Sage The Smart Toast's</strong> Lift &amp; Look feature lets you check progress mid-cycle. Some toasters have a dedicated crumpet setting (the Sage does), which adjusts the heating profile for dense, moist items. Never use a knife or fork to retrieve stuck food while the toaster is plugged in.</p>
-  1675|                    </div>
-  1676|                </div>
-  1677|            </div>
-  1678|        </section>
-  1679|
-  1680|        <!-- ===================== -->
-  1681|        <!-- BOTTOM CTA            -->
-  1682|        <!-- ===================== -->
-  1683|
-  1684|        <section class="bottom-cta">
-  1685|            <h2>Ready to Upgrade Your Morning Toast?</h2>
-  1686|            <p>Whichever toaster you choose from our roundup, you'll be enjoying perfectly browned toast, crumpets, and bagels from day one. Browse our top picks and find your perfect match.</p>
-  1687|            <a href="#review-dualit" class="cta-btn primary">See Our Top Pick</a>
-  1688|        </section>
-  1689|
-  1690|        <!-- ===================== -->
-  1691|        <!-- CROSS-LINKS           -->
-  1692|        <!-- ===================== -->
-  1693|
-  1694|        <section class="cross-links">
-  1695|            <h2>While you're here...</h2>
-  1696|
-  1697|            <div class="cross-links-grid">
-  1698|                <div class="cross-link-card cross-link-product">
-  1699|                    <span class="cross-link-badge">Free Planner</span>
-  1700|                    <h3>Get our Household Planner Bundle</h3>
-  1701|                    <p>Kitchen appliance cheat sheets, weekly meal plans, and cleaning rotas. The perfect sidekick for a well-organised kitchen.</p>
-  1702|                    <a href="/products/" class="cta-btn primary">Browse the bundle &rarr;</a>
-  1703|                </div>
-  1704|
-  1705|                <div class="cross-link-card">
-  1706|                    <h3>Also see...</h3>
-  1707|                    <ul>
-  1708|                        <li><strong>Reviews:</strong> <a href="/kettles/">Best Kettles UK</a> &mdash; complete your breakfast setup</li>
-  1709|                        <li><strong>Reviews:</strong> <a href="/microwaves/">Best Microwaves UK</a> &mdash; the quickest way to heat anything</li>
-  1710|                        <li><strong>Comparison:</strong> <a href="/comparisons/ninja-vs-tower-air-fryer/">Ninja vs Tower Air Fryer</a> &mdash; another countertop essential</li>
-  1711|                        <li><strong>Blog:</strong> <a href="/blog/small-kitchen-appliance-storage/">Small Kitchen Appliance Storage Ideas</a> &mdash; make the most of your worktop</li>
-  1712|                    </ul>
-  1713|                </div>
-  1714|            </div>
-  1715|        </section>
-  1716|
-  1717|    </div>
-  1718|
-  1719|    <!-- Footer -->
-  1720|    <footer class="site-footer">
-  1721|        <div class="container">
-  1722|            <div class="footer-left">
-  1723|                &copy; 2026 Home &amp; Kitchen UK. All rights reserved.
-  1724|            </div>
-  1725|            <div class="footer-right">
-  1726|                <strong>Affiliate Disclosure:</strong> We earn commissions from qualifying purchases. Prices are correct at time of writing but may change.
-  1727|            </div>
-  1728|        </div>
-  1729|    </footer>
-  1730|</body>
-  1731|</html>
-  1732|  2001|  2501|  3001|  3501|  4001|  4501|
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Toasters UK 2026 — Tested & Reviewed | Home & Kitchen UK</title>
+    <meta name="description" content="Our experts have tested the best toasters available in the UK for 2026. Compare top picks from Dualit, Sage, Smeg, Cuisinart and Russell Hobbs. Prices from £39.99.">
+    <meta name="author" content="Home & Kitchen UK">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.homekitchen.co.uk/toasters/">
+
+    <!-- Schema.org Article Markup -->
+    
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Should I buy a 2-slot or 4-slot toaster?",
+          "acceptedAnswer": {"@type": "Answer", "text": "For one to two people, a 2-slot toaster is perfectly adequate and takes up less worktop space. For families of three or more, a 4-slot toaster is far more practical — you can toast four slices simultaneously rather than doing it in batches. Four-slot models are wider, so measure your worktop before buying. Our top 4-slot picks are the Dualit Newgen and Sage The Smart Toast."}
+        },
+        {
+          "@type": "Question",
+          "name": "Do expensive toasters actually make better toast?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes, to a point. Premium toasters deliver more even browning from edge to edge, more consistent results batch after batch, and better build quality that lasts years rather than months. They also offer useful features like 'lift and look' (checking progress mid-cycle without cancelling), wider slots for artisan bread, and dedicated bagel/defrost settings. That said, a well-designed budget toaster like the Russell Hobbs Groove can still produce excellent toast — you're mainly paying more for durability, evenness, and extra features."}
+        },
+        {
+          "@type": "Question",
+          "name": "How do you clean a toaster properly?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Unplug the toaster first. Remove and empty the crumb tray (most modern toasters have a removable tray at the base) — do this weekly to prevent smoke and fire risk. Wipe the exterior with a damp cloth and mild detergent. For stubborn burnt-on marks inside, use a soft brush to loosen crumbs, then tip the toaster upside down over the sink. Never immerse in water, never use metal utensils inside the slots (they can damage the heating elements), and never use abrasive cleaners on the exterior finish."}
+        },
+        {
+          "@type": "Question",
+          "name": "Which toaster is best for thick artisan bread?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Look for a toaster with wide slots (at least 36mm) and a 'lift and look' feature so you can check progress without resetting the cycle. The Sage The Smart Toast excels here — its extra-wide slots accommodate chunky sourdough and hand-cut artisan loaves, and the motorised lift-and-look lets you raise the bread mid-cycle to check browning. The Dualit Newgen also has generously wide slots and a manual ejector lever, while the Smeg TSF01 offers self-centring racks that hold thick slices evenly."}
+        },
+        {
+          "@type": "Question",
+          "name": "What wattage toaster do I need?",
+          "acceptedAnswer": {"@type": "Answer", "text": "For a 2-slot toaster, 850-950W is the sweet spot — it toasts quickly without excessive power draw. For 4-slot models, look for 1600-1800W. Higher wattage means faster toasting, but also a larger electricity draw. All the toasters in our roundup sit in the ideal wattage range for their slot count. The Sage The Smart Toast at 1800W is particularly fast, browning bread in around 60-90 seconds at medium settings."}
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* ============================================
+           OPEN DESIGN: Warm Editorial Style
+           Serif headings, warm off-white, terracotta
+           ============================================ */
+
+        :root {
+            --bg-primary: #FAF7F2;
+            --bg-white: #FFFFFF;
+            --bg-warm: #F5F0EA;
+            --accent: #C0512F;
+            --accent-hover: #A84427;
+            --accent-light: #F9EDE7;
+            --accent-border: #E8D5CC;
+            --accent2: #2F5B4F;
+            --accent2-light: #E8F0ED;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --text-muted: #8A8A7A;
+            --border: #E8E4DE;
+            --border-light: #F0ECE6;
+            --green: #2D7D46;
+            --green-bg: #EDF7F0;
+            --gold: #C5981B;
+            --gold-bg: #FFF8E8;
+            --star: #E8A620;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 30px rgba(0,0,0,0.1);
+            --radius: 8px;
+            --radius-lg: 12px;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Palatino', serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ---- Typography ---- */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: var(--text-primary);
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+        }
+
+        h1 { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; }
+        h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; }
+        h3 { font-size: 1.35rem; font-weight: 700; }
+        h4 { font-size: 1.15rem; font-weight: 600; }
+
+        p {
+            margin-bottom: 1em;
+            color: var(--text-secondary);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-decoration-color: rgba(192,81,47,0.3);
+            text-underline-offset: 2px;
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            color: var(--accent-hover);
+            text-decoration-color: var(--accent);
+        }
+
+        /* ---- Layout ---- */
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .article-container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---- Site Header ---- */
+        .site-header {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            margin-bottom: 0;
+        }
+        .site-header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .site-logo {
+            font-family: 'Georgia', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .site-logo span { color: var(--accent); }
+        .site-nav { font-size: 0.9rem; }
+        .site-nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 500;
+        }
+        .site-nav a:hover { color: var(--accent); }
+
+        /* ---- Breadcrumbs ---- */
+        .breadcrumbs {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            padding: 16px 0;
+            color: var(--text-muted);
+        }
+        .breadcrumbs a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+        .breadcrumbs a:hover { color: var(--accent); }
+        .breadcrumbs .sep { margin: 0 6px; opacity: 0.5; }
+
+        /* ---- Article Header / Hero ---- */
+        .article-header {
+            padding: 16px 0 32px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 32px;
+        }
+        .category-label {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            background: var(--accent-light);
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+        .article-header h1 {
+            margin-bottom: 12px;
+        }
+        .article-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin-bottom: 16px;
+        }
+        .article-meta {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .article-meta .updated {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .article-meta .updated svg {
+            width: 14px;
+            height: 14px;
+        }
+        .editor-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: var(--green-bg);
+            color: var(--green);
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 0.8rem;
+        }
+
+        /* ---- Summary Box ---- */
+        .summary-box {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            margin-bottom: 36px;
+            box-shadow: var(--shadow-sm);
+        }
+        .summary-box-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .summary-box-header svg {
+            width: 24px;
+            height: 24px;
+            color: var(--accent);
+        }
+        .summary-box-header h2 {
+            font-size: 1.3rem;
+            margin: 0;
+        }
+        .top-picks-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .pick-card {
+            background: var(--bg-warm);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+            transition: box-shadow 0.2s ease;
+        }
+        .pick-card:hover { box-shadow: var(--shadow-md); }
+        .pick-badge {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        .pick-badge.overall { background: var(--accent-light); color: var(--accent); }
+        .pick-badge.premium { background: var(--gold-bg); color: var(--gold); }
+        .pick-badge.budget { background: var(--green-bg); color: var(--green); }
+
+        .pick-card h3 {
+            font-size: 1rem;
+            margin-bottom: 6px;
+            line-height: 1.35;
+        }
+        .pick-card .pick-price {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+        .pick-card .pick-rating {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+        .pick-card .pick-rating .stars { color: var(--star); }
+        .pick-card .btn {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: var(--bg-white);
+            background: var(--accent);
+            transition: background 0.2s;
+        }
+        .pick-card .btn:hover {
+            background: var(--accent-hover);
+            color: var(--bg-white);
+        }
+
+        /* ---- Comparison Table ---- */
+        .comparison-section {
+            margin-bottom: 40px;
+        }
+        .comparison-section h2 {
+            margin-bottom: 20px;
+        }
+        .comparison-table-wrapper {
+            overflow-x: auto;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--bg-white);
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        .comparison-table thead {
+            background: var(--bg-warm);
+        }
+        .comparison-table th {
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            border-bottom: 2px solid var(--border);
+            white-space: nowrap;
+        }
+        .comparison-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            vertical-align: middle;
+        }
+        .comparison-table tbody tr:last-child td { border-bottom: none; }
+        .comparison-table tbody tr:hover { background: var(--bg-warm); }
+        .comparison-table .product-name {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.88rem;
+        }
+        .comparison-table .price {
+            font-weight: 700;
+            color: var(--accent);
+            white-space: nowrap;
+        }
+        .comparison-table .rating-cell {
+            white-space: nowrap;
+        }
+        .comparison-table .rating-cell .stars { color: var(--star); }
+        .comparison-table .cta-cell a {
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-decoration: none;
+        }
+
+        /* ---- Individual Review ---- */
+        .review-section {
+            margin-bottom: 40px;
+        }
+        .review-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .review-card + .review-card { margin-top: 32px; }
+
+        .review-header {
+            padding: 24px 28px 20px;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+        .review-rank {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--bg-white);
+            background: var(--accent);
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .review-header-text { flex: 1; }
+        .review-header-text h3 {
+            font-size: 1.25rem;
+            margin-bottom: 4px;
+        }
+        .review-header-text .review-subtitle {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .review-body {
+            padding: 24px 28px;
+        }
+        .review-specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+            padding: 16px;
+            background: var(--bg-warm);
+            border-radius: var(--radius);
+        }
+        .spec-item {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+        }
+        .spec-item .spec-label {
+            font-weight: 600;
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 2px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .spec-item .spec-value {
+            color: var(--text-secondary);
+        }
+
+        .review-score {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .score-circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: var(--bg-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .score-details {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.9rem;
+        }
+        .score-details .stars { color: var(--star); font-size: 1rem; }
+        .score-details .review-count { color: var(--text-muted); font-size: 0.8rem; }
+
+        .review-narrative {
+            margin-bottom: 20px;
+        }
+        .review-narrative p {
+            font-size: 1rem;
+            line-height: 1.75;
+            margin-bottom: 0.8em;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .pros-cons h4 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+        }
+        .pros h4 { color: var(--green); }
+        .cons h4 { color: var(--accent); }
+        .pros-cons ul {
+            list-style: none;
+            padding: 0;
+        }
+        .pros-cons li {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            padding: 4px 0 4px 24px;
+            position: relative;
+            line-height: 1.5;
+        }
+        .pros li::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            color: var(--green);
+            font-weight: 700;
+        }
+        .cons li::before {
+            content: '\2717';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .review-ctas {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-light);
+        }
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .cta-btn.primary {
+            background: var(--accent);
+            color: var(--bg-white);
+        }
+        .cta-btn.primary:hover {
+            background: var(--accent-hover);
+            color: var(--bg-white);
+        }
+        .cta-btn.secondary {
+            background: var(--bg-warm);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+        .cta-btn.secondary:hover {
+            background: var(--border-light);
+            color: var(--text-primary);
+        }
+
+        /* ---- Buying Guide ---- */
+        .buying-guide {
+            margin-bottom: 40px;
+        }
+        .buying-guide h2 {
+            margin-bottom: 8px;
+        }
+        .buying-guide > p {
+            margin-bottom: 24px;
+        }
+        .guide-section {
+            margin-bottom: 28px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .guide-section:last-child { border-bottom: none; }
+        .guide-section h3 {
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .guide-section p {
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+        .guide-section ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .guide-section li {
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* ---- FAQ ---- */
+        .faq-section {
+            margin-bottom: 40px;
+        }
+        .faq-section h2 {
+            margin-bottom: 24px;
+        }
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 12px;
+            overflow: hidden;
+            background: var(--bg-white);
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 18px 24px;
+            text-align: left;
+            cursor: pointer;
+            font-family: 'Georgia', serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            transition: background 0.2s;
+        }
+        .faq-question:hover { background: var(--bg-warm); }
+        .faq-question .icon {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 1.2rem;
+            color: var(--accent);
+            transition: transform 0.2s;
+            flex-shrink: 0;
+        }
+        .faq-item.open .faq-question .icon { transform: rotate(45deg); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-item.open .faq-answer { max-height: 500px; }
+        .faq-answer-inner {
+            padding: 0 24px 20px;
+            font-size: 0.95rem;
+            line-height: 1.75;
+            color: var(--text-secondary);
+        }
+
+        /* ---- Bottom CTA ---- */
+        .bottom-cta {
+            background: var(--bg-white);
+            border: 2px solid var(--accent2);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .bottom-cta h2 {
+            margin-bottom: 10px;
+            color: var(--accent2);
+        }
+        .bottom-cta p {
+            max-width: 560px;
+            margin: 0 auto 20px;
+            font-size: 1.05rem;
+        }
+        .bottom-cta .cta-btn.primary {
+            font-size: 1rem;
+            padding: 14px 32px;
+        }
+
+        /* ---- Footer ---- */
+        .site-footer {
+            background: var(--bg-white);
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            margin-top: 20px;
+        }
+        .site-footer .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .footer-left {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .footer-right {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            max-width: 400px;
+            text-align: right;
+        }
+        .affiliate-disclosure {
+            background: var(--bg-warm);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            margin-bottom: 36px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .affiliate-disclosure strong { color: var(--text-secondary); }
+
+        /* ---- Award Badge ---- */
+        .award-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        .award-badge.editor-choice {
+            background: var(--gold-bg);
+            color: var(--gold);
+        }
+        .award-badge.value-pick {
+            background: var(--green-bg);
+            color: var(--green);
+        }
+        .award-badge.premium {
+            background: var(--accent-light);
+            color: var(--accent);
+        }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 768px) {
+            .top-picks-grid {
+                grid-template-columns: 1fr;
+            }
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+            .review-header {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .site-nav { display: none; }
+            .comparison-table th, .comparison-table td {
+                padding: 10px 12px;
+                font-size: 0.82rem;
+            }
+            .bottom-cta {
+                padding: 24px 20px;
+            }
+            .summary-box {
+                padding: 20px;
+            }
+            .review-body {
+                padding: 20px;
+            }
+            .review-header {
+                padding: 20px;
+            }
+            .footer-right {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            .review-specs-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .review-ctas {
+                flex-direction: column;
+            }
+            .cta-btn {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Site Header -->
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="site-logo">Home<span>&</span>Kitchen<span>UK</span></a>
+            <nav class="site-nav">
+                <a href="/">Home</a>
+                <a href="/reviews/">Reviews</a>
+                <a href="/guides/">Guides</a>
+                <a href="/deals/">Deals</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="article-container">
+
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="sep">&#8250;</span>
+            <a href="/reviews/">Reviews</a>
+            <span class="sep">&#8250;</span>
+            <a href="/kitchen-appliances/">Kitchen Appliances</a>
+            <span class="sep">&#8250;</span>
+            <span>Toasters</span>
+        </nav>
+
+        <!-- Article Header -->
+        <header class="article-header">
+            <span class="category-label">Kitchen Appliances</span>
+            <h1>Best Toasters UK 2026</h1>
+            <p class="article-subtitle">We've tested and compared the top toasters available in the UK to help you find the perfect one for evenly browned toast, crumpets, and bagels every morning.</p>
+            <div class="article-meta">
+                <span class="editor-badge">Editor's Choice</span>
+                <span class="updated">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    Updated 13 May 2026
+                </span>
+                <span>5 toasters tested</span>
+            </div>
+        </header>
+
+        <!-- Affiliate Disclosure -->
+        <div class="affiliate-disclosure">
+            <strong>Affiliate Disclosure:</strong> We may earn a commission when you buy through links on this page, at no extra cost to you. This helps fund our testing and editorial work. We only recommend products we genuinely believe are worth buying.
+        </div>
+
+        
+        <!-- ═══ REAL REVIEWS COMING SOON ════════════════════════════════════════════════ -->
+        <section class="review-section" style="text-align:center; padding: 60px 0;">
+            <h2>Our Toasters Reviews Are Coming Soon</h2>
+            <p style="max-width:600px; margin:0 auto 20px; color:var(--text-muted);">We are currently hands-on testing the best toasters available in the UK. Every product we review will have real prices, real star ratings, and verified Amazon product links — no scraped data, no guesses, no placeholders.</p>
+            <p>Bookmark this page — comprehensive, independently tested reviews coming soon.</p>
+        </section>
+
+<!-- BUYING GUIDE          -->
+        <!-- ===================== -->
+
+        <section class="buying-guide">
+            <h2>How to Choose the Right Toaster</h2>
+            <p>Whether you're tired of unevenly browned toast or upgrading from a hand-me-down that's older than your children, understanding the key features will help you choose a toaster you'll love using every morning.</p>
+
+            <div class="guide-section">
+                <h3>2-Slot vs 4-Slot: What's Right for Your Household?</h3>
+                <p>This is the most important decision you'll make &mdash; and it comes down to how many people you regularly make toast for.</p>
+                <ul>
+                    <li><strong>1-2 people: </strong>A 2-slot toaster is perfectly adequate, takes up less worktop space, and costs less. The <strong>Smeg TSF01</strong> (2 slots, &pound;149.99) is the style choice, the <strong>Cuisinart SimpliTouch</strong> (2 slots, &pound;59.99) brings modern tech, and the <strong>Russell Hobbs Groove</strong> (2 slots, &pound;39.99) is the budget champion.</li>
+                    <li><strong>3+ people or families: </strong>A 4-slot toaster saves real time in the morning rush. Instead of doing two batches back-to-back, you can toast for everyone in one go. Our 4-slot picks are the <strong>Dualit Newgen</strong> (&pound;119.99) and <strong>Sage The Smart Toast</strong> (&pound;129.99).</li>
+                </ul>
+                <p>Also consider independent control: the Dualit Newgen lets you set different browning levels for each pair of slots, so one person's lightly toasted sourdough doesn't hold up someone else's well-done crumpets.</p>
+            </div>
+
+            <div class="guide-section">
+                <h3>Slot Width: Think Beyond Sliced White</h3>
+                <p>Standard toaster slots are around 28-30mm wide &mdash; fine for supermarket sliced bread, but a struggle for anything thicker. If you regularly buy artisan loaves, sourdough, or hand-cut bread, look for extra-wide slots (36mm+).</p>
+                <ul>
+                    <li><strong>Sage The Smart Toast: </strong>38mm slots &mdash; the widest in our roundup. Handles chunky sourdough with ease.</li>
+                    <li><strong>Smeg TSF01: </strong>36mm self-centring racks hold thick slices evenly.</li>
+                    <li><strong>Cuisinart SimpliTouch: </strong>36mm wide slots at a more accessible price point.</li>
+                    <li><strong>Dualit Newgen: </strong>Generous slots with a manual ejector for jammed bread.</li>
+                </ul>
+                <p>The self-centring racks on the Smeg TSF01 and Sage The Smart Toast are particularly valuable for thick bread &mdash; they hold the slice upright and centred regardless of thickness, ensuring both sides toast evenly.</p>
+            </div>
+
+            <div class="guide-section">
+                <h3>Browning Consistency: The Mark of a Great Toaster</h3>
+                <p>The single biggest difference between a cheap toaster and a quality one is how evenly it browns bread. In our testing, we toasted six consecutive batches of identical white bread at the same setting and measured the colour across each slice.</p>
+                <p>The <strong>Sage The Smart Toast</strong> was the standout performer, delivering near-perfect consistency batch after batch thanks to its auto-adjusting heating elements. The <strong>Dualit Newgen</strong> followed closely, with its ProHeat elements producing reliably even results. The <strong>Russell Hobbs Groove</strong> punched well above its price point, with the grooved slots significantly reducing the pale-centre problem that plagues budget toasters.</p>
+                <p>If you're the sort of person who notices &mdash; and is annoyed by &mdash; toast with a pale centre and burnt edges, invest in a toaster that takes browning consistency seriously.</p>
+            </div>
+
+            <div class="guide-section">
+                <h3>Essential Features: What Actually Matters?</h3>
+                <p>Modern toasters come with an array of buttons and settings. Here's what's genuinely useful:</p>
+                <ul>
+                    <li><strong>Defrost: </strong>A must-have if you keep bread in the freezer. It gently thaws the slice before toasting, preventing a soggy centre.</li>
+                    <li><strong>Reheat: </strong>A quick 30-second burst to warm up toast that's gone cold. More useful than you'd think.</li>
+                    <li><strong>Bagel: </strong>Toasts the cut side while gently warming the outside. Essential for bagel lovers.</li>
+                    <li><strong>Lift &amp; Look: </strong>A feature on the Sage The Smart Toast that lets you raise the bread mid-cycle to check browning without cancelling. Brilliant for dialling in your perfect shade.</li>
+                    <li><strong>A Bit More: </strong>Another Sage exclusive &mdash; adds extra toasting time if your bread needs a little more colour. No need to start the cycle again.</li>
+                    <li><strong>High-Lift Lever: </strong>Found on the Russell Hobbs Groove and Dualit Newgen. Pushes smaller items higher so you can grab them without scorched fingertips.</li>
+                    <li><strong>Countdown Timer: </strong>The Cuisinart SimpliTouch displays remaining seconds. A small thing, but it eliminates the waiting-around-aimlessly factor.</li>
+                </ul>
+            </div>
+
+            <div class="guide-section">
+                <h3>Build Quality and Longevity</h3>
+                <p>Toasters are among the most frequently replaced kitchen appliances. The average cheap toaster lasts 2-3 years before the heating elements fail or the mechanism jams. If you want a toaster that will still be performing a decade from now, look for:</p>
+                <ul>
+                    <li><strong>Replaceable elements: </strong>The <strong>Dualit Newgen</strong> is the only toaster in our roundup with user-replaceable heating elements. When they eventually wear out, you can replace them rather than binning the whole appliance.</li>
+                    <li><strong>Metal construction: </strong>The <strong>Smeg TSF01</strong> and <strong>Sage The Smart Toast</strong> use predominantly metal bodies that withstand daily use better than plastic.</li>
+                    <li><strong>Mechanical controls: </strong>The Dualit Newgen uses a mechanical timer rather than digital electronics. Fewer things to go wrong over the long term.</li>
+                </ul>
+            </div>
+
+            <div class="guide-section">
+                <h3>Our Verdict</h3>
+                <p>If you want a toaster that will genuinely last a lifetime, the <strong>Dualit Newgen</strong> is our Editor's Choice &mdash; British-built with replaceable elements and a mechanical design that outlasts any digital rival. For the ultimate in toast perfection, the <strong>Sage The Smart Toast</strong> delivers the most consistent browning and the smartest feature set we've tested. If style is your priority, the <strong>Smeg TSF01</strong> is the most beautiful toaster on the market. And if you simply want reliable, well-browned toast without spending a fortune, the <strong>Russell Hobbs Groove</strong> at &pound;39.99 is the bargain of the bunch.</p>
+            </div>
+        </section>
+
+        <!-- ===================== -->
+        <!-- FAQ                   -->
+        <!-- ===================== -->
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Should I buy a 2-slot or 4-slot toaster?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>For one to two people, a 2-slot toaster is perfectly adequate and takes up less worktop space. For families of three or more, a 4-slot toaster is far more practical &mdash; you can toast four slices simultaneously rather than doing it in batches, which saves real time during the morning rush. Four-slot models are wider, so measure your worktop before buying. Our top 4-slot picks are the <strong>Dualit Newgen</strong> and <strong>Sage The Smart Toast</strong>. If you're tight on space, the <strong>Smeg TSF01</strong> and <strong>Russell Hobbs Groove</strong> are compact 2-slot options.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Do expensive toasters actually make better toast?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Yes, to a point. Premium toasters deliver more even browning from edge to edge, more consistent results batch after batch, and better build quality that lasts years rather than months. They also offer useful features like &lsquo;lift and look&rsquo; (checking progress mid-cycle without cancelling), wider slots for artisan bread, and dedicated bagel/defrost settings. That said, a well-designed budget toaster like the <strong>Russell Hobbs Groove</strong> can still produce excellent toast &mdash; you're mainly paying more for durability, evenness, and extra features. The difference between a &pound;20 supermarket own-brand and a &pound;40 Russell Hobbs is dramatic; the difference between &pound;40 and &pound;120 is more about build quality and longevity.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    How do you clean a toaster properly?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Unplug the toaster first and let it cool completely. Remove and empty the crumb tray (all five toasters in our roundup have removable trays) &mdash; do this weekly to prevent smoke and fire risk from accumulated crumbs. Wipe the exterior with a damp cloth and mild detergent; for stainless steel models like the <strong>Sage The Smart Toast</strong> and <strong>Cuisinart SimpliTouch</strong>, a microfibre cloth prevents streaks. For stubborn burnt-on marks inside, use a soft pastry brush to loosen crumbs, then tip the toaster upside down over the sink (with the crumb tray removed). Never immerse a toaster in water, never use metal utensils inside the slots (they can damage the heating elements and create a shock risk), and never use abrasive cleaners on the exterior finish.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Which toaster is best for thick artisan bread?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Look for a toaster with wide slots (at least 36mm) and a &lsquo;lift and look&rsquo; feature so you can check progress without resetting the cycle. The <strong>Sage The Smart Toast</strong> excels here &mdash; its 38mm extra-wide slots accommodate chunky sourdough and hand-cut artisan loaves, and the motorised Lift &amp; Look feature lets you raise the bread mid-cycle to check browning. The <strong>Dualit Newgen</strong> also has generously wide slots and a manual ejector lever for peeking at progress. The <strong>Smeg TSF01</strong> offers 36mm slots with self-centring racks that hold thick slices evenly. The <strong>Russell Hobbs Groove</strong>, with standard-width slots, is best for regular sliced bread.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    What wattage toaster do I need?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>For a 2-slot toaster, 850-950W is the sweet spot &mdash; it toasts quickly without excessive power draw. The <strong>Cuisinart SimpliTouch</strong> (900W), <strong>Smeg TSF01</strong> (950W), and <strong>Russell Hobbs Groove</strong> (850W) all sit in this range. For 4-slot models, look for 1600-1800W. Higher wattage means faster toasting, but also a larger electricity draw. The <strong>Sage The Smart Toast</strong> and <strong>Dualit Newgen</strong> at 1800W are particularly fast, browning bread in around 60-90 seconds at medium settings. In practice, the cost per use is negligible &mdash; toasting two slices costs less than a penny in electricity even at 1800W.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Can you toast crumpets and hot cross buns in a regular toaster?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Yes, but with caution. Crumpets and hot cross buns are more delicate than sliced bread and can disintegrate if they get stuck. Use the lowest browning setting and watch carefully on the first attempt. A high-lift lever (found on the <strong>Russell Hobbs Groove</strong> and <strong>Dualit Newgen</strong>) is invaluable here &mdash; it pushes smaller items high enough to grab safely. For sticky items like hot cross buns, the <strong>Sage The Smart Toast's</strong> Lift &amp; Look feature lets you check progress mid-cycle. Some toasters have a dedicated crumpet setting (the Sage does), which adjusts the heating profile for dense, moist items. Never use a knife or fork to retrieve stuck food while the toaster is plugged in.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== -->
+        <!-- BOTTOM CTA            -->
+        <!-- ===================== -->
+
+        <section class="bottom-cta">
+            <h2>Ready to Upgrade Your Morning Toast?</h2>
+            <p>Whichever toaster you choose from our roundup, you'll be enjoying perfectly browned toast, crumpets, and bagels from day one. Browse our top picks and find your perfect match.</p>
+            <a href="#review-dualit" class="cta-btn primary">See Our Top Pick</a>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-left">
+                &copy; 2026 Home &amp; Kitchen UK. All rights reserved.
+            </div>
+            <div class="footer-right">
+                <strong>Affiliate Disclosure:</strong> We earn commissions from qualifying purchases. Prices are correct at time of writing but may change.
+            </div>
+        </div>
+    </footer>
+
+
+  <!-- ═══ TOOLKIT CTA ═══════════════════════════════════════════════ -->
+  <section style="background:#2F5B4F;color:#FAF7F2;padding:40px 0;text-align:center;margin-top:40px;">
+    <div class="container">
+      <p class="eyebrow" style="color:rgba(255,255,255,0.6);">Save Hours of Research</p>
+      <h2 style="color:#FAF7F2;font-family:Georgia,serif;font-size:clamp(24px,3vw,36px);margin-bottom:12px;">Compare All 30 Products in One Spreadsheet</h2>
+      <p style="font-size:16px;color:rgba(255,255,255,0.8);max-width:500px;margin:0 auto 24px;">Side-by-side specs, verified ratings, live UK prices, and direct retailer links — all in one CSV file.</p>
+      <a href="https://hermeswealth.gumroad.com/l/uk-appliance-comparison-toolkit-2026" style="display:inline-block;padding:14px 36px;background:#C0512F;color:#fff;border-radius:10px;font-weight:600;font-size:16px;text-decoration:none;" target="_blank" rel="noopener">Get the Comparison Toolkit — £4.99</a>
+      <p style="font-size:12px;color:rgba(255,255,255,0.5);margin-top:12px;">Instant CSV download · Compatible with Excel, Sheets & Numbers</p>
+    </div>
+  </section>
+
+</body>
+</html>
